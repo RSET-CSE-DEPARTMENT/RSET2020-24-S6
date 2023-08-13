@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+.list
+{
+   max-width: 500px;
+ width: 100%;
+ background: #fff;
+ margin: 20px auto;
+ box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+ padding: 30px;
+}
+
+.staff-form{
+   width: 100%;
+   margin-top: 20px;
+}
+
+.box{
+  margin-bottom: 30px;
+ align-items: center;
+ width: 100%;
+ outline: none;
+ border: 1px solid #d5dbd9;
+ font-size: 15px;
+ padding: 8px 10px;
+ border-radius: 3px;
+ transition: all 0.3s ease;
+ 
+}
+
+.button{
+  width: 100%;
+  padding: 8px 10px;
+ font-size: 15px; 
+ border: 0px;
+ background: rgb(137, 137, 207);
+ color: #fff;
+ cursor: pointer;
+ border-radius: 3px;
+ outline: none;
+}

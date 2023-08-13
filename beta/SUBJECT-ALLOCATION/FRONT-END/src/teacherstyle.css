@@ -1,0 +1,105 @@
+
+.logout-butt{
+    position: relative;
+    margin-left: 83%;
+    top: 0vh;
+    height: 3vh;
+    width: 12vh;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: small;
+    transition: all 300ms ease-in-out;
+    background-color: rgb(176, 122, 122);
+}
+
+.logout-butt:hover{
+    background-color:aliceblue;
+}
+
+.teachpage-cont1{
+    position: relative;
+    width: 20vh;
+    height: 12vh;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    margin-top: 1vh;
+    margin-left: 80%;
+    text-align: center;
+    border-color: black;
+    font-size: small;
+}
+
+.contmargin1{
+    margin-top: 3vh;
+    list-style: none;
+}
+
+.list123{
+    list-style: none;
+}
+
+.progressbutt{
+    margin-top: -15vh;
+    margin-left: 10vh;
+    position: relative;
+    height: 5vh;
+    width: 15vh;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: medium;
+    transition: all 300ms ease-in-out;
+    background-color: rgb(176, 122, 122);
+}
+
+.progressbutt:hover{
+    background-color:aliceblue;
+}
+
+.title-margin{
+    margin-left: 10vh ;
+    margin-top: 2vh;
+    width: 25vh;
+    height: 5vh;
+    font-size: 17px;
+}
+
+.teach-sem-drop{
+    margin-left: 32vh ;
+    margin-top: -5vh;
+    width: 20vh;
+    height: 5vh;
+    
+}
+
+.view-teach-select-container{
+    position: relative;
+    top: 50%;
+    left: 20%;
+    margin-top: 3vh;
+
+}
+
+.updatebuttsubmit{
+    margin-left: 45%;
+    margin-top: 3vh;
+    font-size: medium;
+    border-radius: 7px;
+    width: 10vh;
+    height: 4vh;
+    background-color: green;
+    color: black;
+}
+
+.updatebuttsubmit::after{
+    background-color: aliceblue;
+    color: black;
+}
+
+.select-row-cont{
+    position: relative;
+    top: 50%;
+    margin-top: 10vh;
+    align-items: center;
+    margin-bottom: 10vh;
+    margin-left: 20%;
+}

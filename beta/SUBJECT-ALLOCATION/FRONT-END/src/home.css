@@ -1,0 +1,80 @@
+.dash{
+  font-size: 30px;
+  font-family: 'Monospace';
+  font-style: italic;
+  margin-left: 12vh;
+  top: 10vh;
+  position: relative;
+
+}
+
+.box2{
+  position: fixed;
+  margin-top: 15vh;
+  width: 300px;
+  height:200px;
+  background-size: cover;
+  margin-left: 20vh;
+  background-color: #f3a9a9;
+  padding: 20px;
+  opacity: 0.7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+}
+
+.box2:hover{
+  background-color: rgb(237, 90, 90);
+  transform: scale(1.1);
+}
+.box3{
+  position: fixed;
+  margin-top: 15vh;
+  width: 300px;
+  height:200px;
+  background-size: cover;
+  margin-left: 70vh;
+  background-color: #f3a9a9;
+  padding: 20px;
+  opacity: 0.7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+}
+
+.box3:hover{
+  background-color: rgb(237, 90, 90);
+  transform: scale(1.1);
+}
+.box4{
+  position: fixed;
+  margin-top: 15vh;
+  width: 300px;
+  height:200px;
+  background-size: cover;
+  margin-left: 120vh;
+  background-color: #f3a9a9;
+  padding: 20px;
+  opacity: 0.7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+}
+
+.box4:hover{
+  background-color: rgb(237, 90, 90);
+  transform: scale(1.1);
+}
+
+.dashtitle{
+  font-size: 20px;
+  color: black;
+  margin-left: 4vh;
+  margin-top: 4vh;
+}
+
+.dashsubtitle{
+  color: black;
+  margin-left: 4vh;
+  font-size: large;
+}

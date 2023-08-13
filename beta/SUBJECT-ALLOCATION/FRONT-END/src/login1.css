@@ -1,0 +1,86 @@
+.image{
+    background-image: url('abc.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.logo{
+    position: relative;
+    z-index: 100;
+    height: 15vh;
+    width: 7vw;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+
+#heading{
+    position: relative;
+    font-family: 'Poppins';
+    font-size: 40px;
+    text-align: center;
+    top: 22vh;
+    font-style:bold;
+    font-weight: 4000;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    color: rgb(8, 8, 8);
+}
+
+.admbutt{
+    position: relative;
+    width: 20vh;
+    height: 7vh;
+    margin-top: 35vh;
+    margin-left: 80vh;
+    font-family: 'Monospace';
+    font-size: large;
+    border-radius: 7px;
+    border: -20px;
+    border-color: black;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+}
+.admbutt:hover{
+    position: relative;
+    width: 20vh;
+    height: 7vh;
+    margin-top: 35vh;
+    margin-left: 80vh;
+    font-family: 'Monospace';
+    font-size: large;
+    border-radius: 7px;
+    border: -20px;
+    background-color: black;
+    color:white;
+}
+.teacbutt{
+    position: relative;
+    width: 20vh;
+    height: 7vh;
+    margin-top: 35vh;
+    margin-left: 5vh;
+    font-family: 'Monospace';
+    font-size: large;
+    border-radius: 7px;
+    border: -20px;
+    border-color: black;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+}
+.teacbutt:hover{
+    position: relative;
+    width: 20vh;
+    height: 7vh;
+    margin-top: 35vh;
+    margin-left: 5vh;
+    font-family: 'Monospace';
+    font-size: large;
+    border-radius: 7px;
+    border: -20px;
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+
+

@@ -1,0 +1,68 @@
+.image{
+  background-image: url('abc.jpg');
+  filter:brightness(0.5) blur(3px) ;
+  -webkit-filter: blur(3px);
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  position: fixed;
+ 
+}
+
+
+.box1 {
+  position: fixed;
+  margin-top: 30vh;
+  width: 400px;
+  height:300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 80vh;
+  background-color: #f9f4f4;
+  /*background-image: url('https://images.pexels.com/photos/7130560/pexels-photo-7130560.jpeg?cs=srgb&dl=pexels-codioful-%28formerly-gradienta%29-7130560.jpg&fm=jpg');*/
+  padding: 20px;
+  opacity: 0.7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+}
+
+h2 {
+  text-align:center;
+  font-family: 'Caprasimo';
+  font-size: 25px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-family: 'PT Sans Narrow';
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.submit{
+  width: 10vh;
+  margin-left: 20vh;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #45a049;
+}

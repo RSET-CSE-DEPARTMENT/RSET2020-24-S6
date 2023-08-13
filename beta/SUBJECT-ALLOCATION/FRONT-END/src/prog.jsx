@@ -1,0 +1,26 @@
+import React from 'react'
+
+const Prog = async(demo) => {
+    
+      try {
+        console.log(demo)
+        const response = await fetch('http://127.0.0.1:8000/home/getview', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({val:"1"})
+        });
+    
+        if (response.ok) {
+          console.log('Data posted successfully!');
+        } else {
+          console.error('Error posting data:', response.status);
+        }
+      } catch (error) {
+        console.error('Error posting data:', error);
+      }
+      
+}
+
+export default Prog
