@@ -23,13 +23,13 @@ const {DynamoDBClient , GetItemCommand,PutItemCommand,ScanCommand,UpdateItemComm
 const REGION = "ap-south-1"
 const credentials= {
 
-    secretAccessKey: 'WbVrvyqcUFDTOBUS4+13UWlvs0LzMb3/80qX2Ihb',
-    accessKeyId: 'AKIAU4KAUOXD3FB6O76C'
+    secretAccessKey: 'enter aws secret key',
+    accessKeyId: 'enter aws access key'
 };
 const REGION1="ap-south-1";
 const credentials1={
-    secretAccessKey:'k1DdHwcwjV1cE6XEMAk1xihsL1/8MuuD5lFO9ZVZ',
-    accessKeyId: 'AKIAVBBA7M24BVL35YP3',
+    secretAccessKey:'enter aws secret key',
+    accessKeyId: 'enter aws access key',
 }
 
 //Create DynamoDB client object
