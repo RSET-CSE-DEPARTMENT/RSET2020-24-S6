@@ -1,6 +1,8 @@
 # SlidesGenie: Revolutionizing Learning and Presentation Creation with AI
 
-SlidesGenie is an innovative AI-driven web application designed to address the challenges of traditional learning and presentation creation. By combining the power of AI learning tools and presentation generators, SlidesGenie aims to revolutionize the learning experience through automation and captivating content.
+SlidesGenie is an innovative AI-driven web application designed to address the challenges of traditional learning and presentation creation.
+- **SlideGenie**: An AI-powered slides generator that generates google slides presentations based on the topic that the user has inputted.
+- **Memory Lane**: An AI-powered learning tool that creates bizarre stories around the input learning material and presents it in a visual format.
 
 ## Problem Statement
 
