@@ -1,5 +1,6 @@
 # Adding 3 example user prompts and the corresponding assistant answers
 # in two lists : user_inputs and assistant_answers
+# Few-shot training
 
 user_inputs = ['''
 Features of a Monopoly Market 
