@@ -1,4 +1,4 @@
-#VirtualSliders - Air Hockey using Hand Detection
+# VirtualSliders - Air Hockey using Hand Detection
 This project investigates the implementation of computer vision techniques to enhance the gameplay experience of air hockey through hand detection. Traditional air hockey
 games require a physical table and equipment, limiting accessibility and socialization. To address this, we propose a computer vision-based solution utilizing real-time hand
 detection algorithms to track and interpret players’ hand movements.
@@ -13,6 +13,6 @@ history and relevant statistics, providing valuable data for tracking patient im
 By combining entertainment with therapeutic benefits, this project contributes to computer vision advancements and medical rehabilitation practices, showcasing the potential
 of leveraging real-time hand tracking to enhance traditional tabletop games.
 
-#Video Demonstration
+# Video Demonstration
 The folllowing link contains video demonstration of our project, note that it is a Hand Recording, which was done so to demonstrate the Multiplayer capabilities of the Project.
 Link: 
