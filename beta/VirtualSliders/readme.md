@@ -13,6 +13,6 @@ history and relevant statistics, providing valuable data for tracking patient im
 By combining entertainment with therapeutic benefits, this project contributes to computer vision advancements and medical rehabilitation practices, showcasing the potential
 of leveraging real-time hand tracking to enhance traditional tabletop games.
 
-# Video Demonstration
+## Video Demonstration
 The folllowing link contains video demonstration of our project, note that it is a Hand Recording, which was done so to demonstrate the Multiplayer capabilities of the Project.
-Link: 
+Link: https://youtu.be/WJ4CdqWIDJs 
