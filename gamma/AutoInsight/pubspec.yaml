@@ -1,0 +1,60 @@
+name: autoinsight
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+
+dependencies:
+  carousel_slider: ^4.2.1
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  #Firebase core and auth
+  firebase_core: ^2.14.0
+  intl: ^0.17.0
+  firebase_auth: ^4.6.3
+  cloud_firestore: ^4.8.2
+  firebase_storage: ^11.2.4
+  floating_navbar: ^2.0.2
+  email_validator: ^2.1.16
+  url_launcher: ^6.1.5
+  flutter_native_splash: ^2.2.7
+  datepicker_dropdown: ^0.0.7+5
+  flutter_time_picker_spinner: ^2.0.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+  fonts:
+    - family: PoppinsBold
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+    - family: PoppinsMed
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Medium.ttf
+    - family: PoppinsEBItalic
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-ExtraBoldItalic.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+    - family: PoppinsReg
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+    - family: PoppinsEL
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-ExtraLight.ttf
+    - family: PoppinsSB
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-SemiBold.ttf
+    - family: PoppinsLight
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Light.ttf
