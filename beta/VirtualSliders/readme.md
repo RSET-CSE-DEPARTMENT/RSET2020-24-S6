@@ -2,7 +2,7 @@ This project investigates the implementation of computer vision techniques to en
 games require a physical table and equipment, limiting accessibility and socialization. To address this, we propose a computer vision-based solution utilizing real-time hand
 detection algorithms to track and interpret players’ hand movements.
 
-The proposed system empowers players to enjoy the game without the need for physical infrastructure, making it cost-effective and dynamic. Additionally, gesture-based gameplay mechanics, such as power-ups and additional scoring opportunities, are introduced
+The proposed system empowers players to enjoy the game without the need for physical infrastructure, making it cost-effective and dynamic. Additionally, gesture-based gameplay mechanics, such as power-ups and additional scoring opportunities, are introduced
 to enhance player immersion and interaction.
 
 Moreover, this project explores the therapeutic potential of the hand detection-based virtual air hockey game, particularly in physiotherapy and rehabilitation settings. The
