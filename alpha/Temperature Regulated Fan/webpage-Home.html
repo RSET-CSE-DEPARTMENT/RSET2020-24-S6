@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Intelli</title>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+		<script src="h	ttps://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<style>
+			html {
+  				scroll-behavior: smooth;
+			}
+			.body{
+				margin: 0px;
+				padding: 0px;
+			}
+			.chart-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 30px;
+			}
+			.background{
+				background-color: rgb(0, 0, 0);
+				margin: 0px;
+				height: 25vh;
+				font-size: 20px;
+				font-family: Arial, Helvetica, sans-serif, Times, serif, sans-serif;
+				margin-bottom: 50px;
+			}
+			.head{
+				text-align: center;
+				margin-top: 25px;
+				color: white;
+			}
+			.head2{
+				
+				margin-top: 70px;
+				font-size: 25px;
+				font-family:  Bree Verdana , Tahoma, sans-serif;
+			}
+			.top{
+				color: white;
+				padding: 20px;
+				margin: 0px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 13px;
+				font-weight: bold;
+				display:inline-flex;
+			}
+			.slider_bar {
+				height: 25px;
+				background: #d3d3d3;
+				outline: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				-webkit-transition: .2s;
+				transition: .2s;
+				width: 200px;
+				opacity: 0.7;
+			}
+			
+			.slider_bar:hover {
+				opacity: 1;
+			}
+			
+			.slider_bar::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				width: 25px;
+				height: 25px;
+				background: #04AA6D;
+				cursor: pointer;
+			}
+			
+			#sliderValue {
+				margin-top: 10px;
+			}
+			.manual{
+				padding: 20px;
+				font-size: 25px;
+				font-weight: bold;
+				background-color:#04AA6D;
+				border: none;
+				font-family: Helvetica, sans-serif;
+				border-radius: 10px;
+		
+			}
+			.content{
+				margin-left: 20px;
+				text-align: center;
+			}
+			.send-value-button{
+				background-color: #282828;
+				color: white;
+				border: none;
+				border-radius: 15px;
+				font-family: Helvetica, sans-serif;
+				font-weight: medium;
+				padding:8px;
+				
+			}
+			.send-value-button:hover{
+				cursor: pointer;
+				background-color: black;
+				opacity: 1;
+			}
+			.button-automatic{
+				background-color: rgb(232, 158, 20);
+				border: none;
+				font-size: 25px;
+				font-weight: bold;
+				padding: 20px;
+				border-radius: 10px;
+				margin-top: 20px;
+				
+				opacity: .9;
+			}
+
+			.button-automatic:hover{
+				cursor: pointer;
+				opacity: 1;
+			}
+			.about{
+				margin-top: 100px;
+				background-color: aquamarine;
+				padding: 30px;
+			}
+			.about-head{
+			
+				font-family: Helvetica, sans-serif;
+				font-weight: bolder;
+				margin-left: 20px;
+				font-size: 40px;
+				
+			}
+			.about-desc{
+				margin-left: 20px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: bold;
+				width: 1000px;
+				margin-bottom: 0px;
+				line-height: 28px;
+				font-size: 18px;
+			}
+		</style>
+		
+	</head>
+	
+	<body class="body">
+		<div class="background">
+			<p class="top">Home</p>
+			<a href="#About" class="top">About</a>
+			<h1 class="head">INTELLI</h1> 
+		</div>
+
+		<div class="content">
+			<label class="manual">Manual Control</label>
+			<h2>Fan speed:<span id="sliderValue">50</span></h2>
+			<input  type="range" id="slider" min="0" max="255" step="1" value="0" class="slider_bar" oninput="sendSliderValue(this.value)"> <br>
+			
+			<button class="send-value-button" onclick="sendSliderValue()">
+				send value
+			</button> <br>
+			
+			<div>
+				<button class="button-automatic" onclick="sendSliderValue2()">
+					Automatic Mode
+				</button>
+			</div>
+		</div>
+		<h3 class="head2">Timestamp Graph readings...</h3>
+	</body>
+
+	<body>
+		<div class="chart-container">
+			<canvas id="lineChart" style="height: 200px;"></canvas>
+		</div>
+		<div id="About" class="about">
+			<h1 class="about-head">About</h1>
+			<p class="about-desc"> Due to varying climatic conditions in India from time to time, fan speed regulation is an
+				important aspect in India. Also, in large-scale buildings and industries fan speed regulation is
+				necessary to maintain the organization's efficiency and maintenance. By adjusting the fan
+				speed based on the temperature, temperature-sensed fan speed control ensures that the
+				cooling system provides adequate cooling when needed.
+			</p>
+		</div>
+		<script>
+			
+			var slider = document.getElementById("slider");
+			var output = document.getElementById("sliderValue");
+			output.innerHTML = slider.value;
+			
+			slider.oninput = function() {
+			  output.innerHTML = this.value;
+			}
+			
+			function sendSliderValue() {
+				// Get the slider value
+				var value = document.getElementById("slider").value;
+
+				var value2=11;
+				// Create a new XMLHttpRequest object
+				var xhr = new XMLHttpRequest();
+
+				// Prepare the request URL
+				var url = "http://192.168.136.92/slider?value=" + value + "&value2=" + value2.toString();
+
+				// Set up the request
+				xhr.open("GET", url, true);
+
+				// Send the request
+				xhr.send();
+			}
+			
+			function sendSliderValue2() {
+				var value=0;
+				var value2=22;
+				// Create a new XMLHttpRequest object
+				var xhr = new XMLHttpRequest();
+				window.alert("Fan set on Automatic Mode");
+				// Prepare the request URL
+				var url = "http://192.168.136.92/slider?value=" + value + "&value2=" + value2;
+
+				// Set up the request
+				xhr.open("GET", url, true);
+
+				// Send the request
+				xhr.send();
+			}
+
+			// Initialize Firebase
+			var firebaseConfig = {
+			  apiKey: "AIzaSyAIHizGPzxfkuXvK8xPmMAakwc4n4rN8yE",
+			  authDomain: "",
+			  databaseURL: "https://fan-control-8ba6a-default-rtdb.firebaseio.com/",
+			  projectId: "Fan-control",
+			  storageBucket: "",
+			  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+			  appId: "YOUR_APP_ID",
+			};
+			firebase.initializeApp(firebaseConfig);
+	
+			// Get a reference to the database
+			var database = firebase.database();
+	
+			// Get a reference to the canvas element
+			var chartCanvas = document.getElementById('lineChart');
+	
+			// Create the chart instance
+			var lineChart = new Chart(chartCanvas, {
+			  type: 'line',
+			  data: {
+				 labels: [],
+				 datasets: [{
+					label: 'Temperature',
+					data: [],
+					borderColor: 'rgba(255, 99, 132, 1)',
+					backgroundColor: 'rgba(255, 99, 132, 0.5)',
+					borderWidth: 1,
+					fill: false
+				 }]
+			  },
+			  options: {
+				 responsive: true,
+				 maintainAspectRatio: false,
+				 scales: {
+					y: {
+					  beginAtZero: true
+					}
+				 }
+			  }
+			});
+	
+			// Read data from Firebase database and update the chart
+			var dataRef = database.ref('DHT/readings');
+			dataRef.on('value', function(snapshot) {
+			  var data = snapshot.val();
+			  var labels = [];
+			  var temperatureData = [];
+	
+			  for (var timestamp in data) {
+				 if (data.hasOwnProperty(timestamp)) {
+					var temperature = data[timestamp].temperature;
+					var date = data[timestamp].date;
+					var time = data[timestamp].time;
+	
+					labels.push(date + ' ' + time);
+					temperatureData.push(temperature);
+				 }
+			  }
+	
+			  lineChart.data.labels = labels;
+			  lineChart.data.datasets[0].data = temperatureData;
+			  lineChart.update();
+			});
+		 </script>
+		 
+	</body>
+
+</html>
