@@ -1,0 +1,55 @@
+/* styled.css */
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      width: 100%;
+      background-image: url('pngtree-light-green-branches-and-leaves-watermark-floral-plant-background-picture-image_1445958.png'); /* Replace with your background image */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+  }
+
+.result-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Limit the width of the response container */
+  }
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #bdd248;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #a2bb36;
+  }
+  
+  button:focus {
+    outline: none;
+  }
