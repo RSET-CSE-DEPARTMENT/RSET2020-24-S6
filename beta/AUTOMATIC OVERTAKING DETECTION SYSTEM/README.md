@@ -15,6 +15,8 @@ To deploy this project run
 ```bash
   python Log.py
 ```
-## Demo
 
-beta/AUTOMATIC OVERTAKING DETECTION SYSTEM/GIF/demo.gif
+
+https://github.com/Rahul6111/RSET2020-24-S6/assets/95371610/6fb5b8d5-d4b0-4ab7-bc32-bdb4998f1642
+
+
