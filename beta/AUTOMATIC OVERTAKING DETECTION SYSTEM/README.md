@@ -1,4 +1,4 @@
-## **Automatic Overtaking Detection System For Bridges**
+## **Automated Overtaking Detection System For Bridges**
 
 This project we have developed an automatic overtaking detection system that helps to
 identify people who overtake vehicles in bridges, accurately recording the violators’ details
