@@ -1,0 +1,97 @@
+// Pins for ultrasonic sensor
+const int trigPin = 2;
+const int echoPin = 3;
+
+// Pins for motor control
+const int motorEnablePin = 9;
+const int motorInput1Pin = 10;
+const int motorInput2Pin = 11;
+
+// Pin for the buzzer
+const int buzzerPin = 4;
+
+// Variables for distance calculation
+long duration;
+int distance;
+
+// Threshold distance in centimeters
+const int thresholdDistance = 150;
+
+void setup() {
+  // Initialize the serial communication
+  Serial.begin(9600);
+
+  // Set the ultrasonic sensor pins as input
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+
+  // Set the motor control pins as output
+  pinMode(motorEnablePin, OUTPUT);
+  pinMode(motorInput1Pin, OUTPUT);
+  pinMode(motorInput2Pin, OUTPUT);
+
+  // Set the buzzer pin as output
+  pinMode(buzzerPin, OUTPUT);
+}
+
+void loop() {
+  // Clear the trigger pin
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  // Set the trigger pin high for 10 microseconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // Measure the duration of the pulse on the echo pin
+  duration = pulseIn(echoPin, HIGH);
+
+  // Calculate the distance based on the speed of sound
+  distance = duration * 0.034 / 2;
+
+  // Print the distance on the serial monitor
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // Check if the distance is less than the threshold
+  if (distance < thresholdDistance) {
+
+    // Activate the buzzer
+    if (distance < 100)
+    {
+      tone(buzzerPin, 3000); // Play a tone with a frequency of 3000Hz
+      delay(100);
+      noTone(buzzerPin);
+      delay(50);
+      digitalWrite(motorInput1Pin, HIGH);
+      digitalWrite(motorInput2Pin, LOW);
+      analogWrite(motorEnablePin, 255); // Apply full power to the motor
+     
+    }
+    else
+    {
+      tone(buzzerPin, 3000); // Play a tone with a frequency of 3000Hz
+      delay(200);
+      noTone(buzzerPin);
+      delay(200);
+      // Turn off the motor
+    digitalWrite(motorInput1Pin, HIGH);
+    digitalWrite(motorInput2Pin, LOW);
+    analogWrite(motorEnablePin, 100); // Stop the motor
+    }
+   
+  } else {
+    // Turn off the motor
+    digitalWrite(motorInput1Pin, LOW);
+    digitalWrite(motorInput2Pin, LOW);
+    analogWrite(motorEnablePin, 0); // Stop the motor
+
+    // Turn off the buzzer
+    noTone(buzzerPin);
+  }
+
+  // Delay before the next measurement
+  delay(500);
+}
