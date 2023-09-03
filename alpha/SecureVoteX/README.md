@@ -1,3 +1,3 @@
-#ABSTRACT
+## ABSTRACT
 
 ’SecureVoteX’ is a fingerprint-based voting system designed to enhance the integrity and efficiency of the electoral process. The project aims to address the challenges of voter fraud, identity theft, and inaccurate vote counting in traditional voting systems. The primary objective is to provide a secure, user-friendly, and transparent voting platform. Through fingerprint recognition, only eligible voters can participate, eliminating the risk of fraud and multiple voting. The methodology involves utilizing a fingerprint sensor connected to a PC via a USB to TTL converter. Python’s PyFingerprint library with Tkinter GUI enables voter authentication, candidate management, and encrypted vote counting. By incorporating biometric technology and streamlining voter authentication and ensuring accurate vote counting, ’SecureVoteX’ ensures accurate voter identification, prevents multiple voting, and fosters trust in democratic elections.
