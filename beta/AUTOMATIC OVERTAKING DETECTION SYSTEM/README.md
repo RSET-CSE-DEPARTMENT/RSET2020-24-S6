@@ -8,6 +8,9 @@ extract the part of the image that shows the number plate of cars. We then use o
 character recognition (OCR) to extract the characters from the region of interest and add
 it to the database.
 Due to lack of dataset we have chosen an highway input instead of bridges.
+
+This project is a combined effort done by M S Rahul, Mathew Shaji, Harikrishnan R and Jai Mathew James of class CSBeta Batch 2024, Rajagiri School of Engineering and Technology, Kakkanad.
+
 ## Deployment
 
 To deploy this project run
