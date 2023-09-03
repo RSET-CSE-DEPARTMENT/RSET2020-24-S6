@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block styles %}
+<link rel="stylesheet" href="../static/home.css" />
+{% endblock %} {% block content%}
+<div class="pageContent">
+	<div class="pageContentBox">
+		<div class="recorderTitle">Record your Sound-Bite...</div>
+		<div class="controls" id="controls">
+			<button class="btn" id="recordButton">RECORD</button>
+			<button class="btn" id="pauseButton" disabled>PAUSE</button>
+			<button class="btn" id="stopButton" disabled>STOP</button>
+		</div>
+		<div class="sampleRate" id="formats">
+			Format: start recording to see sample rate
+		</div>
+		<div class="recListTitle">Recordings :</div>
+		<div class="recListWrapper">
+			<ol class="recList" id="recordingsList"></ol>
+		</div>
+		<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+	</div>
+	<div class="pageContentBox rightContent">
+		<div class="summaryText transcript" id="transcriptText"></div>
+		<div class="summaryText summary" id="summaryText"></div>
+		{% if user!=None %}
+		<button class="saveBtn" id="saveBtn" disabled>SAVE</button>
+		{% else %}
+		<button class="saveBtn" id="saveBtn" disabled>
+			Login to save summary
+		</button>
+		{% endif %}
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="/static/recorder.js"></script>
+	<script src="/static/home.js"></script>
+</div>
+{% endblock %}

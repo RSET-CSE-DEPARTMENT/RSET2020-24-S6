@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block styles %}
+<link rel="stylesheet" href="../static/save.css" />
+{% endblock %} {% block content %}
+<style id="temp">
+
+</style>
+<div class="pagecontainer-save" id="pagecontainer-save">
+	<div class="content" id="content-left">
+		<span class="label">Summary Title</span>
+		<div class="save-summary" id="save-summary">
+			<input
+				class="save-title"
+				id="save-title"
+				placeholder="file is stored in .txt format..."
+			/>
+			<button class="btn" id="save-title-btn" onclick="saved()">
+				save
+			</button>
+		</div>
+		<span class="label">Categories</span>
+		<div class="save-tags" id="save-tags">
+			<div class="dropdown">
+				<button class="drop-btn">+</button>
+				<div class="drop-content">
+					<a onclick='mytags("Entertainment")'>Entertainment</a>
+					<a onclick='mytags("Food")'>Food</a>
+					<a onclick='mytags("News")'>News</a>
+					<a onclick='mytags("Sports")'>Sports</a>
+					<a onclick='mytags("World")'>World</a>
+					<a onclick='mytags("Technical")'>Technical</a>
+					<a onclick='mytags("Technology")'>Technology</a>
+					<a onclick='mytags("Climate")'>Climate</a>
+					<a onclick='mytags("Speech")'>Speech</a>
+				</div>
+			</div>
+			<div class="taglist" id="_tag_"></div>
+		</div>
+		<span class="label">Template</span>
+		<div class="save-template">
+			<button class="btn" id="default" onclick="normal()">default</button>
+			<button class="btn" id="bullet" onclick="bullet()">bullet</button>
+			<button class="btn" id="minute" onclick="minute()">minutes</button>
+		</div>
+		<div class="save-action" id="save-action">
+			<button class="btn" id="cancel" onclick="cancel()">cancel</button>
+		</div>
+	</div>
+	<div class="content" id="content-right">
+		<div class="save-display" id="textbox">{{summary}}</div>
+	</div>
+</div>
+<script src="../static/save.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+{% endblock%}

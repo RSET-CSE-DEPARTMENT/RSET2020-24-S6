@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="../static/profile.css">
+{% endblock %}
+
+{% block content%}
+  <div class="pageContainer"> 
+    <div class="container">
+  
+      <div class="pic-group">
+        <img src=https://t4.ftcdn.net/jpg/04/10/43/77/360_F_410437733_hdq4Q3QOH9uwh0mcqAhRFzOKfrCR24Ta.jpg id="profile-pic" class="profile-pic">
+        <input type="file" id="profile-pic-upload" accept="image/*" class="hidden" onchange="displaySelectedProfilePic(event)">
+      </div>
+  
+    <div class="formContainer">  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" value="johndoe@example.com" readonly>
+      </div>
+  
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" value="johndoe" readonly>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" value="********" readonly>
+      </div>
+  
+      <div class="form-group">
+        <input type="submit" value="Edit Changes" id="edit-button" onclick="enableEditing()">
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      function enableEditing() {
+        document.getElementById("profile-pic-upload").classList.remove("hidden");
+        document.getElementById("profile-pic").classList.add("hidden");
+  
+        document.getElementById("email").removeAttribute("readonly");
+        document.getElementById("username").removeAttribute("readonly");
+        document.getElementById("password").removeAttribute("readonly");
+  
+        document.getElementById("edit-button").value = "Save Changes";
+        document.getElementById("edit-button").onclick = saveChanges;
+      }
+  
+      function saveChanges() {
+        var profilePic = document.getElementById("profile-pic-upload").value;
+        var email = document.getElementById("email").value;
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+  
+        // Code to save the changes goes here
+  
+        alert("Changes saved successfully!");
+  
+        // Disable editing after saving changes
+        document.getElementById("profile-pic-upload").classList.add("hidden");
+        document.getElementById("profile-pic").classList.remove("hidden");
+  
+        document.getElementById("email").setAttribute("readonly", "readonly");
+        document.getElementById("username").setAttribute("readonly", "readonly");
+        document.getElementById("password").setAttribute("readonly", "readonly");
+  
+        document.getElementById("edit-button").value = "Edit Changes";
+        document.getElementById("edit-button").onclick = enableEditing;
+      }
+  
+      function displaySelectedProfilePic(event) {
+        var input = event.target;
+        var reader = new FileReader();
+  
+        reader.onload = function () {
+          var profilePic = document.getElementById("profile-pic");
+          profilePic.src = reader.result;
+        };
+  
+        reader.readAsDataURL(input.files[0]);
+      }
+    </script>
+{% endblock %}
+
+

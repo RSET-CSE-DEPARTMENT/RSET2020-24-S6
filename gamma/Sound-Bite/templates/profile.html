@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block styles %}
+<link rel="stylesheet" href="../static/profile.css" />
+{% endblock %} {% block content%}
+<div class="pageContent">
+	<div class="pageContentBox">
+		<div class="profileLeft">
+			<div class="profilePicOption">
+				<img
+					src="https://t4.ftcdn.net/jpg/04/10/43/77/360_F_410437733_hdq4Q3QOH9uwh0mcqAhRFzOKfrCR24Ta.jpg"
+					alt=""
+					class="profilePicture"
+					id="profilePicture"
+				/>
+				<label class="editProfilePic" for="uploadImg">
+					<i class="fa-regular fa-image icon"></i>
+				</label>
+				<input type="file" id="uploadImg" accept="image/*" src="" alt="" onchange="uploadImage()"/>
+			</div>
+		</div>
+		<div class="profileRight">
+			<span class="label">Username</span>
+			<input type="text" class="infoField" id="userInput" value="hello" readonly/>
+			<span class="label">Email</span>
+			<input type="text" class="infoField" id="emailInput" readonly/>
+			<div class="passwordGroup" style="display: none;">
+				<span class="label">Old password</span>
+				<input type="password" class="infoField" id="oldPassword" />
+				<span class="label">New password</span>
+				<input type="password" class="infoField" id="newPassword" />
+			</div>
+			<div class="buttonGroup">
+				<button class="btn" type="button" id="editButton" onclick="editDetails()">Edit</button>
+				<button class="btn" type="button" id="saveButton" style="display: none;" onclick="saveDetails()">Save</button>
+				<button class="btn" type="button" id="cancelButton" style="display: none;" onclick="cancelEditDetails()">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../static/profile.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript">getProfile();</script>
+{% endblock %}

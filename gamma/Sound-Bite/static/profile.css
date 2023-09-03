@@ -1,0 +1,126 @@
+.pageContent {
+	display: flex;
+	width: 100vw;
+	height: calc(100vh - 120px);
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #001729;
+}
+
+.pageContentBox {
+	display: flex;
+	height: calc(100vh - 120px - 40px);
+	width: calc(100vw - 35px);
+	border-radius: 15px;
+    padding: 10px;
+	/* background-color: #89c2d9; */
+	background-color: #e7ecef;
+}
+
+.profileLeft{
+    display: flex;
+    flex:1;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 0px 3px -3px rgba(117,116,117,0.39);
+}
+
+.profilePicOption{
+    display: flex;
+    position: relative;
+    height: 40vh;
+    width: 40vh;
+    margin-right: 20px;
+}
+
+.profilePicture{
+    height: 40vh;
+    width: 40vh;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.editProfilePic{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    color: gray;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icon{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#uploadImg{
+    display: none;
+}
+
+.profileRight{
+    display: flex;
+    flex: 2;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.label {
+	margin-top: 20px;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 24px;
+	color: black;
+}
+
+.infoField{
+    display: flex;
+    height: 30px;
+    width: 30vw;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+}
+
+.buttonGroup{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+	display: flex;
+	height: 40px;
+	width: 200px;
+    padding: 10px;
+    margin: 10px;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 26px;
+	font-weight: 300;
+	border: none;
+	cursor: pointer;
+	background-color: #014f86;
+}
+
+.passwordGroup{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: space-evenly;
+}
