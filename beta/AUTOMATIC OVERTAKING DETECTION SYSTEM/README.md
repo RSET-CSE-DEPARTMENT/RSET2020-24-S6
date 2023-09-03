@@ -7,3 +7,11 @@ learning and object detection to identify the violators, take the image, underst
 extract the part of the image that shows the number plate of cars. We then use optical
 character recognition (OCR) to extract the characters from the region of interest and add
 it to the database.
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  python Log.py
+```
