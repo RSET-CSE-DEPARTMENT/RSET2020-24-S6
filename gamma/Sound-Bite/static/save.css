@@ -1,0 +1,233 @@
+.pagecontainer-save {
+	display: flex;
+	width: 100vw;
+	height: calc(100vh - 120px);
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #001729;
+}
+
+.content {
+	display: flex;
+	height: calc(100vh - 120px - 40px);
+	width: calc(50vw - 30px);
+	border-radius: 15px;
+	padding: 10px;
+	background-color: #e7ecef;
+	/* background-color: rgb(254, 250, 250); */
+	align-items: first baseline;
+	justify-content: start;
+	flex-direction: column;
+}
+
+.label {
+	margin-top: 20px;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 24px;
+	color: black;
+}
+
+.save-summary {
+	display: flex;
+	margin-top: 5px;
+	width: calc(50vw - 30px);
+}
+
+.save-title {
+	background-color: lightgray;
+	height: 20px;
+	width: 25vw;
+	margin-right: 5px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 18px;
+}
+
+@keyframes glowing {
+	0%{
+	  background-color: #E11B1B;
+	}
+	10%{
+		background-color: #CB2026;
+	}
+	20%{
+		background-color: #B42530;
+	}
+	30%{
+		background-color: #9E2B3B;
+	}
+	40%{
+		background-color: #873046;
+	}
+	50%{
+		background-color: #713551;
+	}
+	60%{
+		background-color: #5B3A5B;
+	}
+	70%{
+		background-color: #443F66;
+	}
+	80%{
+		background-color: #2E4571;
+	}
+	90%{
+		background-color: #174A7B;
+	}
+	100%{
+		background-color: #014F86;	
+	}
+	
+  }
+  
+
+.btn {
+	display: flex;
+	height: 40px;
+	width: 10vw;
+	border-radius: 5px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 26px;
+	font-weight: 300;
+	border: none;
+	cursor: pointer;
+	background-color: #014f86;
+}
+
+.btn:hover{
+	background-color: #012a4a;
+}
+
+.save-tags {
+	display: flex;
+	margin-top: 5px;
+}
+
+.dropdown {
+	display: inline-block;
+}
+
+.drop-btn {
+	height: 50px;
+	width: 50px;
+	border: none;
+	border-radius: 50%;
+	background-color: #61a5c2;
+	color: white;
+	font-size: 40px;
+	cursor: pointer;
+}
+
+.drop-content {
+	display: none;
+	border-radius: 10px;
+	position: absolute;
+	background-color: lightgray;
+	min-width: 200px;
+	box-shadow: 2px 2px 5px rgba(169, 169, 169, 0.682);
+}
+
+.dropdown:hover .drop-content {
+	display: block;
+}
+
+.dropdown a {
+	display: block;
+	height: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	color: black;
+	text-decoration: none;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 16px;
+}
+
+.dropdown:hover .drop-btn {
+	background-color: #2a6f97;
+}
+.dropdown a:hover {
+	background-color: darkgray;
+}
+
+.taglist {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y:auto;
+	margin-left: 10px;
+	height: 100px;
+}
+
+.tags {
+	height: 40px;
+	padding: 10px;
+	margin: 3px;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	border: none;
+	cursor: pointer;
+	background-color: #4692c7;
+}
+
+.tags:hover{
+    background-color: #cccccc;
+}
+
+.save-template{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: auto;
+    height: 60px;
+    width: calc(35vw - 30px);
+    align-items: start;
+    justify-content: space-between
+}
+
+.save-action{
+    align-self: flex-end;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background-color: lightgray;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: darkgray;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: gray;
+}
+
+.save-display {
+	display: flex;
+	overflow-y: auto;
+	height: calc(100vh - 120px - 60px);
+	width: calc(50vw - 50px);
+	padding: 10px;
+	border-radius: 10px;
+	background-color: white;
+	color: #001729;
+	white-space: pre-wrap;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 20px;
+}

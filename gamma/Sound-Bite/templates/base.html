@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SOUND BITE</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Josefin+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/base.css" />
+    {% block styles %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="pageContainerBase">
+        <div class="logo">
+            <i class="fa-solid fa-podcast logoIcon"></i>
+            <span class="logoText"> SOUND BITE </span>
+        </div>
+        <div class="navbar">
+            {% if user!=None %}
+            <div class="navSearch">
+                
+            </div>
+            <div class="navOptions">
+                <ul class="optionList">
+                    <li class="optionItem">
+                        <a href="/" class="link">HOME </a>
+                    </li>
+
+                    <li class="optionItem">
+                        <a href="/saved" class="link">SAVED</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navProfile">
+                <div class="navLogout">
+                    <a href="/logout" class="optionItem link">LOGOUT</a>
+                </div>
+                <img src=https://t4.ftcdn.net/jpg/04/10/43/77/360_F_410437733_hdq4Q3QOH9uwh0mcqAhRFzOKfrCR24Ta.jpg
+                    alt="" class="profilePic" id="profilePic">
+                <a class="profileName" href="/profile">{{ user }}</a>
+            </div>
+            {% else %}
+            <div class="navLogReg">
+                <ul class="optionList">
+                    <li class="optionItem">
+                        <a href="/login" class="link">LOGIN</a>
+                    </li>
+
+                    <li class="optionItem">
+                        <a href="/register" class="link">REGISTER</a>
+                    </li>
+                </ul>
+            </div>
+            {%endif%}
+        </div>
+            {% block content%}
+            {% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../static/base.js"></script>
+    <script type="text/javascript">navPicture();</script>
+</body>
+
+</html>

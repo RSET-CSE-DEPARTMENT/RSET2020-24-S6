@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Page</title>
+  <link rel="stylesheet" type="text/css" href="..\static\register.css">
+</head>
+<body>
+  <div class="container">
+    <form>
+      <h2>Sign up</h2>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirmpass" placeholder="Confirm Password" required>
+      <button type="submit" id="signup-btn">Sign Up</button>
+      <p>Already have an account? <a href="/login">Sign in</a></p>
+    </form>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // Function to handle sign up button click
+    function handleSignUp() {
+      // Retrieve email and password input values
+      var username = document.getElementById("username").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmpass = document.getElementById("confirmpass").value;
+
+      if (username.length < 5) {
+        alert('Username must be at least 5 characters long');
+        return false;
+      }
+
+      if (!isValidEmail(email)) {
+        alert('Please enter a valid email address');
+        return false;
+      }
+
+      if (password.length < 5) {
+        alert('Password must be at least 5 characters long');
+        return false;
+      }
+
+      if (password !== confirmpass) {
+        alert('Password and Confirm Password do not match');
+        return false;
+      }
+
+      // Prevent the form from submitting
+      event.preventDefault();
+
+      // create a JSON object
+      data = {username : username, email : email, password : password, confirmpass : confirmpass}
+
+      // Check details availability
+      async function sendUserDetails() {
+      try {
+        const response = await axios.post('/register', data);
+        if (response.data === "Success") {
+          console.log("Success")
+          window.location = "/login"
+        }
+        else if (response.data === "email")
+        {
+          alert('Email already registered');
+        }
+      } catch (error) {
+        console.error('Error signing up:', error);
+        alert('Error signing up. Please try again later.');
+      }
+    }
+
+    sendUserDetails();
+
+    }
+    function isValidEmail(email) {
+      // A simple regular expression to validate email format
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+    // Add event listeners to the buttons
+    document.getElementById("signup-btn").addEventListener("click", handleSignUp);
+  </script>
+</body>
+</html>

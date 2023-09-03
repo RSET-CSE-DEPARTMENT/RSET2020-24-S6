@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block styles %}
+<link rel="stylesheet" href="../static/saved.css" />
+{% endblock %} {% block content%}
+<div class="pageContent">
+	<div class="pageContentBox">
+		<div class="searchOptions">
+			<div class="searchBox">
+				<input
+					class="searchBoxText"
+					id="searchTextbox"
+					placeholder="Enter search terms..."
+				/>
+				<button class="btn" id="searchButton">Search</button>
+			</div>
+			<span class="label">Select Categories: </span>
+			<div class="save-tags" id="save-tags">
+				<div class="dropdown">
+					<button class="drop-btn">+</button>
+					<div class="drop-content">
+						<a onclick='mytags("Entertainment")'>Entertainment</a>
+						<a onclick='mytags("Food")'>Food</a>
+						<a onclick='mytags("News")'>News</a>
+						<a onclick='mytags("Sports")'>Sports</a>
+						<a onclick='mytags("World")'>World</a>
+						<a onclick='mytags("Technical")'>Technical</a>
+						<a onclick='mytags("Technology")'>Technology</a>
+						<a onclick='mytags("Climate")'>Climate</a>
+						<a onclick='mytags("Speech")'>Speech</a>
+					</div>
+				</div>
+				<div class="taglist" id="_tag_"></div>
+			</div>
+			<div class="dateBox">
+				<div class="label">From date:</div>
+				<input type="date" class="dateInput" id="searchDate" />
+			</div>
+		</div>
+		<div class="summaryList" id="summaryList"></div>
+	</div>
+	<div class="pageContentBox right">
+		<div class="summaryText summaryTitle" id="summaryTitle"></div>
+		<div class="summaryText summaryTags">
+			<div class="taglist" id="summaryTags">
+			</div>
+		</div>
+		<div class="summaryText summaryTextContent" id="summaryText"></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="/static/saved.js"></script>
+	<script type="text/javascript">
+		getSummaries();
+	</script>
+</div>
+{% endblock %}

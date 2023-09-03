@@ -1,0 +1,286 @@
+.pageContent {
+	display: flex;
+	width: 100vw;
+	height: calc(100vh - 120px);
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #001729;
+}
+
+.pageContentBox {
+	display: flex;
+	height: calc(100vh - 120px - 20px);
+	width: calc(50vw - 10px);
+	border-radius: 15px;
+	/* background-color: #89c2d9; */
+	background-color: #e7ecef;
+	align-items:center;
+	justify-items: center;
+    justify-content: space-evenly;
+	flex-direction: column;
+}
+
+.searchOptions{
+    display: flex;
+    flex-direction: column;
+    height: calc(40vh);
+    width: calc(50vw - 50px);
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.label {
+    margin-top: 20px;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 24px;
+	color: black;
+}
+
+.searchBox{
+    display: flex;
+    width: calc(50vw - 50px);
+    justify-content: space-evenly;
+}
+
+.searchBoxText{
+    height: 30px;
+    width: 30vw;
+    padding: 10px;
+    background-color: lightgray;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: "Josefin Sans", sans-serif;
+	font-size: 24px;
+	color: black;
+}
+
+.btn{
+    display: flex;
+	height: 50px;
+    width: 10vw;
+    background-color: lightgray;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 26px;
+	font-weight: 300;
+	border: none;
+	cursor: pointer;
+	background-color: #014f86;
+}
+
+.btn:hover{
+	background-color: #012a4a;
+}
+
+.save-tags {
+	display: flex;
+	margin-top: 5px;
+}
+
+.dropdown {
+	display: inline-block;
+}
+
+.drop-btn {
+	height: 50px;
+	width: 50px;
+	border: none;
+	border-radius: 50%;
+	background-color: #61a5c2;
+	color: white;
+	font-size: 40px;
+	cursor: pointer;
+}
+
+.drop-content {
+	display: none;
+	border-radius: 10px;
+	position: absolute;
+	background-color: lightgray;
+	min-width: 200px;
+	box-shadow: 2px 2px 5px rgba(169, 169, 169, 0.682);
+}
+
+.dropdown:hover .drop-content {
+	display: block;
+}
+
+.dropdown a {
+	display: block;
+	height: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	color: black;
+	text-decoration: none;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 16px;
+}
+
+.dropdown:hover .drop-btn {
+	background-color: #2a6f97;
+}
+.dropdown a:hover {
+	background-color: darkgray;
+}
+
+.taglist {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y:auto;
+	margin-left: 10px;
+}
+
+.tags {
+	height: 20px;
+	margin: 3px;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	border: none;
+	cursor: pointer;
+	background-color: #4692c7;
+}
+
+.tags:hover{
+    background-color: #cccccc;
+}
+
+.dateBox{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dateInput{
+    display: flex;
+    height: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 300px;
+    background-color: lightgray;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: "Josefin Sans", sans-serif;
+	font-size: 18px;
+}
+
+.summaryList{
+    display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+    height: calc(30vh);
+    width: calc(50vw - 50px);
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+.summaryListItem{
+    display: flex;
+    height: 30px;
+	padding: 10px;
+	margin-top: 5px;
+	border-radius: 15px;
+	align-items: center;
+	justify-content: space-between;
+    background-color:#4692c7;
+    color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.name{
+	display: flex;
+	flex: 3;
+}
+
+.time{
+	display: flex;
+	flex: 3;
+}
+
+.summaryDeletebutton{
+	display: flex;
+	flex: 1;
+}
+
+.right{
+    justify-content: space-evenly;
+}
+
+.summaryText {
+	display: flex;
+	justify-self: center;
+	overflow-y: auto;
+	width: calc(50vw - 50px);
+	padding: 10px;
+	border-radius: 10px;
+	background-color: white;
+	color: #001729;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 20px;
+}
+
+.summaryTitle{
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+}
+
+.summaryTags{
+	height: 30px;
+	justify-content: center;
+}
+
+.summaryTagItem{
+	height: 10px;
+	margin: 3px;
+	padding: 5px;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	border: none;
+	background-color: #4692c7;
+}
+
+.summaryTextContent{
+	height: calc(55vh);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background-color: lightgray;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: darkgray;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: gray;
+}

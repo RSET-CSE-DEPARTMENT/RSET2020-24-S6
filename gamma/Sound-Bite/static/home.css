@@ -1,0 +1,231 @@
+.pageContent {
+	display: flex;
+	width: 100vw;
+	height: calc(100vh - 120px);
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #001729;
+}
+
+.pageContentBox {
+	display: flex;
+	height: calc(100vh - 120px - 20px);
+	width: calc(50vw - 10px);
+	border-radius: 15px;
+	/* background-color: #89c2d9; */
+	background-color: #e7ecef;
+	align-items:center;
+	justify-items: center;
+	flex-direction: column;
+}
+
+.rightContent{
+	justify-content: space-evenly;
+}
+
+.recorderTitle {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 40px;
+	font-weight: 400;
+	margin-top: 20px;
+	margin-left: 10px;
+	color: #001729;
+}
+
+.controls {
+	display: flex;
+	width: calc(50vw - 30px);
+	margin: 10px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.btn {
+	display: flex;
+	height: 60px;
+	width: 15vw;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 26px;
+	font-weight: 300;
+	border: none;
+	cursor: pointer;
+	background-color: #014f86;
+}
+
+.btn:hover,
+.btn:focus {
+	outline: none;
+	background: #013a63;
+}
+
+.btn:disabled {
+	pointer-events: none;
+	background: lightgray;
+}
+
+.sampleRate {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	margin-top: 5px;
+	color: #001729;
+}
+
+.recListTitle {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 34px;
+	font-weight: 400;
+	margin-top: 10px;
+	margin-left: 10px;
+	color: #001729;
+}
+
+.recListWrapper {
+	display: flex;
+	overflow-y: auto;
+	width: calc(50vw - 30px);
+	justify-content: center;
+}
+
+.recList {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.recListItem {
+	display: flex;
+	flex:1;
+	flex-wrap: wrap;
+	align-items: center;	
+	justify-content: space-evenly;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 5px;
+	background-color: #013a63;
+}
+
+.recAudio{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.recLinks{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 20vw;
+}
+
+.recDownLink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: 9vw;
+	border-radius: 5px;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+	background-color: #2a6f97;
+}
+
+.recDownLink:hover {
+	background-color: #61a5c2;
+}
+
+.recUploadLink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: 9vw;
+	border-radius: 5px;
+	border: none;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #2a6f97;
+	color: white;
+}
+
+.recUploadLink:hover {
+	outline: none;
+	background-color: #61a5c2;
+}
+
+.recUploadLink:disabled {
+	pointer-events: none;
+	background: lightgray;
+}
+
+.summaryText {
+	display: flex;
+	justify-self: center;
+	overflow-y: auto;
+	height: calc(35vh - 20px);
+	width: calc(50vw - 50px);
+	/* margin-top: 20px; */
+	padding: 10px;
+	border-radius: 10px;
+	background-color: white;
+	color: #001729;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 20px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background-color: lightgray;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: darkgray;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: gray;
+}
+
+
+.saveBtn {
+	display: flex;
+	align-self: center;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: 200px;
+	border: none;
+	border-radius: 5px;
+	background-color: #014f86;
+	text-decoration: none;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.saveBtn:hover {
+	outline: none;
+	background: #013a63;
+}
+
+.saveBtn:disabled {
+	pointer-events: none;
+	background: lightgray;
+	color: gray;
+}

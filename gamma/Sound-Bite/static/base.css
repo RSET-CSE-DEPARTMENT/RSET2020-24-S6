@@ -1,0 +1,120 @@
+body {
+	margin: 0;
+	background-color: #001729;
+}
+
+.pageContainerBase {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	background-color: #61a5c2;
+	color: white;
+}
+
+.logo {
+	display: flex;
+	position: sticky;
+	top: 0;
+	width: 100vw;
+	height: 60px;
+	background-color: #013a63;
+	align-items: center;
+	justify-content: center;
+}
+
+.logoIcon {
+	font-size: 30px;
+	margin-right: 20px;
+}
+
+.logoText {
+	font-family: 'Carter One', cursive;
+	font-size: 30px;
+}
+
+.navbar {
+	display: flex;
+	width: 100vw;
+	height: 60px;
+	background-color: #012a4a;
+}
+
+.navOptions {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.optionList {
+	display: flex;
+	padding: 0;
+	list-style: none;
+	justify-content: center;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 22px;
+	font-weight: 200;
+}
+
+.link {
+	text-decoration: none;
+	color: white;
+}
+
+.optionItem {
+	display: flex;
+	margin-right: 50px;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.navSearch {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.navProfile {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	flex: 1;
+}
+
+.profilePic{
+	width: 50px;
+	height:50px;
+	border-radius: 50%;
+	object-fit:cover;
+	cursor:pointer;
+	margin-right: 10px;
+}
+
+.profileName{
+	display: flex;
+	margin-right:30px;
+	text-decoration: none;
+	color: white;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.navLogout{
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+	justify-content: center;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.navLogReg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
