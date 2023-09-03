@@ -16,7 +16,7 @@ To deploy this project run
   python Log.py
 ```
 
+![Gif](https://github.com/Rahul6111/RSET2020-24-S6/assets/95371610/fec61cf9-e077-4327-84c0-8f49ec8e556c)
 
-https://github.com/Rahul6111/RSET2020-24-S6/assets/95371610/6fb5b8d5-d4b0-4ab7-bc32-bdb4998f1642
 
 
