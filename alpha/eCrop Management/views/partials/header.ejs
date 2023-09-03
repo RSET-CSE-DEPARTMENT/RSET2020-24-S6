@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Title from variable passed-->
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Gauge JS-->
+    <script src="https://cdn.jsdelivr.net/npm/raphael"></script>
+    <script src="https://cdn.jsdelivr.net/npm/justgage"></script>
+    <link rel="icon" type="image/png" href="img/microp_logo.png">
+    <!--Google font importing-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--Bootstrap CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/market.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); </style>
+    <script src="https://kit.fontawesome.com/a23cc9aee3.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/home_style.css">
+  <style>
+    /* Styles for the popup */
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .popup-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+  <!-- header section starts -->
+  <header class="header">
+
+    <a href="/dashboard" class="logo">
+        <img src="img/name.png" alt="dashboard">
+    </a>
+
+    <nav class="navbar">
+        <div id="close" class="fas fa-times"></div>
+        <a class="nav_item" href="marketplace" >MarketPlace</a>
+        <a class="nav_item" href="login.html" >Log Out</a>
+    </nav>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    </header>
+    <!-- header section ends -->
+
+
+    <!-- GSAP CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+    let navbar = document.querySelector('.header .navbar')
+
+    document.querySelector('#menu').onclick = () =>{
+    navbar.classList.add('active');
+    }
+
+    document.querySelector('#close').onclick = () =>{
+    navbar.classList.remove('active');
+    }
+
+    // mousemove home img
+    document.addEventListener('mousemove', move);
+    function move(e){
+    this.querySelectorAll('.move').forEach(layer =>{
+    const speed = layer.getAttribute('data-speed')
+    const x = (window.innerWidth - e.pageX*speed)/120
+    const y = (window.innerWidth - e.pageY*speed)/120
+    layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+    }
+
+    gsap.from('.logo', {opacity: 0, duration: 1, delay: 0.2, y:10})
+    gsap.from('.navbar .nav_item', {opacity: 0, duration: 1, delay: 1, y:30, stagger: 0.2})
+
+    gsap.from('.title', {opacity: 0, duration: 1, delay: 0.5, y:30})
+    gsap.from('.description', {opacity: 0, duration: 1, delay: 0.8, y:30})
+    gsap.from('.btn', {opacity: 0, duration: 1, delay: 0.3, y:30})
+    gsap.from('.image', {opacity: 0, duration: 1, delay: 0.6, y:30})
+
+    </script>
+
+      

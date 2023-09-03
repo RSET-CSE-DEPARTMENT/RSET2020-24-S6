@@ -1,0 +1,142 @@
+html * {
+    font-family: 'Poppins', sans-serif;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 20px;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+  .grid-item {
+    text-align: center;
+    border: 1px solid #ccc; /* Outline for each grid item */
+    padding: 10px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Bootstrap tweaks */
+  
+  .card {
+    border-color:rgb(164, 190, 123);
+    border-style:solid;
+    border-width: 0.15em;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+  }
+  
+  .list-group-horizontal > .list-group-item {
+    border: none;
+  }
+  
+  #info-modal-img {
+    width: 100%;
+  }
+  
+  .table {
+    margin-bottom: 0;
+  }
+  
+  .spacing {
+    height: 1.5em;
+  }
+  
+  .bid {
+    background-color: #285430;
+  }
+  
+  .bid:hover {
+    background-color: blanchedalmond;
+    outline: none !important;
+  }
+  
+  .info {
+    background-color: rgb(164, 190, 123);
+  }
+  
+  .navmod {
+    background-color: #285430 !important;
+  }
+  
+  .roundy {
+    border-radius: 20%;
+  }
+  
+  .navlink {
+    color: white;
+    background-color: #E5D9B6;
+    text-decoration: none;
+    padding: 0.6em;
+  }
+  
+  .navlink:hover {
+    color:rgb(164, 190, 123);
+  }
+  
+  #footer{
+    padding: 7% -5%;
+    text-align: center;
+  }
+  .social-icon{
+    margin: 20px 10px;
+  }
+  .bi{
+    font-size: 3.5rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 5em;
+  }

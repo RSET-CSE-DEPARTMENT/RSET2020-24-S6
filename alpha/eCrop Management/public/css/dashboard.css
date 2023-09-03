@@ -1,0 +1,362 @@
+body{
+    font-family: 'Poppins' , sans-serif;
+    height: 100vh;
+  }
+  .sensor-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    transition: box-shadow 0.3s;
+    transform: scale(0.8);
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .sensor-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sensor-card h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .sensor-values p {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .sensor-values p span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sensor-card {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 5px;
+    transition: box-shadow 0.3s;
+  }
+  .chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px; /* Adjust the max-width as per your preference */
+    margin: 0 auto;
+  }
+  
+  .chart-item {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .sensor-values {
+    margin-bottom: 20px;
+  }
+  
+  #refresh-button {
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;;
+  }
+  
+  
+  #refresh-button:hover {
+    background-color: #3276b1;
+  }
+  
+  #title{
+    background-color: #285430;
+    color: #E5D9B6;
+    height: 6em;
+  
+  }
+  .sensor-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .sensor-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sensor-card h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .sensor-values p {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .sensor-values p span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card{
+    border-radius: 15px;
+    border: 2px solid #000;
+  }
+  .sensor-card {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    transition: box-shadow 0.3s;
+  }
+  
+  
+  .sensor-values {
+    margin-bottom: 20px;
+  }
+  
+  #refresh-button {
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  
+  #refresh-button:hover {
+    background-color: #3276b1;
+  }
+  .token{
+    margin-top: 10px;
+  }
+  
+  .abc {
+   margin-right: 230em;
+  }
+  .company-name {
+    font-family: "Poppins";
+    text-align: center;
+  }
+  
+  .new{
+   z-index: -1;
+  }
+  h1,h2,h3{
+    font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  p{
+    color: grey;
+  }
+  .container-fluid{
+    padding: 1% 2% 2%;
+  }
+  /* navbar */
+  .navbar{
+   font-family: "Poppins", sans serif;
+      margin-top: -200;
+    padding:0 0 2.5rem;
+  }
+  
+  .navbar-brand{
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .nav-item{
+    padding: 0 18px;
+  }
+  .nav-link{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    background-color:#285430;
+  }
+  /* button */
+  .Download-button{
+  margin: 5% 3% 5% 0;
+  }
+  /* titleimage */
+  .title-image{
+    width: 100%;
+  z-index: 0;
+  
+  right: 22%;
+  }
+  
+  .title-image1{
+    width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: auto;
+  }
+  /* features */
+  #features{
+    padding: 7% 15%;
+    background-color: #E5D9B6;
+    position: relative;
+    z-index: 1;
+  }
+  .feature-box{
+    text-align: center;
+    padding: 5%;
+  }
+  .icon{
+    color: #285430;
+  margin-bottom: 1rem;
+  
+  }
+  .icon:hover{
+    color: #5F8D4E;
+  }
+  /* testimonial */
+  #testimonials{
+  
+    text-align: center;
+    background-color: #E5D9B6;
+    color: black;
+  }
+  .carousel-item{
+      padding: 7% 15%;
+  }
+  .testimonial-image{
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+  #press{
+    text-align: center;
+    background-color: #E5D9B6;
+    padding-bottom: 3%;
+  }
+  .press-logo{
+    width: 15%;
+    margin: 20px 20px 50px;
+  }
+  /* pricing */
+  #pricing{
+    padding: 100px;
+    text-align: center;
+  }
+  .pricing-coloum{
+    padding: 3% 2%;
+  }
+  
+  /* calltoaction */
+  #cta{
+    text-align: center;
+    background-color: #E5D9B6;
+    color: black;
+    padding: 1% 0%;
+    font-family: "Montserrat-Bold";
+  font-weight: bold;
+    font-size: 3.5rem;
+  }
+  .la{
+    padding: 2% 15% 0;
+  }
+  /* footer */
+  #footer{
+    padding: 7% -5%;
+    text-align: center;
+  }
+  .social-icon{
+    margin: 20px 10px;
+  }
+  .bi{
+    font-size: 3.5rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 5em;
+  }  
+  .show {
+    max-height: 50px !important;
+  }
+
+  @media (max-width: 991px) {
+    #title {
+      text-align: center;
+    }
+  
+    .title-image {
+      position: static;
+      transform: rotate(0);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .sensor-card {
+      width: 90%;
+      margin: 10px auto;
+    }
+  
+    .card-container {
+      flex-wrap: wrap;
+    }
+  
+    .button-container {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .sensor-card {
+      width: 100%;
+      margin: 10px auto;
+    }
+  

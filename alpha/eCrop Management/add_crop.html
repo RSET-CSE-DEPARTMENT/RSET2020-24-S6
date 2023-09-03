@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Title-->
+    <title>Microp Home</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="img/microp_logo.png">
+
+    <!--Importing Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--Bootstrap CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a23cc9aee3.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/home_style.css">
+</head>
+<body>
+    <!--Header starts-->
+    <header class="header">
+
+        <a href="/" class="logo">
+            <img src="img/name.png" alt="microp">
+        </a>
+        
+        <!--Navbar starts-->
+        <nav class="navbar">
+            <div id="close" class="fas fa-times"></div>
+            <a class="nav_item" href="marketplace" >MarketPlace</a>
+            <a class="nav_item" href="login.html" >Log Out</a>
+        </nav>
+        <!--Navbar ends-->
+    
+        <div id="menu" class="fas fa-bars"></div>
+    </header>
+    <!--Header ends-->
+
+    <style>
+        /* Styles for screens with a maximum width of 600px */
+        @media screen and (max-width: 600px) {
+            .cust {
+                height: 60vh !important; /* Adjust the height as needed */
+            }
+            
+            .custom-card-size {
+                width: 100% !important; /* Adjust the width as needed */
+                height: 350px !important; /* Adjust the height as needed */
+            }
+    
+            .custom-input-size {
+                font-size: 14px !important ; /* Adjust the font size as needed */
+                padding: 8px !important ; /* Adjust the padding as needed */
+            }
+    
+            .custom-button-size {
+                font-size: 14px !important; /* Adjust the font size as needed */
+                padding: 8px 16px !important; /* Adjust the padding as needed */
+            }
+    
+            .custom-label-size {
+                font-size: 16px !important; /* Adjust the font size as needed */
+            }
+        }
+    </style>
+    
+    <style>
+        .cust {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+    
+        .custom-card-size {
+            width: 800px; /* Adjust the width as needed */
+            height: 550px; /* Adjust the height as needed */
+        }
+    
+        .custom-input-size {
+            font-size: 18px; /* Adjust the font size as needed */
+            padding: 10px; /* Adjust the padding as needed */
+        }
+    
+        .custom-button-size {
+            font-size: 18px; /* Adjust the font size as needed */
+            padding: 10px 20px; /* Adjust the padding as needed */
+        }
+    
+        .custom-label-size {
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+        /* Added CSS to center-align the content within the col-sm-12 */
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+
+    <!--Form input-->
+    <div class="cust container mt-5">
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6 center-content">
+                <h1>Add Crop to Marketplace</h1>
+                <div class="card custom-card-size">
+                    <div class="card-body">
+                        <!-- Makes POST request to /register route -->
+                        <form action="/add_crop.html" method="POST">
+                            <!--Drop down for crop-->
+                            <div class="form-group">
+                                <label for="crops" class="custom-label-size">Choose a crop:</label>
+                                <select name="crops" id="crops" class="custom-input-size">
+                                    <option value="tomato" name="tomato">Tomato</option>
+                                    <option value="ladys_finger" name="ladys_finger">Ladys Finger</option>
+                                    <option value="chilli" name="chilli">Chilli</option>
+                                    <option value="lettuce" name="lettuce">Lettuce</option>
+                                </select>
+                            </div>
+
+                            <!--Quantity-->
+                            <div class="form-group">
+                                <label for="quantity" class="custom-label-size">Quantity in Kg</label>
+                                <input type="text" class="form-control custom-input-size" name="quantity" required>
+                            </div>
+
+                            <!--Price-->
+                            <div class="form-group">
+                                <label for="price" class="custom-label-size">Price(Per Kg)</label>
+                                <input type="number" class="form-control custom-input-size" name="price" required>
+                            </div>
+
+                            <!--Address-->
+                            <div class="form-group">
+                                <label for="address" class="custom-label-size">Address</label><br>
+                                <textarea name="address" rows="4" cols="50" class="form-control custom-input-size" required></textarea>
+                                <!--input type="text" class="form-control custom-input-size" name="address"-->
+                            </div>
+                            <button type="submit" class="btn btn-dark form-control custom-button-size submit-btn">ADD</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer begin-->
+    <footer id="footer">
+        <i class="social-icon fa-brands fa-facebook"></i>
+        <i class="social-icon fa-brands fa-twitter"></i>
+        <i class="social-icon fa-brands fa-instagram"></i>
+        <i class="social-icon fa-solid fa-envelope"></i>
+        <p>© Copyright zenith</p>
+    </footer>
+    <!-- Footer end -->
+
+    <script src="index.js"></script>
+    <script src="//code.tidio.co/an2yav56ptnhnpl1t1pikgrqfbakg3jo.js" async></script>
+
+    <!-- GSAP CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+    let navbar = document.querySelector('.header .navbar')
+
+    document.querySelector('#menu').onclick = () =>{
+    navbar.classList.add('active');
+    }
+
+    document.querySelector('#close').onclick = () =>{
+    navbar.classList.remove('active');
+    }
+
+    // mousemove home img
+    document.addEventListener('mousemove', move);
+    function move(e){
+    this.querySelectorAll('.move').forEach(layer =>{
+    const speed = layer.getAttribute('data-speed')
+    const x = (window.innerWidth - e.pageX*speed)/120
+    const y = (window.innerWidth - e.pageY*speed)/120
+    layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+    }
+
+    gsap.from('.logo', {opacity: 0, duration: 1, delay: 0.2, y:10})
+    gsap.from('.navbar .nav_item', {opacity: 0, duration: 1, delay: 1, y:30, stagger: 0.2})
+    gsap.from('.title', {opacity: 0, duration: 1, delay: 0.5, y:30})
+    gsap.from('.description', {opacity: 0, duration: 1, delay: 0.8, y:30})
+    gsap.from('.btn', {opacity: 0, duration: 1, delay: 0.3, y:30})
+    gsap.from('.image', {opacity: 0, duration: 1, delay: 0.6, y:30})
+
+    </script>
+</body>
+</html>

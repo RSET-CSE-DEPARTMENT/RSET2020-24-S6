@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Title-->
+  <title>Plant Leaf Diseases</title>
+
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="img/microp_logo.png">
+
+  <!--Importing google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!--Bootstrap CDN-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a23cc9aee3.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/home_style.css">
+</head>
+
+<body>
+  <!-- header section starts -->
+  <header class="header">
+
+    <a href="/" class="logo">
+        <img src="img/name.png" alt="microp">
+    </a>
+
+    <!--Navbar start-->
+    <nav class="navbar">
+        <div id="close" class="fas fa-times"></div>
+        <a class="nav_item" href="marketplace" >MarketPlace</a>
+        <a class="nav_item" href="login.html" >Log Out</a>
+    </nav>
+    <!--Navbar end-->
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <style>
+       /* Custom CSS to remove animations, transitions, and hover effects */
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    /* Disable hover effects for all elements */
+    *:hover,
+    *::before:hover,
+    *::after:hover {
+      animation: none !important;
+      transition: none !important;
+    }
+      /* Custom CSS to remove animations and transitions */
+      .disease-box,
+      .disease-box * {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+      }
+  
+      /* Disable any hover effects on the disease boxes (if present) */
+      .disease-box:hover {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+      }
+
+      #plant-diseases {
+      margin-top: 80px;
+    }
+
+    .disease-box {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .disease-box h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .disease-box p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    </style>
+
+</header>
+  <!-- header section ends -->
+
+  <!-- GSAP CDN Link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+  <script>
+      let navbar = document.querySelector('.header .navbar');
+    
+      document.querySelector('#menu').onclick = () => {
+        navbar.classList.add('active');
+      };
+    
+      document.querySelector('#close').onclick = () => {
+        navbar.classList.remove('active');
+      };
+    
+      // mousemove home img
+      document.addEventListener('mousemove', move);
+    
+      function move(e) {
+        this.querySelectorAll('.move').forEach((layer) => {
+          const speed = layer.getAttribute('data-speed');
+          const x = (window.innerWidth - e.pageX * speed) / 120;
+          const y = (window.innerWidth - e.pageY * speed) / 120;
+          layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+      }
+    
+      gsap.from('.logo', { opacity: 0, duration: 1, delay: 0.6, y: 10 });
+      gsap.from('.navbar .nav_item', {
+        opacity: 0,
+        duration: 1,
+        delay: 1.1,
+        y: 30,
+        stagger: 0.2,
+      });
+    
+      gsap.from('.title', { opacity: 0, duration: 1, delay: 0.6, y: 30 });
+      gsap.from('.description', { opacity: 0, duration: 1, delay: 0.8, y: 30 });
+      gsap.from('.btn', { opacity: 0, duration: 1, delay: 0.9, y: 30 });
+      gsap.from('.image', { opacity: 0, duration: 1, delay: 1, y: 30 });
+    </script>
+    <!-- GSAP CDN Link ends-->
+
+  <!-- Plant Diseases section starts -->
+  
+  <section id="plant-diseases" style="margin-top: 160px;">
+      <div class="row">
+        <div class="disease-box col-lg-4">
+          <h2>Soy Downy Mildew</h2>
+          <p><strong>Description: </strong>Soy Downy Mildew is a fungal disease that affects soybean plants. It is characterized by yellow
+            or pale green leaves, fuzzy growth on the undersides of leaves, and reduced plant vigor.</p>
+          <p><strong>Remedy:</strong>Apply a fungicide specifically designed for soybean downy mildew control. Ensure proper plant spacing
+            for good air circulation and remove infected plants to prevent the spread of the disease.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Soy Frogeye Leaf Spot</h2>
+          <p><strong>Description: </strong>Soy Frogeye Leaf Spot is a fungal disease that affects soybean plants. It causes circular, dark
+            spots with gray centers and reddish-brown borders on the leaves.</p>
+          <p><strong>Remedy:</strong> Apply a fungicide labeled for frogeye leaf spot control. Practice crop rotation and ensure good plant
+            nutrition and balanced soil pH.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Tomato Yellow Leaf Curl Virus</h2>
+          <p><strong>Description: </strong>Tomato Yellow Leaf Curl Virus is a viral disease that affects tomato plants. It causes upward curling
+            and yellowing of the leaves, stunted growth, and reduced fruit production.</p>
+          <p><strong>Remedy:</strong>Use resistant tomato varieties, control the whitefly population, and remove infected plants to prevent
+            the spread of the virus.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Maize Ravi Corn Rust</h2>
+          <p><strong>Description: </strong> Maize Ravi Corn Rust is a fungal disease that affects maize plants. It appears as reddish-brown to
+            orange pustules on the leaves, stems, and husks of the corn plants.</p>
+          <p><strong>Remedy:</strong>Plant resistant maize varieties, practice crop rotation, and apply fungicides to control the disease
+            spread.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Tomato Bacterial Spot</h2>
+          <p><strong>Description: </strong>: Tomato Bacterial Spot is a bacterial disease that affects tomato plants. It causes dark, water-soaked
+            lesions on the leaves, stems, and fruits.</p>
+          <p><strong>Remedy:</strong>Remove infected plants, practice crop rotation, and apply copper-based bactericides to control the
+            disease.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Tomato Septoria Leaf Spot</h2>
+          <p><strong>Description: </strong>: Tomato Septoria Leaf Spot is a fungal disease that affects tomato plants. It causes small, dark
+            spots with a light center on the leaves, which eventually develop into larger lesions.</p>
+          <p><strong>Remedy:</strong>Remove infected leaves, practice good plant hygiene, and apply fungicides to manage the disease.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Cabbage Healthy</h2>
+          <p><strong>Description: </strong>: Cabbage Healthy refers to a healthy cabbage plant without any visible diseases or disorders.</p>
+          <p><strong>Remedy:</strong>Maintain proper plant nutrition, practice crop rotation, and monitor for potential diseases.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Tomato Healthy</h2>
+          <p><strong>Description: </strong>: Tomato Healthy refers to a healthy tomato plant without any visible diseases or disorders.</p>
+          <p><strong>Remedy:</strong>Maintain proper plant care, provide adequate nutrition, and monitor for any signs of disease.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Maize Grey Leaf Spot</h2>
+          <p><strong>Description: </strong>: Maize Grey Leaf Spot is a fungal disease that affects maize plants. It causes gray to tan lesions with
+            dark borders on the leaves.</p>
+          <p><strong>Remedy:</strong>Plant resistant maize varieties, practice crop rotation, and apply fungicides to control the disease
+            spread.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Tomato Blight</h2>
+          <p><strong>Description: </strong>: Tomato Blight is a fungal disease that affects tomato plants. It causes wilting, browning of stems,
+            and dark lesions on leaves and fruits.</p>
+          <p><strong>Remedy:</strong>Remove infected plants, practice good sanitation, and apply fungicides to manage the disease.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Tomato Spider Mite</h2>
+          <p><strong>Description: </strong>: Tomato Spider Mite is a common pest that affects tomato plants. It causes yellow stippling on leaves,
+            webbing, and overall decline in plant health.</p>
+          <p><strong>Remedy:</strong>Control mite infestation with insecticidal soaps or miticides, improve plant vigor, and maintain proper
+            humidity.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Tomato Leaf Mold</h2>
+          <p><strong>Description: </strong>: Tomato Leaf Mold is a fungal disease that affects tomato plants. It causes yellowing and upward curling
+            of leaves, with fuzzy white to brown mold growth on the lower leaf surface.</p>
+          <p><strong>Remedy:</strong>Provide good air circulation, avoid overhead watering, and apply fungicides labeled for leaf mold control.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Maize Healthy</h2>
+          <p><strong>Description: </strong>: Maize Healthy refers to a healthy maize plant without any visible diseases or disorders.</p>
+          <p><strong>Remedy:</strong>Maintain proper plant care, provide adequate nutrition, and monitor for any signs of disease.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Maize Lethal Necrosis</h2>
+          <p><strong>Description: </strong>: Maize Lethal Necrosis is a viral disease that affects maize plants. It causes stunted growth, yellowing
+            and necrosis of leaves, and reduced grain yield.</p>
+          <p><strong>Remedy:</strong>Plant resistant maize varieties, control the insect vectors, and practice good field hygiene to prevent the
+            disease.</p>
+        </div>
+
+        <div class="disease-box col-lg-4">
+          <h2>Cabbage Black Rot</h2>
+          <p><strong>Description: </strong>: Cabbage Black Rot is a bacterial disease that affects cabbage plants. It causes yellowing, wilting, and
+            V-shaped lesions on leaves, along with blackening of veins.</p>
+          <p><strong>Remedy:</strong>Remove infected plants, practice crop rotation, and apply copper-based bactericides to manage the disease.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Plant Diseases section ends -->
+
+    <!--Footer begin-->
+    <footer id="footer">
+      <i class="social-icon fa-brands fa-facebook"></i>
+      <i class="social-icon fa-brands fa-twitter"></i>
+      <i class="social-icon fa-brands fa-instagram"></i>
+      <i class="social-icon fa-solid fa-envelope"></i>
+      <p>© 2023 Microp</p>
+    </footer>
+    <!--Footer ends-->
+
+</body>
+
+</html>
