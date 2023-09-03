@@ -9,7 +9,7 @@ character recognition (OCR) to extract the characters from the region of interes
 it to the database.
 Due to lack of dataset we have chosen an highway input instead of bridges.
 
-This project is a combined effort done by M S Rahul, Mathew Shaji, Harikrishnan R and Jai Mathew James of class CSBeta Batch 2024, Rajagiri School of Engineering and Technology, Kakkanad.
+This project is a combined effort done by M S Rahul, Mathew Shaji, Harikrishnan R and Jai Mathew James of class CSBeta Batch 2024, Rajagiri School of Engineering and Technology, Kakkanad. 
 
 ## Deployment
 
