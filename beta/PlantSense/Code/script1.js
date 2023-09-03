@@ -2,7 +2,7 @@
 
 // API endpoint and parameters
 const apiUrl = 'https://api.plant.id/v2/identify';
-const apiKey = 'aoVySy2B01qk0Nbh7OCnxQa4kL9939cQzd2lYEAwuXeWVlp9bS';
+const apiKey = 'Add your Plant.id API key here';
 
 
 // Function to identify a plant
