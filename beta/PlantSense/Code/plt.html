@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PLANT IDENTIFICATION</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>PLANT IDENTIFICATION</h1>
+ 
+  <div class="upload-container">
+    <input type="file" id="image-upload" accept="image/*">
+    <button id="submit-btn" onclick="identifyPlant()">Identify Plant</button>
+    <button id="capture-btn" onclick="takePhoto()">Take Photo</button>
+    <button id="view-medicines-btn" onclick="viewMedicines()">View Medicines</button>
+    <button id="get-plant-btn" onclick="getPlant()">Get Plant</button>
+  </div>
+ 
+  <div id="result-container">
+    <h2>RESULT</h2>
+    <div id="result"></div>
+  </div>
+ 
+  <div id="download-container">
+    <a id="download-link" download="captured_photo.jpg" style="display: none;">Download Captured Photo</a>
+  </div>
+
+
+  <video id="video" autoplay></video>
+
+
+  <script src="script1.js"></script> <!-- Include the external JavaScript file -->
+</body>
+</html>
+

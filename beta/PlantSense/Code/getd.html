@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buy Plant @</title>
+    <link rel="stylesheet" type="text/css" href="styled.css">
+</head>
+<body>
+    <h1>Buy Plant @</h1>
+
+    <div class="result-container" id="result-container">
+        <p id="plant-info"></p>
+    </div>
+
+    <button onclick="goBack()">Back</button>
+
+    <script>
+        // Retrieve the identified plant name from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const identifiedPlant = urlParams.get('plant');
+
+        // Make an AJAX request to the server-side script to get the plant info
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Request successful
+                    const plantInfo = JSON.parse(xhr.responseText);
+                    displayPlantInfo(plantInfo);
+                } else {
+                    // Request failed
+                    console.error('Failed to get plant info.');
+                }
+            }
+        };
+
+        xhr.open('GET', `get_plant.php?name=${encodeURIComponent(identifiedPlant)}`);
+        xhr.send();
+
+        function displayPlantInfo(plantInfo) {
+            const resultContainer = document.getElementById('result-container');
+            const plantInfoParagraph = document.getElementById('plant-info');
+
+            if (plantInfo) {
+                // Display the retrieved plant information
+                plantInfoParagraph.textContent = `
+                Name: ${plantInfo.name}
+                link1: ${plantInfo.link1}
+                link2: ${plantInfo.link2}
+                link3: ${plantInfo.link3}
+                // Add more properties based on your database table columns
+                `;
+                resultContainer.style.display = 'block';
+            } else {
+                // Handle the case when no plant is found
+                plantInfoParagraph.textContent = 'No plant found.';
+                resultContainer.style.display = 'block';
+            }
+        }
+
+        function goBack() {
+            // Go back to plt.html when the back button is clicked
+            window.history.back();
+        }
+    </script>
+    
+</body>
+</html>

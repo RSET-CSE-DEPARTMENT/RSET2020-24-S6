@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant-SignUp</title>
+    <link rel="stylesheet" href="signup_style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="/index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class='bx bx-search-alt'></i></button>
+        </form>
+    </header>
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <h2 class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAp1JREFUWEetWFt27CAMEytrurKZrizZGT0mQGywwH3M1z1csIUsy6QpAciYf2zd2fqPSwnJT1xX/4IqctbZI0tAmCa9MSEhu+yymM9pjvYG9Mvfz9h1dx8APgB83RDkktFfiecwZJceQfrlODLwAnAM/91xEEBbAcjNSmBzn430FlErjsaQvv3ERE8pyc8IoT5pRMF3i3sM0esJva88shFBFt8zMMQPLkvDjkW7SfnfTkM1VcKJPOiko+Al4FWnNx8ATbHLgoj2HWc9uHNGewH47G1P6BXdnN5IcdJKwK8aRzxFymy7b41VAVLqHs7s2Gkgrip2032OZfkD804qVajG2ADNDSYJvFsWIAAuIB1ADtlAuyzxIQvIEeDkNzVQO+h33qosS59Nn0CWiypDsgcOIJ0DxxrMGRrGE+sUlZkW3ugYAVkwwWbalKnRcSG3DqtLDm4N6Knv0pM0ymV9Rhcz+ikzhJiYdLxux13XmSoySIPF1Pj2XaVKZsIIoF6qH3jSQ5UO5/97YsdM2UEa0klN+a8EvIMmGXx+pgvI1Z1tZk/UY9DhWbbyuPuO+mkb8Z5RgfVN7b6RX0B67yDEGq9Dc0tlfYhHfMTMh/vD6H7Mm7nlpb1Lxtti+KzYKHUJ2nTtY8tGnPS7rOyvI2TzubOpV8UoAu7jgR9Zf3XomSbByrAlzxVG8l2ieXgrTJZ15kNyQJuhrj17CbQk+kVAPtTVJG0la6AXOtSAlp0R67LYLuJD5TAHtBavEWxkspmiMU3Ub7D2SKM2Pzt4pAl4W1MNJSCrZL1LpsZ3aj6lm/YsAPkMlVV9+VVpfSNzOmtRDfMs6b3s38wR40YYEd0wiZM/WI3j7iHLT2bpCF9sGhOeMTKql+Y2PyHizxV79hsCsA0/SLEjJAAAAABJRU5ErkJggg=="/>
+                Plant Identification</h2>
+                <div class="text-sci">
+                <h2>Welcome! <br><span>To our website</span></h2>
+                <p>
+                    This website allows you to identify the plant and the medicines made from it.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="logreg-box">
+            <div class="form-box login">
+                <form id="signinForm">
+                    <h2>Sign In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox" id="checkbox">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn" name="sign_in"  >Sign In</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="signup.html" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Add the Firebase App, Realtime Database, and Authentication SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebaseui.js"></script>  
+    <script src="signin.js"></script>
+</body>
+</html>
