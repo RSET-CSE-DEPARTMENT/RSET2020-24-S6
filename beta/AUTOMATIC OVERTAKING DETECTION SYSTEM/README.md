@@ -17,4 +17,4 @@ To deploy this project run
 ```
 ## Demo
 
-![Demo](beta/AUTOMATIC OVERTAKING DETECTION SYSTEM/GIF/demo.mp4)
+![Demo](beta/AUTOMATIC OVERTAKING DETECTION SYSTEM/GIF/demo.gif)
