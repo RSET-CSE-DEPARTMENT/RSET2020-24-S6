@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>889503539449-af83k31rdbg860jrpnlpl2d4u4o6svd5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.889503539449-af83k31rdbg860jrpnlpl2d4u4o6svd5</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>889503539449-5dd9lobmp9pmacqps1k615l5sg1vmss4.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAK86mMg5MbsHBa9dfdvrjecBodSq449G4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>889503539449</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mycompany.turfbooking</string>
+	<key>PROJECT_ID</key>
+	<string>turfbooking-6f315</string>
+	<key>STORAGE_BUCKET</key>
+	<string>turfbooking-6f315.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:889503539449:ios:a41d73b7f938165a078228</string>
+</dict>
+</plist>

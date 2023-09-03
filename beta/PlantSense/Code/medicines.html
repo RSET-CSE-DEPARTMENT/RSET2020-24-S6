@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Medicines</title>
+  <link rel="stylesheet" type="text/css" href="stylem.css">
+  <style>
+    /* Center the content vertically and horizontally */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Add some spacing between elements */
+    h1, #medicines-list, #openai-response, button {
+      margin: 10px;
+    }
+
+    /* Styles for the OpenAI response container */
+    #openai-response-container {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      max-width: 80%; /* Limit the width of the response container */
+    }
+
+    /* Increase the font size of the identified plant text */
+    #identified-plant-text {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Medicines for Identified Plant</h1>
+  <!-- List the medicines here -->
+  <div id="medicines-list"></div>
+
+  <!-- Display the OpenAI response -->
+  <div id="openai-response-container">
+    <p id="openai-response"></p>
+  </div>
+
+  <!-- Add a back button to return to plt.html -->
+  <button onclick="goBack()">Back</button>
+
+  <script>
+    function goBack() {
+      // Go back to plt.html when the back button is clicked
+      window.history.back();
+    }
+
+    // Retrieve the identified plant name from the URL query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const identifiedPlant = urlParams.get('plant');
+
+    //const identifiedPlant = "Aloe vera";
+
+    // Display the identified plant name on the page
+    const plantElement = document.createElement('p');
+    plantElement.innerText = 'Identified plant: ' + identifiedPlant;
+    plantElement.id = 'identified-plant-text'; // Add an ID to the element
+    document.getElementById('medicines-list').appendChild(plantElement);
+
+    const openaiApiKey = "add your openaiApi key here";
+
+    function generateResponse(prompt) {
+      return fetch("https://api.openai.com/v1/engines/text-davinci-003/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${openaiApiKey}`,
+        },
+        body: JSON.stringify({
+          prompt: prompt,
+          max_tokens: 4000,
+          stop: null,
+          // temperature: 0.5,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => data.choices[0].text)
+        .catch((error) => console.error("Error:", error));
+    }
+
+    const prompt = identifiedPlant + " medicines";
+
+    generateResponse(prompt)
+      .then((response) => {
+        // Display the OpenAI response on the page
+        const openaiResponseElement = document.getElementById('openai-response');
+        openaiResponseElement.innerText = response;
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
+  </script>
+</body>
+</html>

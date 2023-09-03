@@ -1,0 +1,395 @@
+body{
+    font-family: 'Poppins' , sans-serif;
+    height: 100vh;
+  }
+  
+  #title{
+    background-color: #285430;
+    color: #E5D9B6;
+    height: 6em;
+  
+  }
+  .submit-btn{
+    margin-top: 10px;
+  }
+  .token{
+    margin-top: 10px;
+  }
+  
+  .abc {
+   margin-right: 230em;
+  }
+  .company-name {
+    font-family: "Poppins";
+    text-align: center;
+  }
+  
+  .new{
+   z-index: -1;
+  }
+  h1,h2,h3{
+    font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  p{
+    color: grey;
+  }
+  .container-fluid{
+    padding: 1% 2% 7%;
+  }
+  /* navbar */
+  
+  /* button */
+  .Download-button{
+  margin: 5% 3% 5% 0;
+  }
+  /* titleimage */
+  .title-image{
+    width: 100%;
+  z-index: 0;
+  
+  right: 22%;
+  }
+  
+  .title-image1{
+    width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: auto;
+  }
+  /* features */
+  #features{
+    padding: 7% 15%;
+    background-color: #E5D9B6;
+    position: relative;
+    z-index: 1;
+  }
+  .feature-box{
+    text-align: center;
+    padding: 5%;
+  }
+  .icon{
+    color: #285430;
+  margin-bottom: 1rem;
+  
+  }
+  .icon:hover{
+    color: #5F8D4E;
+  }
+  /* testimonial */
+  #testimonials{
+  
+    text-align: center;
+    background-color: #E5D9B6;
+    color: black;
+  }
+  .carousel-item{
+      padding: 7% 15%;
+  }
+  .testimonial-image{
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+  #press{
+    text-align: center;
+    background-color: #E5D9B6;
+    padding-bottom: 3%;
+  }
+  .press-logo{
+    width: 15%;
+    margin: 20px 20px 50px;
+  }
+  /* pricing */
+  #pricing{
+    padding: 100px;
+    text-align: center;
+  }
+  .pricing-coloum{
+    padding: 3% 2%;
+  }
+  
+  /* calltoaction */
+  #cta{
+    text-align: center;
+    background-color: #E5D9B6;
+    color: black;
+    padding: 1% 0%;
+    font-family: "Montserrat-Bold";
+  font-weight: bold;
+    font-size: 3.5rem;
+  }
+  .la{
+    padding: 2% 15% 0;
+  }
+  select {
+    width: 200px; /* Set the desired width */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Style the dropdown arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 16px;
+  }
+
+  /* Style when the select tag is focused */
+  select:focus {
+    outline: none;
+    border-color: #4d90fe;
+    box-shadow: 0 0 5px rgba(77, 144, 254, 0.5);
+  }
+  /* footer */
+  #footer{
+    padding: 7% -5%;
+    text-align: center;
+  }
+  .social-icon{
+    margin: 20px 10px;
+  }
+  .bi{
+    font-size: 3.5rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 5em;
+  }
+  @media (max-width:991px) {
+  #title{
+    text-align: center;
+  }
+  
+    .title-image{
+      position: static;
+      transform: rotate(0);
+    }
+  }
+  
+  .show {
+    max-height: 50px !important;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+*{
+  font-family: 'Nunito',sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+section{
+  padding: 2rem 9%;
+}
+
+/* header */
+
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  z-index: 2;
+}
+
+.header .logo img{
+  height: 6rem;
+}
+
+.header .navbar #close{
+  display: none;
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #1B1C1E;
+}
+
+.header .navbar a{
+  font-size: 2rem;
+  margin-right: 2rem;
+  color: #1B1C1E;
+}
+
+.nav_item {
+  text-decoration: none; /* Remove underline */
+}
+
+.header .navbar a:hover{
+  color: #285430;
+}
+
+.header #menu{
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #1B1C1E;
+}
+
+/* ends */
+
+/* home */
+
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.home .content{
+  flex: 1 1 40rem;
+  padding-top: 6.5rem;
+}
+
+.home .content .title{
+  font-size: 6rem;
+  color: #1B1C1E;
+  text-transform: uppercase;
+}
+
+.home .content .title span{
+  text-transform: uppercase;
+  color: #285430;
+}
+
+.home .content .description{
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #1B1C1E;
+}
+
+.home .content .btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: #285430;
+  cursor: pointer;
+}
+
+.home .content .btn:hover{
+  letter-spacing: .2rem;
+}
+
+.home .image{
+  flex: 1 1 40rem;
+} 
+
+.home .image img{
+  width: 100%;
+}
+
+/* end */
+
+@media (max-width:991px){
+  html{
+    font-size: 55%;
+  }
+
+  .header{
+    padding: 2rem;
+  }
+
+  section{
+    padding: 2rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .header #menu{
+    display: inline-block;
+  }
+
+  .header .navbar{
+    position: fixed;
+    top: 0; right: -105%;
+    width: 30rem;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(50px);
+    transition: .5s;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    z-index: 1200;
+    text-decoration: none;
+  }
+
+  .header .navbar.active{
+    right: 0;
+  }
+
+  .header .navbar #close{
+    display: block;
+  }
+
+  .header .navbar a{
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+   
+  }
+
+  .row{
+    text-size-adjust: 20em;
+
+  }
+
+  .home .content{
+    padding-top: 9.5rem;
+  }
+
+  .home .image img{
+    width: 368px;
+  } 
+
+  .home .content .title{
+    font-size: 4rem;
+  }
+
+  .home .content .description{
+    font-size: 1.6rem;
+  }
+
+}
+
+@media (max-width:450px){
+  html{
+    font-size: 50%;
+  }
+}
