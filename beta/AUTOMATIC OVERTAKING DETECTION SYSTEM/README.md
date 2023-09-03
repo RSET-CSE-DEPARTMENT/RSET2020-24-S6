@@ -21,7 +21,7 @@ To deploy this project run
 
 ## Demonstration
 
-[![Sample Video](https://img.youtube.com/vi/8ecjzT61FY8/1.jpg)](https://youtu.be/8ecjzT61FY8)
+[![Sample Video](https://img.youtube.com/vi/8ecjzT61FY8/0.jpg)](https://youtu.be/8ecjzT61FY8)
 
 
 
