@@ -20,7 +20,10 @@ To deploy this project run
 ![Gif](https://github.com/Rahul6111/RSET2020-24-S6/assets/95371610/fec61cf9-e077-4327-84c0-8f49ec8e556c)
 
 ## Demonstration
-<iframe width="560" height="315" src="https://youtu.be/8ecjzT61FY8" frameborder="0" allowfullscreen></iframe>
+
+[![Sample Video](https://img.youtube.com/vi/ABC123/0.jpg)](https://youtu.be/8ecjzT61FY8)
+
+
 
 
 
