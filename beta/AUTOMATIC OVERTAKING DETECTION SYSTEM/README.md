@@ -17,4 +17,4 @@ To deploy this project run
 ```
 ## Demo
 
-https://youtu.be/OSPgyEr1r1U
+![Demo](beta/AUTOMATIC OVERTAKING DETECTION SYSTEM/GIF/demo.mp4)
