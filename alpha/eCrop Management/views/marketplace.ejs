@@ -1,0 +1,210 @@
+<%- include('partials/header', { title: 'marketplace' }) %>
+<!-- Popup -->
+<div id="myPopup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Enter New Price</h2>
+        <p>Please enter the new price:</p>
+        <input type="number" id="newPriceInput" placeholder="Enter new price">
+        <button id="submitPriceButton">Submit</button>
+    </div>
+</div>
+<!--Popup end-->
+<head>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+    
+        /* Popup Styling */
+        .popup {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: 999;
+        }
+    
+        .popup-content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    
+        .close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+        }
+    
+        /* Container and Grid Styling */
+        .container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px;
+        }
+    
+      .grid-item {
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    
+    /* Increase the text size for elements inside the container and grids */
+    .container h3,
+    .container p,
+    .grid-item p,
+    .grid-item button {
+      font-size: 18px;
+    }
+    
+    /* Increase the text size for the header inside the container */
+    .container h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    /* Increase the text size for the buttons inside the container */
+    .grid-item button {
+      font-size: 16px;
+    }
+    
+    /* ... (Rest of your CSS code) ... */
+    
+    /* Media Query for screens smaller than 768px */
+    @media only screen and (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* Media Query for screens smaller than 480px */
+    @media only screen and (max-width: 480px) {
+      .container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    
+    /* Additional Media Query for screens smaller than 320px */
+    @media only screen and (max-width: 320px) {
+      .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        margin-top: 40px;
+      }
+      .vh-80 {
+        padding-top: 60px;
+      }
+      .grid-item img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<section class="vh-100" style="background-color: white;">
+    <br><br><br><br><br><br>
+    <!--Create grid for each crop in database-->
+    <div class="container">
+        <% crops.forEach(function (crop) { %>
+        <div id="crop_<%= crop.quantity %>" class="grid-item">
+            <img src="../img/<%= crop.title %>.jpg" alt="Product Image" width="200" height="200">
+            <h3><%= crop.title %></h3>
+            <p id="price_<%= crop.quantity %>">Price: ₹ <%= crop.amount %></p>
+            <p id="remainingTime_<%= crop.quantity %>">Time Left: </p>
+            <button class="button bid-button" data-crop-id="<%= crop.quantity %>">Place Bid</button>
+        </div>
+        <% }) %>
+    </div>
+</section>
+
+<!-- Include footer partial -->
+<%- include('partials/footer') %>
+
+<script>
+    // Get the bid buttons, popup, and form elements
+    var bidButtons = document.getElementsByClassName("bid-button");
+    var popup = document.getElementById("myPopup");
+    var closeButton = popup.querySelector(".close");
+    var newPriceInput = document.getElementById("newPriceInput");
+    var submitPriceButton = document.getElementById("submitPriceButton");
+
+    var currentCropId; // Variable to store the ID of the currently selected crop
+
+    // Function to open the popup
+    function openPopup() {
+        currentCropId = this.dataset.cropId; // Store the current crop ID
+        popup.style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        popup.style.display = "none";
+    }
+
+    // Function to handle form submission
+    function submitPrice(event) {
+        event.preventDefault(); // Prevent form submission
+        var newPrice = newPriceInput.value;
+        if (newPrice < document.getElementById("price_" + currentCropId).textContent.split(" ")[1]) {
+            alert("New price must be greater than the current price!");
+            return;
+        }
+        var priceElement = document.getElementById("price_" + currentCropId);
+        priceElement.textContent = "Price: " + newPrice;
+        closePopup();
+    }
+
+    // Function to calculate and update remaining time every second
+    function updateRemainingTime() {
+        var currentTime = new Date().getTime();
+        <% crops.forEach(function (crop) { %>
+            var cropElement = document.getElementById("crop_<%= crop.quantity %>");
+            var remainingTimeElement = document.getElementById("remainingTime_<%= crop.quantity %>");
+            var endTime = new Date("<%= crop.endTime %>").getTime();
+            var remainingTime = endTime - currentTime;
+
+            if (remainingTime <= 0) {
+                cropElement.style.display = "none"; // Hide the completed auction
+            } else {
+                var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+                remainingTimeElement.textContent = "Time Left: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }
+        <% }) %>
+        setTimeout(updateRemainingTime, 1000); // Update remaining time every second
+    }
+
+    // Add click event listeners to each bid button
+    Array.from(bidButtons).forEach(function (button) {
+        button.addEventListener("click", openPopup);
+    });
+
+    // Add click event listener to the close button
+    closeButton.addEventListener("click", closePopup);
+
+    // Add click event listener to the submit button
+    submitPriceButton.addEventListener("click", submitPrice);
+
+    // Start updating the remaining time
+    updateRemainingTime();
+</script>
+</body>
+</html>

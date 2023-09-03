@@ -1,0 +1,421 @@
+<!--include header.ejs partial-->
+<%- include('partials/header',{title:'dashboard'}) %>
+
+  <section class="vh-60 cust" style="background-color: white;">
+    <div class="container py-5 h-2 d-flex justify-content-center align-items-center">
+
+      <div class="z-index-n1 d-flex-row-reverse justify-content-end align-items-center h-10">
+
+        <br><br><br>
+        <div class="card" style="border-radius: 15px; font-size: 20px; width: 600px;">
+
+          <div class="container-fluid">
+
+            <div class="card-body p-4">
+
+              <div class="d-flex text-black">
+
+                <div class="flex-shrink-0">
+                  <img src="img/user.svg"
+                    alt="Generic placeholder image" class="img-fluid"
+                    style="width: 120px; border-radius: 10px;">
+                </div>
+
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-1">zenith</h5>
+                  <p class="mb-2 pb-1" style="color: #2b2a2a;">User Id: </p>
+                  <div class="d-flex justify-content-start rounded-3 p-2 mb-2" style="background-color: #efefef;">
+                    <div>
+                      <p class="small text-muted mb-1">Flat No</p>
+                      <p class="mb-0">B41</p>
+                    </div>
+
+                    <div class="px-3">
+                      <p class="small text-muted mb-1">Plant Type</p>
+                      <p class="mb-0">Vegetables</p>
+                    </div>
+
+                    <div>
+                      <p class="small text-muted mb-1">No of Plants</p>
+                      <p class="mb-0">8</p>
+                    </div>
+                  </div>
+
+                  <button id="add-crop-button" class="btn btn-outline-primary me-1 flex-grow-1" style="font-size: 13px; padding: 10px 20px;">ADD CROP</button>
+                  <button id="scan-leaf-button" class="btn btn-outline-primary me-1 flex-grow-1" style="font-size: 13px; padding: 10px 20px;">SCAN LEAF</button>
+  
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+    <style>
+    @media (max-width: 576px) {
+      .card {
+        width: 100% !important;
+        padding: 10px !important;
+        font-size: 16px !important;
+      }
+    }
+  </style>
+  
+  </section>
+
+   <section class="vh-80 chart" style="background-color: white;">
+
+    <div class="card-container">
+      <!--Realtime Readings-->
+      <div class="sensor-card">
+        <!--Humidity card-->
+        <h3>Humidity</h3>
+        <div class="sensor-values">
+          <canvas id="humidity-gauge"></canvas>
+        </div>
+        <h2><%= readings.humidity%></h2>
+      </div>
+
+      <div class="sensor-card">
+        <!--Moisture card-->
+        <h3>Moisture</h3>
+        <div class="sensor-values">
+          <canvas id="moisture-gauge"></canvas>
+        </div>
+        <h2><%= readings.moisture%>%</h2>
+      </div>
+
+      <div class="sensor-card">
+        <!--Temperature card-->
+        <h3>Temperature</h3>
+        <div class="sensor-values">
+          <canvas id="temperature-gauge"></canvas>
+        </div>
+        <h2><%= readings.temperature%>°C</h2>
+      </div>
+
+    </div>
+
+    <section class="chart-container">
+    <!--Line graph-->
+      <div class="chart-item">
+        <!--Temperature line graph-->
+        <canvas id="temperature-chart"></canvas>
+      </div>
+
+      <div class="chart-item">
+        <!--Humidity line graph-->
+        <canvas id="humidity-chart"></canvas>
+      </div>
+
+      <div class="chart-item">
+        <!--Moisture line graph-->
+        <canvas id="moisture-chart"></canvas>
+      </div>
+
+    </section>
+    
+    <section class="vh-80 chart-container" style="background-color: white;">
+          <h3>Sensor Readings</h3>
+          <!--Combined line graph-->
+          <div class="chart-item">
+            <canvas id="sensor-chart"></canvas>
+          </div>
+
+    </section>
+
+  <div class="button-container">
+    <button id="refresh-button" class="btn btn-primary">Refresh</button>
+  </div>
+
+ </section>
+
+<!--include footer partial-->
+<%- include('partials/footer') %>
+
+  <!-- Add the following style and script at the bottom of the file -->
+  <style>
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    // Add event listeners to the buttons
+    const addCropButton = document.getElementById("add-crop-button");
+    addCropButton.addEventListener("click", function() {
+      // Redirect to add_crop.html
+      window.location.href = "/add_crop.html";
+    });
+
+    const scanLeafButton = document.getElementById("scan-leaf-button");
+    scanLeafButton.addEventListener("click", function() {
+      window.location.href = "/disease.html";
+    });
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
+  <script>
+    // Get the sensor readings from the server
+    const readings = {
+      humidity: <%= readings.humidity || 0 %>,
+      moisture: <%= readings.moisture || 0 %>,
+      temperature: <%= readings.temperature || 0 %>
+    };
+
+    // Create and initialize the gauges
+    const humidityGauge = new Gauge(document.getElementById("humidity-gauge")).setOptions({
+      angle: 0,
+      lineWidth: 0.2,
+      radiusScale: 1,
+      pointer: {
+        length: 0.6,
+        strokeWidth: 0.035,
+        color: "#000000"
+      },
+      staticZones: [
+        { strokeStyle: "#F03E3E", min: 0, max: 20 },
+        { strokeStyle: "#FFDD00", min: 20, max: 60 },
+        { strokeStyle: "#30B32D", min: 60, max: 100 }
+      ],
+      limitMax: false,
+      limitMin: false,
+      highDpiSupport: true
+    });
+    humidityGauge.animationSpeed = 32; // Set the animation speed
+    humidityGauge.set(readings.humidity); // Set the gauge value
+
+    const moistureGauge = new Gauge(document.getElementById("moisture-gauge")).setOptions({
+      angle: 0,
+      lineWidth: 0.2,
+      radiusScale: 1,
+      pointer: {
+        length: 0.6,
+        strokeWidth: 0.035,
+        color: "#000000"
+      },
+      staticZones: [
+        { strokeStyle: "#F03E3E", min: 0, max: 20 },
+        { strokeStyle: "#FFDD00", min: 20, max: 60 },
+        { strokeStyle: "#30B32D", min: 60, max: 100 }
+      ],
+      limitMax: false,
+      limitMin: false,
+      highDpiSupport: true
+    });
+    moistureGauge.animationSpeed = 32; // Set the animation speed
+    moistureGauge.set(readings.moisture); // Set the gauge value
+
+    const temperatureGauge = new Gauge(document.getElementById("temperature-gauge")).setOptions({
+      angle: 0,
+      lineWidth: 0.2,
+      radiusScale: 1,
+      pointer: {
+        length: 0.6,
+        strokeWidth: 0.035,
+        color: "#000000"
+      },
+      staticZones: [
+        { strokeStyle: "#F03E3E", min: 0, max: 20 },
+        { strokeStyle: "#FFDD00", min: 20, max: 60 },
+        { strokeStyle: "#30B32D", min: 60, max: 100 }
+      ],
+      limitMax: false,
+      limitMin: false,
+      highDpiSupport: true
+    });
+    temperatureGauge.animationSpeed = 32; // Set the animation speed
+    temperatureGauge.set(readings.temperature); // Set the gauge value
+
+    // Add event listener to the refresh button
+    const refreshButton = document.getElementById("refresh-button");
+    refreshButton.addEventListener("click", function() {
+      location.reload(); // Reload the page
+    });
+
+    const currentDate = new Date();
+
+    // Initialize an array to hold the labels
+    const chartLabels = [];
+
+    // Generate the labels for the past 7 days
+    for (let i = 6; i >= 0; i--) {
+      const date = new Date(currentDate);
+      date.setDate(date.getDate() - i);
+      const day = date.toLocaleDateString('en-US', { day: 'numeric' });
+      const month = date.toLocaleDateString('en-US', { month: 'short' });
+      chartLabels.push(`${month} ${day}`);
+    }
+    // Data for line charts
+    const temperatureChartData = {
+      labels: chartLabels,
+      datasets: [
+        {
+          label: "Temperature",
+          data: <%= JSON.stringify(temperature) %>,
+          borderColor: "rgba(255, 99, 132, 1)",
+          backgroundColor: "rgba(255, 99, 132, 0.2)",
+          fill: false,
+        },
+      ],
+    };
+
+    const humidityChartData = {
+      labels: chartLabels,
+      datasets: [
+        {
+          label: "Humidity",
+          data: <%= JSON.stringify(humidity) %>,
+          borderColor: "rgba(54, 162, 235, 1)",
+          backgroundColor: "rgba(54, 162, 235, 0.2)",
+          fill: false,
+        },
+      ],
+    };
+
+    const moistureChartData = {
+      labels: chartLabels,
+      datasets: [
+        {
+          label: "Moisture",
+          data: <%= JSON.stringify(moisture) %>,
+          borderColor: "rgba(75, 192, 192, 1)",
+          backgroundColor: "rgba(75, 192, 192, 0.2)",
+          fill: false,
+        },
+      ],
+    };
+
+    // Create the line charts
+    const temperatureChart = new Chart(document.getElementById("temperature-chart"), {
+      type: "line",
+      data: temperatureChartData,
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: "Day",
+            },
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: "Temperature",
+            },
+          },
+        },
+      },
+    });
+
+    const humidityChart = new Chart(document.getElementById("humidity-chart"), {
+      type: "line",
+      data: humidityChartData,
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: "Day",
+            },
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: "Humidity",
+            },
+          },
+        },
+      },
+    });
+
+    const moistureChart = new Chart(document.getElementById("moisture-chart"), {
+      type: "line",
+      data: moistureChartData,
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: "Day",
+            },
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: "Moisture",
+            },
+          },
+        },
+      },
+    });
+
+    //single chart
+    const sensorChart = new Chart(document.getElementById('sensor-chart'), {
+      type: 'line',
+      data: {
+        labels: chartLabels,
+        datasets: [
+          {
+            label: 'Temperature',
+            data: <%= JSON.stringify(temperature) %>,
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false
+          },
+          {
+            label: 'Humidity',
+            data: <%= JSON.stringify(humidity) %>,
+            borderColor: 'rgba(54, 162, 235, 1)',
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            fill: false
+          },
+          {
+            label: 'Moisture',
+            data: <%= JSON.stringify(moisture) %>,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            fill: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Day'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Value'
+            }
+          }
+        }
+      }
+    });
+
+  </script>
