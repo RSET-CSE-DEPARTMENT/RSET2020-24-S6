@@ -15,3 +15,6 @@ To deploy this project run
 ```bash
   python Log.py
 ```
+## Demo
+
+https://youtu.be/OSPgyEr1r1U
