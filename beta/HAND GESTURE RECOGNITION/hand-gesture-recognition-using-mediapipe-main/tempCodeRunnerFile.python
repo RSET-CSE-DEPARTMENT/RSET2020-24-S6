@@ -1,0 +1,6 @@
+import csv
+with open("fariz.csv",'w',newline='') as r:
+    fieldnames=['first name','last name']
+    writer=csv.Dictwriter(r,fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow({'first name'='fariz','last name'='p a'})
