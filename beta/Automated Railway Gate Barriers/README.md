@@ -1,0 +1,3 @@
+# Automatic Railway Gate Closing Barriers
+
+This projects helps in the automation of barriers present at various railway junctions. It checks for trains travelling between two stations and stores their arrival times and other details in a database. This database will be continuosly checked for the next train arriving at the railway crossing. At the appropriate time, a messasge will be sent to the gate closing module (In this case the arduino) to begin the gate closing procedure. Once the train passes, its entry from the database is deleted and we wait for the next train.
