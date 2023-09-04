@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "190696383052",
+    "project_id": "meditime-login-4403c",
+    "storage_bucket": "meditime-login-4403c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190696383052:android:e92ed081d30866421bcae9",
+        "android_client_info": {
+          "package_name": "com.example.MediTime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190696383052-cfdhrfprkctjonrehnnk1v3ucqtofe6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMBDz2Qo_J-fUk0UOw2Dz1WaKv_0aTalc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190696383052-cfdhrfprkctjonrehnnk1v3ucqtofe6a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "190696383052-539dosa72qhc20pmj96b7ju2ds4ngjdm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.medicineReminder"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190696383052:android:05a242af56e837aa1bcae9",
+        "android_client_info": {
+          "package_name": "com.example.medicine_reminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190696383052-cfdhrfprkctjonrehnnk1v3ucqtofe6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMBDz2Qo_J-fUk0UOw2Dz1WaKv_0aTalc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190696383052-cfdhrfprkctjonrehnnk1v3ucqtofe6a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "190696383052-539dosa72qhc20pmj96b7ju2ds4ngjdm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.medicineReminder"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
