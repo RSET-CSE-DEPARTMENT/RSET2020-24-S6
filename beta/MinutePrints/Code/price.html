@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Price Calculator</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <img class="image" src="./images/logo.jpg" alt="Printease" width="90" height="40">
+        <ul id="nav-bar">
+            <li >
+                <a href="#home">Home</a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h1>Price Calculator</h1>
+        </div>
+
+        <div class="price1">
+        <div>
+          <span class="decorated-text">Type of mode :</span></span><span id="mode1"></span>
+      </div>
+      
+        <div>
+            <span class="decorated-text">Type of color :</span><span id="color1"></span>
+        </div>
+        <div>
+            <span class="decorated-text">No. of pages  :</span><span id="pages1"></span>
+        </div>
+        <div>
+            <span class="decorated-text">No. of copies :</span><span id="copies1"></span>
+        </div>
+        <div>
+          <span class="decorated-text">Side :</span><span id="side1"></span>
+      </div>
+        <div>
+            <span class="decorated-text">Total amount :</span></span><span id="amount1"></span>
+        </div>
+
+      </div>
+        <div class="htag">
+            <h4 class="mode-heading">Mode of Payment</h4>
+            <div class="wrapper">
+              <div class="option">
+                <input class="input" type="radio" name="btn" value="Offline" checked="">
+                <div class="btn">
+                  <span class="span">Offline</span>
+                </div>
+              </div>
+              <div class="option">
+                <input class="input" type="radio" name="btn" value="Online">
+                <div class="btn">
+                  <span class="span">Online</span>
+                </div>  
+              </div>
+            </div>
+            <button class="shadow__btn1" onclick="updateDetails()">update details</button>
+          </div>
+
+        <button class="shadow__btn" id="submitButton" onclick="pay()">Submit</button>
+   
+    </div>
+</body>
+<script> 
+  /*document.getElementById('submitButton').addEventListener('click', function() {
+   var inputVal = document.getElementById('amount1').innerHTML;
+   var encodedValue = encodeURIComponent(inputVal);
+   window.location.href = 'offline.html?variableName=' + encodedValue;
+ });
+ /*var variableValue1 = new URLSearchParams(window.location.search).get('variableName1');
+ document.getElementById('shopname1').innerText = variableValue1;
+
+ var variableValue2 = new URLSearchParams(window.location.search).get('variableName2');
+ document.getElementById('districtname1').innerText = variableValue2;*/
+  </script>
+<script src="index.js"></script>
+
+</html> 
