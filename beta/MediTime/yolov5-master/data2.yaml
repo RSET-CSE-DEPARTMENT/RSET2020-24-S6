@@ -1,0 +1,13 @@
+train: C:\programming_LIFE\FLutter\yolov5-master\train2
+val: C:\programming_LIFE\FLutter\yolov5-master\valid2
+test: C:\programming_LIFE\FLutter\yolov5-master\test2
+
+nc: 1
+names: ['pill']
+
+roboflow:
+  workspace: pilldex
+  project: pill-detect-kh3pf
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/pilldex/pill-detect-kh3pf/dataset/2

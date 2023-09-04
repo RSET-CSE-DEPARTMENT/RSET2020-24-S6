@@ -1,0 +1,5 @@
+train: C:\programming_LIFE\FLutter\yolov5-master\train\images
+val: C:\programming_LIFE\FLutter\yolov5-master\valid\images
+
+nc: 1
+names: ['pill']

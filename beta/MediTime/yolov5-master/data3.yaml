@@ -1,0 +1,13 @@
+train: C:\programming_LIFE\FLutter\yolov5-master\train3
+val: C:\programming_LIFE\FLutter\yolov5-master\valid3
+test: C:\programming_LIFE\FLutter\yolov5-master\test3
+
+nc: 6
+names: ['Aspirin', 'Diclofenac', 'Ibruprofen', 'Idomethacin', 'Mefenamic acid', 'Paracetamol']
+
+roboflow:
+  workspace: huachiew-chalermprakiet-university
+  project: pill-ident-app
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/huachiew-chalermprakiet-university/pill-ident-app/dataset/4
