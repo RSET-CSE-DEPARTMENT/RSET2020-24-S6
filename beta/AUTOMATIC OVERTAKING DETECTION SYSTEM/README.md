@@ -9,7 +9,16 @@ character recognition (OCR) to extract the characters from the region of interes
 it to the database.
 Due to lack of dataset we have chosen an highway input instead of bridges.
 
-This project is a combined effort done by M S Rahul, Mathew Shaji, Harikrishnan R and Jai Mathew James of class CSBeta Batch 2024, Rajagiri School of Engineering and Technology, Kakkanad. 
+This project is a combined effort done by M S Rahul, Mathew Shaji, Harikrishnan R and Jai Mathew James of class CSBeta Batch 2024, Rajagiri School of Engineering and Technology, Kakkanad.
+
+## Expected System Requirements
+
+The system of user is expected to have the following features:
+• Windows should be version 10 or above
+• Requirement of Internet connection for login and addition to database.
+• A storage space of approximate 3 GB for the app.
+• A minimum Ram size of 12GB is required in the device.
+• Graphics Card with GPU: NVIDIA Ge Force GTX
 
 ## Deployment
 
