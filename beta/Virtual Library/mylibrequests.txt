@@ -1,0 +1,30 @@
+import json
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+table_requests = dynamodb.Table('library_requests')
+
+def lambda_handler(event, context):
+    library_id = event['library_id']
+
+    response = table_requests.scan(
+        FilterExpression='library_id = :library_id',
+        ExpressionAttributeValues={':library_id': library_id}
+    )
+
+    items = response.get('Items', [])
+    book_ids = [item['book_id'] for item in items]
+    user_ids = [item['user_id'] for item in items]
+    request_texts = [item['request_text'] for item in items]
+
+    result = {
+        'library_id': library_id,
+        'book_ids': book_ids,
+        'user_ids': user_ids,
+        'request_texts': request_texts
+    }
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps(result)
+    }

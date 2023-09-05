@@ -1,0 +1,117 @@
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+table_libraries = dynamodb.Table('libraries')
+table_user = dynamodb.Table('user')
+
+def lambda_handler(event, context):
+    try:
+        search_key = event['queryStringParameters']['key']  # Get the search key from the event
+
+        # Search for books in the libraries table
+        response_libraries = table_libraries.scan()
+
+        books = []
+
+        if 'Items
+                        books.append(book)
+
+        # Search for books in the user table
+        response_user = table_user.scan()
+
+        if 'Items' in response_user:
+            for item in response_user['Items']:
+                aBooks = item.get('aBooks', {})
+                for book_id, book_details in aBooks.items():
+                    if search_key.lower() in book_id.lower() or search_key.lower() in book_details['title'].lower():
+                        book = {
+                            'book_id': book_id,
+                            'book_title': book_details['title'],
+                            'user_id': item['userid'],
+                            'user_name': item['name'],
+                            'belong_to': 'user'
+                        }
+                        books.append(book)
+
+        if len(books) > 0:
+            return {
+                'statusCode': 200,
+                'body': json.dumps(books)
+            }
+        
+        return {
+            'statusCode': 200,
+            'body': 'No matching books found'
+        }
+    
+    except Exception as e:
+        return {
+            'statusCode': 400,
+            'body': str(e)
+        }
+
+in response_libraries:
+            for item in response_libraries['Items']:
+                books_data = item.get('books', {})
+                for book_id, book_details in books_data.items():
+                    if search_key.lower() in book_id.lower() or search_key.lower() in book_details['title'].lower():
+                        book = {
+                            'book_id': book_id,
+                            'book_title': book_details['title'],
+                            'library_id': item['library_id'],
+                            'library_name': item['library_name'],
+                            'location': item['location'],
+                            'author': book_details['author'],
+                            'belong_to': 'library'
+                        }
+
+
+        if 'Items
+                        books.append(book)
+
+        # Search for books in the user table
+        response_user = table_user.scan()
+
+        if 'Items' in responimport boto3
+
+dynamodb = boto3.resource('dynamodb')
+table_libraries = dynamodb.Table('libraries')
+table_user = dynamodb.Table('user')
+
+def lambda_handler(event, context):
+    try:
+        search_key = event['queryStringParameters']['key']  # Get the search key from the event
+
+        # Search for books in the libraries table
+        response_libraries = table_libraries.scan()
+
+        books = []se_user:
+            for item in response_user['Items']:
+                aBooks = item.get('aBooks', {})
+                for book_id, book_details in aBooks.items():
+                    if search_key.lower() in book_id.lower() or search_key.lower() in book_details['title'].lower():
+                        book = {
+                            'book_id': book_id,
+                            'book_title': book_details['title'],
+                            'user_id': item['userid'],
+                            'user_name': item['name'],
+                            'belong_to': 'user'
+                        }
+                        books.append(book)
+
+        if len(books) > 0:
+            return {
+                'statusCode': 200,
+                'body': json.dumps(books)
+            }
+        
+        return {
+            'statusCode': 200,
+            'body': 'No matching books found'
+        }
+    
+    except Exception as e:
+        return {
+            'statusCode': 400,
+            'body': str(e)
+        }

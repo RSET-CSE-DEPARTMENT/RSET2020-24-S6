@@ -1,0 +1,67 @@
+# import the JSON utility package
+import json
+# import the AWS SDK (for Python the package name is boto3)
+import boto3
+
+# create a DynamoDB object using the AWS SDK
+dynamodb = boto3.resource('dynamodb')
+# use the DynamoDB object to select our table
+table = dynamodb.Table('userBooks')
+
+# define the handler function that the Lambda service will use as an entry point
+def lambda_handler(event, context):
+    # Extract the input parameters
+    bID = event['bID']
+    lend_code = event['lend_code']
+
+    try:
+        # Retrieve the user book entry from the table
+        response = table.get_item(
+            Key={
+                'bID': bID
+            }
+        )
+
+        if 'Item' in response:
+            item = response['Item']
+            
+            # Check if the book is already provided (lent)
+            if item['provided']:
+                return {
+                    'statusCode': 400,
+                    'body': json.dumps('Book Already Lent')
+                }
+            
+            # Check if the lend code matches
+            if item['lend_code'] == lend_code:
+                # Update the provided status to True and set the pick up time
+                table.update_item(
+                    Key={
+                        'bID': bID
+                    },
+                    UpdateExpression='SET provided = :val, pick_up_time = :time',
+                    ExpressionAttributeValues={
+                        ':val': True,
+                        ':time': 'current_time'  # Replace 'current_time' with the actual pick up time
+                    }
+                )
+                
+                return {
+                    'statusCode': 200,
+                    'body': json.dumps('Lending Successful')
+                }
+            else:
+                return {
+                    'statusCode': 400,
+                    'body': json.dumps('Invalid Lend Code')
+                }
+        else:
+            return {
+                'statusCode': 404,
+                'body': json.dumps('User Book Entry Not Found')
+            }
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps('An error occurred: {}'.format(str(e)))
+        }

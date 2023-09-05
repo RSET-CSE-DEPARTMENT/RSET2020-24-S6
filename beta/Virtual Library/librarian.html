@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="stylelib.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Welcome Librarian</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="img"></div>
+
+  <div class="center-button">
+    <a href="#" onclick="redirectTo('libdash.html')">Librarian Dashboard</a>
+    <a href="#" onclick="redirectTo('uplib.html')">Update Library Details</a>
+    <a href="#" onclick="redirectTo('finecheck.html')">Fine Check</a>
+  </div>
+
+  <div id="response-table" class="response-table"></div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      const apiUrl = 'https://cj656kk0ra.execute-api.ap-south-1.amazonaws.com/dev';
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ library_id: id })
+      })
+        .then(response => response.json())
+        .then(data => {
+          const responseData = JSON.parse(data.body);
+
+          const tableContainer = document.getElementById('response-table');
+
+          if (responseData.book_ids.length > 0) {
+            const table = document.createElement('table');
+            table.classList.add('response-table');
+
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+
+            const headers = [
+              'Book ID',
+              'User ID',
+              'Request Text'
+            ];
+
+            headers.forEach(headerText => {
+              const th = document.createElement('th');
+              th.textContent = headerText;
+              headerRow.appendChild(th);
+            });
+
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+
+            for (let i = 0; i < responseData.book_ids.length; i++) {
+              const row = document.createElement('tr');
+
+              const bookIdCell = document.createElement('td');
+              bookIdCell.textContent = responseData.book_ids[i];
+              row.appendChild(bookIdCell);
+
+              const userIdCell = document.createElement('td');
+              userIdCell.textContent = responseData.user_ids[i];
+              row.appendChild(userIdCell);
+
+              const requestTextsCell = document.createElement('td');
+              requestTextsCell.textContent = responseData.request_texts[i] || '';
+              row.appendChild(requestTextsCell);
+
+              tbody.appendChild(row);
+            }
+
+            table.appendChild(tbody);
+            tableContainer.appendChild(table);
+          } else {
+            const noDataText = document.createElement('p');
+            noDataText.textContent = 'No data available';
+            tableContainer.appendChild(noDataText);
+          }
+        })
+        .catch(error => {
+          alert('Error: ' + error.message);
+        });
+    });
+
+    function redirectTo(page) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      const redirectUrl = page + '?id=' + id;
+      window.location.href = redirectUrl;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="stylelib.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Library Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="img"></div>
+
+  <div class="center-button">
+    <a href="#" onclick="redirectTo('addbook.html')">Add Book</a>
+    <a href="#" onclick="redirectTo('deletebook.html')">Delete Book</a>
+    <a href="#" onclick="redirectTo('lendbook.html')">Lend Book</a>
+    <a href="#" onclick="redirectTo('returnbook.html')">Return Book</a>
+  </div>
+
+  
+  <a href="#" onclick="redirectTo('librarian.html')" class="return-button">Back</a>
+
+  <script>
+    function redirectTo(page) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      const redirectUrl = page + '?id=' + id;
+      window.location.href = redirectUrl;
+    }
+
+    
+  </script>
+</body>
+</html>

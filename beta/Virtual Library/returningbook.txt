@@ -1,0 +1,77 @@
+import json
+import boto3
+from botocore.exceptions import ClientError
+
+dynamodb = boto3.resource('dynamodb')
+table_borrow = dynamodb.Table('borrow')
+table_libraries = dynamodb.Table('libraries')
+
+def lambda_handler(event, context):
+    borrow_id = event['borrow_id']
+
+    try:
+        # Check if the borrow entry exists
+        response = table_borrow.get_item(
+            Key={
+                'borrow_id': borrow_id
+            }
+        )
+        if 'Item' not in response:
+            return {
+                'statusCode': 400,
+                'body': 'Borrow entry not found'
+            }
+
+        # Update the borrow entry to mark it as returned
+        table_borrow.update_item(
+            Key={
+                'borrow_id': borrow_id
+            },
+            UpdateExpression='SET #ret = :ret',
+            ExpressionAttributeNames={
+                '#ret': 'returned'
+            },
+            ExpressionAttributeValues={
+                ':ret': True
+            }
+        )
+
+        # Get the library and book details from the borrow entry
+        borrow_entry = response['Item']
+        library_id = borrow_entry['library_id']
+        book_id = borrow_entry['book_id']
+
+        # Update the book availability in the library
+        response = table_libraries.get_item(
+            Key={
+                'library_id': library_id
+            }
+        )
+        if 'Item' not in response:
+            return {
+                'statusCode': 400,
+                'body': 'Library not found'
+            }
+        library = response['Item']
+        books = library['books']
+        if book_id in books:
+            books[book_id]['available'] = True
+            table_libraries.update_item(
+                Key={
+                    'library_id': library_id
+                },
+                UpdateExpression='SET books = :books',
+                ExpressionAttributeValues={
+                    ':books': books
+                }
+            )
+
+        return {
+            'statusCode': 200,
+            'body': 'Book returned successfully'
+        }
+    except ClientError as e:
+        return {
+            'statusCode': 500,
+            'body': 'An error occurred: {}'.format(e.response['Error']['Message'])
+        }

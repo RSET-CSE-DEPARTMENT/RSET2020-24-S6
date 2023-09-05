@@ -1,0 +1,35 @@
+import json
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('libraries')
+
+def lambda_handler(event, context):
+    library_id = event['library_id']
+    
+    # Check if the librarian with the given library_id exists
+    response = table.get_item(
+        Key={
+            'library_id': library_id
+        }
+    )
+    
+    if 'Item' not in response:
+        return {
+            'statusCode': 200,
+            'body': json.dumps('Librarian not found')
+        }
+    
+    # Update the librarian details
+    librarian = response['Item']
+    librarian['address'] = event.get('address', librarian['address'])
+    librarian['email_address'] = event.get('email_address', librarian['email_address'])
+    librarian['library_name'] = event.get('library_name', librarian['library_name'])
+    librarian['phone_number'] = event.get('phone_number', librarian['phone_number'])
+    
+    table.put_item(Item=librarian)
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Librarian details updated successfully')
+    }

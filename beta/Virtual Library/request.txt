@@ -1,0 +1,72 @@
+import json
+import boto3
+from decimal import Decimal
+import random
+import string
+from datetime import datetime
+
+dynamodb = boto3.resource('dynamodb')
+user_table = dynamodb.Table('user')
+user_books_table = dynamodb.Table('userBooks')
+
+def generate_random_code():
+    return ''.join(random.choices(string.digits, k=6))
+
+def lambda_handler(event, context):
+    requesting_user_id = event['requesting_user_id']
+    lending_user_id = event['lending_user_id']
+    book_id = event['book_id']
+    request_text = event['request_text']
+
+    # Get the book details from the lending user's aBooks
+    response = user_table.get_item(
+        Key={
+            'userid': lending_user_id
+        }
+    )
+    lending_user = response.get('Item')
+
+    if not lending_user:
+        return {
+            'statusCode': 404,
+            'body': json.dumps('Lending user not found')
+        }
+
+    book = lending_user['aBooks'].get(book_id)
+
+    if not book:
+        return {
+            'statusCode': 404,
+            'body': json.dumps('Book not found in lending user\'s aBooks')
+        }
+
+    # Generate random codes
+    return_code = generate_random_code()
+    lend_code = generate_random_code()
+
+    # Create an entry in the userBooks table
+    current_datetime = datetime.now().isoformat()
+    entry = {
+        'bID': generate_random_code(),
+        'requesting_user_id': requesting_user_id,
+        'lending_user_id': lending_user_id,
+        'book_id': book_id,
+        'book_name': book['title'],
+        'provided': False,
+        'returned': False,
+        'request_text': request_text,
+        'borrow_date': current_datetime,
+        'return_date': '',
+        'return_code': return_code,
+        'lend_code': lend_code
+    }
+
+    # Put the entry in the userBooks table
+    user_books_table.put_item(Item=entry)
+    subject = "Your request for book: "+ book_name +"has been recorded"
+    
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Borrow book request created successfully')
+    }

@@ -1,0 +1,39 @@
+import json
+import boto3
+from decimal import Decimal
+
+dynamodb = boto3.resource('dynamodb')
+user_table = dynamodb.Table('user')
+user_books_table = dynamodb.Table('userBooks')
+
+def lambda_handler(event, context):
+    lending_user_id = event['lending_user_id']
+
+    # Retrieve the lending user from the user table
+    response = user_table.get_item(
+        Key={
+            'userid': lending_user_id
+        }
+    )
+    lending_user = response.get('Item')
+
+    if not lending_user:
+        return {
+            'statusCode': 404,
+            'body': json.dumps('Lending user not found')
+        }
+
+    # Retrieve the requests for the lending user's books from the userBooks table
+    response = user_books_table.scan(
+        FilterExpression='requesting_user_id = :user_id OR lending_user_id = :user_id',
+        ProjectionExpression='bID,requesting_user_id, lending_user_id, book_id, book_name, provided, returned, created_at,request_text,borrow_date',
+        ExpressionAttributeValues={
+            ':user_id': lending_user_id
+        }
+    )
+    requests = response.get('Items', [])
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps(requests)
+    }

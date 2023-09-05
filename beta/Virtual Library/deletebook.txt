@@ -1,0 +1,45 @@
+import json
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+table_libraries = dynamodb.Table('libraries')
+
+def lambda_handler(event, context):
+    library_id = event['library_id']
+    book_id = event['book_id']
+
+    try:
+        # Check if the library exists
+        response = table_libraries.get_item(
+            Key={
+                'library_id': library_id
+            }
+        )
+        if 'Item' not in response:
+            raise Exception('Library does not exist')
+
+        # Check if the book ID exists in the library
+        if 'books' not in response['Item'] or book_id not in response['Item']['books']:
+            raise Exception('Book ID does not exist in the library')
+
+        # Delete the book from the library
+        response = table_libraries.update_item(
+            Key={
+                'library_id': library_id
+            },
+            UpdateExpression='REMOVE books.#book_id',
+            ExpressionAttributeNames={
+                '#book_id': book_id
+            }
+        )
+
+        return {
+            'statusCode': 200,
+            'body': 'Book deleted successfully'
+        }
+
+    except Exception as e:
+        return {
+            'statusCode': 400,
+            'body': str(e)
+        }

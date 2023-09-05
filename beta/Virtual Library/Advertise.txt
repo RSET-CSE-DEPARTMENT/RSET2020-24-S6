@@ -1,0 +1,38 @@
+import json
+import boto3
+from decimal import Decimal
+
+dynamodb = boto3.resource('dynamodb')
+table_user = dynamodb.Table('user')
+
+def lambda_handler(event, context):
+    user_id = event['user_id']
+    book_id = event['book_id']
+    title = event['title']
+    author = event['author']
+    genre = event['genre']
+    available = event['available']
+
+    try:
+        # Retrieve the user from the table
+        response = table_user.get_item(
+            Key={
+                'userid': user_id
+            }
+        )
+        
+        if 'Item' not in response:
+            return {
+                'statusCode': 404,
+                'body': 'User not found'
+            }
+
+        # Check if the book already exists in the user's tionary
+        user = response['Item']
+        aBooks = user.get('aBooks', {})
+        if book_id in aBooks:
+            return {
+                'statusCode': 400,
+                'body': 'Book ID already exists'
+            }
+        

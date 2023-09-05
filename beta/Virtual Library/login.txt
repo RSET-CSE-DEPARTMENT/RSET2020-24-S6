@@ -1,0 +1,62 @@
+import json
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+user_table = dynamodb.Table('user')
+librarian_table = dynamodb.Table('libraries')
+
+def lambda_handler(event, context):
+    user_id = event['id']
+    password = event['password']
+
+    # Check if user exists in the user table
+    user_response = user_table.get_item(
+        Key={
+            'userid': user_id
+        }
+    )
+
+    if 'Item' in user_response:
+        # User exists, check password
+        stored_password = user_response['Item']['password']
+        if stored_password != password:
+            # Incorrect password
+            return {
+                'statusCode': 401,
+                'body': json.dumps('Incorrect password')
+            }
+        else:
+            # Password matches, user login successful
+            return {
+                'statusCode': 200,
+                'body': json.dumps('User login successful')
+            }
+    else:
+        # Check if librarian exists in the librarian table
+        librarian_response = librarian_table.get_item(
+            Key={
+                'library_id': user_id
+            }
+        )
+
+        if 'Item' in librarian_response:
+            # Librarian exists, check password
+            stored_password = librarian_response['Item']['password']
+            if stored_password != password:
+                # Incorrect password
+                return {
+                    'statusCode': 401,
+                    'body': json.dumps('Incorrect password')
+                }
+            else:
+                # Password matches, librarian login successful
+                return {
+                    'statusCode': 201,
+                    'body': json.dumps('Librarian login successful')
+                }
+        else:
+            # User or librarian not found
+            return {
+                'statusCode': 404,
+                'body': json.dumps('User or librarian not found')
+            }

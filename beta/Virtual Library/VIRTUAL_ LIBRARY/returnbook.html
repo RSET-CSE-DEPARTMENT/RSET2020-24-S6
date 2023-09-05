@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borrow Entries</title>
+  <link rel="stylesheet" href="stylelib77.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <style>
+body{overflow-x:hidden;
+}
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+font-size:13px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }tbody td {
+    color: white; /* Set the text color to white */
+  }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Borrow Entries</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="img"></div>
+<div class="center-content">
+    <div id="borrow-table"></div>
+  </div>
+  
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const libraryId = getUrlParam('id');
+      const apiUrl = 'https://5okdnt0flj.execute-api.us-east-1.amazonaws.com/dev';
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ library_id: libraryId })
+      })
+        .then(response => response.json())
+        .then(data => {
+          const borrowEntries = data.body;
+
+          if (borrowEntries.length > 0) {
+            const borrowTable = document.getElementById('borrow-table');
+
+            const table = document.createElement('table');
+
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+
+            const headers = [
+              'Borrow ID',
+              'Book ID',
+              'Book Name',
+              'Borrow Date',
+              'Borrower Name',
+              'Library ID',
+              'Library Name',
+              'Returned',
+              'User ID',
+              'Actions'
+            ];
+
+            headers.forEach(headerText => {
+              const th = document.createElement('th');
+              th.textContent = headerText;
+              headerRow.appendChild(th);
+            });
+
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+            borrowEntries.forEach(borrowEntry => {
+              const row = document.createElement('tr');
+
+              const borrowIdCell = document.createElement('td');
+              borrowIdCell.textContent = borrowEntry.borrow_id;
+              row.appendChild(borrowIdCell);
+
+              const bookIdCell = document.createElement('td');
+              bookIdCell.textContent = borrowEntry.book_id;
+              row.appendChild(bookIdCell);
+
+              const bookNameCell = document.createElement('td');
+              bookNameCell.textContent = borrowEntry.book_name;
+              row.appendChild(bookNameCell);
+
+              const borrowDateCell = document.createElement('td');
+              borrowDateCell.textContent = borrowEntry.borrow_date;
+              row.appendChild(borrowDateCell);
+
+              const borrowerNameCell = document.createElement('td');
+              borrowerNameCell.textContent = borrowEntry.borrower_name;
+              row.appendChild(borrowerNameCell);
+
+              const libraryIdCell = document.createElement('td');
+              libraryIdCell.textContent = borrowEntry.library_id;
+              row.appendChild(libraryIdCell);
+
+              const libraryNameCell = document.createElement('td');
+              libraryNameCell.textContent = borrowEntry.library_name;
+              row.appendChild(libraryNameCell);
+
+              const returnedCell = document.createElement('td');
+              returnedCell.textContent = borrowEntry.returned;
+              row.appendChild(returnedCell);
+
+              const userIdCell = document.createElement('td');
+              userIdCell.textContent = borrowEntry.userid;
+              row.appendChild(userIdCell);
+
+              const actionsCell = document.createElement('td');
+              const returnButton = document.createElement('button');
+              returnButton.textContent = 'Return';
+              returnButton.addEventListener('click', function() {
+                returnBorrow(borrowEntry.borrow_id);
+              });
+              actionsCell.appendChild(returnButton);
+              row.appendChild(actionsCell);
+
+              tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+            borrowTable.appendChild(table);
+          } else {
+            const borrowTable = document.getElementById('borrow-table');
+            const noDataText = document.createElement('p');
+            noDataText.textContent = 'No borrow entries found';
+            borrowTable.appendChild(noDataText);
+          }
+        })
+        .catch(error => {
+          alert('Error: ' + error.message);
+        });
+    });
+
+    function returnBorrow(borrowId) {
+      const apiUrl = 'https://my2z1wq1i0.execute-api.ap-south-1.amazonaws.com/dev';
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ borrow_id: borrowId })
+      })
+        .then(response => response.json())
+        .then(data => {
+          alert('Borrow returned successfully');
+        })
+        .catch(error => {
+          alert('Error: ' + error.message);
+        });
+    }
+
+    function getUrlParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+  </script>
+</body>
+</html>

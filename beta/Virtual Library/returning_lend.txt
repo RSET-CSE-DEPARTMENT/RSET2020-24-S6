@@ -1,0 +1,43 @@
+# import the JSON utility package
+import json
+# import the AWS SDK (for Python the package name is boto3)
+import boto3
+
+# create a DynamoDB object using the AWS SDK
+dynamodb = boto3.resource('dynamodb')
+# use the DynamoDB object to select our table
+table = dynamodb.Table('userBooks')
+
+# define the handler function that the Lambda service will use as an entry point
+def lambda_handler(event, context):
+    # Extract the input parameter
+    bID = event['bID']
+
+    try:
+        # Retrieve the user book entry from the table
+        response = table.get_item(
+            Key={
+                'bID': bID
+            }
+        )
+
+        if 'Item' in response:
+            item = response['Item']
+            
+            # Extract the return code from the entry
+            return_code = item['return_code']
+            
+            return {
+                'statusCode': 200,
+                'body': json.dumps(return_code)
+            }
+        else:
+            return {
+                'statusCode': 404,
+                'body': json.dumps('User Book Entry Not Found')
+            }
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps('An error occurred: {}'.format(str(e)))
+        }

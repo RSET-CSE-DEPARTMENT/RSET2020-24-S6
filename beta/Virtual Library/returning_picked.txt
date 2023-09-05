@@ -1,0 +1,64 @@
+# import the JSON utility package
+import json
+# import the AWS SDK (for Python the package name is boto3)
+import boto3
+from datetime import datetime
+
+# create a DynamoDB object using the AWS SDK
+dynamodb = boto3.resource('dynamodb')
+# use the DynamoDB object to select our table
+table = dynamodb.Table('userBooks')
+
+# define the handler function that the Lambda service will use as an entry point
+def lambda_handler(event, context):
+    # Extract the input parameters
+    bID = event['bID']
+    return_code = event['return_code']
+
+    try:
+        # Retrieve the user book entry from the table
+        response = table.get_item(
+            Key={
+                'bID': bID
+            }
+        )
+
+        if 'Item' in response:
+            item = response['Item']
+            
+            # Check if the return code matches
+            if item['return_code'] == return_code:
+                # Set the return date and mark as returned
+                return_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                
+                table.update_item(
+                    Key={
+                        'bID': bID
+                    },
+                    UpdateExpression='SET provided = :val1, returned = :val2, return_date = :val3',
+                    ExpressionAttributeValues={
+                        ':val1': True,
+                        ':val2': True,
+                        ':val3': return_date
+                    }
+                )
+                
+                return {
+                    'statusCode': 200,
+                    'body': json.dumps('Book Return Successful')
+                }
+            else:
+                return {
+                    'statusCode': 400,
+                    'body': json.dumps('Invalid Return Code')
+                }
+        else:
+            return {
+                'statusCode': 404,
+                'body': json.dumps('User Book Entry Not Found')
+            }
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps('An error occurred: {}'.format(str(e)))
+        }

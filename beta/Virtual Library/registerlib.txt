@@ -1,0 +1,57 @@
+import json
+import boto3
+from decimal import Decimal
+from botocore.exceptions import ClientError
+
+dynamodb = boto3.resource('dynamodb')
+table_libraries = dynamodb.Table('libraries')
+
+def lambda_handler(event, context):
+    library_id = event['library_id']
+    library_name = event['library_name']
+    phone_number = event['phone_number']
+    email_address = event['email_address']
+    address = event['address']
+    latitude = Decimal(str(event['latitude']))  # Convert to Decimal
+    longitude = Decimal(str(event['longitude']))  # Convert to Decimal
+    password = event['password']
+
+    try:
+        # Check if the library already exists in the table
+        response = table_libraries.get_item(
+            Key={
+                'library_id': library_id
+            }
+        )
+        if 'Item' in response:
+            return {
+                'statusCode': 409,
+                'body': 'Library already exists'
+            }
+
+        # Register the library by adding it to the table
+        table_libraries.put_item(
+            Item={
+                'library_id': library_id,
+                'library_name': library_name,
+                'phone_number': phone_number,
+                'email_address': email_address,
+                'address': address,
+                'location': {
+                    'latitude': str(latitude),  # Convert back to string
+                    'longitude': str(longitude),  # Convert back to string
+                },
+                'password': password,
+                'books': {}
+            }
+        )
+
+        return {
+            'statusCode': 200,
+            'body': 'Library registered successfully'
+        }
+    except ClientError as e:
+        return {
+            'statusCode': 500,
+            'body': 'An error occurred: {}'.format(e.response['Error']['Message'])
+        }

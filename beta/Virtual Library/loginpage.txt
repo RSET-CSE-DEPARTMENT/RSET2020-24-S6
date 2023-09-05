@@ -1,0 +1,48 @@
+# import the JSON utility package
+import json
+# import the AWS SDK (for Python the package name is boto3)
+import boto3
+from decimal import Decimal
+
+# create a DynamoDB object using the AWS SDK
+dynamodb = boto3.resource('dynamodb')
+# use the DynamoDB object to select our table
+table = dynamodb.Table('user')
+
+# define the handler function that the Lambda service will use as an entry point
+def lambda_handler(event, context):
+    # Check if user with given user ID already exists in the database
+    response = table.get_item(
+        Key={
+            'userid': event['id']
+        }
+    )
+    
+    if 'Item' in response:
+        # User already exists
+        return {
+            'statusCode': 200,
+            'body': json.dumps('User Already Exists. Login instead')
+        }
+    else:
+        # User does not exist, insert new record
+        response = table.put_item(
+            Item={
+                'name': event['name'],
+                'userid': event['id'],
+                'password': event['password'],
+                'bBooks': {},
+                'aBooks': {},
+                'address': event['address'],
+                'location': {
+                    'longitude': Decimal(str(event['longitude'])),
+                    'latitude': Decimal(str(event['latitude']))
+                },
+                'phone_number': event['phone_number']
+            }
+        )
+        # Return a greeting with the name of the user
+        return {
+            'statusCode': 200,
+            'body': json.dumps('Sign Up Successful. Hello ' + event['name'])
+        }
