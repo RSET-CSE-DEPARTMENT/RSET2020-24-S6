@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://res-console.cloudinary.com/ddncpqawo/thumbnails/v1/image/upload/v1687934576/Y29sZ18xX2Q1MXZjeA==/preview");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+
+        .navbar {
+            background-color: #3f51b5;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+        .table-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-table,
+        .right-table {
+            flex-basis: 48%;
+        }
+
+        .table {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .table thead th {
+            background-color: black;
+            color: white;
+        }
+
+        .table thead th,
+        .table thead th a {
+            color: white;
+        }
+
+        .table tbody td {
+            background-color: #495057;
+        }
+
+        .table-bordered {
+            border: 1px solid white;
+        }
+
+        .btn {
+            color: white;
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+        .sh {
+            color :white;
+        }
+
+        .scroll-table {
+            height: 500px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cypher - Recommended Colleges</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="left-table">
+                <h3 class="sh">Colleges</h3>
+                <div class="details-box scroll-table">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Location</th>
+                                <th>Course</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for college in colleges %}
+                            <tr>
+                                <td>{{ college.name }}</td>
+                                <td>{{ college.location }}</td>
+                                <td>{{ college.course }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <form action="/train" method="POST">
+                    <label for="algorithm" class = "sh">Choose Algorithm:</label>
+                    <select name="algorithm" id="algorithm">
+                        <option value="lr" {% if selected_algorithm == 'lr' %}selected{% endif %}>Linear Regression</option>
+                        <option value="mlp" {% if selected_algorithm == 'mlp' %}selected{% endif %}>Polynomial Regression</option>
+                        <option value="rf" {% if selected_algorithm == 'rf' %}selected{% endif %}>Random Forest</option>
+                        <option value="svr" {% if selected_algorithm == 'svr' %}selected{% endif %}>Support Vector Regression</option>
+                    </select>
+                    <br>
+                    <button class="btn" type="submit">Train Model</button>
+                </form>
+            </div>
+            <div class="right-table">
+                <h3 class="sh">Machine Learning Algorithm Metrics</h3>
+                <div class="details-box">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Algorithm</th>
+                                <th>False Positives</th>
+                                <th>False Negatives</th>
+                                <th>Accuracy(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for algorithm, metric in metrics.items() %}
+                            <tr>
+                                <td>{{ algorithms[algorithm] }}</td>
+                                <td>{{ metric.false_positive }}</td>
+                                <td>{{ metric.false_negative }}</td>
+                                <td>{{ metric.accuracy }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
