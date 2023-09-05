@@ -12,4 +12,5 @@ learning techniques with sensor-based systems offers a promising solution for ac
 robust hand gesture recognition ensuring real-time performance which is crucial for an
 effective user experience
 
-demo-demo video link
+demo-demo video link 
+https://youtu.be/zucnE-IJILI
