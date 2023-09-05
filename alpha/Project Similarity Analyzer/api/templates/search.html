@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block heading %}
+  <title>New Search</title>
+  <link rel='stylesheet' href="{{url_for("static",filename="css/search.css")}}">
+  <style>
+    /* Loading screen style */
+    #loadingScreen {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+    }
+
+    #loadingSpinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+{% endblock heading %}
+
+{% block content %}
+  
+  <div class="c1">
+    <form id="searchForm" action='' method='post'>
+      {{form.csrf_token()}}
+      <div class="c4">
+        {{ form.abstract(class='t1',rows='40',cols='110')}}
+      </div>
+      <div class="c2">
+        <div class="cc2">
+          <p class="ft">
+            Start writing or paste your abstracts on the editor to begin..!!
+          </p>
+        </div>
+        <button id="submitButton" class='b1'>Submit</button>
+      </div>
+    </form>
+  </div> 
+
+  <div id="loadingScreen">
+    <!-- Loading spinner -->
+    <div id="loadingSpinner"></div>
+  </div>
+
+  <script>
+    document.getElementById("submitButton").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent form submission to add the loading screen
+
+      // Display the loading screen while the form is being submitted
+      document.getElementById("loadingScreen").style.display = "block";
+
+      // Submit the form after a small delay to give time for the loading screen to show
+      setTimeout(function() {
+        document.getElementById("searchForm").submit();
+      }, 500); // Adjust the delay (in milliseconds) as needed
+    });
+
+    // This event will be triggered when the page finishes loading
+    window.onload = function() {
+      // Hide the loading screen
+      document.getElementById("loadingScreen").style.display = "none";
+    };
+  </script>
+
+{% endblock %}

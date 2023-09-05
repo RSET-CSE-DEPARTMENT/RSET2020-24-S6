@@ -1,0 +1,13 @@
+.pro_details{
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 5rem;
+  background-color:azure;
+
+}
+.pro_details h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:medium;
+  margin-block-start: 0;
+  
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block heading %}
+
+  <title>
+    Details
+  </title>
+  <link rel='stylesheet' href="{{url_for("static",filename="css/project_details.css")}}">
+
+{% endblock heading %}
+{% block content %}
+  <div class='pro_details'>
+    
+    <h3 >ID: </h3>
+    <p>{{project[0]}}</p>
+    
+    <h3>Title: </h3>
+    <p>{{project[1]}}</p>
+    <h3>abstract: </h3>
+    <p>{{project[2]}}</p>
+  </div>
+
+{% endblock content%}

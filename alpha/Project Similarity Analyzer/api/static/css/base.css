@@ -1,0 +1,39 @@
+body,html{
+  height: 100%;
+  margin:0;
+  padding: o;;
+  background-color: rgb(248,249,250);
+}
+
+.c1{
+  width:100%;
+  display: inline-block;
+  
+}
+.vnav{
+  width:8%;
+  height: 100%;
+  display: flex;
+  background-color: rgb(43,53,78);
+  position: fixed;
+  margin-right: 2%;
+  justify-content: space-around;
+  align-items: center;
+}
+.content{
+  padding-left: 8%;
+}
+
+.cc1{
+  width: 70%;
+  height: 60%;
+  padding-top: 10%;
+  display: block;
+  margin:auto;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.nav-link{
+  margin: 30% auto;
+
+}

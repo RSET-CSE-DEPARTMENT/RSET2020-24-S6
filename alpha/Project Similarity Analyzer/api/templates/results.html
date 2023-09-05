@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+
+{% block heading%}
+
+  <title>
+    Reports
+  </title>
+  <link rel='stylesheet' href="{{url_for("static",filename="css/results.css")}}">
+  
+{% endblock heading%}
+
+
+{% block content%}
+  <div class="t1">
+ 
+      <table>
+
+          <tr>
+              <th class="h1">
+                  Id
+              </th>
+              <th class="h2">
+                  Project Title
+              </th>
+              <th class="h3">
+                  Similarity Score
+              </th>
+              <th class="h3">
+                Project Details
+            </th>
+          </tr>
+
+          {% for result in result_set %}
+            <tr>
+              <td class="h1">
+                  {{result[0]}}
+              </td>
+              <td class="h2">
+                  {{result[1]}}
+              </td>
+              <td class="h3">
+                  {{result[3]}}
+              </td>
+              <td class='h1'>
+                <a href= "{{ url_for('result_details',id=result[0]) }}">
+                  <button> Details</button>
+                </a>
+
+                
+              </td>
+            </tr>
+          {% endfor %}
+
+        </div>            
+              
+      </table>
+   
+
+{% endblock %}

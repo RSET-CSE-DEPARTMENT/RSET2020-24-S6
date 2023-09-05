@@ -1,0 +1,37 @@
+
+table{
+    width: 70%;
+    margin-left: 15%;
+    border-collapse: collapse;
+    box-shadow:5px 5px 10px rgba(0,0,0,0.15);
+}
+th{
+    height: 80px;
+    font-weight: bold;
+    width: 20%;
+    font-size: larger;
+    border:1px solid black ;
+}
+td{
+    height: 40px;
+    width: 20%;
+    color: rgb(67, 67, 67);
+    border:1px solid black ;
+}
+tr:nth-child(even){
+    background-color: #D6EEEE;
+}
+tr:nth-child(odd){
+    background-color:white;
+}
+.t1{
+    padding-top: 10%;
+}
+.h1{
+    width: 2%;
+    text-align: center;
+}
+.h3{
+    width:5%;
+    text-align: center;
+}
