@@ -1,0 +1,37 @@
+import json
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+table_libraries = dynamodb.Table('libraries')
+
+def lambda_handler(event, context):
+    library_id = event['library_id']
+    book = event['book']
+
+    try:
+        # Check if the library exists
+        response = table_libraries.get_item(
+            Key={
+                'library_id': library_id
+            }
+        )
+        if 'Item' not in response:
+            raise Exception('Library does not exist')
+
+        # Check if the book ID already exists in the library
+        if 'books' in response['Item'] and book['book_id'] in response['Item']['books']:
+            raise Exception('Book ID already exists in the library')
+
+        # Add the book to the library
+        response = table_libraries.update_item(
+            Key={
+                'library_id': library_id
+            },
+            UpdateExpression='SET books.#book_id = :book',
+            ExpressionAttributeNames={
+                '#book_id': book['book_id']
+            },
+            ExpressionAttributeValues={
+                ':book': book
+            }
+        )

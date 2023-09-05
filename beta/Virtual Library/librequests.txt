@@ -1,0 +1,41 @@
+import json
+import boto3
+from datetime import datetime
+
+dynamodb = boto3.resource('dynamodb')
+table_requests = dynamodb.Table('library_requests')
+
+def lambda_handler(event, context):
+    try:
+        user_id = event['user_id']
+        library_id = event['library_id']
+        book_id = event['book_id']
+        request_text = event['request_text']
+        
+        request_date = datetime.now().isoformat()
+
+        item = {
+            'request_date': request_date,
+            'user_id': user_id,
+            'library_id': library_id,
+            'book_id': book_id,
+            'request_text': request_text
+        }
+
+        table_requests.put_item(Item=item)
+        return {
+            'statusCode': 200,
+            'body': json.dumps('Library request created successfully')
+        }
+
+    except KeyError as e:
+        return {
+            'statusCode': 400,
+            'body': json.dumps('Missing required input field: {}'.format(str(e)))
+        }
+
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps('Error creating library request: {}'.format(str(e)))
+        }

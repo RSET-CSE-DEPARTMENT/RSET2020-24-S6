@@ -1,0 +1,29 @@
+import json
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+user_books_table = dynamodb.Table('userBooks')
+
+def lambda_handler(event, context):
+    bID = event['bID']
+
+    # Retrieve the user book entry from the userBooks table
+    response = user_books_table.get_item(
+        Key={
+            'bID': bID
+        }
+    )
+    user_book = response.get('Item')
+
+    if not user_book:
+        return {
+            'statusCode': 404,
+            'body': json.dumps('User book entry not found')
+        }
+
+    lend_code = user_book['lend_code']
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps(lend_code)
+    }

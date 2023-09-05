@@ -1,0 +1,26 @@
+import boto3
+from botocore.exceptions import ClientError
+
+dynamodb = boto3.resource('dynamodb')
+table_borrow = dynamodb.Table('borrow')
+
+def lambda_handler(event, context):
+    try:
+        library_id = event['library_id']
+        
+        response = table_borrow.scan(
+            FilterExpression='library_id = :id',
+            ExpressionAttributeValues={':id': library_id}
+        )
+        
+        borrow_entries = response['Items']
+        
+        return {
+            'statusCode': 200,
+            'body': borrow_entries
+        }
+    except ClientError as e:
+        return {
+            'statusCode': 500,
+            'body': 'An error occurred: {}'.format(e.response['Error']['Message'])
+        }

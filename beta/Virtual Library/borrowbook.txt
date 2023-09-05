@@ -1,0 +1,114 @@
+import json
+import boto3
+from botocore.exceptions import ClientError
+from datetime import datetime
+
+dynamodb = boto3.resource('dynamodb')
+table_users = dynamodb.Table('user')
+table_libraries = dynamodb.Table('libraries')
+table_borrow = dynamodb.Table('borrow')
+
+def lambda_handler(event, context):
+    user_id = event['user_id']
+    book_id = event['book_id']
+    library_id = event['library_id']
+
+    # Check if the user is registered
+    if not is_user_registered(user_id):
+        return {
+            'statusCode': 400,
+            'body': 'User not found'
+        }
+
+    try:
+        # Check if the book is available in the library
+        response = table_libraries.get_item(
+            Key={
+                'library_id': library_id
+            }
+        )
+        if 'Item' not in response:
+            return {
+                'statusCode': 400,
+                'body': 'Library not found'
+            }
+        library = response['Item']
+        books = library['books']
+        if book_id not in books or not books[book_id]['available']:
+            return {
+                'statusCode': 400,
+                'body': 'Book not available in the library'
+            }
+
+        # Get book details
+        book = books[book_id]
+        book_name = book['title']
+
+        # Get library details
+        library_name = library['library_name']
+
+        # Mark the book as unavailable in the library
+        books[book_id]['available'] = False
+        table_libraries.update_item(
+            Key={
+                'library_id': library_id
+            },
+            UpdateExpression='SET books = :books',
+            ExpressionAttributeValues={
+                ':books': books
+            }
+        )
+
+        # Generate a unique borrow_id
+        borrow_id = generate_borrow_id()
+
+        # Add entry to borrow table
+        current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        table_borrow.put_item(
+            Item={
+                'borrow_id': borrow_id,
+                'userid': user_id,
+                'borrower_name': get_user_name(user_id),
+                'library_id': library_id,
+                'library_name': library_name,
+                'book_id': book_id,
+                'book_name': book_name,
+                'borrow_date': current_datetime,
+                'returned': False
+            }
+        )
+
+        return {
+            'statusCode': 200,
+            'body': 'Book borrowed successfully'
+        }
+    except ClientError as e:
+        return {
+            'statusCode': 500,
+            'body': 'An error occurred: {}'.format(e.response['Error']['Message'])
+        }
+
+
+def is_user_registered(user_id):
+    response = table_users.get_item(
+        Key={
+            'userid': user_id
+        }
+    )
+    return 'Item' in response
+
+
+def get_user_name(user_id):
+    response = table_users.get_item(
+        Key={
+            'userid': user_id
+        }
+    )
+    if 'Item' in response:
+        return response['Item']['name']
+    return 'Unknown'
+
+
+def generate_borrow_id():
+    current_datetime = datetime.now().strftime('%Y%m%d%H%M%S%f')
+    return 'BORROW' + current_datetime

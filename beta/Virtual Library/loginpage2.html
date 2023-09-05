@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login</title>
+      <link rel="stylesheet" href="style1.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script>
+var handleLoginFormSubmit = (event) => {
+            event.preventDefault(); // Prevent form submission
+
+            var id = document.querySelector(".login .field input[name='id']").value;
+            var password = document.querySelector(".login .field input[name='password']").value;
+
+            callAPI(id, password); // Call the API function with the form values
+         };
+
+         var callAPI = (id, password) => {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            var raw = JSON.stringify({
+               "id": id,
+               "password": password
+            });
+            var requestOptions = {
+               method: 'POST',
+               headers: myHeaders,
+               body: raw,
+               redirect: 'follow'
+            };
+            fetch("https://rij8ucmahh.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
+               .then(response => response.text())
+               .then(result => {
+                  console.log(result); // Log the API response
+                  var responseObj = JSON.parse(result);
+                  if (responseObj.statusCode === 201) {
+                     alert("Login successful");
+                    window.location.href = "librarian.html?id=" + id;
+ // Forward to the next page with the id parameter
+                  } else if(responseObj.statusCode === 200){
+                     alert("Login successful");
+                     window.location.href = "user.html?id=" + id; // Forward to the next page with the id parameter
+                  }
+else {
+                     alert("Login failed: " + responseObj.body);
+                     console.log(responseObj); // Log the response object for further analysis
+                  }
+               })
+               .catch(error => {
+                  alert("An error occurred while logging in. Please try again.");
+                  console.log('error', error);
+               });
+         };
+         var handleSignupFormSubmit = (event) => {
+            event.preventDefault(); // Prevent form submission
+
+            var name = document.querySelector(".signup .field input[name='name']").value;
+            var id = document.querySelector(".signup .field input[name='id']").value;
+            var password = document.querySelector(".signup .field input[name='password']").value;
+            var confirmPassword = document.querySelector(".signup .field input[name='confirm_password']").value;
+            var address = document.querySelector(".signup .field input[name='address']").value;
+            var phoneNumber = document.querySelector(".signup .field input[name='phone_number']").value;
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+               alert("Passwords do not match. Please try again.");
+               return;
+            }
+
+            // Get the user's current location using Geolocation API
+            navigator.geolocation.getCurrentPosition((position) => {
+               var latitude = position.coords.latitude;
+               var longitude = position.coords.longitude;
+
+               callAPI2(name, id, password, address, longitude, latitude, phoneNumber);
+            }, (error) => {
+               console.log(error);
+               alert("Failed to retrieve current location. Please try again.");
+            });
+         };
+
+         var callAPI2 = (name, id, password, address, longitude, latitude, phoneNumber) => {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            var raw = JSON.stringify({
+               "name": name,
+               "id": id,
+               "password": password,
+               "address": address,
+               "longitude": longitude,
+               "latitude": latitude,
+               "phone_number": phoneNumber
+            });
+            var requestOptions = {
+               method: 'POST',
+               headers: myHeaders,
+               body: raw,
+               redirect: 'follow'
+            };
+            fetch("https://2jluqzmrgk.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
+               .then(response => response.text())
+               .then(result => {
+                  console.log(result); // Log the API response
+                  var responseObj = JSON.parse(result);
+                  if (responseObj.statusCode === 200) {
+                     alert("Sign Up successful. Hello " + responseObj.body);
+                  } else {
+                     alert("Sign Up failed: " + responseObj.body);
+                     console.log(responseObj); // Log the response object for further analysis
+                  }
+               })
+               .catch(error => {
+                  alert("An error occurred while signing up. Please try again.");
+                  console.log('error', error);
+               });
+         };
+
+         window.addEventListener('DOMContentLoaded', () => {
+            var loginForm = document.querySelector("form.login");
+            var loginButton = loginForm.querySelector("input[type='submit']");
+            loginButton.addEventListener("click", handleLoginFormSubmit);
+            var signupForm = document.querySelector("form.signup");
+            var signupButton = signupForm.querySelector("input[type='submit']");
+            signupButton.addEventListener("click", handleSignupFormSubmit);
+         });
+      </script>
+   </head>
+   <body>
+      <div class="background"></div>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="#" class="login">
+                  <div class="field">
+                     <input type="text" name="id" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" name="password" placeholder="Password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">
+                     <p style="color:#fff">Not a member?<a href=""> Signup now</a></p>
+                  </div>
+               </form>
+               <form action="#" class="signup" onsubmit="handleSignupFormSubmit(event)">
+                  <div class="field">
+                     <input type="text" name="name" placeholder="Name" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" name="id" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" name="password" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" name="address" placeholder="Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="text" name="phone_number" placeholder="Phone Number" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="register-library-link">
+            <p style="color:#fff">Register as a library? <a href="liblogin.html">Click here</a></p>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+   </body>
+</html>

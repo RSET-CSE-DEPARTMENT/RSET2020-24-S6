@@ -1,0 +1,35 @@
+import boto3
+from botocore.exceptions import ClientError
+from datetime import datetime, timedelta
+
+dynamodb = boto3.resource('dynamodb')
+table_borrow = dynamodb.Table('borrow')
+
+def lambda_handler(event, context):
+    try:
+        library_id = event['library_id']
+
+        # Calculate the date 2 months ago from the current date
+        two_months_ago = datetime.now() - timedelta(days=60)
+
+        # Query the borrow table for entries that meet the criteria
+        response = table_borrow.scan(
+            FilterExpression='library_id = :library_id and borrow_date < :date and returned = :returned',
+            ExpressionAttributeValues={
+                ':library_id': library_id,
+                ':date': two_months_ago.strftime('%Y-%m-%d'),
+                ':returned': False
+            }
+        )
+
+        # Return the list of overdue borrow entries
+        borrow_entries = response['Items'](e.response['Error']['Message'])
+        }
+          return {
+            'statusCode': 200,
+            'body': borrow_entries
+        }
+    except ClientError as e:
+        return {
+            'statusCode': 500,
+            'body': 'An error occurred: {}'.format
