@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="ret.css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Library Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="img"></div>
+
+  <div class="center-button">
+    <a href="#" onclick="redirectTo1('advertise.html')" id="advertiseButton">Advertise</a>
+    <a href="#" onclick="redirectTo('pickup.html')" id="pickupButton" style="display: none;">Pickup Book</a>
+    <a href="#" onclick="redirectTo('lenduser.html')" id="lendBookButton" style="display: none;">Lend Book</a>
+    <a href="#" onclick="redirectTo('return.html')" id="returnBookButton" style="display: none;">Return Book</a>
+    <a href="#" onclick="redirectTo('takeback.html')" id="takeBackButton" style="display: none;">Take Back Book</a>
+  </div>
+
+  <div class="filter">
+    <label for="filter">Filter:</label>
+    <select id="filter" onchange="applyFilter()">
+      <option value="myBooks"></option>
+      <option value="myBooks">My Books</option>
+      <option value="myRequests">My Requests</option>
+    </select>
+  </div>
+
+  <div id="requests" class="requests"></div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      const apiUrl = 'https://0stth7hb4a.execute-api.ap-south-1.amazonaws.com/dev';
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ lending_user_id: id })
+      })
+        .then(response => response.json())
+        .then(data => {
+          const requests = JSON.parse(data.body);
+
+          if (requests.length > 0) {
+            const requestsContainer = document.getElementById('requests');
+
+            const table = document.createElement('table');
+
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+
+            const headers = [
+              'Lending User ID',
+              'Requesting User ID',
+              'Book ID',
+              'Book Name','Borrow Date',
+              'Provided',
+              'Returned',
+              'bID',
+              'Select'
+            ];
+
+            headers.forEach(headerText => {
+              const th = document.createElement('th');
+              th.textContent = headerText;
+              headerRow.appendChild(th);
+            });
+
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+            requests.forEach(request => {
+              const row = document.createElement('tr');
+
+              const lendingUserIdCell = document.createElement('td');
+              lendingUserIdCell.textContent = request.lending_user_id;
+              row.appendChild(lendingUserIdCell);
+
+              const requestingUserIdCell = document.createElement('td');
+              requestingUserIdCell.textContent = request.requesting_user_id;
+              row.appendChild(requestingUserIdCell);
+
+              const bookIdCell = document.createElement('td');
+              bookIdCell.textContent = request.book_id;
+              row.appendChild(bookIdCell);
+
+              const bookNameCell = document.createElement('td');
+              bookNameCell.textContent = request.book_name;
+              row.appendChild(bookNameCell);
+
+              const borrow_date = document.createElement('td');
+              borrow_date.textContent = request.borrow_date;
+              row.appendChild(borrow_date);
+
+              const providedCell = document.createElement('td');
+              providedCell.textContent = request.provided;
+              row.appendChild(providedCell);
+
+              const returnedCell = document.createElement('td');
+              returnedCell.textContent = request.returned;
+              row.appendChild(returnedCell);
+
+              const bIDCell = document.createElement('td');
+              bIDCell.textContent = request.bID;
+              row.appendChild(bIDCell);
+
+
+              const selectCell = document.createElement('td');
+              const selectRadio = document.createElement('input');
+              selectRadio.type = 'radio';
+              selectRadio.name = 'bookSelection';
+              selectRadio.value = request.bID;
+              selectCell.appendChild(selectRadio);
+              row.appendChild(selectCell);
+
+              tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+            requestsContainer.appendChild(table);
+          } else {
+            const requestsContainer = document.getElementById('requests');
+            const noDataText = document.createElement('p');
+            noDataText.textContent = 'No requests found';
+            requestsContainer.appendChild(noDataText);
+          }
+        })
+        .catch(error => {
+          alert('Error: ' + error.message);
+        });
+
+      // Hide the other buttons when the page is loaded
+      const pickupButton = document.getElementById('pickupButton');
+      const lendBookButton = document.getElementById('lendBookButton');
+      const returnBookButton = document.getElementById('returnBookButton');
+      const takeBackButton = document.getElementById('takeBackButton');
+
+      pickupButton.style.display = 'none';
+      lendBookButton.style.display = 'none';
+      returnBookButton.style.display = 'none';
+      takeBackButton.style.display = 'none';
+    });
+
+    function applyFilter() {
+      const filterSelect = document.getElementById('filter');
+      const filterValue = filterSelect.value;
+
+      const tableRows = document.querySelectorAll('#requests table tbody tr');
+
+      tableRows.forEach(row => {
+        const lendingUserId = row.querySelector('td:nth-child(1)').textContent;
+        const requestingUserId = row.querySelector('td:nth-child(2)').textContent;
+
+        if (filterValue === 'myBooks') {
+          if (lendingUserId !== getUrlParam('id')) {
+            row.style.display = 'none';
+          } else {
+            row.style.display = '';
+          }
+        } else if (filterValue === 'myRequests') {
+          if (requestingUserId !== getUrlParam('id')) {
+            row.style.display = 'none';
+          } else {
+            row.style.display = '';
+          }
+        } else {
+          row.style.display = '';
+        }
+      });
+
+      // Show/hide buttons based on the filter selection
+      const advertiseButton = document.getElementById('advertiseButton');
+      const pickupButton = document.getElementById('pickupButton');
+      const lendBookButton = document.getElementById('lendBookButton');
+      const returnBookButton = document.getElementById('returnBookButton');
+      const takeBackButton = document.getElementById('takeBackButton');
+
+      if (filterValue === 'myBooks') {
+        advertiseButton.style.display = 'inline-block';
+        pickupButton.style.display = 'none';
+        lendBookButton.style.display = 'inline-block';
+        returnBookButton.style.display = 'none';
+        takeBackButton.style.display = 'inline-block';
+
+      } else if (filterValue === 'myRequests') {
+        advertiseButton.style.display = 'inline-block';
+        pickupButton.style.display = 'inline-block';
+        lendBookButton.style.display = 'none';
+        returnBookButton.style.display = 'inline-block';
+        takeBackButton.style.display = 'none';
+      }
+    }
+
+    function redirectTo1(page) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+
+      const redirectUrl = page + '?id=' + id;
+      window.location.href = redirectUrl;
+    }
+
+    function redirectTo(page) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      const selectedBook = document.querySelector('input[name="bookSelection"]:checked');
+
+      if (selectedBook) {
+        const bID = selectedBook.value;
+        const redirectUrl = page + '?id=' + id + '&bID=' + bID;
+        window.location.href = redirectUrl;
+      } else {
+        alert('Please select a book');
+      }
+    }
+
+    function getUrlParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+  </script>
+</body>
+</html>

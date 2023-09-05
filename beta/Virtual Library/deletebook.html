@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Delete Book</title>
+  <link rel="stylesheet" href="style2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title signup">
+        Delete Book
+      </div>
+    </div>
+    <div class="scrollable-container">
+      <div class="form-container">
+        <div class="form-inner">
+          <form action="#" class="signup">
+            <div class="field">
+              <input type="text" placeholder="Book ID" required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var callAPI = (bookId) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      var raw = JSON.stringify({
+        "library_id": id,
+        "book_id": bookId
+      });
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+      fetch("https://einp5jqzc4.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+          console.log(result); // Log the API response
+          var responseObj = JSON.parse(result);
+          if (responseObj.statusCode === 200) {
+            alert("Book deleted successfully");
+  
+          } else {
+            alert("Failed to delete book: " + responseObj.body);
+            console.log(responseObj); // Log the response object for further analysis
+          }
+        })
+        .catch(error => {
+          alert("An error occurred while deleting the book. Please try again.");
+          console.log('error', error);
+        });
+    };
+
+    var handleFormSubmit = (event) => {
+      event.preventDefault();
+      var bookId = document.querySelector(".signup .field input[placeholder='Book ID']").value;
+      callAPI(bookId);
+    };
+
+    window.addEventListener('DOMContentLoaded', () => {
+      var form = document.querySelector("form.signup");
+      var submitButton = form.querySelector("input[type='submit']");
+      submitButton.addEventListener("click", handleFormSubmit);
+    });
+  </script>  <a href="#" onclick="redirectTo('librarian.html')" class="return-button">Back</a>
+<script>
+    function redirectTo(page) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      const redirectUrl = page + '?id=' + id;
+      window.location.href = redirectUrl;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>advertise</title>
+  <link rel="stylesheet" href="advertise.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title signup">
+        Advertise Book Details
+      </div>
+    </div>
+    <div class="scrollable-container">
+      <div class="form-container">
+        <div class="form-inner">
+          <form id ="book-details-form" action="#" class="signup">
+            <div class="field">
+              <input type="text" id="book-id" placeholder="Enter Book Id" required>
+            </div>
+            <div class="field">
+              <input type="text" id="title" placeholder="Enter Title" required>
+            </div>
+            <div class="field">
+              <input type="text" id="author" placeholder="Enter Author" required>
+            </div>
+            <div class="field">
+              <input type="text" id="genre" placeholder="Enter Genre" required>
+            </div>
+            
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('book-details-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Extract the user ID from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const userId = urlParams.get('id');
+
+      const bookId = document.getElementById('book-id').value;
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      const genre = document.getElementById('genre').value;
+
+      const data = {
+        user_id: userId,
+        book_id: bookId,
+        title: title,
+        author: author,
+        genre: genre,
+        available: "True"
+      };
+
+      fetch('https://lk3gc3chcc.execute-api.ap-south-1.amazonaws.com/dev', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.statusCode === 200) {
+            alert('Book details added successfully');
+            document.getElementById('book-details-form').reset();
+          } else {
+            alert('Error: ' + data.body);
+          }
+        })
+        .catch(error => {
+          alert('Error: ' + error.message);
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login</title>
+      <link rel="stylesheet" href="style2.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="background"></div>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title signup">
+               Update Library Details
+            </div>
+         </div>
+         <div class="scrollable-container">
+            <div class="form-container">
+               <div class="form-inner">
+                  <form action="#" class="signup">
+                     <div class="field">
+                        <input type="text" id="libraryName" placeholder="Library Name" required>
+                     </div>
+                     <div class="field">
+                        <input type="text" id="address" placeholder="Address" required>
+                      </div>
+                      <div class="field">
+                        <input type="text" id="email" placeholder="Email Address" required>
+                      </div>
+                     <div class="field">
+                        <input type="tel" id="phoneNumber" placeholder="Phone No" required>
+                      </div>                                                                          
+                     <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Submit" onclick="updateLibraryDetails()">
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+      <a href="#" onclick="redirectTo('librarian.html')" class="return-button">Back</a>
+
+      <script>
+         function redirectTo(page) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            const redirectUrl = page + '?id=' + id;
+            window.location.href = redirectUrl;
+         }
+
+         function updateLibraryDetails() {
+            const libraryId = id; // Hardcoded library ID
+            const libraryName = document.getElementById('libraryName').value;
+            const address = document.getElementById('address').value;
+            const emailAddress = document.getElementById('email').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+
+            const data = {
+               library_id: libraryId,
+               library_name: libraryName,
+               address: address,
+               email_address: emailAddress,
+               phone_number: phoneNumber
+            };
+
+            const url = 'https://lm4wg7fe7a.execute-api.ap-south-1.amazonaws.com/dev';
+
+            fetch(url, {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json',
+               },
+               body: JSON.stringify(data),
+            })
+               .then(response => response.json())
+               .then(result => {
+                  console.log(result); // Log the API response
+                  alert(result.body); // Show success message
+               })
+               .catch(error => {
+                  console.log(error);
+                  alert('An error occurred while updating library details. Please try again.');
+               });
+         }
+      </script>
+   </body>
+</html>

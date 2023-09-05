@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Test</title>
+  <link rel="stylesheet" href="stylelibuser.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    td {
+    color: white; /* Add this line to set text color to white */
+  }
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    margin-bottom: 20px; /* Add this line to create some space below the search container */
+  }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Welcome to Virtual Library</a>
+      </div>
+    </div>
+    <div class="center-button">
+      <a href="#" onclick="redirectTo('manage.html')">Manage</a>
+    </div>
+  </nav>
+
+  <div class="img"></div>
+
+  <div class="center-content">
+    <div class="search-container">
+      <input type="text" id="search-input" class="search-input" placeholder="Enter a keyword">
+      <button onclick="searchBooks()" class="search-button"><i class="fas fa-search"></i> SEARCH</button>
+    </div>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function redirectTo(page) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      const redirectUrl = page + '?id=' + id;
+      window.location.href = redirectUrl;
+    }
+
+    function searchBooks() {
+      const searchInput = document.getElementById('search-input').value;
+      const apiUrl = 'https://0zv27tn1og.execute-api.ap-south-1.amazonaws.com/dev';
+      const requestData = {
+        queryStringParameters: {
+          key: searchInput
+        }
+      };
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestData)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error fetching data');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const books = JSON.parse(data.body);
+        const table = document.createElement('table');
+        
+        // Create table headers
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        const headers = ['Book ID', 'Book Title', 'Author', 'Owner Type', 'Owner ID', 'Owner Name', 'Request'];
+        headers.forEach(headerText => {
+          const th = document.createElement('th');
+          th.textContent = headerText;
+          headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+        
+        // Create table rows for books
+        const tbody = document.createElement('tbody');
+        books.forEach(book => {
+          const bookRow = document.createElement('tr');
+          
+          // Book ID
+          const bookIdCell = document.createElement('td');
+          bookIdCell.textContent = book.book_id;
+          bookRow.appendChild(bookIdCell);
+          
+          // Book Title
+          const bookTitleCell = document.createElement('td');
+          bookTitleCell.textContent = book.book_title;
+          bookRow.appendChild(bookTitleCell);
+          
+          // Author
+          const authorCell = document.createElement('td');
+          authorCell.textContent = book.author;
+          bookRow.appendChild(authorCell);
+          
+          // Owner Type
+          const ownerTypeCell = document.createElement('td');
+          ownerTypeCell.textContent = book.belong_to === 'library' ? 'Library' : 'User';
+          bookRow.appendChild(ownerTypeCell);
+          
+          // Owner ID
+          const ownerIdCell = document.createElement('td');
+          ownerIdCell.textContent = book.belong_to === 'library' ? book.library_id : book.user_id;
+          bookRow.appendChild(ownerIdCell);
+          
+          // Owner Name
+          const ownerNameCell = document.createElement('td');
+          ownerNameCell.textContent = book.belong_to === 'library' ? book.library_name : book.user_name;
+          bookRow.appendChild(ownerNameCell);
+          
+          // Request Button
+          const requestButtonCell = document.createElement('td');
+          const requestButton = document.createElement('button');
+          requestButton.textContent = 'Request';
+          requestButton.addEventListener('click', () => {
+            const userId = extractUserIdFromURL();
+            navigateToBookDetails(book, userId);
+          });
+          requestButtonCell.appendChild(requestButton);
+          bookRow.appendChild(requestButtonCell);
+          
+          tbody.appendChild(bookRow);
+        });
+        table.appendChild(tbody);
+        
+        document.getElementById('result').innerHTML = '';
+        document.getElementById('result').appendChild(table);
+      })
+      .catch(error => {
+        document.getElementById('result').innerText = 'Error: ' + error;
+      });
+    }
+    
+    function extractUserIdFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('id');
+    }
+    
+    function navigateToBookDetails(book, userId) {
+  const bookDetails = {
+    book_id: book.book_id,
+    book_title: book.book_title,
+    library_id: book.library_id,
+    library_name: book.library_name,
+    author: book.author,
+    latitude: book.latitude,
+    longitude: book.longitude
+  };
+const bookDetails1 = {
+    book_id: book.book_id,
+    book_title: book.book_title,
+    user_id: book.user_id,
+    user_name: book.user_name,
+    author: book.author,
+    latitude: book.latitude,
+    longitude: book.longitude
+  };
+  if (book.belong_to === 'library') {
+    const url = `userrequest.html?id=${userId}&bookDetails=${encodeURIComponent(JSON.stringify(bookDetails))}`;
+    window.location.href = url;
+  } else {
+    const url = `userrequest1.html?id=${userId}&bookDetails=${encodeURIComponent(JSON.stringify(bookDetails1))}`;
+    window.location.href = url;
+  }
+}
+
+  </script>
+</body>
+</html>

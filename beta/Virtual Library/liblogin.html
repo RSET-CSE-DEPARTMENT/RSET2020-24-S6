@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login</title>
+      <link rel="stylesheet" href="style2.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="background"></div>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title signup">
+               Librarian Registration
+            </div>
+         </div>
+         <div class="scrollable-container">
+            <div class="form-container">
+               <div class="form-inner">
+                  <form action="#" class="signup" onsubmit="handleSignupFormSubmit(event)">
+                     <div class="field">
+                        <input type="text" id="emailAddress" placeholder="Email Address" required>
+                     </div>
+                     <div class="field">
+                        <input type="tel" id="phoneNumber" placeholder="Phone No" required>
+                      </div>
+                      <div class="field">
+                        <input type="text" id="libraryName" placeholder="Name of Library" required>
+                      </div>
+                      <div class="field">
+                        <input type="text" id="address" placeholder="Address" required>
+                      </div>
+                      <div class="field">
+                        <input type="text" id="location" placeholder="Location" required>
+                      </div>                                                                          
+                     <div class="field">
+                        <input type="password" id="password" placeholder="Password" required>
+                     </div>
+                     <div class="field">
+                        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+                     </div>
+                     <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Signup">
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+         
+         function handleSignupFormSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var emailAddress = document.getElementById("emailAddress").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var libraryName = document.getElementById("libraryName").value;
+            var address = document.getElementById("address").value;
+            var location = document.getElementById("location").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            
+            // Check if the password and confirm password match
+            if (password !== confirmPassword) {
+               alert("Password and Confirm password do not match");
+               return;
+            }
+            
+            var apiUrl = "https://fl6xrga0q9.execute-api.ap-south-1.amazonaws.com/dev";
+            
+            var requestOptions = {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json'
+               },
+               body: JSON.stringify({
+                  "library_id": emailAddress,  // Hardcoded library ID for now
+                  "library_name": libraryName,
+                  "phone_number": phoneNumber,
+                  "email_address": emailAddress,
+                  "address": address,
+                  "latitude": 40.7128,
+                  "longitude": -74.006,
+                  "password": password
+               }),
+               redirect: 'follow'
+            };
+            
+            fetch(apiUrl, requestOptions)
+               .then(response => response.text())
+               .then(result => {
+                  console.log(result); // Log the API response
+                  var responseObj = JSON.parse(result);
+                  if (responseObj.statusCode === 200) {
+                     alert("Library registered successfully");
+                  } else {
+                     alert("Failed to register library: " + responseObj.body);
+                     console.log(responseObj); // Log the response object for further analysis
+                  }
+               })
+               .catch(error => {
+                  alert("An error occurred while registering library. Please try again.");
+                  console.log('error', error);
+               });
+         }
+      </script>
+      <a href="loginpage2.html" class="return-button">Back</a>
+   </body>
+</html>

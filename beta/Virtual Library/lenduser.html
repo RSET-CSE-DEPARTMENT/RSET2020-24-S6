@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pickup Book</title>
+  <link rel="stylesheet" href="lenduser.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title signup">
+        Pickup Book
+      </div>
+    </div>
+    <div class="scrollable-container">
+      <div class="form-container">
+        <div class="form-inner">
+          <form id="pickup-form" action="#" class="signup">
+            <div class="field">
+              <input type="text" id="otp" placeholder="Enter OTP" required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Pickup Book">
+            </div>
+          </form>
+          <div id="result" class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('pickup-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const bID = urlParams.get('bID');
+      const apiUrl = 'https://wg6a4u05w8.execute-api.ap-south-1.amazonaws.com/dev';
+      const otp = document.getElementById('otp').value;
+
+      const data = {
+        bID: bID,
+        lend_code: otp
+      };
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.statusCode === 200) {
+            document.getElementById('result').textContent = 'Lending Successful';
+          } else {
+            document.getElementById('result').textContent = 'Error: ' + data.body;
+          }
+        })
+        .catch(error => {
+          document.getElementById('result').textContent = 'Error: ' + error.message;
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Book</title>
+  <link rel="stylesheet" href="stylelib88.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <style>
+    #map {
+      height: 400px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Virtual Library</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="img"></div>
+
+  <div class="center-content">
+    <h1>Request Book</h1>
+    <div id="request-form" class="request-form">
+      <div class="form-row">
+        <label for="book-id">Book ID:</label>
+        <span id="book-id"></span>
+      </div>
+      <div class="form-row">
+        <label for="user-id">User ID:</label>
+        <span id="user-id"></span>
+      </div>
+      <div class="form-row">
+        <label for="book-title">Book Title:</label>
+        <span id="book-title"></span>
+      </div>
+      <div class="form-row">
+        <label for="user-name">User Name:</label>
+        <span id="user-name"></span>
+      </div>
+      <div class="form-row">
+        <label for="request-text">Request Text:</label>
+        <textarea id="request-text" rows="4" placeholder="Enter your request"></textarea>
+      </div>
+      <div class="form-row">
+        <button onclick="submitRequest()">Submit</button>
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </div>
+
+  <script>
+    function submitRequest() {
+      const queryParams = getURLParameter('bookDetails');
+      const bookDetails = JSON.parse(decodeURIComponent(queryParams));
+      const bookId = bookDetails.book_id;
+      const userId = bookDetails.user_id;
+      const requestText = document.getElementById('request-text').value;
+      const requestingUserId = getURLParameter('id');
+      
+      const apiUrl = 'https://917eb6pyzf.execute-api.ap-south-1.amazonaws.com/dev'; // Replace with your actual API endpoint URL
+      
+      const requestData = {
+        requesting_user_id: requestingUserId,
+        lending_user_id: userId,
+        book_id: bookId,
+        request_text: requestText
+      };
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestData)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error submitting request');
+        }
+        return response.text();
+      })
+      .then(data => {
+        alert('Request submitted successfully');
+        console.log('API response:', data); // Log the response in the console
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while submitting the request. Please try again.');
+      });
+    }
+    
+    function getURLParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+    
+    // Set the book ID, user ID, book title, and user name on the page
+    window.onload = function() {
+      const bookIdSpan = document.getElementById('book-id');
+      const userIdSpan = document.getElementById('user-id');
+      const bookTitleSpan = document.getElementById('book-title');
+      const userNameSpan = document.getElementById('user-name');
+      
+      const queryParams = getURLParameter('bookDetails');
+      const bookDetails = JSON.parse(decodeURIComponent(queryParams));
+      
+      bookIdSpan.textContent = bookDetails.book_id;
+      userIdSpan.textContent = bookDetails.user_id;
+      bookTitleSpan.textContent = bookDetails.book_title;
+      userNameSpan.textContent = bookDetails.user_name;
+
+      // Create and initialize the map
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: {
+          lat: parseFloat(bookDetails.location.latitude),
+          lng: parseFloat(bookDetails.location.longitude)
+        }
+      });
+
+      // Add a marker to the user location
+      const marker = new google.maps.Marker({
+        position: {
+          lat: parseFloat(bookDetails.location.latitude),
+          lng: parseFloat(bookDetails.location.longitude)
+        },
+        map: map,
+        title: bookDetails.user_name
+      });
+
+      // Create a directions service object to handle routing
+      const directionsService = new google.maps.DirectionsService();
+
+      // Create a directions renderer object to display the route
+      const directionsRenderer = new google.maps.DirectionsRenderer({
+        map: map,
+        suppressMarkers: true
+      });
+
+      // Set the origin and destination for the directions request
+      const origin = new google.maps.LatLng(parseFloat(bookDetails.location.latitude), parseFloat(bookDetails.location.longitude));
+      const destination = new google.maps.LatLng(parseFloat(bookDetails.location.latitude), parseFloat(bookDetails.location.longitude));
+
+      // Set the travel mode for the directions request (DRIVING, WALKING, BICYCLING)
+      const travelMode = google.maps.TravelMode.DRIVING;
+
+      // Create the directions request
+      const request = {
+        origin: origin,
+        destination: destination,
+        travelMode: travelMode
+      };
+
+      // Make the directions request
+      directionsService.route(request, function(result, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+          // Display the route on the map
+          directionsRenderer.setDirections(result);
+        }
+      });
+    };
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</body>
+</html>
