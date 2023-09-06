@@ -1,0 +1,66 @@
+<!-- Strings used in the Application are named and expanded here -->
+<resources>
+    <string name="app_name">ODNODE</string>
+    <string name="type_your_email">Type your Email</string>
+    <string name="type_your_password">Type Your Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="not_registered_yet_sign_up">Not Registered Yet , Sign Up !</string>
+    <string name="hello_android">Hello Android!</string>
+    <string name="email">Type your Email</string>
+    <string name="pass">Type Your Password</string>
+    <string name="retypepass">Retype Your Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_registered_sign_in">Already Registered , Sign In !</string>
+    <string name="complaint_registration">Complaint Registration</string>
+    <string name="log_out">Log Out</string>
+    <string name="washrooms">Washrooms</string>
+    <string name="odno_home_page">ODNODE HOME PAGE</string>
+    <string name="register_complaint">Register Complaint</string>
+    <string name="logout">Logout</string>
+    <string name="washroom">Washroom</string>
+    <string name="complaint_register_page">Complaint Register page</string>
+    <string name="register_your_complaints_here">Register your complaints Here</string>
+    <string name="washroom_are_not_clean">Washrooms are not clean</string>
+    <string name="wet_floor">Wet Floor</string>
+    <string name="others">Others*</string>
+    <string name="enter_your_complaints_here">Enter your complaints here*</string>
+    <string name="submit">Submit</string>
+    <string name="floor_3">Floor 3</string>
+    <string name="floor_3z">Floor 3</string>
+    <string name="floor_2">Floor 2</string>
+    <string name="floor_1">Floor 1</string>
+    <string name="status_page">Status Page</string>
+    <string name="sensor_value">Sensor Value</string>
+    <string name="odourguard">OdourGuard</string>
+    <string name="view_complaints">View Complaints</string>
+    <string name="floor">Floor</string>
+    <string name="complaints">Complaints</string>
+    <string name="complaints_displayed_here">Complaints displayed here</string>
+    <string name="fl3">Floor 3</string>
+    <string name="gents">GENTS</string>
+    <string name="ladies">LADIES</string>
+    <string name="fl1">Floor 1</string>
+    <string name="fl2">Floor 2</string>
+    <string name="manage_complaints">Manage Complaints</string>
+    <string name="delete_complaints">Delete Complaints</string>
+    <string name="gender">Gender</string>
+    <string name="selected_item">Selected item:</string>
+    <string-array name="Floor">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Gender2">
+        <item>male</item>
+        <item>female</item>
+    </string-array>
+    <string-array name="Floors">
+        <item>Floor 1</item>
+        <item>Floor 2</item>
+        <item>Floor 3</item>
+    </string-array>
+    <string-array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

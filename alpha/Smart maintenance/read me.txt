@@ -1,0 +1,9 @@
+1. The Kotlin file(Backend) codes will be found in the following directory of 'Android_App Files' folder
+	D:\Project Files\Android_App Files\login2\app\src\main\java\com\example
+
+2. The XML file (Frontend) codes and the following themes and colors used will be found in the following directory of 'Android_App' Files folder
+	D:\Project Files\Android_App Files\login2\app\src\main\res\layout
+
+3. The code used for working the IOT devices will be found in the 'Arduino_IDE_code' folder
+
+4. Datasheet refered for IOT device will be found in 'IOT files' folder

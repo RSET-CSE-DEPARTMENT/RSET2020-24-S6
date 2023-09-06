@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Setting Application themes to required colors and fonts -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- Base application theme. -->
+<style name="Theme.Login2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/DeepPink</item>
+    <item name="colorPrimaryVariant">@color/PaleVioletRed</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/LightPink</item>
+    <item name="colorSecondaryVariant">@color/LightPink</item>
+    <item name="colorOnSecondary">@color/black</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor" tools:targetApi="l">@color/HotPink</item>
+    <!-- Customize your theme here. -->
+</style>
+
+<style name="LoginTextInputOuterFieldStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">15dp</item>
+    <item name="android:layout_marginBottom">15dp</item>
+</style>
+
+<style name="LoginTextInputInnerFieldStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:textColorHint">@color/black</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:singleLine">true</item>
+</style>
+</resources>

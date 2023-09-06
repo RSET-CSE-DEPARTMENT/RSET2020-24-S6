@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Main Home screen design layout -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="@string/odno_home_page"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+        <!-- Button to redirect to washroom page -->
+        <Button
+            android:id="@+id/buttonWashroom"
+            android:layout_width="317dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/MediumVioletRed"
+            android:text="@string/washroom"
+            android:textColor="@color/White"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonRegisterComplaint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- Button to redirect to Register Complaint page -->
+        <Button
+            android:id="@+id/buttonRegisterComplaint"
+            android:layout_width="317dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/MediumVioletRed"
+            android:text="@string/register_complaint"
+            android:textColor="@color/White"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/viewComplaint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonWashroom" />
+        <!-- Button to redirect to View Complaint page -->
+        <Button
+            android:id="@+id/viewComplaint"
+            android:layout_width="317dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/MediumVioletRed"
+            android:text="@string/view_complaints"
+            android:textColor="@color/White"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/LogoutButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRegisterComplaint" />
+        <!-- Button to Logout -->
+        <Button
+            android:id="@+id/LogoutButton"
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/MediumVioletRed"
+            android:text="@string/logout"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewComplaint" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
