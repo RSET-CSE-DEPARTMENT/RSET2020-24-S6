@@ -8,10 +8,10 @@ def detect_violence_in_video(video_path):
     pytesseract.pytesseract.tesseract_cmd = r"C:\Tesseract-OCR\tesseract.exe"
 
     # Twilio credentials
-    account_sid = 'ACf3c0b6983de66944d8d2975c5ee0346e'
-    auth_token = '07705b44ca93ac56d820c2eb87c4a5fc'
-    twilio_phone_number = '+12545955926'
-    destination_phone_number = '+918089505615'
+    account_sid = ''
+    auth_token = ' '
+    twilio_phone_number = ''
+    destination_phone_number = ''
 
     # perform ocr
     def perform_ocr(image):
@@ -95,5 +95,4 @@ def detect_violence_in_video(video_path):
     video.release()
     #cv2.destroyAllWindows()
 
-#video_path = r"C:\Users\Dell\Desktop\violencedetectiontest\model test for vsc\FINAL\labelled op\Finaltestopv1.mp4"
-#detect_violence_in_video(video_path)
+
