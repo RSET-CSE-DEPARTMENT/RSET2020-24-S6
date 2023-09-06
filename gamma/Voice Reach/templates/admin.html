@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Admin Page</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+   <div class="admin-container">
+       <h1>Welcome to the Admin Page</h1>
+       <p>Hello, {{ session.username }}</p>
+       <a href="/logout" class="logout-link">Logout</a>
+
+       <h2>Add New User</h2>
+       <form method="post" action="/admin">
+           <input type="text" name="name" placeholder="Name" required>
+           <input type="email" name="email" placeholder="Email" required>
+           <input type="hidden" name="action" value="insert">
+           <input type="submit" value="Add User">
+       </form>
+
+       <h2>Update Users</h2>
+       <ul>
+           {% for user in users %}
+               <li>
+                   <form method="post" action="/admin">
+                       <input type="text" name="name" value="{{ user['name'] }}" required>
+                       <input type="email" name="email" value="{{ user['email'] }}" required>
+                       <input type="hidden" name="user_id" value="{{ user['id'] }}">
+                       <input type="hidden" name="action" value="update">
+                       <input type="submit" value="Update">
+                   </form>
+               </li>
+           {% endfor %}
+       </ul>
+
+       <h2>Delete Users</h2>
+       <ul>
+           {% for user in users %}
+               <li>
+                   <form method="post" action="/admin">
+                       <span>{{ user['name'] }} - {{ user['email'] }}</span>
+                       <input type="hidden" name="user_id" value="{{ user['id'] }}">
+                       <input type="hidden" name="action" value="delete">
+                       <input type="submit" value="Delete">
+                   </form>
+               </li>
+           {% endfor %}
+       </ul>
+
+   <a href="{{ url_for('show_activities') }}"><button>See user Activities</button></a>
+   </div>
+</body>
+</html>
+
+
