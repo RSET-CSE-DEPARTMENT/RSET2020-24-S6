@@ -1,0 +1,65 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f5f5f5;
+}
+
+.login-container, .admin-container {
+   max-width: 400px;
+   margin: 100px auto;
+   padding: 20px;
+   border: 1px solid #ccc;
+   background-color: #fff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1, .admin-container h1 {
+   text-align: center;
+}
+
+.login-container form, .admin-container p {
+   text-align: center;
+}
+
+.login-container label, .admin-container label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="submit"],
+.admin-container .logout-link {
+   display: block;
+   width: 100%;
+   padding: 5px;
+   padding-right:5px;
+   margin-bottom: 15px;
+}
+
+.login-container input[type="submit"],
+.admin-container .logout-link {
+   background-color: #007BFF;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover,
+.admin-container .logout-link:hover {
+   background-color: #0056b3;
+}
+
+.login-container input[type="submit"]:focus,
+.admin-container .logout-link:focus {
+   outline: none;
+}
+
+.admin-container {
+   text-align: center;
+}
+
+.admin-container .logout-link {
+   text-decoration: none;
+}
