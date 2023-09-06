@@ -1,0 +1,17 @@
+<div id="navbar">
+    <div id="logoImg"><img src="/Care Connect (1)-modified.png"></div>
+    <div class="logotitle"><h1>CareConnect</h1></div>
+
+</div>
+
+
+<script>
+function showNav(){
+    document.getElementById("barNav").style.display="block";
+    document.getElementById("bar").setAttribute("onclick","hideNav()");
+}
+function hideNav(){
+    document.getElementById("barNav").style.display="none";
+    document.getElementById("bar").setAttribute("onclick","showNav()");
+}
+</script>

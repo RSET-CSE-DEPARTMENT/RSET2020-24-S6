@@ -1,0 +1,19 @@
+<%- include('navbar') -%>
+<%- include('header') -%>
+<div id="signup">
+    <div id="registerContainer">
+        <div id="banner"></div>
+        <div id="signup-container">
+              <div id="signup-box">
+                  <div class="heading" style="padding-top: 3%;padding-bottom: 3%;"><span>SIGNUP</span></div>
+                  <form action="/register" method="post">
+                    <input type="text" name="hospitalName" placeholder="TYPE HOSPITAL NAME" style="margin-left: 5%;" value="<%= hospitalName %>" readonly><br>
+                    <input type="text" name="hospitalAddress" placeholder="TYPE HOSPITAL ADDRESS" style="margin-left: 5%;" value="<%= hospitalAddress %>" readonly><br>
+                    <input type="password" name="password" placeholder="YOUR PASSWORD" style="margin-left: 5%;"><br>
+                    <button type="submit" style="margin-left: 5%;">Sign Up</button>
+                  </form>
+              </div>
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

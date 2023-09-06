@@ -1,0 +1,36 @@
+<%- include('navbar') -%>
+<%- include('header') -%>
+<div id="assign-main">
+    <div class="heading" style="margin-top: 0%;padding-top: 0%;font-size: 35px;font-weight: bolder; cursor: default;"><span style="color: yellow"><%= hospitalName %></span></div>
+    <div id="line"></div>
+    <div id="assign-container" style="margin-top: 4%;">
+        <div class="assign-box" style="color: green; cursor: default;">
+            <h2>ACTIVE DRIVERS </h2>(NOT ENGAGED)<br><br>
+            <form action="/activeDriver" method="post">
+                <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+                <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+                <input name="patientId" value="<%= patientId %>" style="display: none;">
+                <button type="submit" style="background-color: #707cf6;">CHECK</button><br>
+            </form>
+            <p style="color:black;font-size: medium;text-align: center;margin-top: 13%;">In this section, you can see the list of all active drivers and assign the patient to them.</p>
+        </div>
+        <!-- <div class="assign-box" style="color: blue"> -->
+            <!-- ACTIVE DRIVER <p>(ENGAGED)</p> -->
+            <!-- <form action="/WorkingDriver" method="post"> -->
+                
+                <!-- <button type="submit" style="background-color: #707cf6;">CHECK</button> -->
+            <!-- </form> -->
+            <!-- <p style="color:lightslategray;font-size: medium;text-align: center;margin-top: 8%;">In this section, you can see the list of all active drivers, who is already in the way to go to  patient</p> -->
+        <!-- </div> -->
+        <!-- <div class="assign-box" style="color: red;"> -->
+            <!-- IN ACTIVE <p>DRIVER</p> -->
+            <!-- <form action="/InActiveDriver" method="post"> -->
+                
+                <!-- <button type="submit" style="background-color: #707cf6;">CHECK</button> -->
+            <!-- </form> -->
+            <!-- <p style="color:lightslategray;font-size: medium;text-align: center;margin-top: 8%;">In this section, you can see the list of all Inactive drivers , who status is now in sleep mode.</p> -->
+        <!-- </div> -->
+    </div>
+</div>
+
+<%- include('footer') -%>

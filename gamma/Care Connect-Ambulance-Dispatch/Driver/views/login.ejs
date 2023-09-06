@@ -1,0 +1,31 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+<div id="login">
+  <div class="heading"><span style="color: black;font-weight: bold;font-size: larger;"><%= hospitalName %></span></div>
+  <div id="line"></div>
+    <div id="registerContainer">
+        <div id="banner">
+        </div>
+        <div id="login-container">
+              <div id="login-box">
+                  <div class="heading" style="padding-top: 3%;padding-bottom: 3%;"><span>LOGIN</span></div><br>
+                  <form action="/login" method="post">
+                    <input type="text" name="hospitalName" placeholder="TYPE HOSPITAL NAME" style="margin-left: 5%;display: none;" value="<%= hospitalName %>" >
+                    <input type="text" name="hospitalAddress" placeholder="TYPE HOSPITAL ADDRESS" style="margin-left: 5%;display: none;" value="<%= hospitalAddress %>" readonly>
+                    <input type="text" name="driverName" placeholder="Your Name" style="margin-left: 5%;"><br>
+                    <input type="text" name="driverId" placeholder="Your Id" style="margin-left: 5%;"><br>
+                    <input type="password" name="password" placeholder="YOUR PASSWORD" style="margin-left: 5%;"><br>
+                    <button type="submit" style="margin-left: 5%;">LOGIN</button>
+                    
+                  </form>
+                  <form action="/signup" method="post">
+                    <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+                    <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+                    <button type="submit" style="margin-left:5%;">SIGN UP</button>
+                  </form>
+                  
+              </div>
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

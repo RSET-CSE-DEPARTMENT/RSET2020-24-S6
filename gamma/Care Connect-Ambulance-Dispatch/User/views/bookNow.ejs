@@ -1,0 +1,23 @@
+<%- include('header') -%>
+
+<!-- navbar section code -->
+<%- include('navbar') -%>
+
+<!-- booking section  -->
+
+<div id="booking-box">
+    <div class="booking-heading"><span>Your CareConnect Ambulance </span></div>
+    <div class="booking-heading"><span>Service</span></div>
+    <div id="line"></div>
+    <div class="booking-desc">One Click and CareConnect Ambulance comes right in</div>
+    <div class="booking-desc">front of the door for help.</div>
+    <div id="contact">
+        <form action="/book" method="post">
+            <input name="phone" placeholder=" Your Mobile no" required><br>
+            <input name="Name" placeholder=" Your Full Name" type="text" required><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+</div>
+
+<%- include('footer') -%>

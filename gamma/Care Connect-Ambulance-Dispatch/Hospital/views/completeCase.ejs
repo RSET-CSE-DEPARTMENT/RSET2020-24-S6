@@ -1,0 +1,20 @@
+<%- include('navbar') -%>
+<%- include('header') -%>
+<div id="complete" style="padding-top: 4%;">
+    <div class="heading" style="margin-top: 0%;padding-top: 0%;"><span style="color: whitesmoke;"><%= hospitalName %></span></div>
+    <div id="line"></div>
+    <div id="complete-container">
+        <% if(elem.length==0){ %>
+            <div class="heading"><span style="color: yellowgreen;">NO COMPLETED CASES</span></div>
+        <% } %>
+        <% for(var i=0;i<elem.length;i++){ %>
+            <div class="completeBox">
+                <div style="font-size: large;">Patient Name:&emsp; <%= elem[i]['patientName'] %></div>
+                <div style="font-size: large;">Patient Number:&emsp; <%= elem[i]['patientNum']%></div>
+                <div style="font-size: large;">Patient Address:&emsp; <%= elem[i]['patientAddress']%></div>
+            </div>
+        <%}%>
+    </div>
+</div>
+
+<%- include('footer') -%>

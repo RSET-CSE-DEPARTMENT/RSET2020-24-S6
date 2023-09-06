@@ -1,0 +1,25 @@
+<%- include('navbar') -%>
+<%- include('header') -%>
+<div id="activeDriver-main">
+    <div class="heading" style="margin-top: 0%;padding-top: 0%;"><%= hospitalName %></div>
+    <div id="line"></div>
+    <div id="activeDriver-container" style="margin-top: 4%;">
+        
+        <% for(var i=0;i<driver.length;i++){ %>
+             <div class="activeDriver-box">
+                  <div>Driver Name:- <%= driver[i]["driverName"] %></div>
+                  <div>Driver Id:- <%= driver[i]["driverId"] %></div>
+                  <div>Driver Number:- <%= driver[i]["driverNum"] %></div>
+                  <form action="/assignDriver" method="post">
+                    <input name="patientId" value="<%= patientId %>" style="display: none;">
+                    <input name="driverId" value="<%= driver[i]['driverId'] %>" style="display: none;">
+                    <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+                    <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+                     <button type="submit"> ASSIGN </button>   
+                  </form>
+             </div>
+       <% } %>
+    </div>
+</div>
+
+<%- include('footer') -%>
