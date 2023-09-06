@@ -1,0 +1,45 @@
+.up-form {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-control {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.up-div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.more-highlights-btn {
+  height: 30px;
+  position: relative;
+  top: -50px;
+  left: 10px;
+}
+.up-form-hlt-lb {
+  margin-left: -188px;
+}
+.up-highlights-div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.up-lb-hlt {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.up-form-btn {
+  padding: 20px;
+  width: 200px;
+  margin-top: 20px;
+}

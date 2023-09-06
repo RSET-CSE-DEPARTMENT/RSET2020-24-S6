@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    padding: 16px;
+    margin: 16px auto;
+  }
+  
+  .result {
+    text-align: center;
+    margin-bottom: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .star {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .stars_radio-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+  }

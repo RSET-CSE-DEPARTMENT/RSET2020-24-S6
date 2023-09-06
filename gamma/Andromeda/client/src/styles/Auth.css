@@ -1,0 +1,129 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  background: rgb(0, 0, 0);
+  height: 100vh;
+}
+.top-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8%;
+  margin-left: 5%;
+}
+.left-container {
+  margin: 0;
+  width: 40vw;
+  padding: px;
+}
+.right-container {
+  width: 44vw;
+  padding-left: 2%;
+  margin-top: -1%;
+  padding-right: 5%;
+}
+
+.app-name {
+  font-size: 140px;
+  color: rgb(255, 217, 0);
+  text-shadow: 3px 3px 3px white;
+  margin: 0;
+}
+.app-description {
+  font-size: 90px;
+  text-align: left;
+  color: rgb(222, 198, 58);
+}
+
+.form {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-left: 250px;
+  border-radius: 50px;
+  width: 400px;
+  height: fit-content;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.form-fields-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 10%;
+}
+.label-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 20px;
+  color: black;
+}
+.input-container {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.auth-input {
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+.buttons-login {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.btn {
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+.btn:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  transform: scale(1.5);
+  border: none;
+  animation: step-end;
+  -webkit-animation: step-end;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+
+.logged-app-description {
+  font-size: 90px;
+  color: rgb(222, 198, 58);
+  padding-left: 5%;
+}
+
+.switch-form-link {
+  border: none;
+  background-color: white;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}

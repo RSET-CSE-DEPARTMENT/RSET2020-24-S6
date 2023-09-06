@@ -1,0 +1,283 @@
+.topbarContainer {
+  width: 100%;
+  background-color: hsl(180, 3%, 7%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.topbarContainer-mob {
+  display: none;
+}
+.topbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  height: fit-content;
+}
+.navbar-links {
+  color: gold;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.logo {
+  font-size: 24px;
+  margin-left: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  color: rgb(163, 153, 14);
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.searchbar {
+  height: 30px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.searchInput {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  margin-right: 10px;
+  border: none;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.topbarIcons {
+  display: flex;
+  color: rgb(255, 238, 0);
+}
+
+.topbarIconItem {
+  margin-right: 15px;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.topbarIconBadge {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  background-color: red;
+  bottom: 5px;
+  right: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.login-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 30px;
+  margin-left: 80px;
+  color: gold;
+}
+
+.separator-line {
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid wheat;
+  background-color: white;
+  box-shadow: 0px 0px 0px 1px white;
+  position: sticky;
+}
+
+.topbar-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: top 0.3s;
+  background-color: hsl(180, 3%, 7%);
+  color: white;
+  z-index: 5;
+  height: 30px;
+  padding-left: 20px;
+  gap: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar.hidden {
+  display: none;
+}
+.topbar-bottom-text {
+  cursor: pointer;
+  padding: 4px 4px;
+  transition: all ease-in-out 420ms;
+  -webkit-transition: all ease-in-out 420ms;
+  -moz-transition: all ease-in-out 420ms;
+  -ms-transition: all ease-in-out 420ms;
+  -o-transition: all ease-in-out 420ms;
+}
+
+.topbar-bottom-text:hover {
+  color: black;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.search-suggestions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  background-color: white;
+  border: 3px solid gold;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 5px;
+  width: 534px;
+  color: black;
+}
+.search-focus {
+  position: absolute;
+  top: 37px;
+  left: 250px;
+  height: fit-content;
+  z-index: 999;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.searchlist {
+  width: fit-content;
+  border-radius: 10px;
+  padding-left: 10px;
+  transition: all 350ms ease-in-out;
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  -ms-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+}
+
+.searchlist:hover {
+  transform: scale(1.2);
+  background-color: orange;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.username-label {
+  color: white;
+  margin-right: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+}
+.featured-suggestion {
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: lawngreen;
+  color: midnightblue;
+}
+.searchlist:hover > .featured-suggestion {
+  background-color: red;
+  color: white;
+}
+.user-icon {
+  padding-left: 10px;
+}
+
+.profile-div {
+  position: absolute;
+  background-color: rgb(76, 20, 197);
+  top: 82px;
+  right: 20px;
+  z-index: 999;
+  width: fit-content;
+  color: gold;
+  display: flex;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0px;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.all-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+.profile-open-icon {
+  cursor: pointer;
+}
+.option-text {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.triangle-icon {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 66px;
+  right: 20px;
+  z-index: 999;
+
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid rgb(76, 20, 197);
+}
+
+.category-navbar-links {
+  margin-left: 0;
+  color: hsl(180, 3%, 7%);
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 50px;
+  cursor: pointer;
+}

@@ -1,0 +1,229 @@
+.cart-container {
+  padding: 2rem 4rem;
+  color: black;
+}
+
+.cart-container h2 {
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+}
+
+.cart-container .titles {
+  margin: 2rem 0 1rem 0;
+}
+
+.cart-container .titles h3 {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cart-items,
+.cart-container .titles {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  column-gap: 0.5rem;
+}
+
+.cart-items {
+  border-top: 1px solid rgb(187, 187, 187);
+  padding: 1rem 0;
+}
+
+.cart-container .titles .product-title {
+  padding-left: 0.5rem;
+}
+
+.cart-container .titles .total {
+  padding-right: 0.5rem;
+  justify-self: right;
+}
+
+.cart-items .cart-product {
+  display: flex;
+}
+
+.cart-product-image {
+  width: 300px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.cart-items .cart-product h3 {
+  font-weight: 400;
+}
+
+.cart-items .cart-product button {
+  border: none;
+  outline: none;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  background: none;
+  color: grey;
+}
+
+.cart-items .cart-product button:hover {
+  color: black;
+}
+
+.cart-product-quantity {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 130px;
+  max-width: 100%;
+  border: 0.5px solid rgb(177, 177, 177);
+  border-radius: 5px;
+}
+.cart-product-quantity button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+}
+.cart-product-quantity .count {
+  padding: 0.7rem 0;
+}
+.cart-product-total-price {
+  justify-self: right;
+  padding: 0.5rem;
+  font-weight: 700;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid rgb(187, 187, 187);
+  padding-top: 2rem;
+}
+.cart-summary .clear-cart {
+  width: 130px;
+  max-width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: 400;
+  letter-spacing: 1.15px;
+  border: 0.5px solid rgb(177, 177, 177);
+  color: grey;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+.cart-checkout {
+  width: 270px;
+  max-width: 100%;
+}
+.cart-checkout .subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.cart-checkout .subtotal .amount {
+  font-weight: 700;
+}
+.cart-checkout p {
+  font-size: 14px;
+  font-weight: 200;
+  margin: 0.5rem 0;
+}
+.cart-checkout button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #4b70e2;
+  color: white;
+  letter-spacing: 1.15;
+}
+.continue-shopping,
+.start-shopping {
+  margin-top: 1rem;
+}
+.continue-shopping a,
+.start-shopping a {
+  color: gray;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.continue-shopping a span,
+.start-shopping a span {
+  margin-left: 0.5rem;
+}
+.cart-empty {
+  font-size: 20px;
+  margin-top: 2rem;
+  color: rgb(84, 84, 84);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-left {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.remove-from-cart {
+  width: 130px;
+  max-width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: 400;
+  margin-top: 5px;
+  letter-spacing: 1.15px;
+  transition: all 0.3s ease-in-out;
+  border: 0.5px solid rgb(177, 177, 177);
+  color: grey;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.remove-from-cart:hover {
+  background-color: rgb(255, 95, 95);
+  color: black;
+}
+
+.continue-text {
+  font-weight: 500;
+  color: rgb(0, 0, 255);
+  font-size: 20px;
+}
+
+#alert {
+  padding: 20px;
+  position: absolute;
+  z-index: 2000;
+  transform: scale(0);
+  top: 10vh;
+  transition: all 5.5s ease-in-out;
+  left: 35vw;
+  border-radius: 20px;
+  background-color: rgb(10, 123, 0);
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+#alert-closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#alert-closebtn:hover {
+  color: black;
+}
