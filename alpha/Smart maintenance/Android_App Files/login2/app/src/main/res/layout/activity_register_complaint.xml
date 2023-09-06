@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Design Layout of Register Complaints Page -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    tools:context=".registerComplaint">
+    <!-- Textview displaying page heading as Complaint Register Page -->
+    <TextView
+        android:id="@+id/TitleViewComplaintRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:text="@string/complaint_register_page"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <!-- Textview displaying register instruction -->
+    <TextView
+        android:id="@+id/TitleViewIndication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="@string/register_your_complaints_here"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Textview displaying washroom not clean option -->
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/washroom_are_not_clean"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cb1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+    <!-- Textview displaying Wet Floor Complaint as option -->
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/wet_floor"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cb2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
+    <!-- Checkbox to select if washroom is not clean -->
+    <CheckBox
+        android:id="@+id/cb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161" />
+    <!-- Checkbox to select if washroom floor is wet -->
+    <CheckBox
+        android:id="@+id/cb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
+    <!-- Textview displaying Other Complaint as option -->
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/others"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cb2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.611" />
+
+    <EditText
+        android:id="@+id/ComplaintTextField"
+        android:layout_width="287dp"
+        android:layout_height="185dp"
+        android:hint="@string/enter_your_complaints_here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv3"
+        app:layout_constraintVertical_bias="0.263" />
+    <!-- To enter floor and gender details of the washroom with complaint -->
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2"
+        app:layout_constraintVertical_bias="0.461">
+
+        <RadioButton
+            android:id="@+id/rdF1"
+            android:layout_width="101dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fl1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv3"
+            app:layout_constraintEnd_toStartOf="@+id/rdF2"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv2"
+            app:layout_constraintVertical_bias="0.262" />
+
+        <RadioButton
+            android:id="@+id/rdF2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="184dp"
+            android:text="@string/fl2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb2"
+            app:layout_constraintVertical_bias="0.165" />
+
+        <RadioButton
+            android:id="@+id/rdF3"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fl3"
+            android:textSize="12sp" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tv3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2"
+        app:layout_constraintVertical_bias="0.919">
+
+        <RadioButton
+            android:id="@+id/rdM"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gents"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv3"
+            app:layout_constraintEnd_toStartOf="@+id/rdF2"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv2"
+            app:layout_constraintVertical_bias="0.262" />
+
+        <RadioButton
+            android:id="@+id/rdW"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="184dp"
+            android:text="@string/ladies"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb2"
+            app:layout_constraintVertical_bias="0.165" />
+
+
+    </RadioGroup>
+    <!-- Button to submit and store the complaint -->
+    <Button
+        android:id="@+id/SubmitRegisterComplaintButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ComplaintTextField"
+        app:layout_constraintVertical_bias="0.157" />
+</androidx.constraintlayout.widget.ConstraintLayout>

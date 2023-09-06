@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Design Layout of Washroom Selection Page -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context=".Washroom">
+    <!-- Scroll View with each washroom displayed for selection -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbarThumbVertical="@drawable/custom_scroll_style">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- Cardviews for displaying washroom details -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Flr1MenCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/HotPink"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp">
+                <!-- Displaying Gender Information -->
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/White"
+                    android:elevation="3dp"
+                    android:src="@drawable/man"/>
+                <!-- Displaying Floor Information -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1.1in"
+                    android:text="@string/floor_1"
+                    android:textColor="@color/Black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Flr1WomenCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/HotPink"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp">
+                <!-- Displaying Gender Information -->
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/White"
+                    android:elevation="3dp"
+                    android:src="@drawable/woman"/>
+                <!-- Displaying Floor Information -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1.1in"
+                    android:text="@string/floor_1"
+                    android:textColor="@color/Black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/Flr2MenCardView"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/HotPink"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp">
+                <!-- Displaying Gender Information -->
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/White"
+                    android:elevation="3dp"
+                    android:src="@drawable/man"/>
+                <!-- Displaying Floor Information -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1.1in"
+                    android:text="@string/floor_2"
+                    android:textColor="@color/Black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/Flr2WomenCardView"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/HotPink"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp">
+                <!-- Displaying Gender Information -->
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/White"
+                    android:elevation="3dp"
+                    android:src="@drawable/woman"/>
+                <!-- Displaying Floor Information -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1.1in"
+                    android:text="@string/floor_2"
+                    android:textColor="@color/Black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/Flr3MenCardView"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/HotPink"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp">
+                <!-- Displaying Gender Information -->
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/White"
+                    android:elevation="3dp"
+                    android:src="@drawable/man"/>
+                <!-- Displaying Floor Information -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1.1in"
+                    android:text="@string/floor_3z"
+                    android:textColor="@color/Black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/Flr3WomenCardView"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/HotPink"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp">
+                <!-- Displaying Gender Information -->
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/White"
+                    android:elevation="3dp"
+                    android:src="@drawable/woman"/>
+                <!-- Displaying Floor Information -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="1.1in"
+                    android:text="@string/floor_3"
+                    android:textColor="@color/Black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
