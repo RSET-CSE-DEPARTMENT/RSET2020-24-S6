@@ -1,0 +1,150 @@
+.ind-pro-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:10vh;
+  overflow-X: hidden;
+}
+
+.ind-image-specs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.ind-img-cont {
+  width: 35vw;
+}
+.ind-specs-content-cont {
+  margin-top:3vh;
+  width: fit-content;
+  border:2px groove gold;
+  padding-right:4vw;
+  padding-left:4vw;
+  padding-bottom: 2vw;
+  height: fit-content;
+}
+
+.ind-pro-img{
+    width:70%;
+    padding-left: 10vw;
+    height: auto;
+}
+
+.ind-rev-cont{
+  height:100vh;
+}
+
+.separate-rr-cont{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color:grey;
+  }
+  
+  .separate-ratings:hover{
+    color:blue;
+    cursor: pointer;
+  }
+  .separate-reviews:hover{
+    color:blue;
+    cursor: pointer;
+  }
+  
+  .separate-highlights{
+    font-size:24px;
+  }
+  
+  .btn-rev-cont{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+    padding-left:10vw;
+  }
+
+  .rating-text{
+    color:white;
+    background-color:gold;
+    width:fit-content;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top:16px;
+    padding-left:10px;
+    padding-right:10px;
+    height:60px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.rev-container{
+  display: flex;
+  flex-direction: row;
+  width:100vw;
+  padding-left:10vw;
+  align-items: center;
+  gap:20px;
+}
+
+.review-textarea{
+  width:40vw;
+  height: 30vh;
+}
+.rev-review-text{
+  color:rgb(0, 23, 170);
+}
+.review-button{
+  cursor: pointer;
+  
+  border-radius: 10px;
+  font-size: 16px;
+  width: 150px;
+  margin-left:57vw;
+  height: 50px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+
+.review-button:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+}
+
+.review-text-header{
+  padding-left: 10vw;
+}
+
+#ind-rev-cont{
+  border:1px solid black;
+  width:60vw;
+  margin-left: 10vw;
+  height:fit-content;
+  margin-bottom: 5vh;
+}
+.review-ind-cont{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  padding-left:3vw;
+}
+
+.bullet-icon{
+  color:gold;
+}
+
+.ind-rev-text-wrap{
+  font-size:1.5em;
+  padding-left: 1vw;
+}

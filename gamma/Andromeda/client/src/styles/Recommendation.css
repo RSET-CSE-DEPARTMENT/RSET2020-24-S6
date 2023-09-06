@@ -1,0 +1,42 @@
+.recommendation-div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.rec-img-div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  transition: transform ease-in-out 0.35s;
+}
+
+.rec-img-div > img:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.all-recs {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-captions {
+  background-color: rgb(54, 52, 52);
+  position: absolute;
+  top: 80%;
+  height: 20%;
+  color: #ffffff;
+  width: 31.2vw;
+  margin-left: 0.5%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 1%;
+}
