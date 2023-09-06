@@ -1,0 +1,199 @@
+<%- include('header') -%>
+<!-- nav section -->
+
+<%- include('navbar') -%>
+
+<!-- banner div -->
+
+<div id="banner-box">
+    <div class="banner" id="b1"><img src="ambulance-rescue-emergency-blue-light.jpg"></div>
+    <div class="banner" id="b2"><img src="483841.jpg"></div>
+    <div class="banner" id="b3"><img src="1551168.webp"></div>
+</div> 
+
+
+<!-- services section -->
+<div id="service">
+    <div class="heading">Top Ambulance Services With Best <span>Facility</span></div>
+    <p style="font-size: x-large;text-align: center;letter-spacing: 1px;">CareConnect provides our clients with a one-stop solution for all healthcare needs and services.</p>
+    <div class="s1">
+        <div style="margin-top: 5%;font-size: larger;font-weight: 400px;margin-right: 5%;">An ambulance tracking service is an innovative solution that utilizes technology to enhance the effectiveness of emergency medical services. It incorporates real-time tracking and communication features to optimize the coordination between hospitals, ambulance drivers, and patients, leading to quicker response times and improved patient outcomes. Our team of skilled paramedics and emergency medical technicians (EMTs) are well-prepared to deliver on-site emergency medical care, including the administration of medications, performing advanced procedures like intubation or defibrillation, and stabilizing patients before transportation to a hospital.</div>
+        <div style="width: 550px;margin-top: 2%; "><img src="service3.jpg" width="450px" height="300px" style="border-radius: 20px;"></div>
+    </div>
+    <div class="s1">
+        <div style="width: 550px;margin-top: 2%; "><img src="service4.png" width="450px" height="300px" style="border-radius: 20px;"></div>
+        <div style="margin-top: 7%;font-size: larger;font-weight: 400px;margin-left: 5%;">By using real-time tracking and communication technologies, ambulance tracking services can reduce the time it takes for an ambulance to reach the patient, which is particularly critical in emergency medical situations. Additionally, the service can help to reduce the workload on hospitals and ambulance services by automating certain tasks, such as assigning ambulance requests to available drivers.</div>
+    </div>
+    
+</div>
+
+<!-- Features section -->
+
+<div>
+    <div class="heading"><span>Features</span> - User Interface</div>
+    <div id="feature">
+        <div class="feature-item">
+            <div class="feature-img"><img src="ui2.webp"></div>
+            <div class="feature-content" style="text-align: center;">Request an ambulance with a single click</div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-img"><img src="depositphotos_32590215-stock-photo-ambulance-car-isolated-on-white.jpg"></div>
+            <div class="feature-content" style="text-align: center;">Real-time tracking of ambulance location and ETA</div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-img"><img src="ui3.jpg"></div>
+            <div class="feature-content" style="text-align: center;">View the status of your ambulance request</div>
+        </div>
+    </div>
+</div>
+
+
+<!-- about us section -->
+
+<div id="AboutBox">
+    <div class="heading"> What is <span>CareConnect</span> ?</div>
+    <div id="aboutContent">India's first, GPS based technology platform for fast and reliable first point medical attention. With an increasing emphasis on promoting independent living today, having access to the nearest ambulance to you can provide much needed peace of mind in a worst case scenario.</div>
+    
+
+</div>
+
+<div id="why">
+    <div class="heading">Why Choose Us? </div>
+    <div id="whyContent">At CareConnect, patient care and convenience go hand-in-hand.Our integrated ambulance transport services were created to assist in saving human lives by providing an ultimate network of equipped Ambulances.By simple location-based mapping, we built a 24/7 emergency and technology platform that connects the customers and the ambulance drivers directly with each other.</div>
+    <div id="whyFeature">
+        <div style="display: flex; width: 25%;">
+            <div><img src="policy1.svg"></div>
+            <div style="margin-top: 13%;margin-left: 5%;">Patient first policy</div>
+        </div>
+        <div style="display: flex;width: 25%;">
+            <div><img src="policy2.svg"></div>
+            <div style="margin-top: 13%;margin-left: 5%;">Emergency assistance within 15 minutes or less</div>
+        </div>
+        <div style="display: flex;width: 25%;">
+            <div><img src="policy3.svg"></div>
+            <div style="margin-top: 13%;margin-left: 5%;"> 24/7 Support</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+<div id="testimonial">
+    
+    <div id="testimonial-container">
+
+        <div class="testimonial-box">
+             <div id="testimonial-img"></div>
+        </div>
+        <div class="testimonial-box">
+            <div style="font-size: xx-large;font-weight: bolder;color: white;text-align: center;margin-top: 10%;">HAPPY CUSTOMERS</div>
+            <div id="review">
+                <div class="review" id="review1">The driver showed concern by waiting after the drop, to make sure the patient's home oxygen concentrator was working properly. The entire crew was very helpful. I would strongly recommend CareConnect to all corporates.</div>
+                <div class="review"  id="review2">The services were easy to connect to and incredibly quick. When I called them, they inquired about my needs and dispatched an ambulance with all the necessary equipment. Overall, it was a great service.</div>
+                <div class="review"  id="review3">The services were very prompt and the staff was very friendly and co-operative. The Ambulance is very well equipped and very hygienic.</div>
+            </div>
+            <div style="display: flex;flex-direction: row;width: 50%;margin-left: 20%;justify-content: center;margin-top: 10%;">
+        <div class="line" onclick="changeReview('review1')" id="line1"></div>
+        <div class="line" onclick="changeReview('review2')" id="line2"></div>
+        <div class="line" onclick="changeReview('review3')" id="line3"></div>
+        </div>
+        </div>
+        
+    </div>
+
+    
+
+
+</div>
+
+
+<!-- contact detail -->
+<!-- <%- include('contact') -%> -->
+
+<script>
+    // JavaScript code
+var currentSlide = 1;
+var totalSlides = 3;
+
+function showSlide(slideNumber) {
+    var slides = document.getElementsByClassName('banner');
+    var i;
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+
+    slides[slideNumber - 1].style.display = 'block';
+}
+
+function previousSlide() {
+    if (currentSlide === 1) {
+        currentSlide = totalSlides;
+    } else {
+        currentSlide--;
+    }
+
+    showSlide(currentSlide);
+}
+
+function nextSlide() {
+    if (currentSlide === totalSlides) {
+        currentSlide = 1;
+    } else {
+        currentSlide++;
+    }
+
+    showSlide(currentSlide);
+}
+
+function startSlider() {
+    setInterval(function() {
+        nextSlide();
+    }, 3000); // Change slide every 3 seconds (adjust as needed)
+}
+
+// Show the first slide initially
+showSlide(currentSlide);
+
+// Start the automatic slider
+startSlider();
+
+
+function changeReview(elem){
+    if(elem=='review1'){
+        document.getElementById("review1").style.display="block";
+        document.getElementById("line1").style.border="solid white 2px";
+        document.getElementById("review2").style.display="none";
+        document.getElementById("line2").style.border="solid darkgray 2px";
+        document.getElementById("review3").style.display="none";
+        document.getElementById("line3").style.border="solid darkgray 2px";
+    }
+    else if(elem=='review2'){
+        document.getElementById("review1").style.display="none";
+        document.getElementById("line1").style.border="solid darkgray 2px";
+        document.getElementById("review2").style.display="block";
+        document.getElementById("line2").style.border="solid white 2px";
+        document.getElementById("review3").style.display="none";
+        document.getElementById("line3").style.border="solid darkgray 2px";
+    }
+    else{
+        document.getElementById("review1").style.display="none";
+        document.getElementById("line1").style.border="solid darkgray 2px";
+        document.getElementById("review2").style.display="none";
+        document.getElementById("line2").style.border="solid darkgray 2px";
+        document.getElementById("review3").style.display="block";
+        document.getElementById("line3").style.border="solid white 2px";
+    }
+}
+
+</script>
+
+
+
+<%- include('footer') -%>

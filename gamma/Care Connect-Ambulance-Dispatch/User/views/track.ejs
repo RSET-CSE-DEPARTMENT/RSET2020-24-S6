@@ -1,0 +1,19 @@
+<%- include('header') -%>
+
+<%- include('navbar') -%>
+
+<div style="margin-top: 5%;margin-bottom:4%;margin-left:8%;margin-right: 8%;text-align: center;color: red;font-size: x-large;font-weight: bolder;">Dont panic, <%= userName %> !</div>
+<div style="margin-left: 8%;margin-right: 8%;text-align: center;margin-bottom: 5%;color: #49a0ae;font-size: xx-large;font-weight: bold;">Our Team Will Contact You in 5 min</div>
+<div id="track" style="margin: auto;width: 370px; margin-bottom: 6%;">
+<form action="/track" method="post">
+    <input value="<%= userName %>" style="display: none;" name="userName">
+    <input value="<%= phoneNumber %>" style="display: none;" name="phoneNumber">
+    <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+    <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+    
+    <button type="submit">TRACK</button>
+
+</form>
+</div>
+
+<%- include('footer') -%>

@@ -1,0 +1,266 @@
+#navbar{
+    background: linear-gradient(maroon,black);
+    width: 100vw;
+    height: 11vh;
+    display: flex;
+    padding: 10px;
+    
+}
+
+#logoImg img{
+   width:80px;
+   margin-left: 10px;
+}
+
+.logotitle{
+  color:white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-style: oblique;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.main-footer {
+    color: white;
+    background-image: linear-gradient(maroon,black);   
+    padding-top: 2em;
+    bottom: 0;
+    width: 100vw;
+    height: 32vh; 
+  }
+  .row{
+    display: flex;
+    gap: 6rem;
+    margin-left: 10px;
+  }
+  
+  .col-sm{
+    margin-left: 57vh;
+    color: yellow;
+  }
+  .footheading{
+    font-size: 20px;
+  }
+
+#hospital-location{
+    height: 60vh;
+    width: 40vw;
+    background-color: white;
+    margin-left: 10%;
+    border-radius: 10%;
+    padding-top: 3%;
+    opacity: 0.8;
+}
+
+.heading{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    color: yellow;
+}
+
+.heading span{
+    color: #49a0ae;
+}
+
+#line{
+    border:solid red 2px;
+    width: 40px;
+    margin: auto;
+    margin-top: 0.5%;
+    border-radius: 25%;
+    margin-bottom: 2%;
+}
+
+
+body{
+    font-family: sans-serif;
+    margin: 0%;
+    overflow-x: hidden;
+    padding: 0%;
+ }
+
+
+ #contact-box{
+    margin-bottom: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #2f2e41;
+    color: white;
+    text-align: center;
+}
+
+#contact-heading{
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+#contact input, #contact button,#contact-detail input,#contact-detail textarea,#contact-detail button,#verifyNum input,#location-detail input,#location-detail button,#location-detail select,#login-box input,#login-box button,#signup-box button, #signup-box input{
+    width: 350px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 3px;
+    border-radius: 10px;
+}
+
+#contact button,#contact-detail button,#location-detail button,#login-box button,#signup-box button{
+    background-color: #49a0ae;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 355px;
+    height: 43px;
+}
+
+#location-section{
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#location-detail{
+    text-align: center;
+    width: 360px;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 8%;
+}
+
+#hospital{
+    background-color: black;
+    padding: 2%;
+}
+
+#hospital-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hospital-item{
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    text-align: center;
+    margin-bottom: 2%;
+    padding-top: 3%;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+.hospital-name{
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.hospital-address{
+    font-size: larger;
+    color: #707087;
+    margin-bottom: 3%;
+}
+
+.hospital-button{
+    width: 120px;
+    height: 40px;
+    margin-top: 4%;
+    background-color: #49a0ae;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#login,#signup,#home,#pending{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Header_NA_FirstResponders_EFM.jpg);
+    background-size: cover;
+    padding-top: 3%;
+}
+
+#registerContainer{
+    width: 70vw;
+    height: 70vh;
+    margin-left: 10%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 4%;
+}
+
+#banner{
+    height: 100%;
+    width: 47%;
+   background-image: url(banner6.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+#login-container,#signup-container{
+    height: 100%;
+    width: 54%;
+    
+}
+
+#login-box,#signup-box{
+    height: 86%;
+    width: 78%;
+    margin-top: 5%;
+    margin-left:8% ;
+}
+
+#profile{
+    background-color: black;
+    padding-top: 3%;
+    padding-bottom: 7%;
+    padding-left: 5%;
+}
+
+#status-box{
+    margin-left: 2%;
+    margin-right: 4%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#status-box label{
+    font-size: x-large;
+    color: red;
+    font-weight: bold;
+}
+
+.status-item img{
+     height: 75vh;
+     width: 98vh;
+}
+
+.status-item button{
+    width: 220px;
+    height: 60px;
+    margin-top: 8%;
+    background-color: olivedrab;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-size: larger;
+    margin-right: 5%;
+}
+
+.status-item{
+    width: 50%;
+    color: skyblue;
+}

@@ -1,0 +1,792 @@
+body{
+   font-family: sans-serif;
+   margin: 0%;
+   padding: 0%;
+}
+
+#navbar{
+    background: linear-gradient(maroon,black);
+    width: 201vh;
+    height: 11vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+
+#navItem{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 3rem;
+    margin-top: 5vh;
+    margin-left: 45vh;
+
+}
+
+.item{
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.item:hover{
+  color: yellow;
+}
+
+#logoImg img{
+   width:80px;
+   margin-left: 10px;
+}
+
+.logotitle{
+  color:white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-style: oblique;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+#navButton button{
+    height: 50px;
+    width: 125px;
+    font-size: large;
+    font-weight: bold;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 5vh;
+    margin-top: 25px;
+}
+#navButton button:hover{
+  background-color: lightgreen;
+}
+#navButton button:active{
+  background-color: yellow;
+}
+.main-footer {
+  color: white;
+  background-image: linear-gradient(maroon,black);   
+  bottom: 0;
+  padding-top: 2em;
+  position: relative;
+  width: 100%;
+  height: 32vh;
+}
+.row{
+  display: flex;
+  gap: 6rem;
+  margin-left: 10px;
+}
+
+.col-sm{
+  margin-left: 57vh;
+  color: yellow;
+}
+.footheading{
+  
+  font-size: 20px;
+}
+
+
+
+/* 
+banner style  */
+
+#banner-box {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.banner{
+    transition: opacity 0.5s ease-in-out;
+}
+
+.banner img{
+    width: 100vw;
+    height: 90vh;
+}
+
+
+
+/* services style */
+
+#service{
+    padding: 3%;
+    margin-bottom: 2%;
+}
+
+.heading{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.heading span{
+    color: #49a0ae;
+}
+
+.s1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 2%;
+    
+}
+
+
+@media screen and (max-width:1050px) {
+    .s1{
+        flex-wrap: wrap;
+    }
+}
+
+
+/* feature section */
+
+.feature-img img{
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+}
+.feature-img{
+    margin-bottom: 5%;
+}
+
+#feature{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    font-size: larger;
+    flex-wrap: wrap;
+}
+
+.feature-item{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+
+/* about us section styling */
+
+#AboutBox{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#aboutContent{
+    margin-top: 3%;
+    font-size: x-large;
+    letter-spacing: 0.7px;
+    text-align: center;
+    line-height: 2.15rem;
+    color: #707087;
+    margin-bottom: 5%;
+}
+
+#why{
+   padding-left: 10%;
+   padding-right: 10%;
+   padding-top: 5%;
+   padding-bottom: 5%;
+    background-color: #2f2e41;
+    color: white;
+    margin-bottom: 5%;
+}
+
+#whyContent{
+    margin-top: 3%;
+    font-size: larger;
+    letter-spacing: 0.7px;
+    text-align: center;
+    line-height: 2.15rem;
+    margin-bottom: 5%;
+}
+
+#whyFeature{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* team member styles */
+
+#Team{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#teamDescription{
+    margin-top: 3%;
+    font-size: larger;
+    letter-spacing: 0.7px;
+    text-align: center;
+    line-height: 2.15rem;
+    margin-bottom: 5%;
+}
+
+#teamMember{
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.member{
+   text-align: center;
+   font-size: larger;
+   font-weight: bold;
+   margin-bottom: 5%;
+}
+
+.memberImg img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10%;
+}
+
+
+
+
+
+/* booking section styling */
+
+#booking-box{
+    margin-top: 5%;
+    padding-bottom: 5%;
+    /* border-bottom: solid 3px lightgray; */
+}
+
+.booking-desc{
+    font-size: large;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #707087;
+    margin-bottom: 0.5%;
+}
+
+.booking-heading{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    color: #49a0ae;
+}
+
+#line{
+    border:solid red 2px;
+    width: 40px;
+    margin: auto;
+    margin-top: 0.5%;
+    border-radius: 25%;
+    margin-bottom: 2%;
+}
+
+#contact{
+    margin: auto;
+    width:max-content;
+    margin-top: 4%;
+}
+
+#contact input, #contact button,#contact-detail input,#contact-detail textarea,#contact-detail button,#verifyNum input,#verifyNum button,#location-detail input,#location-detail button,#location-detail select,#track button,#status-button{
+    width: 350px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 3px;
+    border-radius: 10px;
+}
+
+#contact button,#contact-detail button,#verifyNum button,#location-detail button,#track button,#status-button{
+    background-color: #49a0ae;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 355px;
+    height: 43px;
+}
+
+
+
+/* contact us section styling */
+
+#contact-box{
+    margin-bottom: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #2f2e41;
+    color: white;
+    text-align: center;
+}
+
+#contact-heading{
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+#message-container{
+    margin-top: 10%;
+    margin-bottom: 28%;
+}
+
+
+/* verification section  */
+#verify-section{
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#verifyNum{
+    text-align: center;
+    width: 360px;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 8%;
+}
+#verifyNum div{
+    margin-bottom: 2%;
+    font-size: larger;
+    color: #707087;
+}
+
+/* location section  */
+
+#location-section{
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#location-detail{
+    text-align: center;
+    width: 360px;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 8%;
+}
+
+
+/* hospital section  */
+
+#hospital{
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 5%;
+}
+
+#hospital-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hospital-item{
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    text-align: center;
+    margin-bottom: 2%;
+    padding-top: 3%;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+.hospital-name{
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.hospital-address{
+    font-size: larger;
+    color: #707087;
+    margin-bottom: 3%;
+}
+
+.hospital-button{
+    width: 120px;
+    height: 40px;
+    margin-top: 4%;
+    background-color: #49a0ae;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+
+
+
+
+/* hospital page styling starts from here  */
+
+#hospital-location{
+    height: 65vh;
+    width: 45vw;
+    background-color: white;
+    margin-left: 8%;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-top: 2%;
+}
+
+/* about us section  */
+
+.about{
+    
+    background-color: lightsteelblue;
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: 80px;
+    margin-left: 10px;
+    padding: 20px;
+
+}
+
+
+.ambulance{
+   float: left;
+}
+  
+  h1{
+    align-items: center;
+    
+  }
+
+
+  .title_main{
+    color: red;
+    text-align: center;
+  }
+  .title{
+    color:red
+
+
+  }
+
+  .about_main{
+display: flex;
+background-color: rgb(146, 143, 143);
+margin-top: 60px;
+  }
+
+
+  .about_line{
+    margin-top: 150px;
+  }
+  .about_photo{
+    float: left;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .about_line h2{
+    font-size: 30px;
+  }
+
+
+  
+  .gallery1 {
+    margin: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+    border-radius: 15px;
+    height: 380px;
+
+  }
+
+  .gallery1:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  
+  .gallery2 {
+    margin: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+    height: 380px;
+    border-radius: 15px;
+
+  }
+  
+  
+
+  .gallery2:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+
+  div.gallery3 {
+    margin: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+    border-radius: 15px;
+    height: 380px;
+
+
+  }
+  
+  
+  
+  .gallery3:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+
+  .gallery1{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.gallery2{
+margin-left: 40px;
+margin-right: 40px;
+}
+.gallery3{
+margin-left: 40px;
+margin-right: 40px;
+}
+
+
+  .gallery{
+    display:flex;
+  }
+  
+  div.desc {
+    padding: 5px;
+    text-align: center;
+  }
+
+
+
+  .service{
+    
+    background-color: whitesmoke;
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    margin-right: 40px;
+    margin-left: 30px;
+}
+
+
+.service{
+   float: left;
+}
+  
+  h1{
+    align-items: center;
+    
+  }
+
+
+  .service_main{
+    color: red;
+    text-align: center;
+  }
+  .title{
+    color:red
+
+
+  }
+
+  .sgallery1 {
+    margin: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+    border-radius: 15px;
+  }
+
+  .sgallery1:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .sgallery1 img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .sgallery2 {
+    margin: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+    border-radius: 15px;
+
+  }
+  
+  .sgallery2 img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .sgallery2:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+
+  div.sgallery3 {
+    margin: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+    border-radius: 15px;
+
+  }
+  
+  
+  div.sgallery3 img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .sgallery3:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+
+  .sgallery1{
+    margin-left: 150px;
+    margin-right: 80px;
+}
+.sgallery2{
+margin-left: 80px;
+margin-right: 80px;
+}
+.sgallery3{
+margin-left: 80px;
+margin-right: 200px;
+}
+
+
+  .sgallery{
+    display:flex;
+  }
+  
+  div.sdesc {
+    padding: 5px;
+    text-align: center;
+  }
+
+
+
+  /* testimonial section  */
+  #testimonial-container{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 8%;
+    margin-right: 8%;
+    background-color: #2f2e41;
+    color: white;
+    border-radius: 20px;
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .testimonial-box{
+    height: 100%;
+    width: 50%;
+  }
+
+  #testimonial-img{
+    height: 100%;
+    width: 99%;
+    background-image: url(testimonial.jpg);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  #review{
+    font-size: large;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .review{
+    margin-top: 7%;
+    margin-left: 8%;
+    margin-right: 8%;
+    line-height: 1.5;
+  }
+
+  .line{
+    border:solid darkgray 2px;
+    width: 40px;
+    margin-top: 0.5%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    cursor: pointer;
+  }
+
+#review2{
+  display: none;
+}
+#review3{
+  display: none;
+}
+
+#line1{
+  border: solid white 2px;
+}
+
+
+#track-status{
+  margin-left: 8%;
+  margin-bottom: 2%;
+  margin-top: 4%;
+}
+
+.status-item{
+   font-size: x-large;
+   font-weight: bolder;
+   padding-top: 2%;
+   padding-bottom: 2%;
+   padding-left: 2%;
+   border-left: 3px solid darkgrey;
+   color: darkgrey;
+}
+
+.green{
+   color: green;
+   border-left: 3px solid green;
+}
+
+.driver-value{
+  padding-left: 5%;
+  font-size: medium;
+  color: darkgray;
+  margin-top: 1%;
+}
+

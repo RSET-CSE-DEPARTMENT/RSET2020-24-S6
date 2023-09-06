@@ -1,0 +1,23 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+<div id="profile">
+    <div class="heading"><span style="color: white;"><%= hospitalName %></span></div>
+    <div id="line"></div>
+    <div id="status-box">
+        <div class="status-item">
+            <div style="color: white;font-size: xx-large;font-weight: bolder;margin-bottom: 18%;">Hello  <%= driverId %> !</div>
+            <div style="font-size: x-large;font-weight: bolder;color: floralwhite;margin-bottom: 8%;">Select Your Status </div>
+            <form action="/status" method="post">
+                <input name="driverId" value="<%= driverId %>" style="display: none;">
+                <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+                <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+               <label> <input type="radio" name="status" value="active" checked> ACTIVE</label><br>
+               <label> <input type="radio" name="status" value="sleep"> SLEEP</label> <br>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <div class="status-item"><img src="qW6DTy.jpg"></div>
+    </div>
+</div>
+
+<%- include('footer') -%>

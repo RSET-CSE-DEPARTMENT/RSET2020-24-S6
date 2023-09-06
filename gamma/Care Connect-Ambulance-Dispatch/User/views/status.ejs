@@ -1,0 +1,59 @@
+<%- include('header') -%>
+    <div class="heading" style="margin-top: 4%;"><span>CHECK YOUR STATUS HERE,</span></div>
+    <div id="line"></div>
+    <div id="track-status">
+        <% if(ambuTrack=="Booking Confirmed"){ %>
+            <div class="status-item green">Booking Confirmed</div>
+            <div class="status-item">Approved By Hospital</div>
+            <div class="status-item">Ambulance Assigned
+                <!-- <div class="driver-value">Driver Name:- <%= driverName %></div>   -->
+                <!-- <div class="driver-value">Driver Id:- <%= driverId %></div>   -->
+                <!-- <div class="driver-value">Driver Number:- <%= driverNum %></div>   -->
+            </div>
+            <div class="status-item">Driver is on the way</div>
+            <div class="status-item">Reached Hospital</div>
+
+       <% }else if(ambuTrack=="approved by hospital"){ %>
+        <div class="status-item green">Booking Confirmed</div>
+        <div class="status-item green">Approved By Hospital</div>
+        <div class="status-item">Ambulance Assigned
+            <!-- <div class="driver-value">Driver Name:- <%= driverName %></div>   -->
+            <!-- <div class="driver-value">Driver Id:- <%= driverId %></div>   -->
+            <!-- <div class="driver-value">Driver Number:- <%= driverNum %></div>   -->
+        </div>
+        <div class="status-item">Driver is on the way</div>
+        <div class="status-item">Reached Hospital</div>
+      
+        <% }else if(ambuTrack=="ambulance assigned"){ %>
+        <div class="status-item green">Booking Confirmed</div>
+        <div class="status-item green">Approved By Hospital</div>
+        <div class="status-item green">Ambulance Assigned
+          <!-- <div class="driver-value">Driver Name:- <%= driverName %></div>   -->
+          <!-- <div class="driver-value">Driver Id:- <%= driverId %></div>   -->
+          <!-- <div class="driver-value">Driver Number:- <%= driverNum %></div>   -->
+        </div>
+        
+        <div class="status-item green">Driver is on the way</div>
+        <div class="status-item">Reached Hospital</div>
+
+        <% }else{ %>
+            <div class="status-item green">Booking Confirmed</div>
+            <div class="status-item green">Approved By Hospital</div>
+            <div class="status-item green">Ambulance Assigned
+                <!-- <div class="driver-value">Driver Name:- <%= driverName %></div>   -->
+                <!-- <div class="driver-value">Driver Id:- <%= driverId %></div>   -->
+                <!-- <div class="driver-value">Driver Number:- <%= driverNum %></div>   -->
+            </div>
+           
+            <div class="status-item green">Driver is on the way</div>
+            <div class="status-item green">Reached Hospital</div>
+        <% } %>
+        
+         
+         
+         <button onclick="location.reload()" id="status-button" style="margin-top: 4%;"> CHECK UPDATES </button>
+    </div>
+
+    <div style="position: absolute;top: 30%;left: 50%;"><img src="ambulance.svg" height="350px" width="450px"></div>
+<%- include('contact') -%>
+<%- include('footer') -%>

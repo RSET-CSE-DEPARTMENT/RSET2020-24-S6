@@ -1,0 +1,27 @@
+<%- include('navbar') -%>
+<%- include('header') -%>
+<div id="home">
+    <div id="caseContainer">
+        <div class="caseBox">
+            <div class="heading" style="margin-top: 15%;"><span style="color: red;">PENDING</span></div>
+            <div class="heading"><span style="color: red;">CASES</span></div>
+            <form action="/pending" method="post">
+            <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+            <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+            <button type="submit">CHECK</button>
+            </form>
+            
+        </div>
+        <div class="caseBox">
+            <div class="heading" style="margin-top: 15%;"><span style="color: blue;">ACTIVE</span></div>
+            <div class="heading"><span style="color: blue;">CASES</span></div>
+           <form action="/active" method="post"> <button type="submit">CHECK</button></form>
+        </div>
+        <div class="caseBox">
+            <div class="heading" style="margin-top: 15%;"><span style="color: green;">COMPLETED</span></div>
+            <div class="heading"><span style="color: green;">CASES</span></div>
+            <form action="/completed" method="post"><button type="submit">CHECK</button></form>
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

@@ -1,0 +1,26 @@
+<%-  include('header') -%>
+<%- include('navbar') -%>
+<div id="hospital">
+<div class="heading"><span> Hospitals </span></div>
+<div id="line"></div>
+
+<div id="hospital-list">
+    <% for(var i=0; i < hospital.length; i++) { %>
+    <div class="hospital-item">
+        <div class="hospital-name"><%= hospital[i].name %></div>
+        <div class="hospital-address"><%= hospital[i].address %></div>
+        <form action="/hospital" method="post">
+            <input name="userName" value="<%= userName %>" style="display: none;">
+            <input name="phoneNumber" value="<%= phoneNumber %>" style="display: none;">
+            <input name="hospitalName" value="<%= hospital[i].name %>" style="display: none;">
+            <input name="hospitalAddress" value="<%= hospital[i].address %>" style="display: none;">
+           <button type="submit" class="hospital-button">BOOK NOW</button> 
+        </form>
+        
+    </div>
+    <% } %>
+</div>
+</div>
+
+
+<%- include('footer') -%>

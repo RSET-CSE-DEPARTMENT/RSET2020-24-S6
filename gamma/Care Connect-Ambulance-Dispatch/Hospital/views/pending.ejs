@@ -1,0 +1,34 @@
+<%- include('navbar') -%>
+<%- include('header') -%>
+<div id="pending" style="padding-top: 4%;">
+    <div class="heading" style="margin-top: 0%;padding-top: 0%;"><span style="color: whitesmoke;"><%= hospitalName %></span></div>
+    <div id="line"></div>
+    <div id="pending-container">
+        <% if(elem.length==0){ %>
+            <div class="heading"><span style="color: yellowgreen;">NO PENDING CASES</span></div>
+        <% } %>
+        <% for(var i=0;i<elem.length;i++){ %>
+            <div class="pendingBox">
+                <div style="font-size: larger;font-weight: bold;"><%= elem[i]['patientName'] %></div>
+                <div style="font-size: larger;font-weight: bold;"><%= elem[i]['patientNum']%></div><br />
+                <form action="/assign" method="post">
+                    <input value="<%= elem[i]['patientName'] %>" style="display: none;" name="patientName" >
+                    <input value="<%= elem[i]['patientNum']%>" name="patientNum" style="display: none;">
+                    <input name="patientId" value="<%= elem[i]['_id'] %>" style="display: none;">
+                    <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+                    <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+                    <input name="patientAddress" type="text"  placeholder="patient address" required><br><br>
+                    <button class="assign" type="submit" style="background-color: green;" >ASSIGN</button>
+                </form>
+                <form action="/reject" method="post">
+                    <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+                    <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+                    <input name="patientId" value="<%= elem[i]['_id'] %>" style="display: none;">
+                    <button type="submit" class="reject" style="background-color: red;">Reject</button>
+                </form>
+            </div>
+        <%}%>
+    </div>
+</div>
+
+<%- include('footer') -%>

@@ -1,0 +1,28 @@
+<%- include('header') -%>
+
+<!-- navbar section  -->
+<%- include('navbar') -%>
+
+<!-- verify section  -->
+<div id="verify-section">
+    <i class="fa-solid fa-mobile-screen-button" style="font-size: 200px;color: #49a0ae;text-align: center;width: 80vw;margin-bottom: 3%;"></i>
+    <div class="heading"><span>VERIFY YOUR PHONE NUMBER</span></div>
+    <div id="verifyNum">
+    <div>Hi <%= username %> </div>
+    <div>Enter the 6-digit code we sent to</div>
+    <div><%= number %></div>
+    <form action="/verify" method="post">
+        <input name="userName" value="<%= username %>" style="display: none;">
+        <input name="phoneNumber" value="<%= number %>" style="display: none;">
+        <input name="realCode" value="<%= code %>" style="display: none;">
+        <input placeholder="Enter Verification Code" name="code" required><br>
+        <button type="submit">SUBMIT</button>
+    </form>
+    </div>
+</div>
+
+<!-- contact section  -->
+
+
+<!-- footer section  -->
+<%- include('footer') -%>

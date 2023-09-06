@@ -1,0 +1,40 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+<div id="location-section">
+    <div class="heading"><span>Add Your Location Details</span></div>
+    <div id="line"></div>
+    <div id="location-detail">
+        <form action="/location" method="post">
+            <input name="userName" value="<%= userName %>" style="display: none;">
+            <input name="phoneNumber" value="<%= phoneNumber %>" style="display: none;">
+            <input type="text" value="India" name="country" readonly style="background-color: lightgray;font-weight: bold;"><br>
+            <select id="state" onchange="handleChange(this.value,'<%= allCitiesString %>')" name="state">
+                <option name="state">Select State</option>
+                <% for(var i=0; i < allState.length; i++){ %>
+                    <option name="state"><%= allState[i].name %></option>
+                <% } %>
+            </select>
+            <select id="city" name="city">
+                <option>Select City</option>
+            </select>
+            <button type="submit">SUBMIT</button>
+      
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function handleChange(selectedState,elem){
+        document.getElementById("city").innerHTML="<option>Select City</option>";
+        var elem=JSON.parse(elem);
+        var cities=(elem[selectedState]);
+        cities.forEach(function(city) {
+            var option = document.createElement("option");
+            option.text = city.name;
+            document.getElementById("city").add(option);
+        });
+    }
+
+</script>
+<%- include('footer') -%>

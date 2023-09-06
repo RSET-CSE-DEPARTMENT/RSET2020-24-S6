@@ -1,0 +1,18 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+
+<div id="WorkingDriver-main">
+    <div class="heading" style="margin-top: 0%;padding-top: 0%;"><span><%= hospitalName %></span></div>
+    <div id="line"></div>
+    <div id="workingDriver-container" style="margin-top: 4%;">
+        <% for(var i=0;i<driver.length;i++){ %>
+             <div class="workingDriver-box">
+                  <div>Driver Name:- <%= driver[i]["driverName"] %></div>
+                  <div>Driver Id:- <%= driver[i]["driverId"] %></div>
+                  <div>Driver Number:- <%= driver[i]["driverNum"] %></div>
+             </div>
+       <% } %>
+    </div>
+</div>
+
+<%- include('footer') -%>

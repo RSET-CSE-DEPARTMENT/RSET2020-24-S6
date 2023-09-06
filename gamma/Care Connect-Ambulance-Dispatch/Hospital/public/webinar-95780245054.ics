@@ -1,0 +1,49 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+LAST-MODIFIED:20230407T050750Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook/Asia/Tokyo
+X-LIC-LOCATION:Asia/Tokyo
+BEGIN:STANDARD
+TZNAME:JST
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20230715T162844Z
+DTSTART;TZID=Asia/Tokyo:20230725T150000
+DTEND;TZID=Asia/Tokyo:20230725T163000
+SUMMARY:Tech. Talk – 2nd Session
+UID:20230715T162844Z-95780245054@fe80:0:0:0:85a:6cff:fedd:e233ens5
+TZID:Asia/Tokyo
+DESCRIPTION:Join from a PC\, Mac\, iPad\, iPhone or Android device:\n    
+ Please click this URL to join. https://deloitte.zoom.us/w/95780245054?tk
+ =Tma0AI4jYN0d97ldVbmTP_IcMYWLKEmFDfNrw1RiZZg.DQMAAAAWTPKOPhZHSWVPdnpjMVE
+ yUzJKT0laTU1HajNBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&pwd=MkpJbFVsNVIvZ0ROTXBB
+ VmEzbHBHZz09&uuid=WN_81QGpKpiSeiJGT6zRsQHiw\n    Passcode: 346295\n	Desc
+ ription: Please fill in all items below in English\n\n\nOr One tap mobil
+ e:\n    +16465189805\,\,95780245054#\,\,\,\,*346295# US (New York)\n    
+ +17209289299\,\,95780245054#\,\,\,\,*346295# US (Denver)\n\nOr join by p
+ hone:\n    Dial(for higher quality\, dial a number based on your current
+  location):\n        US: +1 646 518 9805  or +1 720 928 9299  or +1 213 
+ 338 8477  or +1 312 626 6799 \n    Webinar ID: 957 8024 5054\n    Passco
+ de: 346295\n    International numbers available: https://deloitte.zoom.u
+ s/u/acQm21PFtK\n\n
+LOCATION:https://deloitte.zoom.us/w/95780245054?tk=Tma0AI4jYN0d97ldVbmTP_
+ IcMYWLKEmFDfNrw1RiZZg.DQMAAAAWTPKOPhZHSWVPdnpjMVEyUzJKT0laTU1HajNBAAAAAA
+ AAAAAAAAAAAAAAAAAAAAAAAA&pwd=MkpJbFVsNVIvZ0ROTXBBVmEzbHBHZz09&uuid=WN_81
+ QGpKpiSeiJGT6zRsQHiw
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
