@@ -1,0 +1,130 @@
+{% extends "layout.html"%}
+{% block content%}
+<div class="container">
+  
+        <div class="card mt-50 predict-card-cont" style="width: 70%; height: 100%; margin-top:1vh;margin-left:15vw;padding-left:10vw">
+            
+            <div class="card-body">
+                <div class="col-12" style="text-align: center;">
+                    <h5 style="margin-left:-10vw">Fill the details to predict the car price: </h5>
+                </div>
+                <br>
+                <form method="post" accept-charset="utf-8" name="Modelform">
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select the name:</b> </label><br>
+                        <select class="selectpicker form-control" id="names" name="names" required="1" onchange="load_car_models(this.id,'data','car_models')">
+                            {% for name in names %}
+                            <option value="{{ name }}">{{ name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select the model:</b> </label><br>
+                        <select class="selectpicker form-control" id="car_models" name="car_models" required="1">
+                            
+                        </select>
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select manufacture year of the car:</b> </label><br>
+                        <select class="selectpicker form-control" id="id" name="year" required="1">
+                            {% for year in years %}
+                            <option value="{{ year }}">{{ year }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select the Fuel Type:</b> </label><br>
+                        <select class="selectpicker form-control" id="id" name="fuel_type" required="1">
+                            {% for fuel in fuel_types %}
+                            <option value="{{ fuel }}">{{ fuel }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select the Type:</b> </label><br>
+                        <select class="selectpicker form-control" id="id" name="type" required="1">
+                            {% for t in type %}
+                            <option value="{{ t }}">{{ t }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Enter the Number of owners:</b> </label><br>
+                        <input type="text" class="form-control" id="id" name="ownership"placeholder="Enter the number of owners ">
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Enter the Number of Kilometres that the car has travelled:</b> </label><br>
+                        <input type="text" class="form-control" id="id" name="kms" placeholder="Enter the kilometres driven ">
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center;margin-top:20px;">
+                        <button  class="btn btn-primary form-control" onclick="send_data()">Predict Price</button>
+                    </div>
+                </form>
+                <br>
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <h4><span id="prediction"></span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<video  autoplay loop muted class="predict-bg">
+    <source src="{{ url_for('static', filename='images/xyz.mp4') }}" >
+
+ </video>
+<script>
+    
+    function load_car_models(name_id,data,car_model_id)
+    {
+        var name=document.getElementById(name_id);
+        var car_model= document.getElementById(car_model_id);
+        car_model.value="";
+        car_model.innerHTML="";
+        console.log(name.value);
+        
+        
+        {% for name in names %}
+            if( name.value == "{{ name }}")
+            {
+                {% for model in data[name] %}
+
+                    var newOption= document.createElement("option");
+                    console.log("{{ model }}")
+                    newOption.value="{{ model }}";
+                    newOption.innerHTML="{{ model }}";
+                    car_models.options.add(newOption);
+                   
+                {% endfor %}
+            }
+        {% endfor %}
+    }
+
+    function form_handler(event) {
+        event.preventDefault(); // Don't submit the form normally
+    }
+    
+    function send_data()
+    {
+        document.querySelector('form').addEventListener("submit",form_handler);
+
+        var fd=new FormData(document.querySelector('form'));
+
+        var xhr= new XMLHttpRequest({mozSystem: true});
+
+        xhr.open('POST','/predict',true);
+        document.getElementById('prediction').innerHTML="Wait! Predicting Price.....";
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                document.getElementById('prediction').innerHTML="Prediction: ₹"+xhr.responseText;
+
+            }
+        };
+
+        xhr.onload= function(){};
+
+        xhr.send(fd);
+    }
+</script>
+{% endblock content %}

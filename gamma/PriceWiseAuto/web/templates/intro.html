@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        
+        
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet"  href="{{ url_for('static', filename='intro.css') }}"> 
+   <title>PWA</title>
+</head>
+
+<body>
+    
+    
+    
+        <video  autoplay loop muted class="vdo">
+           <source src="{{ url_for('static', filename='images/xyz.mp4') }}" >
+
+        </video>
+        
+        
+        <div class="myimg">
+            <img src="{{ url_for('static', filename='images/pqr.webp') }}">
+        </div>
+            
+            
+            
+         
+            
+            
+            
+            
+            <div class="comp" >
+                <h1>PriceWiseAuto</h1> 
+            </div>
+            
+            
+            <div class="regbuton">
+                <a href="{{url_for('login')}}">
+                    <input class="s1 r2"type="submit" value="Login" style="height: 50px ; width:80px;" >
+                </a>
+            </div>
+
+
+<section >
+      
+ 
+    
+    <div class="box">
+    
+
+        
+        
+    
+      <div class="desc2">
+        Welcome To
+        PriceWiseAuto
+    </div>
+    <div class="desc3">
+          Your ultimate destination for accurate and reliable car price predictions.  <br>
+          &emsp; Our website harnesses the power of advanced machine learning algorithms to provide you with valuable<br>&emsp;&emsp; insights into the  prices of various cars
+          Our user-friendly interface allows you to input specific details about the car<br>&emsp;&emsp;&emsp; you're interested in, 
+          such as make, model, year, mileage, and additional features.  
+        </div>
+        
+    <div class="bck2">
+    </div>
+
+
+
+        
+     
+</div>
+    
+<div class="box2">
+    <div class="f1qu">
+        
+        <div class="quo">
+        PriceWiseAuto 
+        
+    </div>
+    
+    <div class="quo1">
+        Your compass for navigating the world of car prices
+    </div>
+    
+</div>
+
+
+
+</div>
+        
+    
+<div class="box3">
+
+<div class="diga">
+
+    
+    
+    <div class="dig2">
+        Features
+    </div> 
+    
+    
+    <div class="digc">
+        Our algorithms analyze vast amounts of data, including historical sales data, market trends, and specific car attributes, 
+        to generate precise predictions of future car prices. With this information, you can confidently plan your buying or 
+        selling strategy.<br>Input the specific details of the car you're interested in, such as make, model, year, mileage, and 
+        additional features, and our platform generates tailored predictions based on that information. 
+        This ensures that you receive predictions specific to the car you're considering.<br>We are considering two machine 
+        model algorithms to get to our final price.We also provide with a graphical representation of varying price for a particular 
+        car.  
+        
+    </div>
+</div>    
+
+
+</div>    
+
+
+<div class="box4">
+    
+    <div class="f1">
+        
+    <div class="objimg">
+        <img src="{{ url_for('static', filename='images/9.webp') }}">
+    </div>
+
+    <div class="obja">
+
+        <div class="obj1">
+            ABOUT
+        </div>
+        
+        <div class="obj2">
+            US
+        </div> 
+        
+        
+        <div class="objc">
+            PriceWiseAuto is a leading AutoTech company streamlining and revolutionising financing of pre-owned cars in India.<br>
+            It has brought together cutting-edge technology and country-wide partners 
+            to solve all the problems associated with selling an existing car.
+            
+            
+        </div>
+        
+       
+    </div>    
+    
+</div>
+
+</div>
+
+<div class="box5">
+    
+    
+    
+    <div class="slideshow-container">
+        
+        <div class="mySlides  fade">
+            <div class="numbertext">1 / 4</div>
+      <img src="{{ url_for('static', filename='images/1.jpg') }}" style="width:100% "  height="700px">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="{{ url_for('static', filename='images/2.webp') }}" style="width:100%" height="700px">
+        <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="{{ url_for('static', filename='images/3.jpg') }}" style="width:100%"height="700px">
+        <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="{{ url_for('static', filename='images/4.jpg') }}" style="width:100%"height="700px">
+        <div class="text"></div>
+    </div>
+    
+    
+    <a class="prev" onclick="plusSlides(-1)">n</a>
+    <a class="next" onclick="plusSlides(1)">o</a>
+    
+</div>
+<br>
+
+  <div style="text-align:center"> 
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+    </div> 
+</div>
+
+
+
+
+
+
+<script>
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+ let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+ if (slideIndex > slides.length) {slideIndex = 1}    
+ for (i = 0; i < dots.length; i++) {
+   dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3500); 
+}
+    </script>
+    
+
+</section>
+        
+        
+
+
+
+<footer>
+<div class="f1">
+    <div class="cont">
+        Contact Us
+   </div>    
+
+    
+
+    <div class="ju">
+     Join Us   
+    </div>
+
+</div>    
+
+<div class="f1">
+
+    <div class="ct">
+        <ul style="list-style-type: none;">
+        <li style="margin-bottom: 10px;">3482394230,2395037598</li>
+        <li style="margin-bottom: 10px;">egffgh@gmail.com</li>
+        <li style="margin-bottom: 10px;">www.xyzabc.com</li>
+    </ul>
+    
+</div>
+
+
+
+    
+    
+
+    
+    <div>
+        
+        <a href="kj" target="blank" class="fa fa-twitter"></a>
+             
+    </div>
+         
+         <div>
+             
+             <a href="jh" target="blank" class="fa fa-facebook"></a>
+        </div> 
+</div>
+
+</footer>
+
+
+
+
+
+</body>
+</html>
+
+
