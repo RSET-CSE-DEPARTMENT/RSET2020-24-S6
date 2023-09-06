@@ -1,0 +1,103 @@
+*{
+    padding:0;
+    margin :0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color:white;
+}
+.nav-link{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color:white;
+}
+.nav-link:hover{
+    font-weight: bold;
+}
+.nav-link:active{
+    font-weight: bold;
+}
+.bg-dark{
+	background-color: #75767B;
+}
+.mt-50{
+	margin-top: 50px;
+}
+#canvas{
+    border: 2px solid black;
+}
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  .class-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center; 
+    align-items: center;
+    margin: 10;
+    border:0
+  }
+  .media1{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center; 
+    align-items: center;
+    margin: 10;
+    border:0
+  }
+  .form-group1{
+    padding: 5%;
+  }
+  .form-cont{
+    color:white;
+    width:20vw;
+    height:120%;
+    margin-top:10vh;
+    border-radius: 30px;
+    background-color:rgba(53, 50, 50, 0.678) ;
+    z-index:10;
+  }
+
+  .bg-login{
+    position:absolute;
+    top:10vh;
+    left:0;
+    width:100vw;
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  .predict-bg{
+    position:absolute;
+    top:10vh;
+    left:0;
+    width: 100%;
+    overflow:hidden ;
+  }
+
+  .predict-card-cont{
+    z-index:5;
+    color:white;
+    background-color: #000000b2;
+    
+  }
+  

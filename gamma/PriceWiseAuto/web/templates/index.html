@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+  <title >Car Image Selector</title>
+
+  <script>
+    function showCarImage() {
+      var carSelect = document.getElementById("carSelect");
+      var carImage = document.getElementById("carImage");
+      var selectedCar = carSelect.value;
+      
+      // Define the image URLs for each car
+      var carImages = {
+        "alto1": "static/graphs/alto1.png",
+        "amaze": "static/graphs/amaze.png",
+        "baleno": "static/graphs/baleno.png",
+        "brezza": "static/graphs/brezza.png",
+        "ciaz": "static/graphs/ciaz.png",
+        "city": "static/graphs/city.png",
+        "corolla": "static/graphs/corolla.png",
+        "creta": "static/graphs/creta.png",
+        "duster": "static/graphs/duster.png",
+        "ecosport": "static/graphs/ecosport.png",
+        "hyundai10": "static/graphs/hyundai10.png",
+        "ignis": "static/graphs/ignis.png",
+        "kiger": "static/graphs/kiger.png",
+        "kwid": "static/graphs/kwid.png",
+        "nexon": "static/graphs/nexon.png",
+        "santro": "static/graphs/santro.png",
+        "swift": "static/graphs/swift.png",
+        "tiago": "static/graphs/tiago.png",
+        "venue": "static/graphs/venue.png",
+        "verna": "static/graphs/verna.png",
+        "wagonr": "static/graphs/wagonr.png",
+        "wrv": "static/graphs/wrv.png"
+      };
+      
+      // Set the source attribute of the image based on the selected car
+      carImage.src  = carImages[selectedCar];
+    }
+  </script>
+</head>
+<body>
+
+  <div class="img">
+
+    
+    
+    <h1 class="c">Car Trend Chart</h1>
+    
+    <form >
+      <label class="sc" form="carSelect">Select a car:</label>
+      <select id="carSelect">
+      <option value="alto1">Maruti Alto 800</option>
+      <option value="amaze">Honda Amaze</option>
+      <option value="baleno">Maruti Baleno</option>
+      <option value="brezza">Maruti Vitara Brezza</option>
+      <option value="ciaz">Maruti Ciaz</option>
+      <option value="city">Honda City</option>
+      <option value="corolla">Toyota Corolla</option>
+      <option value="creta">Hyundai Creta</option>
+      <option value="duster">Renault Duster</option>
+      <option value="ecosport">Ford Ecosport</option>
+      <option value="hyundai10">Hyundai Grand i10</option>
+      <option value="i20">Hyundai Elite i20</option>
+      <option value="ignis">Maruti IGNIS</option>
+      <option value="kiger">Renault Kiger</option>
+      <option value="kwid">Renault Kwid</option>
+      <option value="nexon">Tata Nexon</option>
+      <option value="santro">Hyundai NEW SANTRO</option>
+      <option value="swift">Maruti Swift</option>
+      <option value="tiago">Tata Tiago</option>
+      <option value="venue">Hyundai VENUE</option>
+      <option value="verna">Hyundai Verna</option>
+      <option value="wagonr">Maruti New Wagon-R</option>
+      <option value="wrv">Honda WR-V</option>
+    </select>
+    <br>
+    <button class="kk" onclick="showCarImage()" value="Submit" type="button"><span>Submit </span></button>
+    <a href="{{url_for('home')}}"><button class="kk" style="margin-right:30px;" onclick="" value="Home" type="button"><span>Home </span></button></a>
+  </form>
+  
+  <br>
+  
+  <img id="carImage" src="" style="opacity: 0.90; margin-left: 60px;">
+</body>
+</div>
+</html>

@@ -1,0 +1,499 @@
+body
+{
+margin:0px 0px;
+padding: 0px;
+    
+}
+
+b{
+    font-weight: bolder;
+}
+
+.myimg {
+padding-left: 20px;
+padding-top: 20px;
+} 
+
+.myimg2{
+  margin-left: 1080px;
+  
+  padding-left: 20px;
+  padding-top:20px;
+}
+
+
+.myimg img{
+    height: 130px;
+    float: left;
+    border-radius: 50%;
+}
+
+.myimg2 img{
+  height: 130px;
+  float: left;
+  border-radius: 50%;
+}
+
+.regbuton{
+    float: right;
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-left: 880px;
+    
+
+}
+
+
+
+.rules{
+    padding-top: 40px;
+    padding-left: 50px;
+}
+
+
+section{
+
+height: 1815px;
+/*1520px*/
+padding-top: 240px;
+}
+
+
+
+
+
+.f1{
+display:flex;
+}
+
+
+.s1{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-right: 590px;  
+}
+
+.r2{
+    background-color:white;
+    color: black;
+    }
+    
+    .r2:hover{
+    background-color: black;
+    color:white;
+    transform: scale(1.3);
+    
+    }
+    
+    .r2:active{
+    
+      transform: translateY(3px);
+        
+    }
+    
+    
+
+
+
+
+.box{
+margin: 0px 0px;
+
+background-color:black;
+padding: 10px 10px;
+height: 230px;
+}
+
+
+
+.desc{
+
+font-weight:200;
+font-size: 25px;
+
+}
+
+.desc2{
+font-size:42px ;
+font-weight:800;
+color:#ffffffc2;
+font-family: sans-serif;
+margin-top: 35px;
+
+
+}
+
+.desc3{
+padding-top: 10px;
+padding-left: 10px;
+font-size: 19px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+color: #ffffffc2;
+}
+
+
+.box2{
+    margin: 0px 0px;
+
+    background-color:darkred;
+    padding: 10px 0px;
+    height: 139px;
+    
+}
+
+
+.f1qu{
+padding-left: 160px;
+display: flex;
+padding-top: 45px;
+
+}
+
+.quo{
+font-size: 35px;
+font-weight:normal;
+color: goldenrod;
+
+
+}
+
+.quo1{
+    font-size: 35px;
+    font-weight:bolder;
+    color:wheat;
+}
+
+
+
+
+.box3{
+    margin: 0px 0px;
+
+    background-color:rgba(255, 255, 255, 0.945);;
+    padding: 10px 0px;
+    height: 300px;
+    
+}
+
+.box4{
+
+    margin: 0px 0px;
+
+    background-color:rgba(255, 255, 255, 0.945);;
+    padding: 10px 0px;
+    height: 340px;
+    
+
+}
+
+
+.box5{
+    margin: 0px 0px;
+
+    background-color:rgba(255, 255, 255, 0.945);
+    height: 785px;
+
+
+}
+
+
+
+
+.diga{
+    padding-left: 30px;
+}
+
+
+
+
+
+.dig2{
+    font-size: 50px;
+    font-weight: 800;
+    color: darkred;
+    font-family:sans-serif;
+}
+
+.digc{
+padding-top: 30px;
+font-size: 22px;
+
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+.obja{
+
+    padding-left: 300px;
+    padding-top: 10px;
+    
+    
+}
+
+.obj1{
+font-size: 50px;
+font-weight: 800;
+color: darkred;
+font-family:sans-serif;
+
+}
+.obj2{
+font-size: 40px;
+font-weight:500;
+color: darkred;
+font-family:sans-serif;
+}
+
+.objc{
+padding-top: 40px;
+font-size: 22px;
+padding-right: 40px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+.objimg{
+  height:285px;
+  width: 1000px;
+  margin-left: 80px;
+  margin-top: 20px;
+
+
+
+
+}
+
+
+
+
+footer{
+background-color:rgb(0, 0, 0);
+height: 165px;
+}
+
+.cont{
+font-size: 32px;
+color: white;
+padding-left: 86px;
+/* text-decoration: underline goldenrod; */
+padding-top: 5px;
+cursor: default;
+}
+
+.ct{
+font-size: 19px;
+color: white;
+float:left;
+padding-left: 40px;
+cursor: default;
+}
+
+
+.ju{
+color: white;
+font-size: 32px;
+/* text-decoration: underline goldenrod; */
+float:left;
+padding-left: 850px;
+padding-top: 5px;
+cursor: default;
+}
+
+
+.fa{
+width: 17px;
+padding: 15px;
+margin: 15px;
+text-align:center;
+border-radius: 50%;
+text-decoration: none;
+height: 16px;
+margin-left: 796px;
+margin-right: -769px;
+}
+
+
+.fa:hover{
+opacity: 0.65;
+}
+
+
+.fa-twitter{
+background: #55acee;
+color: white;
+}
+
+.fa-facebook{
+background: #3b5998;
+color:white;
+}
+
+.mySlides {display:none;}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1300px;
+  position: relative;
+  margin:auto;
+  
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width:auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display:hidden;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+  }
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name:fade;
+  animation-duration: 1.0s;
+}
+
+@keyframes fade {
+  from {opacity: .6} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+.vdo{
+position: absolute;
+right:0;
+bottom:0;
+z-index:-1;
+
+}
+
+@media(min-aspect-ratio:16/9){
+    .vdo{
+      width:100%;
+      height:auto;
+
+
+    }
+     
+}
+
+@media(max-aspect-ratio:16/9){
+  .vdo{
+    width:auto;
+    height:100%;
+
+
+  }
+   
+}
+
+
+.comp{
+  
+  text-align: center;
+  padding-top: 150px;
+  color:#bbb;
+  
+  
+  
+}
+.comp h1{
+  font-size:100px;
+  font-weight:600;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+.comp h1:hover{
+
+  -webkit-text-stroke:4px,#fff;
+  color:#fff;
+  opacity: 1;
+  cursor: pointer;
+  
+}
+
+
+.bck2{
+  background-image: url(pqr.webp);
+  background-size: cover;
+  border-radius: 80%;
+  height:185px;
+  width: 185px;
+
+  margin: -159px 1120px;
+  
+
+}

@@ -1,0 +1,875 @@
+ Year_name,Price,Kms,Fuel,Ownership,Type,Model,Year,Name
+2014 Hyundai Grand i10,"3,63,000","44,523 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2014 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"4,82,000","63,011 km",Petrol,1,Manual,SPORTZ 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2014 Hyundai Grand i10,"3,34,000","96,601 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2014 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"3,83,000","28,399 km",Petrol,2,Manual,ERA 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"3,95,000","35,432 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2019 Hyundai Grand i10,"5,11,000","44,790 km",CNG,2,Manual,MAGNA 1.2 KAPPA VTVT CNG,2019 ,Hyundai Grand i10
+2013 Hyundai Grand i10,"2,95,000","1,17,857 km",Petrol,1,Manual,ASTA (O) 1.2 KAPPA VTVT,2013 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"4,70,000","75,078 km",CNG,1,Manual,SPORTZ 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"4,56,000","9,560 km",Petrol,1,Manual,MAGNA 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2014 Hyundai Grand i10,"3,87,000","70,624 km",Petrol,1,Manual,SPORTS EDITION 1.2L KAPPA VTVT,2014 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"5,39,000","29,966 km",Petrol,1,Manual,ASTA 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2018 Hyundai Grand i10,"5,70,000","15,739 km",CNG,1,Automatic,SPORTZ AT 1.2 KAPPA VTVT,2018 ,Hyundai Grand i10
+2015 Hyundai Grand i10,"3,99,000","82,117 km",Petrol,2,Manual,ASTA 1.2 KAPPA VTVT,2015 ,Hyundai Grand i10
+2015 Hyundai Grand i10,"4,04,000","53,734 km",Petrol,1,Manual,ASTA 1.2 KAPPA VTVT,2015 ,Hyundai Grand i10
+2015 Hyundai Grand i10,"4,52,000","34,900 km",Petrol,2,Automatic,ASTA 1.2 AT VTVT,2015 ,Hyundai Grand i10
+2018 Hyundai Grand i10,"4,94,000","15,290 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2018 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"4,02,000","40,736 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"4,42,000","17,332 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2014 Hyundai Grand i10,"3,31,000","37,755 km",Petrol,2,Manual,MAGNA 1.2 KAPPA VTVT,2014 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"4,61,000","39,616 km",Petrol,1,Manual,MAGNA 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"5,28,000","19,168 km",Petrol,1,Manual,ASTA 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2014 Hyundai Grand i10,"3,78,000","42,182 km",Petrol,1,Manual,SPORTZ 1.2 KAPPA VTVT,2014 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"5,06,000","83,663 km",Petrol,1,Automatic,SPORTZ AT 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"4,51,000","15,485 km",Petrol,1,Manual,SPORTZ 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2013 Hyundai Grand i10,"3,27,000","30,079 km",Petrol,1,Manual,ERA 1.2 KAPPA VTVT,2013 ,Hyundai Grand i10
+2019 Hyundai Grand i10,"5,40,000","43,756 km",Petrol,1,Manual,SPORTZ 1.2 KAPPA VTVT,2019 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"5,52,000","27,924 km",Petrol,1,Automatic,SPORTZ (O) AT 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2013 Hyundai Grand i10,"3,74,000","47,327 km",Petrol,1,Manual,SPORTZ 1.2 KAPPA VTVT,2013 ,Hyundai Grand i10
+2013 Hyundai Grand i10,"3,69,000","67,389 km",Petrol,1,Manual,ASTA 1.2 KAPPA VTVT,2013 ,Hyundai Grand i10
+2019 Hyundai Grand i10,"5,16,000","14,653 km",Petrol,1,Manual,MAGNA 1.2 KAPPA VTVT,2019 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"5,08,000","31,300 km",Petrol,1,Manual,ASTA 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2013 Hyundai Grand i10,"3,84,600","21,567 km",Petrol,1,Manual,SPORTZ 1.2 KAPPA VTVT,2013 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"5,32,000","52,539 km",Petrol,1,Automatic,SPORTZ (O) AT 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2019 Hyundai Grand i10,"5,73,000","18,526 km",Petrol,1,Manual,SPORTZ 1.2 KAPPA VTVT,2019 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"5,10,000","51,878 km",CNG,1,Manual,ASTA 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"4,83,000","61,072 km",Petrol,1,Manual,ASTA 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"4,61,000","17,815 km",Petrol,1,Manual,MAGNA 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2015 Hyundai Grand i10,"3,52,000","1,01,067 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2015 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"3,71,800","28,399 km",Petrol,2,Manual,ERA 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2014 Hyundai Grand i10,"3,62,000","36,474 km",Petrol,1,Manual,ASTA 1.2 KAPPA VTVT,2014 ,Hyundai Grand i10
+2014 Hyundai Grand i10,"3,73,000","48,101 km",Petrol,1,Manual,MAGNA 1.2 VTVT,2014 ,Hyundai Grand i10
+2018 Hyundai Grand i10,"4,43,000","65,158 km",CNG,1,Manual,MAGNA 1.2 VTVT,2018 ,Hyundai Grand i10
+2014 Hyundai Grand i10,"3,16,000","74,389 km",Petrol,1,Manual,MAGNA 1.2 KAPPA VTVT,2014 ,Hyundai Grand i10
+2018 Hyundai Grand i10,"4,95,000","21,494 km",Petrol,1,Manual,SPORTZ O 1.2,2018 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"4,01,000","72,415 km",CNG,1,Manual,SPORTZ 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2018 Hyundai Grand i10,"4,67,000","39,525 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2018 ,Hyundai Grand i10
+2014 Hyundai Grand i10,"3,34,000","96,601 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2014 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"4,69,000","27,804 km",Petrol,1,Manual,SPORTZ 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2018 Hyundai Grand i10,"4,65,000","58,081 km",Petrol,1,Manual,MAGNA 1.2 KAPPA VTVT,2018 ,Hyundai Grand i10
+2019 Hyundai Grand i10,"5,37,000","47,920 km",CNG,2,Manual,MAGNA 1.2 KAPPA VTVT CNG,2019 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"5,46,000","46,942 km",CNG,1,Automatic,SPORTZ (O) AT 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"4,56,000","9,560 km",Petrol,1,Manual,MAGNA 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2018 Hyundai Grand i10,"5,15,000","53,778 km",CNG,2,Automatic,MAGNA AT 1.2 KAPPA VTVT,2018 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"4,46,000","35,810 km",CNG,2,Manual,MAGNA 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2017 Hyundai Grand i10,"4,30,000","59,710 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2017 ,Hyundai Grand i10
+2016 Hyundai Grand i10,"4,02,000","40,736 km",Petrol,2,Manual,SPORTZ 1.2 KAPPA VTVT,2016 ,Hyundai Grand i10
+2017 Hyundai Elite i20,"4,90,000","62,148 km",Petrol,2,Manual,MAGNA EXECUTIVE 1.2,2017 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"5,52,000","55,856 km",Petrol,2,Manual,ASTA 1.2,2017 ,Hyundai Elite i20
+2015 Hyundai Elite i20,"5,10,000","9,515 km",CNG,2,Manual,SPORTZ (O) 1.2,2015 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"5,43,000","44,783 km",CNG,1,Manual,MAGNA EXECUTIVE 1.2,2017 ,Hyundai Elite i20
+2018 Hyundai Elite i20,"5,86,000","65,118 km",Petrol,2,Automatic,MAGNA EXECUTIVE CVT,2018 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"5,39,000","17,063 km",Petrol,1,Manual,MAGNA 1.2,2017 ,Hyundai Elite i20
+2018 Hyundai Elite i20,"5,82,000","53,083 km",Petrol,1,Manual,MAGNA EXECUTIVE 1.2,2018 ,Hyundai Elite i20
+2016 Hyundai Elite i20,"7,37,000","60,937 km",Petrol,1,Automatic,MAGNA 1.4 AT,2016 ,Hyundai Elite i20
+2018 Hyundai Elite i20,"5,72,000","24,248 km",Petrol,2,Manual,MAGNA EXECUTIVE 1.2,2018 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"5,86,000","13,992 km",Petrol,1,Manual,Magna Executive 1.2,2017 ,Hyundai Elite i20
+2016 Hyundai Elite i20,"5,25,000","71,388 km",Petrol,2,Manual,MAGNA 1.2,2016 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"5,63,000","54,124 km",Petrol,1,Manual,SPORTZ 1.2,2017 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"5,65,000","45,302 km",Petrol,1,Manual,MAGNA EXECUTIVE 1.2,2017 ,Hyundai Elite i20
+2018 Hyundai Elite i20,"6,97,000","18,431 km",Petrol,1,Manual,ASTA 1.2,2018 ,Hyundai Elite i20
+2015 Hyundai Elite i20,"4,40,000","41,792 km",Petrol,2,Manual,MAGNA 1.2,2015 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"5,30,000","37,701 km",Petrol,1,Manual,ERA 1.2,2017 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"6,10,000","38,337 km",Petrol,1,Manual,ASTA 1.2,2017 ,Hyundai Elite i20
+2015 Hyundai Elite i20,"5,45,000","29,666 km",Petrol,1,Manual,SPORTZ 1.2,2015 ,Hyundai Elite i20
+2018 Hyundai Elite i20,"6,49,000","21,235 km",Petrol,1,Manual,SPORTZ 1.2,2018 ,Hyundai Elite i20
+2015 Hyundai Elite i20,"4,50,000","52,578 km",Petrol,1,Manual,MAGNA 1.2,2015 ,Hyundai Elite i20
+2021 Renault Kiger,"6,52,000","41,505 km",Petrol,1,Automatic,RXL EASY R 1.0 L,2021 ,Renault Kiger
+2021 Renault Kiger,"8,83,000","22,821 km",Petrol,1,Manual,RXZ TURBO MT,2021 ,Renault Kiger
+2021 Renault Kiger,"9,20,000","11,647 km",Petrol,1,Manual,RXZ TURBO MT DUAL TONE,2021 ,Renault Kiger
+2022 Renault Kiger,"8,15,000","7,556 km",Petrol,1,Manual,RXZ MT,2022 ,Renault Kiger
+2023 Renault Kiger,"9,26,000","26,254 km",Petrol,1,Manual,RXZ TURBO MT DUAL TONE,2023 ,Renault Kiger
+2021 Renault Kiger,"9,98,000","9,698 km",Petrol,1,Automatic,RXZ CVT 1.0 TURBO,2021 ,Renault Kiger
+2021 Renault Kiger,"8,54,000","8,383 km",Petrol,1,Automatic,RXZ 1.0 Easy R Petrol,2021 ,Renault Kiger
+2021 Renault Kiger,"8,56,000","3,623 km",Petrol,1,Automatic,RXZ AMT DUAL TONE,2021 ,Renault Kiger
+2021 Renault Kiger,"8,18,000","15,991 km",Petrol,1,Manual,RXZ 1.0 MT,2021 ,Renault Kiger
+2022 Renault Kiger,"8,03,000","6,642 km",Petrol,1,Automatic,RXT (O) AMT 1.0 DUAL TONE,2022 ,Renault Kiger
+2021 Renault Kiger,"9,87,000","12,944 km",Petrol,1,Automatic,RXZ CVT 1.0 TURBO,2021 ,Renault Kiger
+2022 Renault Kiger,"10,87,000","2,153 km",Petrol,1,Automatic,RXZ TURBO CVT DUAL TONE,2022 ,Renault Kiger
+2021 Renault Kiger,"7,97,000","7,450 km",Petrol,1,Manual,RXZ 1.0 MT,2021 ,Renault Kiger
+2021 Renault Kiger,"7,77,000","45,459 km",Petrol,1,Manual,RXZ MT DUAL TONE,2021 ,Renault Kiger
+2022 Renault Kiger,"10,14,000","12,907 km",Petrol,1,Automatic,RXZ TURBO CVT,2022 ,Renault Kiger
+2021 Renault Kiger,"8,35,000","11,244 km",Petrol,1,Automatic,RXZ AMT,2021 ,Renault Kiger
+2021 Renault Kiger,"9,00,000","6,835 km",Petrol,1,Manual,RXZ 1.0 TURBO MT DUAL TONE,2021 ,Renault Kiger
+2021 Renault Kiger,"8,10,000","17,632 km",Petrol,1,Manual,RXZ 1.0 TURBO MT,2021 ,Renault Kiger
+2015 Maruti Ciaz,"5,07,000","43,721 km",Petrol,1,Manual,VXI,2015 ,Maruti Ciaz
+2017 Maruti Ciaz,"5,54,000","57,953 km",Diesel,1,Manual,DELTA 1.3 DDIS SHVS,2017 ,Maruti Ciaz
+2016 Maruti Ciaz,"5,73,000","47,014 km",Petrol,2,Manual,VXI PLUS,2016 ,Maruti Ciaz
+2018 Maruti Ciaz,"6,10,000","74,648 km",Diesel,2,Manual,DELTA DIESEL 1.3,2018 ,Maruti Ciaz
+2016 Maruti Ciaz,"6,11,000","73,697 km",Petrol,1,Manual,ZXI+,2016 ,Maruti Ciaz
+2017 Maruti Ciaz,"5,93,000","69,680 km",Petrol,1,Manual,SIGMA 1.4 VVT,2017 ,Maruti Ciaz
+2016 Maruti Ciaz,"5,57,000","1,08,934 km",Petrol,1,Manual,ZXI,2016 ,Maruti Ciaz
+2018 Maruti Ciaz,"8,25,000","63,856 km",Petrol,1,Manual,ALPHA 1.5 SHVS PETROL,2018 ,Maruti Ciaz
+2016 Maruti Ciaz,"6,26,000","65,710 km",Petrol,1,Manual,ZXI+,2016 ,Maruti Ciaz
+2018 Maruti Ciaz,"7,95,000","75,760 km",Petrol,1,Manual,ALPHA 1.5 SHVS PETROL,2018 ,Maruti Ciaz
+2016 Maruti Ciaz,"5,15,000","83,055 km",Petrol,3,Automatic,ZXI AT,2016 ,Maruti Ciaz
+2015 Maruti Ciaz,"4,76,000","59,890 km",Petrol,2,Manual,VXI,2015 ,Maruti Ciaz
+2017 Maruti Ciaz,"6,22,000","66,931 km",Petrol,1,Manual,DELTA 1.4 VVT,2017 ,Maruti Ciaz
+2021 Maruti Ciaz,"9,11,000","16,153 km",Petrol,1,Manual,ZETA 1.5 SHVS MT PETROL,2021 ,Maruti Ciaz
+2019 Maruti Ciaz,"8,08,000","65,574 km",Diesel,1,Manual,ALPHA 1.3 DDIS SHVS,2019 ,Maruti Ciaz
+2018 Maruti Ciaz,"8,26,000","15,387 km",Petrol,1,Manual,ALPHA 1.5 SHVS PETROL,2018 ,Maruti Ciaz
+2015 Maruti Ciaz,"5,74,000","59,993 km",Petrol,1,Manual,ZXI,2015 ,Maruti Ciaz
+2018 Maruti Ciaz,"7,54,000","1,23,662 km",Petrol,1,Manual,ALPHA 1.5 SHVS PETROL,2018 ,Maruti Ciaz
+2017 Maruti Ciaz,"5,92,000","61,456 km",Diesel,1,Manual,DELTA 1.3 DDIS SHVS,2017 ,Maruti Ciaz
+2020 Tata NEXON,"7,91,000","31,770 km",Petrol,1,Manual,XZ PLUS PETROL,2020 ,Tata NEXON
+2018 Tata NEXON,"7,27,000","37,384 km",Diesel,1,Manual,XM DIESEL,2018 ,Tata NEXON
+2020 Tata NEXON,"8,32,000","46,764 km",Petrol,1,Automatic,XMA 1.2,2020 ,Tata NEXON
+2019 Tata NEXON,"7,52,000","38,643 km",Petrol,1,Automatic,XMA PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"6,80,000","78,651 km",Diesel,1,Manual,XM DIESEL,2019 ,Tata NEXON
+2020 Tata NEXON,"9,25,000","22,652 km",Petrol,1,Manual,XZ+ OPT PETROL,2020 ,Tata NEXON
+2021 Tata NEXON,"10,03,000","12,546 km",Petrol,1,Manual,XZ PETROL,2021 ,Tata NEXON
+2019 Tata NEXON,"10,38,000","16,032 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2018 Tata NEXON,"7,19,000","95,268 km",Diesel,1,Manual,XZ PLUS DIESEL,2018 ,Tata NEXON
+2019 Tata NEXON,"8,11,000","37,300 km",Petrol,2,Automatic,XZA + 1.2 PETROL A/T,2019 ,Tata NEXON
+2019 Tata NEXON,"8,94,000","58,004 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,59,000","15,271 km",Petrol,2,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"8,98,000","70,632 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,08,000","49,044 km",Petrol,2,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,47,000","23,694 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,82,000","23,457 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2021 Tata NEXON,"9,85,000","11,557 km",Petrol,1,Manual,XZ PLUS PETROL,2021 ,Tata NEXON
+2019 Tata NEXON,"6,79,000","67,365 km",Petrol,1,Automatic,XMA PETROL,2019 ,Tata NEXON
+2018 Tata NEXON,"7,32,000","46,574 km",Petrol,1,Automatic,XZA + 1.2 PETROL A/T,2018 ,Tata NEXON
+2019 Honda WR-V,"6,41,000","53,074 km",Diesel,1,Manual,1.5L I-DTEC S MT,2019 ,Honda WR-V
+2018 Honda WR-V,"6,45,000","37,160 km",Petrol,1,Manual,1.2 I-VTEC S MT,2018 ,Honda WR-V
+2018 Honda WR-V,"6,17,000","50,925 km",Petrol,1,Manual,1.2 I-VTEC S MT,2018 ,Honda WR-V
+2021 Honda WR-V,"9,82,000","8,125 km",Diesel,1,Manual,1.5L I-DTEC VX MT,2021 ,Honda WR-V
+2022 Honda WR-V,"9,00,000","13,732 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2022 ,Honda WR-V
+2017 Honda WR-V,"6,45,000","87,581 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2017 ,Honda WR-V
+2019 Honda WR-V,"7,37,000","56,529 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2019 ,Honda WR-V
+2017 Honda WR-V,"6,04,000","1,10,339 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2017 ,Honda WR-V
+2021 Honda WR-V,"8,65,000","16,754 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2021 ,Honda WR-V
+2018 Honda WR-V,"7,44,000","12,724 km",Petrol,2,Manual,1.2 i-VTEC VX MT,2018 ,Honda WR-V
+2017 Honda WR-V,"6,78,000","39,145 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2017 ,Honda WR-V
+2019 Honda WR-V,"7,91,000","71,998 km",CNG,1,Manual,1.2L I-VTEC VX MT,2019 ,Honda WR-V
+2018 Honda WR-V,"7,50,000","41,825 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2018 ,Honda WR-V
+2021 Honda WR-V,"11,35,000","33,770 km",Diesel,1,Manual,1.5 I-DTEC VX MT,2021 ,Honda WR-V
+2018 Honda WR-V,"7,62,000","36,793 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2018 ,Honda WR-V
+2019 Honda WR-V,"9,10,000","5,375 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2019 ,Honda WR-V
+2021 Honda WR-V,"8,93,000","21,445 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2021 ,Honda WR-V
+2019 Honda WR-V,"6,85,000","38,273 km",Petrol,2,Manual,1.2 i-VTEC VX MT,2019 ,Honda WR-V
+2018 Honda WR-V,"6,45,000","37,160 km",Petrol,1,Manual,1.2 I-VTEC S MT,2018 ,Honda WR-V
+2018 Honda WR-V,"6,17,000","50,925 km",Petrol,1,Manual,1.2 I-VTEC S MT,2018 ,Honda WR-V
+2017 Honda WR-V,"6,45,000","87,581 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2017 ,Honda WR-V
+2019 Honda WR-V,"7,37,000","56,529 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2019 ,Honda WR-V
+2017 Honda WR-V,"6,04,000","1,10,339 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2017 ,Honda WR-V
+2021 Honda WR-V,"8,65,000","16,754 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2021 ,Honda WR-V
+2018 Honda WR-V,"7,44,000","12,724 km",Petrol,2,Manual,1.2 i-VTEC VX MT,2018 ,Honda WR-V
+2017 Honda WR-V,"6,78,000","39,145 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2017 ,Honda WR-V
+2019 Honda WR-V,"7,91,000","71,998 km",CNG,1,Manual,1.2L I-VTEC VX MT,2019 ,Honda WR-V
+2020 Honda WR-V,"9,06,000","59,946 km",Diesel,1,Manual,1.5L i-DTEC VX MT,2020 ,Honda WR-V
+2018 Honda WR-V,"7,50,000","41,825 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2018 ,Honda WR-V
+2021 Honda WR-V,"11,35,000","33,770 km",Diesel,1,Manual,1.5L i-DTEC VX MT,2021 ,Honda WR-V
+2018 Honda WR-V,"7,62,000","36,793 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2018 ,Honda WR-V
+2019 Honda WR-V,"9,10,000","5,375 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2019 ,Honda WR-V
+2021 Honda WR-V,"8,93,000","21,445 km",Petrol,1,Manual,1.2L I-VTEC VX MT,2021 ,Honda WR-V
+2018 Maruti Swift,"5,76,600","48,274 km",Petrol,2,Automatic,VXI AMT,2018 ,Maruti Swift
+2014 Maruti Swift,"4,21,000","6,331 km",Petrol,1,Manual,VXI,2014 ,Maruti Swift
+2015 Maruti Swift,"3,92,000","70,706 km",Petrol,1,Manual,VXI,2015 ,Maruti Swift
+2019 Maruti Swift,"5,83,000","18,890 km",Petrol,2,Manual,VXI,2019 ,Maruti Swift
+2019 Maruti Swift,"6,80,000","36,682 km",CNG,1,Automatic,VXI AMT,2019 ,Maruti Swift
+2018 Maruti Swift,"5,66,000","77,607 km",Petrol,1,Manual,VXI,2018 ,Maruti Swift
+2021 Maruti Swift,"5,99,000","7,159 km",Petrol,1,Manual,LXI,2021 ,Maruti Swift
+2018 Maruti Swift,"5,64,000","51,706 km",Petrol,1,Automatic,VXI AMT,2018 ,Maruti Swift
+2019 Maruti Swift,"6,67,000","36,682 km",CNG,1,Automatic,VXI AMT,2019 ,Maruti Swift
+2019 Maruti Swift,"5,12,000","49,661 km",Petrol,1,Manual,LXI,2019 ,Maruti Swift
+2015 Maruti Swift,"3,73,600","70,706 km",Petrol,1,Manual,VXI,2015 ,Maruti Swift
+2017 Maruti Swift,"4,17,000","43,904 km",Petrol,2,Manual,LXI (O),2017 ,Maruti Swift
+2012 Maruti Swift,"2,47,000","97,529 km",Petrol,1,Manual,VXI,2012 ,Maruti Swift
+2013 Maruti Swift,"3,84,000","70,041 km",CNG,2,Manual,ZXI,2013 ,Maruti Swift
+2019 Maruti Swift,"5,72,000","28,956 km",Petrol,1,Manual,VXI,2019 ,Maruti Swift
+2021 Maruti Swift,"7,93,000","7,633 km",Petrol,1,Manual,ZXI+,2021 ,Maruti Swift
+2018 Maruti Swift,"5,27,000","55,483 km",Petrol,1,Manual,VXI,2018 ,Maruti Swift
+2018 Maruti Swift,"5,95,000","81,889 km",Diesel,1,Manual,ZDI,2018 ,Maruti Swift
+2019 Maruti Swift,"5,04,000","70,182 km",Petrol,1,Manual,LXI,2019 ,Maruti Swift
+2019 Maruti Swift,"5,37,000","17,836 km",Petrol,1,Manual,LXI,2019 ,Maruti Swift
+2020 Maruti Swift,"5,46,000","25,307 km",Petrol,1,Manual,LXI,2020 ,Maruti Swift
+2019 Maruti Swift,"5,67,000","25,661 km",Petrol,2,Manual,VXI,2019 ,Maruti Swift
+2015 Maruti Swift,"3,79,000","33,431 km",Petrol,1,Manual,LXI (O),2015 ,Maruti Swift
+2017 Maruti Swift,"5,18,000","14,097 km",Petrol,2,Manual,VXI,2017 ,Maruti Swift
+2019 Maruti Swift,"5,31,000","31,653 km",Petrol,1,Manual,LXI,2019 ,Maruti Swift
+2021 Maruti Swift,"6,48,000","11,210 km",Petrol,1,Manual,VXI,2021 ,Maruti Swift
+2018 Maruti Vitara Brezza,"6,15,000","22,248 km",Diesel,1,Manual,LDI (O),2018 ,Maruti Vitara Brezza
+2017 Maruti Vitara Brezza,"5,96,000","93,090 km",Diesel,1,Manual,VDI (O),2017 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"8,85,000","9,999 km",Petrol,1,Manual,VXI,2021 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"6,98,000","43,109 km",Diesel,1,Manual,VDI OPT,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"7,47,000","40,605 km",Diesel,1,Manual,ZDI,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"8,02,000","89,151 km",Diesel,1,Automatic,ZDI PLUS AMT,2018 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"8,76,000","29,589 km",Petrol,1,Manual,VXI,2021 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"8,75,000","74,766 km",Diesel,1,Automatic,ZDI AMT,2019 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"7,73,000","57,643 km",Diesel,1,Automatic,ZDI PLUS AMT,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"6,04,000","98,557 km",Diesel,1,Manual,VDI,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"7,42,000","64,938 km",Diesel,1,Manual,ZDI PLUS,2018 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"7,67,000","51,765 km",Diesel,1,Manual,VDI,2019 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"9,21,000","17,637 km",Diesel,1,Automatic,ZDI AMT,2019 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"7,19,000","49,317 km",Diesel,1,Manual,VDI,2018 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"7,61,000","54,125 km",Diesel,2,Automatic,VDI AMT,2019 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"8,11,000","20,945 km",Petrol,1,Manual,LXI,2021 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"7,70,000","22,375 km",Diesel,1,Automatic,VDI AMT,2019 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"8,39,000","18,939 km",Petrol,1,Manual,VXI,2021 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"5,86,000","75,647 km",Diesel,1,Manual,LDI,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"6,78,000","69,862 km",Diesel,1,Automatic,ZDI AMT,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"6,98,000","43,109 km",Diesel,1,Manual,VDI OPT,2018 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"9,02,000","8,642 km",Petrol,1,Manual,VXI,2021 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"8,76,000","29,589 km",Petrol,1,Manual,VXI,2021 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"9,30,000","7,689 km",Petrol,2,Manual,ZXI,2021 ,Maruti Vitara Brezza
+2016 Maruti Vitara Brezza,"6,86,000","77,722 km",Diesel,1,Manual,ZDI,2016 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"6,04,000","98,557 km",Diesel,1,Manual,VDI,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"7,76,000","45,655 km",Diesel,1,Manual,ZDI,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"7,34,000","64,938 km",Diesel,1,Manual,ZDI PLUS,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"7,35,000","91,454 km",Diesel,1,Manual,ZDI PLUS,2018 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"7,53,000","54,125 km",Diesel,2,Automatic,VDI AMT,2019 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"7,14,000","83,523 km",Diesel,1,Manual,VDI,2019 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"8,75,000","74,766 km",Diesel,1,Automatic,ZDI AMT,2019 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"8,26,000","48,600 km",Diesel,1,Manual,ZDI PLUS,2018 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"8,02,000","89,151 km",Diesel,1,Automatic,ZDI PLUS AMT,2018 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"9,21,000","17,637 km",Diesel,1,Automatic,ZDI AMT,2019 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"7,86,000","87,576 km",Diesel,1,Automatic,ZDI AMT,2019 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"8,56,000","18,939 km",Petrol,1,Manual,VXI,2021 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"8,85,000","9,999 km",Petrol,1,Manual,VXI,2021 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"7,42,000","64,938 km",Diesel,1,Manual,ZDI PLUS,2018 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"7,66,000","57,617 km",Diesel,1,Automatic,VDI AMT,2019 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"7,67,000","51,765 km",Diesel,1,Manual,VDI,2019 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"6,04,000","98,557 km",Diesel,1,Manual,VDI,2018 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"9,21,000","17,637 km",Diesel,1,Automatic,ZDI AMT,2019 ,Maruti Vitara Brezza
+2019 Maruti Vitara Brezza,"8,75,000","74,766 km",Diesel,1,Automatic,ZDI AMT,2019 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"8,95,000","34,843 km",Diesel,1,Automatic,ZDI + AMT,2018 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"9,49,000","7,689 km",Petrol,2,Manual,ZXI,2021 ,Maruti Vitara Brezza
+2021 Maruti Vitara Brezza,"8,76,000","29,589 km",Petrol,1,Manual,VXI,2021 ,Maruti Vitara Brezza
+2018 Maruti Vitara Brezza,"8,02,000","89,151 km",Diesel,1,Automatic,ZDI PLUS AMT,2018 ,Maruti Vitara Brezza
+2019 Maruti Baleno,"5,21,000","29,905 km",Petrol,1,Manual,SIGMA PETROL 1.2,2019 ,Maruti Baleno
+2017 Maruti Baleno,"5,04,000","20,275 km",Petrol,1,Manual,DELTA PETROL 1.2,2017 ,Maruti Baleno
+2020 Maruti Baleno,"6,63,000","29,750 km",Petrol,1,Manual,DELTA PETROL 1.2,2020 ,Maruti Baleno
+2019 Maruti Baleno,"6,25,000","34,496 km",Petrol,1,Manual,ZETA PETROL 1.2,2019 ,Maruti Baleno
+2016 Maruti Baleno,"4,67,000","50,935 km",Petrol,2,Manual,DELTA PETROL 1.2,2016 ,Maruti Baleno
+2020 Maruti Baleno,"6,51,000","32,492 km",Petrol,1,Manual,DELTA PETROL 1.2,2020 ,Maruti Baleno
+2019 Maruti Baleno,"5,85,000","48,397 km",Petrol,2,Manual,DELTA PETROL 1.2,2019 ,Maruti Baleno
+2015 Maruti Baleno,"4,94,000","41,694 km",Petrol,1,Manual,DELTA PETROL 1.2,2015 ,Maruti Baleno
+2019 Maruti Baleno,"5,16,000","29,905 km",Petrol,1,Manual,SIGMA PETROL 1.2,2019 ,Maruti Baleno
+2017 Maruti Baleno,"5,89,000","64,616 km",Petrol,1,Automatic,ZETA CVT PETROL 1.2,2017 ,Maruti Baleno
+2019 Maruti Baleno,"7,30,000","27,188 km",Petrol,1,Automatic,ALPHA CVT PETROL 1.2,2019 ,Maruti Baleno
+2017 Maruti Baleno,"5,04,000","20,275 km",Petrol,1,Manual,DELTA PETROL 1.2,2017 ,Maruti Baleno
+2023 Maruti Baleno,"8,08,000","5,726 km",Petrol,2,Manual,ZETA PETROL 1.2,2023 ,Maruti Baleno
+2017 Maruti Baleno,"6,00,000","32,062 km",Petrol,1,Manual,ALPHA PETROL 1.2,2017 ,Maruti Baleno
+2020 Maruti Baleno,"6,45,000","22,982 km",Petrol,2,Manual,ZETA PETROL 1.2,2020 ,Maruti Baleno
+2018 Maruti Baleno,"5,66,000","53,683 km",CNG,1,Manual,DELTA PETROL 1.2,2018 ,Maruti Baleno
+2016 Maruti Baleno,"4,60,000","97,852 km",Petrol,1,Manual,DELTA PETROL 1.2,2016 ,Maruti Baleno
+2018 Maruti Baleno,"5,76,000","50,874 km",Petrol,1,Manual,DELTA PETROL 1.2,2018 ,Maruti Baleno
+2016 Maruti Baleno,"4,66,000","67,985 km",Petrol,1,Manual,DELTA PETROL 1.2,2016 ,Maruti Baleno
+2019 Maruti Baleno,"6,69,000","72,555 km",CNG,1,Manual,ZETA PETROL 1.2,2019 ,Maruti Baleno
+2017 Maruti Baleno,"5,03,000","1,16,039 km",CNG,1,Manual,ZETA PETROL 1.2,2017 ,Maruti Baleno
+2020 Maruti Baleno,"6,44,000","32,492 km",Petrol,1,Manual,DELTA PETROL 1.2,2020 ,Maruti Baleno
+2019 Maruti Baleno,"6,04,000","28,991 km",Petrol,1,Manual,DELTA PETROL 1.2,2019 ,Maruti Baleno
+2016 Maruti Baleno,"5,07,000","28,131 km",Petrol,2,Manual,DELTA PETROL 1.2,2016 ,Maruti Baleno
+2020 Maruti Baleno,"6,76,000","35,053 km",Petrol,1,Manual,DELTA PETROL 1.2,2020 ,Maruti Baleno
+2020 Maruti Baleno,"7,07,000","26,354 km",CNG,2,Manual,ZETA PETROL 1.2,2020 ,Maruti Baleno
+2018 Maruti Baleno,"6,17,000","20,599 km",Petrol,2,Manual,ALPHA PETROL 1.2,2018 ,Maruti Baleno
+2017 Maruti Baleno,"5,78,000","46,883 km",Petrol,1,Automatic,ZETA CVT PETROL 1.2,2017 ,Maruti Baleno
+2017 Maruti Baleno,"5,89,000","64,616 km",Petrol,1,Automatic,ZETA CVT PETROL 1.2,2017 ,Maruti Baleno
+2020 Maruti Baleno,"6,45,000","22,982 km",Petrol,2,Manual,ZETA PETROL 1.2,2020 ,Maruti Baleno
+2019 Maruti Baleno,"6,69,000","72,555 km",CNG,1,Manual,ZETA PETROL 1.2,2019 ,Maruti Baleno
+2017 Maruti Baleno,"5,04,000","20,275 km",Petrol,1,Manual,DELTA PETROL 1.2,2017 ,Maruti Baleno
+2019 Maruti Baleno,"6,04,000","28,991 km",Petrol,1,Manual,DELTA PETROL 1.2,2019 ,Maruti Baleno
+2016 Maruti Baleno,"5,35,000","50,090 km",Petrol,1,Automatic,DELTA CVT PETROL 1.2,2016 ,Maruti Baleno
+2020 Maruti Baleno,"6,51,000","32,492 km",Petrol,1,Manual,DELTA PETROL 1.2,2020 ,Maruti Baleno
+2016 Maruti Baleno,"5,07,000","28,131 km",Petrol,2,Manual,DELTA PETROL 1.2,2016 ,Maruti Baleno
+2018 Maruti Baleno,"5,76,000","50,874 km",Petrol,1,Manual,DELTA PETROL 1.2,2018 ,Maruti Baleno
+2017 Maruti Baleno,"5,03,000","1,16,039 km",CNG,1,Manual,ZETA PETROL 1.2,2017 ,Maruti Baleno
+2019 Maruti Baleno,"5,74,000","62,610 km",Petrol,1,Manual,DELTA PETROL 1.2,2019 ,Maruti Baleno
+2019 Maruti Baleno,"5,85,000","48,397 km",Petrol,2,Manual,DELTA PETROL 1.2,2019 ,Maruti Baleno
+2017 Maruti Baleno,"5,00,000","1,00,102 km",Petrol,1,Manual,ZETA PETROL 1.2,2017 ,Maruti Baleno
+2021 Maruti Baleno,"6,43,000","42,431 km",Petrol,1,Manual,DELTA PETROL 1.2,2021 ,Maruti Baleno
+2020 Maruti Baleno,"6,40,000","60,810 km",CNG,1,Manual,DELTA PETROL 1.2,2020 ,Maruti Baleno
+2016 Ford Ecosport,"5,09,000","67,312 km",Petrol,1,Manual,AMBIENTE 1.5L PETROL,2016 ,Ford Ecosport
+2018 Ford Ecosport,"6,73,000","49,437 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2015 Ford Ecosport,"5,02,000","92,975 km",Petrol,1,Automatic,TITANIUM 1.5L PETROL AT,2015 ,Ford Ecosport
+2018 Ford Ecosport,"7,23,000","54,308 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"8,65,000","34,393 km",CNG,2,Manual,1.5 TITANIUM SIGNATURE TI VCT (SUNROOF),2018 ,Ford Ecosport
+2015 Ford Ecosport,"5,58,000","42,516 km",CNG,2,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2018 Ford Ecosport,"6,40,000","37,750 km",Diesel,1,Manual,AMBIENTE 1.5L DIESEL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"7,03,000","54,831 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2019 Ford Ecosport,"7,41,000","45,739 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2019 ,Ford Ecosport
+2019 Ford Ecosport,"8,22,000","31,548 km",Diesel,1,Manual,TITANIUM 1.5L DIESEL,2019 ,Ford Ecosport
+2019 Ford Ecosport,"7,22,000","64,517 km",Petrol,2,Manual,TITANIUM 1.5L PETROL,2019 ,Ford Ecosport
+2015 Ford Ecosport,"5,56,000","40,632 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2016 Ford Ecosport,"5,56,000","58,172 km",Petrol,2,Manual,1.0 TREND+ (ECOBOOST),2016 ,Ford Ecosport
+2017 Ford Ecosport,"5,67,000","52,450 km",Petrol,2,Manual,TREND 1.5L PETROL,2017 ,Ford Ecosport
+2017 Ford Ecosport,"7,28,000","14,241 km",Petrol,1,Manual,TITANIUM+ 1.0L ECOBOOST,2017 ,Ford Ecosport
+2015 Ford Ecosport,"5,47,000","80,965 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2018 Ford Ecosport,"9,40,000","47,942 km",Petrol,1,Manual,TITANIUM 1.5L SIGNATURE EDITION (SUNROOF) PETROL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"6,87,000","77,285 km",Diesel,1,Manual,TITANIUM 1.5L DIESEL,2018 ,Ford Ecosport
+2017 Ford Ecosport,"6,83,000","91,641 km",Petrol,1,Automatic,TITANIUM + 1.5L PETROL AT,2017 ,Ford Ecosport
+2018 Ford Ecosport,"7,36,000","45,730 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2016 Ford Ecosport,"5,09,000","67,312 km",Petrol,1,Manual,AMBIENTE 1.5L PETROL,2016 ,Ford Ecosport
+2018 Ford Ecosport,"6,73,000","49,437 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2015 Ford Ecosport,"5,02,000","92,975 km",Petrol,1,Automatic,TITANIUM 1.5L PETROL AT,2015 ,Ford Ecosport
+2018 Ford Ecosport,"7,23,000","54,308 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"8,65,000","34,393 km",CNG,2,Manual,1.5 TITANIUM SIGNATURE TI VCT (SUNROOF),2018 ,Ford Ecosport
+2015 Ford Ecosport,"5,58,000","42,516 km",CNG,2,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2018 Ford Ecosport,"6,40,000","37,750 km",Diesel,1,Manual,AMBIENTE 1.5L DIESEL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"7,03,000","54,831 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2019 Ford Ecosport,"7,41,000","45,739 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2019 ,Ford Ecosport
+2019 Ford Ecosport,"8,22,000","31,548 km",Diesel,1,Manual,TITANIUM 1.5L DIESEL,2019 ,Ford Ecosport
+2019 Ford Ecosport,"7,22,000","64,517 km",Petrol,2,Manual,TITANIUM 1.5L PETROL,2019 ,Ford Ecosport
+2015 Ford Ecosport,"5,56,000","40,632 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2016 Ford Ecosport,"5,56,000","58,172 km",Petrol,2,Manual,1.0 TREND+ (ECOBOOST),2016 ,Ford Ecosport
+2017 Ford Ecosport,"5,67,000","52,450 km",Petrol,2,Manual,TREND 1.5L PETROL,2017 ,Ford Ecosport
+2017 Ford Ecosport,"7,28,000","14,241 km",Petrol,1,Manual,TITANIUM+ 1.0L ECOBOOST,2017 ,Ford Ecosport
+2015 Ford Ecosport,"5,47,000","80,965 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2018 Ford Ecosport,"9,40,000","47,942 km",Petrol,1,Manual,TITANIUM 1.5L SIGNATURE EDITION (SUNROOF) PETROL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"6,87,000","77,285 km",Diesel,1,Manual,TITANIUM 1.5L DIESEL,2018 ,Ford Ecosport
+2017 Ford Ecosport,"6,83,000","91,641 km",Petrol,1,Automatic,TITANIUM + 1.5L PETROL AT,2017 ,Ford Ecosport
+2018 Ford Ecosport,"7,36,000","45,730 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2016 Ford Ecosport,"5,09,000","67,312 km",Petrol,1,Manual,AMBIENTE 1.5L PETROL,2016 ,Ford Ecosport
+2018 Ford Ecosport,"6,73,000","49,437 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2015 Ford Ecosport,"5,02,000","92,975 km",Petrol,1,Automatic,TITANIUM 1.5L PETROL AT,2015 ,Ford Ecosport
+2018 Ford Ecosport,"7,23,000","54,308 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"8,65,000","34,393 km",CNG,2,Manual,1.5 TITANIUM SIGNATURE TI VCT (SUNROOF),2018 ,Ford Ecosport
+2015 Ford Ecosport,"5,58,000","42,516 km",CNG,2,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2018 Ford Ecosport,"6,40,000","37,750 km",Diesel,1,Manual,AMBIENTE 1.5L DIESEL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"7,03,000","54,831 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2019 Ford Ecosport,"7,41,000","45,739 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2019 ,Ford Ecosport
+2019 Ford Ecosport,"8,22,000","31,548 km",Diesel,1,Manual,TITANIUM 1.5L DIESEL,2019 ,Ford Ecosport
+2019 Ford Ecosport,"7,22,000","64,517 km",Petrol,2,Manual,TITANIUM 1.5L PETROL,2019 ,Ford Ecosport
+2015 Ford Ecosport,"5,56,000","40,632 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2016 Ford Ecosport,"5,56,000","58,172 km",Petrol,2,Manual,1.0 TREND+ (ECOBOOST),2016 ,Ford Ecosport
+2017 Ford Ecosport,"5,67,000","52,450 km",Petrol,2,Manual,TREND 1.5L PETROL,2017 ,Ford Ecosport
+2017 Ford Ecosport,"7,28,000","14,241 km",Petrol,1,Manual,TITANIUM+ 1.0L ECOBOOST,2017 ,Ford Ecosport
+2015 Ford Ecosport,"5,47,000","80,965 km",Petrol,1,Manual,TITANIUM 1.5L PETROL,2015 ,Ford Ecosport
+2018 Ford Ecosport,"9,40,000","47,942 km",Petrol,1,Manual,TITANIUM 1.5L SIGNATURE EDITION (SUNROOF) PETROL,2018 ,Ford Ecosport
+2018 Ford Ecosport,"6,87,000","77,285 km",Diesel,1,Manual,TITANIUM 1.5L DIESEL,2018 ,Ford Ecosport
+2017 Ford Ecosport,"6,83,000","91,641 km",Petrol,1,Automatic,TITANIUM + 1.5L PETROL AT,2017 ,Ford Ecosport
+2018 Ford Ecosport,"7,36,000","45,730 km",Diesel,1,Manual,1.5TITANIUM TDCI,2018 ,Ford Ecosport
+2014 Maruti Alto 800,"2,30,000","25,730 km",Petrol,1,Manual,LXI,2014 ,Maruti Alto 800
+2015 Maruti Alto 800,"2,35,000","74,113 km",Petrol,1,Manual,LXI,2015 ,Maruti Alto 800
+2012 Maruti Alto 800,"2,87,000","21,178 km",Petrol,1,Manual,LXI,2012 ,Maruti Alto 800
+2013 Maruti Alto 800,"2,77,000","16,736 km",Petrol,1,Manual,LXI,2013 ,Maruti Alto 800
+2014 Maruti Alto 800,"2,77,000","63,813 km",Petrol,1,Manual,LXI,2014 ,Maruti Alto 800
+2016 Maruti Alto 800,"3,35,000","24,839 km",Petrol,2,Manual,VXI,2016 ,Maruti Alto 800
+2016 Maruti Alto 800,"3,07,000","22,042 km",Petrol,1,Manual,LXI,2016 ,Maruti Alto 800
+2012 Maruti Alto 800,"2,56,000","55,429 km",Petrol,2,Manual,LXI,2012 ,Maruti Alto 800
+2012 Maruti Alto 800,"2,63,000","55,568 km",Petrol,1,Manual,LXI,2012 ,Maruti Alto 800
+2015 Maruti Alto 800,"2,95,000","44,787 km",Petrol,1,Manual,LXI,2015 ,Maruti Alto 800
+2012 Maruti Alto 800,"2,65,000","48,775 km",Petrol,2,Manual,LXI,2012 ,Maruti Alto 800
+2013 Maruti Alto 800,"2,64,000","59,845 km",Petrol,1,Manual,LXI,2013 ,Maruti Alto 800
+2015 Maruti Alto 800,"3,03,000","62,554 km",Petrol,1,Manual,LXI,2015 ,Maruti Alto 800
+2013 Maruti Alto 800,"2,65,000","73,065 km",Petrol,1,Manual,LXI,2013 ,Maruti Alto 800
+2017 Maruti Alto 800,"3,37,000","41,690 km",Petrol,2,Manual,VXI O,2017 ,Maruti Alto 800
+2013 Maruti Alto 800,"2,80,000","56,630 km",Petrol,1,Manual,LXI,2013 ,Maruti Alto 800
+2013 Maruti Alto 800,"2,77,000","28,596 km",Petrol,1,Manual,LXI,2013 ,Maruti Alto 800
+2012 Maruti Alto 800,"2,83,000","68,582 km",Petrol,1,Manual,LXI,2012 ,Maruti Alto 800
+2015 Maruti Alto 800,"3,18,000","12,229 km",Petrol,1,Manual,LXI,2015 ,Maruti Alto 800
+2018 Maruti Alto 800,"2,82,000","92,856 km",Petrol,1,Manual,LXI,2018 ,Maruti Alto 800
+2013 Maruti Alto 800,"2,33,000","99,427 km",Petrol,2,Manual,LXI,2013 ,Maruti Alto 800
+2018 Toyota Corolla Altis,"13,48,000","66,349 km",Petrol,1,Automatic,VL AT,2018 ,Toyota Corolla Altis
+2017 Toyota Corolla Altis,"10,69,000","45,060 km",Petrol,2,Manual,GL,2017 ,Toyota Corolla Altis
+2015 Toyota Corolla Altis,"8,91,000","51,236 km",Petrol,1,Automatic,VL CVT PETROL,2015 ,Toyota Corolla Altis
+2016 Toyota Corolla Altis,"8,54,000","88,365 km",Petrol,1,Automatic,G AT,2016 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,44,000","83,706 km",Petrol,1,Manual,G PETROL,2010 ,Toyota Corolla Altis
+2017 Toyota Corolla Altis,"11,15,000","75,836 km",Petrol,1,Automatic,G AT,2017 ,Toyota Corolla Altis
+2011 Toyota Corolla Altis,"4,06,000","1,00,075 km",Petrol,2,Manual,1.8 G,2011 ,Toyota Corolla Altis
+2018 Toyota Corolla Altis,"12,00,000","51,848 km",Diesel,2,Manual,G DIESEL,2018 ,Toyota Corolla Altis
+2015 Toyota Corolla Altis,"9,69,000","60,408 km",Petrol,2,Automatic,VL CVT PETROL,2015 ,Toyota Corolla Altis
+2011 Toyota Corolla Altis,"3,92,000","66,466 km",Petrol,2,Manual,1.8 G,2011 ,Toyota Corolla Altis
+2011 Toyota Corolla Altis,"3,52,000","53,059 km",CNG,2,Manual,G CNG,2011 ,Toyota Corolla Altis
+2012 Toyota Corolla Altis,"4,38,000","91,323 km",Petrol,2,Automatic,G AT,2012 ,Toyota Corolla Altis
+2015 Toyota Corolla Altis,"10,23,000","39,314 km",Petrol,1,Automatic,VL CVT PETROL,2015 ,Toyota Corolla Altis
+2014 Toyota Corolla Altis,"7,72,000","1,02,477 km",Petrol,2,Automatic,VL AT PETROL,2014 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,83,000","45,685 km",Petrol,1,Manual,1.8 J,2010 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,59,000","69,700 km",Petrol,2,Manual,G PETROL,2010 ,Toyota Corolla Altis
+2011 Toyota Corolla Altis,"3,85,000","82,699 km",Petrol,2,Manual,G PETROL,2011 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,72,000","58,816 km",Petrol,1,Manual,GL PETROL,2010 ,Toyota Corolla Altis
+2018 Toyota Corolla Altis,"11,53,000","1,01,720 km",Diesel,1,Manual,G DIESEL,2018 ,Toyota Corolla Altis
+2014 Toyota Corolla Altis,"6,23,000","57,094 km",Petrol,1,Automatic,VL AT PETROL,2014 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,94,000","73,233 km",Petrol,2,Manual,G PETROL,2010 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"3,18,000","79,686 km",Diesel,2,Manual,J DIESEL,2010 ,Toyota Corolla Altis
+2014 Toyota Corolla Altis,"6,15,000","68,791 km",Petrol,1,Manual,G PETROL,2014 ,Toyota Corolla Altis
+2018 Toyota Corolla Altis,"9,39,000","54,068 km",Petrol,1,Manual,G,2018 ,Toyota Corolla Altis
+2018 Toyota Corolla Altis,"10,08,000","79,045 km",Petrol,1,Manual,GL PETROL,2018 ,Toyota Corolla Altis
+2016 Toyota Corolla Altis,"7,39,000","80,498 km",Petrol,1,Manual,G,2016 ,Toyota Corolla Altis
+2017 Toyota Corolla Altis,"11,07,000","66,207 km",Petrol,1,Automatic,VL AT,2017 ,Toyota Corolla Altis
+2012 Toyota Corolla Altis,"4,21,000","78,351 km",Petrol,1,Manual,G,2012 ,Toyota Corolla Altis
+2018 Toyota Corolla Altis,"12,00,000","51,848 km",Diesel,2,Manual,G DIESEL,2018 ,Toyota Corolla Altis
+2017 Toyota Corolla Altis,"11,15,000","75,836 km",Petrol,1,Automatic,G AT,2017 ,Toyota Corolla Altis
+2015 Toyota Corolla Altis,"8,91,000","51,236 km",Petrol,1,Automatic,VL CVT PETROL,2015 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,55,000","69,278 km",Petrol,2,Manual,G PETROL,2010 ,Toyota Corolla Altis
+2011 Toyota Corolla Altis,"3,92,000","66,466 km",Petrol,2,Manual,1.8 G,2011 ,Toyota Corolla Altis
+2018 Toyota Corolla Altis,"11,53,000","1,01,720 km",Diesel,1,Manual,G DIESEL,2018 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,44,000","83,706 km",Petrol,1,Manual,G PETROL,2010 ,Toyota Corolla Altis
+2011 Toyota Corolla Altis,"3,52,000","53,059 km",CNG,2,Manual,G CNG,2011 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,65,000","58,816 km",Petrol,1,Manual,GL PETROL,2010 ,Toyota Corolla Altis
+2014 Toyota Corolla Altis,"7,58,000","1,02,477 km",Petrol,2,Automatic,VL AT PETROL,2014 ,Toyota Corolla Altis
+2011 Toyota Corolla Altis,"4,06,000","1,00,075 km",Petrol,2,Manual,1.8 G,2011 ,Toyota Corolla Altis
+2015 Toyota Corolla Altis,"9,69,000","60,408 km",Petrol,2,Automatic,VL CVT PETROL,2015 ,Toyota Corolla Altis
+2012 Toyota Corolla Altis,"4,38,000","91,323 km",Petrol,2,Automatic,G AT,2012 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,83,000","45,685 km",Petrol,1,Manual,1.8 J,2010 ,Toyota Corolla Altis
+2011 Toyota Corolla Altis,"3,81,000","82,699 km",Petrol,2,Manual,G PETROL,2011 ,Toyota Corolla Altis
+2010 Toyota Corolla Altis,"2,59,000","69,700 km",Petrol,2,Manual,G PETROL,2010 ,Toyota Corolla Altis
+2016 Toyota Corolla Altis,"8,54,000","88,365 km",Petrol,1,Automatic,G AT,2016 ,Toyota Corolla Altis
+2018 Toyota Corolla Altis,"13,48,000","66,349 km",Petrol,1,Automatic,VL AT,2018 ,Toyota Corolla Altis
+2014 Honda Amaze,"4,28,000","34,297 km",Petrol,1,Manual,1.2L I-VTEC EX,2014 ,Honda Amaze
+2022 Honda Amaze,"8,75,000","6,732 km",Petrol,1,Manual,1.2L I-VTEC VX,2022 ,Honda Amaze
+2018 Honda Amaze,"6,23,000","70,968 km",Petrol,1,Manual,1.2L I-VTEC S,2018 ,Honda Amaze
+2014 Honda Amaze,"4,66,000","54,075 km",Petrol,1,Manual,1.2L I-VTEC VX,2014 ,Honda Amaze
+2019 Honda Amaze,"7,92,000","45,560 km",Petrol,1,Automatic,1.2L I-VTEC VX CVT,2019 ,Honda Amaze
+2022 Honda Amaze,"8,31,000","4,593 km",Petrol,1,Manual,1.2L I-VTEC S,2022 ,Honda Amaze
+2018 Honda Amaze,"7,91,000","55,146 km",Petrol,2,Automatic,1.2L I-VTEC V CVT,2018 ,Honda Amaze
+2017 Honda Amaze,"4,58,000","1,15,427 km",CNG,1,Manual,1.2L I-VTEC SX,2017 ,Honda Amaze
+2014 Honda Amaze,"3,68,000","69,565 km",Petrol,1,Manual,1.2L I-VTEC EX,2014 ,Honda Amaze
+2019 Honda Amaze,"7,58,000","16,645 km",Petrol,1,Manual,1.2L I-VTEC V,2019 ,Honda Amaze
+2017 Honda Amaze,"4,22,000","97,313 km",Petrol,2,Manual,1.2 SMT I VTEC,2017 ,Honda Amaze
+2015 Honda Amaze,"3,50,000","72,908 km",Petrol,2,Manual,1.2L I-VTEC EX,2015 ,Honda Amaze
+2018 Honda Amaze,"5,36,000","18,487 km",Petrol,1,Manual,1.2L I-VTEC S OPT,2018 ,Honda Amaze
+2019 Honda Amaze,"8,24,000","40,225 km",Petrol,1,Automatic,1.2L I-VTEC VX CVT,2019 ,Honda Amaze
+2020 Honda Amaze,"7,58,000","37,158 km",Petrol,1,Automatic,1.2 S CVT I VTEC SPECIAL EDITION,2020 ,Honda Amaze
+2019 Honda Amaze,"5,34,000","52,793 km",Petrol,1,Manual,1.2L I-VTEC E,2019 ,Honda Amaze
+2020 Honda Amaze,"6,62,000","15,072 km",Petrol,2,Manual,1.2L I-VTEC S,2020 ,Honda Amaze
+2019 Honda Amaze,"6,89,000","22,382 km",Petrol,1,Manual,1.2L I-VTEC S,2019 ,Honda Amaze
+2018 Honda Amaze,"5,99,000","52,212 km",Petrol,1,Manual,1.2L I-VTEC S,2018 ,Honda Amaze
+2014 Honda Amaze,"3,99,000","12,286 km",Petrol,2,Manual,1.2L I-VTEC EX,2014 ,Honda Amaze
+2020 Honda Amaze,"7,28,000","34,295 km",Petrol,2,Automatic,1.2L I-VTEC V CVT,2020 ,Honda Amaze
+2016 Honda Amaze,"4,83,000","46,305 km",Petrol,1,Manual,1.2L I-VTEC SX,2016 ,Honda Amaze
+2018 Honda Amaze,"5,59,000","59,141 km",Petrol,2,Manual,1.2L I-VTEC S,2018 ,Honda Amaze
+2014 Honda Amaze,"3,34,000","77,120 km",Petrol,1,Manual,1.2 EXMT I VTEC,2014 ,Honda Amaze
+2014 Honda Amaze,"3,64,000","93,416 km",Petrol,1,Manual,1.2 SX MT I VTEC,2014 ,Honda Amaze
+2015 Honda Amaze,"3,50,000","72,908 km",Petrol,2,Manual,1.2L I-VTEC EX,2015 ,Honda Amaze
+2019 Honda Amaze,"6,88,000","34,029 km",Diesel,1,Automatic,1.5L I-DTEC VX CVT,2019 ,Honda Amaze
+2020 Honda Amaze,"6,62,000","15,072 km",Petrol,2,Manual,1.2L I-VTEC S,2020 ,Honda Amaze
+2017 Honda Amaze,"4,58,000","1,15,427 km",CNG,1,Manual,1.2L I-VTEC SX,2017 ,Honda Amaze
+2017 Honda Amaze,"4,89,000","91,233 km",Petrol,1,Manual,1.2L I-VTEC SX,2017 ,Honda Amaze
+2018 Honda Amaze,"5,36,000","18,487 km",Petrol,1,Manual,1.2L I-VTEC S OPT,2018 ,Honda Amaze
+2019 Honda Amaze,"6,89,000","22,382 km",Petrol,1,Manual,1.2L I-VTEC S,2019 ,Honda Amaze
+2021 Honda Amaze,"7,37,000","29,251 km",Diesel,1,Manual,1.5L I-DTEC S,2021 ,Honda Amaze
+2014 Honda Amaze,"3,68,000","69,565 km",Petrol,1,Manual,1.2L I-VTEC EX,2014 ,Honda Amaze
+2019 Honda Amaze,"8,24,000","40,225 km",Petrol,1,Automatic,1.2L I-VTEC VX CVT,2019 ,Honda Amaze
+2020 Honda Amaze,"7,58,000","37,158 km",Petrol,1,Automatic,1.2 S CVT I VTEC SPECIAL EDITION,2020 ,Honda Amaze
+2014 Honda Amaze,"3,99,000","12,286 km",Petrol,2,Manual,1.2L I-VTEC EX,2014 ,Honda Amaze
+2020 Honda Amaze,"7,28,000","34,295 km",Petrol,2,Automatic,1.2L I-VTEC V CVT,2020 ,Honda Amaze
+2018 Honda Amaze,"5,59,000","59,141 km",Petrol,2,Manual,1.2L I-VTEC S,2018 ,Honda Amaze
+2014 Honda Amaze,"3,34,000","77,120 km",Petrol,1,Manual,1.2 EXMT I VTEC,2014 ,Honda Amaze
+2016 Honda Amaze,"4,78,000","51,975 km",Petrol,1,Manual,1.2L I-VTEC SX,2016 ,Honda Amaze
+2015 Honda Amaze,"3,46,000","45,679 km",Diesel,2,Manual,1.5L I-DTEC S,2015 ,Honda Amaze
+2013 Honda Amaze,"3,45,000","51,258 km",Petrol,2,Manual,1.2L I-VTEC S,2013 ,Honda Amaze
+2019 Honda Amaze,"5,34,000","52,793 km",Petrol,1,Manual,1.2L I-VTEC E,2019 ,Honda Amaze
+2016 Honda Amaze,"4,83,000","46,305 km",Petrol,1,Manual,1.2L I-VTEC SX,2016 ,Honda Amaze
+2015 Honda Amaze,"3,50,000","72,908 km",Petrol,2,Manual,1.2L I-VTEC EX,2015 ,Honda Amaze
+2019 Honda Amaze,"6,88,000","34,029 km",Diesel,1,Automatic,1.5L I-DTEC VX CVT,2019 ,Honda Amaze
+2020 Honda Amaze,"6,62,000","15,072 km",Petrol,2,Manual,1.2L I-VTEC S,2020 ,Honda Amaze
+2017 Honda Amaze,"4,58,000","1,15,427 km",CNG,1,Manual,1.2L I-VTEC SX,2017 ,Honda Amaze
+2017 Honda Amaze,"4,89,000","91,233 km",Petrol,1,Manual,1.2L I-VTEC SX,2017 ,Honda Amaze
+2018 Honda Amaze,"5,36,000","18,487 km",Petrol,1,Manual,1.2L I-VTEC S OPT,2018 ,Honda Amaze
+2019 Honda Amaze,"6,89,000","22,382 km",Petrol,1,Manual,1.2L I-VTEC S,2019 ,Honda Amaze
+2021 Honda Amaze,"7,37,000","29,251 km",Diesel,1,Manual,1.5L I-DTEC S,2021 ,Honda Amaze
+2014 Honda Amaze,"3,68,000","69,565 km",Petrol,1,Manual,1.2L I-VTEC EX,2014 ,Honda Amaze
+2019 Honda Amaze,"8,24,000","40,225 km",Petrol,1,Automatic,1.2L I-VTEC VX CVT,2019 ,Honda Amaze
+2020 Honda Amaze,"7,58,000","37,158 km",Petrol,1,Automatic,1.2 S CVT I VTEC SPECIAL EDITION,2020 ,Honda Amaze
+2014 Honda Amaze,"3,99,000","12,286 km",Petrol,2,Manual,1.2L I-VTEC EX,2014 ,Honda Amaze
+2020 Honda Amaze,"7,28,000","34,295 km",Petrol,2,Automatic,1.2L I-VTEC V CVT,2020 ,Honda Amaze
+2018 Honda Amaze,"5,59,000","59,141 km",Petrol,2,Manual,1.2L I-VTEC S,2018 ,Honda Amaze
+2014 Honda Amaze,"3,34,000","77,120 km",Petrol,1,Manual,1.2 EXMT I VTEC,2014 ,Honda Amaze
+2016 Honda Amaze,"4,78,000","51,975 km",Petrol,1,Manual,1.2L I-VTEC SX,2016 ,Honda Amaze
+2015 Honda Amaze,"3,46,000","45,679 km",Diesel,2,Manual,1.5L I-DTEC S,2015 ,Honda Amaze
+2013 Honda Amaze,"3,45,000","51,258 km",Petrol,2,Manual,1.2L I-VTEC S,2013 ,Honda Amaze
+2019 Honda Amaze,"5,34,000","52,793 km",Petrol,1,Manual,1.2L I-VTEC E,2019 ,Honda Amaze
+2016 Honda Amaze,"4,83,000","46,305 km",Petrol,1,Manual,1.2L I-VTEC SX,2016 ,Honda Amaze
+2015 Hyundai Elite i20,"5,93,000","51,512 km",Petrol,1,Manual,SPORTZ (O) 1.2,2015 ,Hyundai Elite i20
+2017 Hyundai Elite i20,"7,71,000","79,383 km",Diesel,1,Manual,ASTA 1.4 CRDI DUAL TONE,2017 ,Hyundai Elite i20
+2015 Honda City,"6,19,000","62,808 km",Petrol,2,Automatic,1.5L I-VTEC SV CVT,2015 ,Honda City
+2015 Honda City,"6,10,000","74,206 km",CNG,2,Automatic,VX CVT PETROL,2015 ,Honda City
+2017 Honda City,"8,36,000","44,997 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2017 ,Honda City
+2019 Honda City,"7,66,000","80,386 km",Petrol,2,Manual,1.5L I-VTEC V MT,2019 ,Honda City
+2018 Honda City,"8,06,000","49,089 km",Petrol,1,Manual,V MT PETROL,2018 ,Honda City
+2012 Honda City,"3,95,000","63,533 km",Petrol,1,Manual,S MT PETROL,2012 ,Honda City
+2020 Honda City,"11,24,000","29,589 km",Petrol,2,Automatic,VX CVT PETROL,2020 ,Honda City
+2010 Honda City,"2,40,000","1,22,143 km",Petrol,2,Manual,1.5L I-VTEC V MT,2010 ,Honda City
+2017 Honda City,"8,00,000","65,215 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2017 ,Honda City
+2014 Honda City,"5,06,000","77,192 km",Petrol,1,Manual,1.5L I-VTEC S MT,2014 ,Honda City
+2015 Honda City,"6,28,000","79,875 km",Petrol,1,Automatic,1.5L I-VTEC SV CVT,2015 ,Honda City
+2011 Honda City,"3,07,000","86,432 km",Petrol,2,Manual,V MT PETROL,2011 ,Honda City
+2021 Honda City,"14,03,000","11,796 km",Petrol,1,Automatic,ZX CVT,2021 ,Honda City
+2015 Honda City,"6,04,000","50,626 km",Petrol,1,Manual,1.5L I-VTEC VX (O) MT,2015 ,Honda City
+2015 Honda City,"5,92,000","67,645 km",Petrol,1,Manual,V MT PETROL,2015 ,Honda City
+2012 Honda City,"4,95,000","81,010 km",Petrol,1,Manual,1.5L I-VTEC V MT,2012 ,Honda City
+2017 Honda City,"8,71,000","15,237 km",Petrol,1,Automatic,1.5L I-VTE V CVT,2017 ,Honda City
+2018 Honda City,"7,84,000","43,135 km",Petrol,2,Manual,1.5L I-VTEC V MT,2018 ,Honda City
+2015 Honda City,"5,44,000","96,488 km",Petrol,2,Manual,SV MT PETROL,2015 ,Honda City
+2013 Honda City,"4,42,000","58,055 km",Petrol,2,Manual,1.5L I-VTEC S MT,2013 ,Honda City
+2015 Honda City,"6,65,000","47,609 km",Petrol,1,Manual,1.5L I-VTEC V MT,2015 ,Honda City
+2012 Honda City,"4,65,000","77,300 km",Petrol,2,Manual,1.5L I-VTEC V MT,2012 ,Honda City
+2013 Honda City,"4,39,000","1,04,570 km",Petrol,1,Manual,1.5L I-VTEC V MT,2013 ,Honda City
+2015 Honda City,"6,05,000","75,876 km",Petrol,1,Manual,SV MT PETROL,2015 ,Honda City
+2018 Honda City,"8,91,000","60,955 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2018 ,Honda City
+2017 Honda City,"7,70,000","60,894 km",Petrol,1,Manual,1.5L I-VTEC VX,2017 ,Honda City
+2018 Honda City,"8,18,000","36,750 km",Petrol,1,Manual,1.5L I-VTEC V MT,2018 ,Honda City
+2017 Honda City,"9,38,000","23,263 km",Petrol,2,Automatic,1.5L I-VTEC ZX CVT,2017 ,Honda City
+2016 Honda City,"7,44,000","38,706 km",Petrol,1,Manual,V MT PETROL,2016 ,Honda City
+2018 Honda City,"8,37,000","26,502 km",Petrol,2,Manual,V MT PETROL,2018 ,Honda City
+2018 Honda City,"9,38,000","66,399 km",Petrol,1,Automatic,VX CVT PETROL,2018 ,Honda City
+2018 Honda City,"8,33,000","49,423 km",Petrol,1,Manual,V MT PETROL,2018 ,Honda City
+2018 Honda City,"8,00,000","1,24,892 km",Diesel,1,Manual,1.5L I-DTEC VX,2018 ,Honda City
+2016 Honda City,"7,62,000","43,238 km",Petrol,2,Manual,1.5L I-VTEC V MT,2016 ,Honda City
+2018 Honda City,"9,06,000","80,079 km",Petrol,2,Automatic,1.5L I-VTEC VX CVT,2018 ,Honda City
+2021 Honda City,"13,83,000","39,858 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2021 ,Honda City
+2018 Honda City,"9,12,000","99,861 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2018 ,Honda City
+2016 Honda City,"7,53,000","58,808 km",Petrol,2,Manual,1.5L I-VTEC V MT,2016 ,Honda City
+2017 Honda City,"8,69,000","49,038 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2017 ,Honda City
+2017 Honda City,"8,06,000","47,971 km",Petrol,1,Manual,1.5L I-VTEC V MT,2017 ,Honda City
+2021 Honda City,"12,40,000","10,949 km",Petrol,1,Manual,1.5L I-VTEC V MT 5TH GEN,2021 ,Honda City
+2019 Honda City,"10,42,000","27,022 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2019 ,Honda City
+2021 Honda City,"13,46,000","19,497 km",Petrol,1,Manual,1.5L I-VTEC VX,2021 ,Honda City
+2017 Honda City,"8,85,000","55,699 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2017 ,Honda City
+2018 Honda City,"10,46,000","63,562 km",Petrol,1,Automatic,ZX CVT ANNIVERSARY EDITION,2018 ,Honda City
+2021 Honda City,"13,55,000","20,630 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2021 ,Honda City
+2019 Honda City,"10,23,000","65,759 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2019 ,Honda City
+2020 Honda City,"13,18,000","18,781 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2020 ,Honda City
+2016 Honda City,"8,68,000","37,220 km",Petrol,1,Automatic,VX CVT PETROL,2016 ,Honda City
+2015 Honda City,"7,14,000","81,098 km",Petrol,1,Manual,1.5L I-VTEC VX,2015 ,Honda City
+2017 Honda City,"9,44,000","40,753 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2017 ,Honda City
+2021 Honda City,"14,21,300","9,210 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2021 ,Honda City
+2016 Honda City,"7,67,000","1,10,941 km",Petrol,2,Automatic,1.5L I-VTEC VX CVT,2016 ,Honda City
+2020 Honda City,"12,44,000","17,785 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2020 ,Honda City
+2021 Honda City,"14,87,000","9,439 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2021 ,Honda City
+2022 Honda City,"15,47,000","10,563 km",Petrol,1,Manual,1.5L I-VTEC ZX,2022 ,Honda City
+2014 Honda City,"5,49,000","58,778 km",Petrol,1,Manual,1.5L I-VTEC V MT,2014 ,Honda City
+2015 Honda City,"5,99,000","50,626 km",Petrol,1,Manual,1.5L I-VTEC VX (O) MT,2015 ,Honda City
+2017 Honda City,"7,20,000","39,861 km",Petrol,1,Manual,V MT PETROL,2017 ,Honda City
+2015 Honda City,"5,94,000","56,236 km",Petrol,1,Manual,1.5L I-VTEC V MT,2015 ,Honda City
+2010 Honda City,"2,75,000","80,053 km",Petrol,1,Automatic,1.5L I-VTEC V AT,2010 ,Honda City
+2016 Honda City,"6,71,000","33,591 km",Petrol,1,Manual,V MT PETROL,2016 ,Honda City
+2013 Honda City,"4,53,000","45,482 km",CNG,1,Manual,S MT PETROL,2013 ,Honda City
+2015 Honda City,"5,46,000","79,539 km",Petrol,2,Manual,1.5L I-VTEC V MT,2015 ,Honda City
+2019 Honda City,"9,98,000","33,276 km",Petrol,1,Automatic,V CVT,2019 ,Honda City
+2012 Honda City,"3,37,000","76,200 km",Petrol,1,Manual,1.5 E MT PETROL,2012 ,Honda City
+2019 Honda City,"7,58,000","80,386 km",Petrol,2,Manual,1.5L I-VTEC V MT,2019 ,Honda City
+2021 Honda City,"9,75,000","23,072 km",Petrol,2,Manual,1.5L I-VTEC V MT 5TH GEN,2021 ,Honda City
+2017 Honda City,"7,23,000","91,910 km",Petrol,1,Manual,1.5L I-VTEC V MT,2017 ,Honda City
+2014 Honda City,"5,06,000","77,192 km",Petrol,1,Manual,1.5L I-VTEC S MT,2014 ,Honda City
+2016 Honda City,"6,77,000","88,087 km",CNG,1,Manual,VX MT PETROL,2016 ,Honda City
+2015 Honda City,"5,92,000","67,645 km",Petrol,1,Manual,V MT PETROL,2015 ,Honda City
+2010 Honda City,"2,41,000","64,043 km",Petrol,2,Manual,1.5L I-VTEC S MT,2010 ,Honda City
+2015 Honda City,"6,89,000","73,965 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2015 ,Honda City
+2017 Honda City,"9,52,000","58,989 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2017 ,Honda City
+2015 Honda City,"6,10,000","74,206 km",CNG,2,Automatic,VX CVT PETROL,2015 ,Honda City
+2019 Honda City,"10,80,000","36,609 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2019 ,Honda City
+2014 Honda City,"6,39,000","49,319 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2014 ,Honda City
+2015 Honda City,"6,75,000","80,005 km",Petrol,1,Automatic,VX CVT PETROL,2015 ,Honda City
+2017 Honda City,"7,20,000","39,861 km",Petrol,1,Manual,V MT PETROL,2017 ,Honda City
+2012 Honda City,"3,73,000","49,837 km",Petrol,1,Manual,1.5L I-VTEC S MT,2012 ,Honda City
+2016 Honda City,"6,77,000","88,087 km",CNG,1,Manual,VX MT PETROL,2016 ,Honda City
+2021 Honda City,"15,04,000","33,789 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2021 ,Honda City
+2021 Honda City,"9,75,000","23,072 km",Petrol,2,Manual,1.5L I-VTEC V MT 5TH GEN,2021 ,Honda City
+2019 Honda City,"9,98,000","33,276 km",Petrol,1,Automatic,V CVT,2019 ,Honda City
+2019 Honda City,"7,58,000","80,386 km",Petrol,2,Manual,1.5L I-VTEC V MT,2019 ,Honda City
+2010 Honda City,"2,75,000","80,053 km",Petrol,1,Automatic,1.5L I-VTEC V AT,2010 ,Honda City
+2015 Honda City,"5,99,000","50,626 km",Petrol,1,Manual,1.5L I-VTEC VX (O) MT,2015 ,Honda City
+2017 Honda City,"8,11,000","35,292 km",Petrol,1,Manual,1.5L I-VTEC V MT,2017 ,Honda City
+2015 Honda City,"5,46,000","79,539 km",Petrol,2,Manual,1.5L I-VTEC V MT,2015 ,Honda City
+2018 Honda City,"7,97,000","32,812 km",Petrol,1,Manual,V MT PETROL,2018 ,Honda City
+2017 Honda City,"8,82,000","39,832 km",Petrol,2,Automatic,1.5L I-VTEC VX CVT,2017 ,Honda City
+2016 Honda City,"6,71,000","33,591 km",Petrol,1,Manual,V MT PETROL,2016 ,Honda City
+2015 Honda City,"6,10,000","74,206 km",CNG,2,Automatic,VX CVT PETROL,2015 ,Honda City
+2019 Honda City,"10,80,000","36,609 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2019 ,Honda City
+2014 Honda City,"6,39,000","49,319 km",Petrol,1,Automatic,1.5L I-VTEC VX CVT,2014 ,Honda City
+2015 Honda City,"6,75,000","80,005 km",Petrol,1,Automatic,VX CVT PETROL,2015 ,Honda City
+2017 Honda City,"7,20,000","39,861 km",Petrol,1,Manual,V MT PETROL,2017 ,Honda City
+2012 Honda City,"3,73,000","49,837 km",Petrol,1,Manual,1.5L I-VTEC S MT,2012 ,Honda City
+2016 Honda City,"6,77,000","88,087 km",CNG,1,Manual,VX MT PETROL,2016 ,Honda City
+2021 Honda City,"15,04,000","33,789 km",Petrol,1,Automatic,1.5L I-VTEC ZX CVT,2021 ,Honda City
+2021 Honda City,"9,75,000","23,072 km",Petrol,2,Manual,1.5L I-VTEC V MT 5TH GEN,2021 ,Honda City
+2019 Honda City,"9,98,000","33,276 km",Petrol,1,Automatic,V CVT,2019 ,Honda City
+2019 Honda City,"7,58,000","80,386 km",Petrol,2,Manual,1.5L I-VTEC V MT,2019 ,Honda City
+2010 Honda City,"2,75,000","80,053 km",Petrol,1,Automatic,1.5L I-VTEC V AT,2010 ,Honda City
+2015 Honda City,"5,99,000","50,626 km",Petrol,1,Manual,1.5L I-VTEC VX (O) MT,2015 ,Honda City
+2017 Honda City,"8,11,000","35,292 km",Petrol,1,Manual,1.5L I-VTEC V MT,2017 ,Honda City
+2015 Honda City,"5,46,000","79,539 km",Petrol,2,Manual,1.5L I-VTEC V MT,2015 ,Honda City
+2018 Honda City,"7,97,000","32,812 km",Petrol,1,Manual,V MT PETROL,2018 ,Honda City
+2017 Honda City,"8,82,000","39,832 km",Petrol,2,Automatic,1.5L I-VTEC VX CVT,2017 ,Honda City
+2016 Honda City,"6,71,000","33,591 km",Petrol,1,Manual,V MT PETROL,2016 ,Honda City
+2016 Hyundai Verna,"6,98,000","33,224 km",Petrol,1,Automatic,1.6 VTVT SX AT,2016 ,Hyundai Verna
+2018 Hyundai Verna,"10,06,000","66,078 km",Petrol,1,Automatic,1.6 VTVT SX (O) AT,2018 ,Hyundai Verna
+2018 Hyundai Verna,"10,20,000","78,698 km",Petrol,2,Automatic,1.6 VTVT SX (O) AT,2018 ,Hyundai Verna
+2017 Hyundai Verna,"10,46,000","37,939 km",Petrol,1,Automatic,1.6 VTVT SX (O) AT,2017 ,Hyundai Verna
+2019 Hyundai Verna,"9,34,000","31,184 km",Diesel,1,Manual,1.4 EX CRDI,2019 ,Hyundai Verna
+2017 Hyundai Verna,"8,38,000","56,634 km",Petrol,1,Manual,1.6 VTVT SX (O),2017 ,Hyundai Verna
+2019 Hyundai Verna,"9,77,000","37,640 km",Diesel,1,Manual,1.6 CRDI SX,2019 ,Hyundai Verna
+2018 Hyundai Verna,"10,32,000","61,109 km",Diesel,1,Manual,1.6 SX (O) CRDI MT,2018 ,Hyundai Verna
+2016 Hyundai Verna,"7,02,000","67,077 km",Diesel,1,Manual,1.6 CRDI SX,2016 ,Hyundai Verna
+2017 Hyundai Verna,"10,01,000","69,690 km",Petrol,1,Automatic,1.6 VTVT SX (O) AT,2017 ,Hyundai Verna
+2018 Hyundai Verna,"8,02,000","46,631 km",Petrol,1,Manual,1.4 EX PETROL,2018 ,Hyundai Verna
+2018 Hyundai Verna,"10,47,000","45,833 km",Petrol,2,Automatic,1.6 VTVT SX (O) AT,2018 ,Hyundai Verna
+2017 Hyundai Verna,"9,18,000","77,112 km",Petrol,1,Automatic,1.6 VTVT SX (O) AT,2017 ,Hyundai Verna
+2014 Hyundai Verna,"6,11,000","96,375 km",Diesel,1,Automatic,FLUIDIC 1.6 CRDI SX AT,2014 ,Hyundai Verna
+2021 Hyundai Verna,"14,04,325","24,255 km",Petrol,1,Automatic,SX (O) 1.5 VTVT IVT,2021 ,Hyundai Verna
+2020 Hyundai Verna,"14,01,000","47,456 km",Petrol,1,Automatic,SX (O)1.0 TURBO DCT,2020 ,Hyundai Verna
+2018 Hyundai Verna,"9,89,000","66,339 km",Diesel,1,Automatic,1.6 CRDI SX + AT,2018 ,Hyundai Verna
+2016 Hyundai Verna,"7,54,000","34,108 km",Petrol,1,Automatic,1.6 VTVT SX AT,2016 ,Hyundai Verna
+2018 Hyundai Verna,"9,18,000","22,161 km",Petrol,1,Automatic,1.6 EX VTVT AT,2018 ,Hyundai Verna
+2021 Hyundai Verna,"14,25,000","5,473 km",Petrol,1,Automatic,SX (O) 1.5 VTVT IVT,2021 ,Hyundai Verna
+2018 Hyundai Verna,"9,36,000","18,046 km",Petrol,2,Automatic,1.6 EX VTVT AT,2018 ,Hyundai Verna
+2017 Hyundai Verna,"9,56,000","79,501 km",Diesel,1,Manual,1.6 CRDI SX,2017 ,Hyundai Verna
+2020 Hyundai Verna,"14,28,000","62,593 km",Diesel,1,Automatic,SX 1.5 CRDI AT,2020 ,Hyundai Verna
+2017 Hyundai Verna,"9,31,000","60,988 km",Diesel,1,Manual,1.6 CRDI SX,2017 ,Hyundai Verna
+2021 Hyundai Verna,"16,50,000","14,660 km",Diesel,1,Automatic,SX (O) 1.5 CRDI AT,2021 ,Hyundai Verna
+2013 Hyundai Verna,"5,48,000","68,059 km",Petrol,1,Manual,FLUIDIC 1.6 VTVT SX,2013 ,Hyundai Verna
+2013 Hyundai Verna,"5,51,000","81,298 km",Diesel,2,Manual,FLUIDIC 1.6 CRDI SX,2013 ,Hyundai Verna
+2015 Hyundai Verna,"6,81,000","22,931 km",Petrol,1,Manual,FLUIDIC 4S 1.6 VTVT S,2015 ,Hyundai Verna
+2020 Hyundai Verna,"13,80,000","32,987 km",Diesel,1,Manual,SX (O) 1.5 CRDI,2020 ,Hyundai Verna
+2013 Hyundai Verna,"4,47,000","43,767 km",Petrol,1,Manual,FLUIDIC 1.4 VTVT,2013 ,Hyundai Verna
+2011 Hyundai Verna,"3,39,000","99,678 km",Petrol,1,Manual,FLUIDIC 1.6 VTVT EX,2011 ,Hyundai Verna
+2016 Hyundai Verna,"5,53,000","1,08,714 km",Petrol,3,Manual,FLUIDIC 4S 1.6 VTVT S,2016 ,Hyundai Verna
+2021 Hyundai Verna,"14,72,000","36,033 km",Diesel,1,Manual,SX (O) 1.5 CRDI,2021 ,Hyundai Verna
+2020 Hyundai Verna,"11,00,000","47,741 km",Diesel,1,Manual,S PLUS 1.5 CRDI,2020 ,Hyundai Verna
+2020 Hyundai Verna,"9,76,000","40,516 km",Petrol,1,Manual,1.6 VTVT SX,2020 ,Hyundai Verna
+2011 Hyundai Verna,"3,69,000","48,576 km",Petrol,1,Manual,FLUIDIC 1.6 VTVT EX,2011 ,Hyundai Verna
+2018 Hyundai Verna,"9,17,000","95,612 km",Petrol,1,Automatic,1.6 VTVT SX (O) AT,2018 ,Hyundai Verna
+2016 Hyundai Verna,"6,98,000","33,224 km",Petrol,1,Automatic,1.6 VTVT SX AT,2016 ,Hyundai Verna
+2018 Hyundai Verna,"10,06,000","66,078 km",Petrol,1,Automatic,1.6 VTVT SX (O) AT,2018 ,Hyundai Verna
+2018 Hyundai Verna,"10,20,000","78,698 km",Petrol,2,Automatic,1.6 VTVT SX (O) AT,2018 ,Hyundai Verna
+2017 Hyundai Verna,"10,46,000","37,939 km",Petrol,1,Automatic,1.6 VTVT SX (O) AT,2017 ,Hyundai Verna
+2019 Hyundai Verna,"9,34,000","31,184 km",Diesel,1,Manual,1.4 EX CRDI,2019 ,Hyundai Verna
+2017 Hyundai Verna,"8,38,000","56,634 km",Petrol,1,Manual,1.6 VTVT SX (O),2017 ,Hyundai Verna
+2019 Hyundai Verna,"9,77,000","37,640 km",Diesel,1,Manual,1.6 CRDI SX,2019 ,Hyundai Verna
+2018 Hyundai Verna,"10,32,000","61,109 km",Diesel,1,Manual,1.6 SX (O) CRDI MT,2018 ,Hyundai Verna
+2016 Hyundai Verna,"7,02,000","67,077 km",Diesel,1,Manual,1.6 CRDI SX,2016 ,Hyundai Verna
+2017 Hyundai Verna,"10,01,000","69,690 km",Petrol,1,Automatic,1.6 VTVT SX (O) AT,2017 ,Hyundai Verna
+2019 Maruti New Wagon-R,"5,21,000","85,969 km",CNG,1,Manual,LXI CNG 1.0,2019 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,06,000","7,438 km",Petrol,1,Manual,LXI 1.0,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,84,000","67,357 km",CNG,1,Manual,LXI CNG 1.0,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,07,000","9,739 km",Petrol,1,Manual,LXI 1.0,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"4,99,000","90,671 km",CNG,1,Manual,LXI CNG (O) 1.0,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,26,000","66,997 km",CNG,2,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,17,000","39,788 km",CNG,1,Manual,LXI CNG 1.0 L,2019 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,15,000","16,521 km",Petrol,1,Manual,VXI 1.0,2021 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,21,000","85,969 km",CNG,1,Manual,LXI CNG 1.0,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,14,000","18,863 km",Petrol,2,Manual,LXI 1.0,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,07,000","95,841 km",CNG,1,Manual,LXI CNG 1.0 L,2019 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"6,23,000","19,176 km",CNG,1,Manual,LXI CNG 1.0,2021 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,26,000","10,555 km",Petrol,1,Manual,LXI (O) 1.0,2021 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,69,000","18,543 km",Petrol,1,Manual,VXI 1.2,2021 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"4,96,000","97,574 km",CNG,1,Manual,1.0 Lxi (o) cng,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,13,000","14,391 km",Petrol,1,Manual,LXI 1.0,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"6,05,000","21,779 km",CNG,1,Manual,LXI CNG 1.0,2019 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,97,000","10,149 km",Petrol,1,Manual,VXI 1.0,2021 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"6,21,000","28,647 km",CNG,1,Manual,LXI CNG (O) 1.0,2021 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"6,03,000","13,673 km",Petrol,1,Automatic,ZXI 1.2 AMT,2019 ,Maruti New Wagon-R
+2022 Maruti New Wagon-R,"7,27,000","3,084 km",CNG,1,Manual,VXI CNG 1.0,2022 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"6,24,000","12,161 km",Petrol,1,Automatic,VXI (O) 1.2 AMT,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"6,52,000","39,247 km",Petrol,1,Automatic,ZXI 1.2 AMT,2019 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,48,000","53,481 km",CNG,1,Manual,LXI CNG 1.0,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,38,000","46,297 km",CNG,1,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"6,26,000","54,496 km",CNG,1,Manual,LXI CNG 1.0,2021 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,15,000","16,521 km",Petrol,1,Manual,VXI 1.0,2021 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,17,000","39,788 km",CNG,1,Manual,LXI CNG 1.0 L,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,07,000","9,739 km",Petrol,1,Manual,LXI 1.0,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,33,000","40,242 km",CNG,1,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,16,000","10,555 km",Petrol,1,Manual,LXI (O) 1.0,2021 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,26,000","66,997 km",CNG,2,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,13,000","18,863 km",Petrol,2,Manual,LXI 1.0,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,60,000","31,387 km",CNG,2,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,61,000","8,834 km",Petrol,1,Manual,VXI 1.2,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,32,000","23,981 km",Petrol,2,Manual,VXI 1.0,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,41,000","61,785 km",CNG,1,Manual,LXI CNG 1.0,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,84,000","37,940 km",CNG,1,Manual,LXI CNG 1.0,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"4,96,000","97,574 km",CNG,1,Manual,1.0 Lxi (o) cng,2019 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,21,000","85,969 km",CNG,1,Manual,LXI CNG 1.0,2019 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,06,000","7,438 km",Petrol,1,Manual,LXI 1.0,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,84,000","67,357 km",CNG,1,Manual,LXI CNG 1.0,2020 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,97,000","10,149 km",Petrol,1,Manual,VXI 1.0,2021 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"6,21,000","28,647 km",CNG,1,Manual,LXI CNG (O) 1.0,2021 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"6,03,000","13,673 km",Petrol,1,Automatic,ZXI 1.2 AMT,2019 ,Maruti New Wagon-R
+2022 Maruti New Wagon-R,"7,27,000","3,084 km",CNG,1,Manual,VXI CNG 1.0,2022 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"6,21,000","28,647 km",CNG,1,Manual,LXI CNG (O) 1.0,2021 ,Maruti New Wagon-R
+2022 Maruti New Wagon-R,"7,27,000","3,084 km",CNG,1,Manual,VXI CNG 1.0,2022 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,97,000","10,149 km",Petrol,1,Manual,VXI 1.0,2021 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"6,24,000","12,161 km",Petrol,1,Automatic,VXI (O) 1.2 AMT,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"6,52,000","39,247 km",Petrol,1,Automatic,ZXI 1.2 AMT,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,60,000","31,387 km",CNG,2,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,07,000","9,739 km",Petrol,1,Manual,LXI 1.0,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,38,000","40,242 km",CNG,1,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,15,000","16,521 km",Petrol,1,Manual,VXI 1.0,2021 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,17,000","39,788 km",CNG,1,Manual,LXI CNG 1.0 L,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,38,000","46,297 km",CNG,1,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,12,000","14,391 km",Petrol,1,Manual,LXI 1.0,2020 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,16,000","10,555 km",Petrol,1,Manual,LXI (O) 1.0,2021 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,13,000","18,863 km",Petrol,2,Manual,LXI 1.0,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"4,96,000","97,574 km",CNG,1,Manual,1.0 Lxi (o) cng,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,26,000","66,997 km",CNG,2,Manual,LXI CNG 1.0 L,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,61,000","8,834 km",Petrol,1,Manual,VXI 1.2,2019 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,06,000","7,438 km",Petrol,1,Manual,LXI 1.0,2019 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,21,000","85,969 km",CNG,1,Manual,LXI CNG 1.0,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,41,000","61,785 km",CNG,1,Manual,LXI CNG 1.0,2020 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,07,000","95,841 km",CNG,1,Manual,LXI CNG 1.0 L,2019 ,Maruti New Wagon-R
+2020 Maruti New Wagon-R,"5,32,000","23,981 km",Petrol,2,Manual,VXI 1.0,2020 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"5,49,000","49,905 km",CNG,1,Manual,LXI CNG 1.0 L,2021 ,Maruti New Wagon-R
+2019 Maruti New Wagon-R,"5,16,000","92,418 km",CNG,1,Manual,1.0 Lxi (o) cng,2019 ,Maruti New Wagon-R
+2021 Maruti New Wagon-R,"6,23,000","19,176 km",CNG,1,Manual,LXI CNG 1.0,2021 ,Maruti New Wagon-R
+2018 Maruti IGNIS,"4,10,000","68,785 km",Petrol,1,Manual,SIGMA 1.2,2018 ,Maruti IGNIS
+2021 Maruti IGNIS,"6,24,350","6,547 km",Petrol,2,Manual,ZETA 1.2,2021 ,Maruti IGNIS
+2017 Maruti IGNIS,"4,17,000","51,497 km",Petrol,2,Manual,DELTA 1.2,2017 ,Maruti IGNIS
+2017 Maruti IGNIS,"5,12,000","29,406 km",Petrol,2,Automatic,ZETA 1.2 AMT DUAL TONE,2017 ,Maruti IGNIS
+2017 Maruti IGNIS,"5,60,000","48,269 km",Petrol,1,Automatic,ALPHA 1.2 AMT,2017 ,Maruti IGNIS
+2017 Maruti IGNIS,"5,56,000","41,720 km",Petrol,1,Automatic,ZETA 1.2 AMT,2017 ,Maruti IGNIS
+2018 Maruti IGNIS,"5,64,000","52,777 km",Petrol,1,Automatic,ALPHA 1.2 AMT,2018 ,Maruti IGNIS
+2017 Maruti IGNIS,"5,41,000","9,665 km",Petrol,1,Manual,ALPHA 1.2,2017 ,Maruti IGNIS
+2017 Maruti IGNIS,"5,03,000","30,045 km",CNG,1,Manual,DELTA 1.2,2017 ,Maruti IGNIS
+2017 Maruti IGNIS,"4,61,000","30,125 km",Petrol,2,Manual,DELTA 1.2,2017 ,Maruti IGNIS
+2020 Maruti IGNIS,"5,12,000","11,195 km",Petrol,1,Manual,SIGMA 1.2,2020 ,Maruti IGNIS
+2017 Maruti IGNIS,"5,41,000","26,207 km",Petrol,1,Manual,ZETA 1.2,2017 ,Maruti IGNIS
+2019 Maruti IGNIS,"5,37,000","20,364 km",Petrol,1,Manual,DELTA 1.2,2019 ,Maruti IGNIS
+2017 Maruti IGNIS,"5,00,000","39,181 km",Petrol,2,Automatic,ZETA 1.2 AMT,2017 ,Maruti IGNIS
+2019 Maruti IGNIS,"5,63,000","23,547 km",Petrol,1,Manual,ZETA 1.2,2019 ,Maruti IGNIS
+2017 Maruti IGNIS,"5,34,000","47,474 km",Petrol,2,Manual,ZETA 1.2,2017 ,Maruti IGNIS
+2019 Hyundai VENUE,"9,12,000","57,123 km",Diesel,1,Manual,SX (O) 1.5 CRDI,2019 ,Hyundai VENUE
+2019 Hyundai VENUE,"7,79,000","37,597 km",Petrol,2,Manual,SX 1.0 TURBO,2019 ,Hyundai VENUE
+2020 Hyundai VENUE,"7,46,000","34,850 km",Petrol,1,Manual,S 1.2,2020 ,Hyundai VENUE
+2019 Hyundai VENUE,"8,62,000","23,797 km",Diesel,2,Manual,SX 1.4 CRDI,2019 ,Hyundai VENUE
+2021 Hyundai VENUE,"8,98,000","23,036 km",Petrol,1,Manual,S 1.0 TURBO IMT,2021 ,Hyundai VENUE
+2022 Hyundai VENUE,"8,38,500","16,028 km",Petrol,1,Manual,S 1.2,2022 ,Hyundai VENUE
+2020 Hyundai VENUE,"7,88,000","27,058 km",Petrol,1,Manual,S 1.2,2020 ,Hyundai VENUE
+2020 Hyundai VENUE,"8,13,000","40,734 km",Diesel,1,Manual,SMT 1.5 CRDI,2020 ,Hyundai VENUE
+2021 Hyundai VENUE,"11,38,000","16,168 km",Petrol,2,Automatic,SX PLUS 1.0 TURBO DCT,2021 ,Hyundai VENUE
+2019 Hyundai VENUE,"9,06,000","67,033 km",Petrol,1,Automatic,SX PLUS 1.0 TURBO DCT,2019 ,Hyundai VENUE
+2019 Hyundai VENUE,"8,82,000","40,600 km",Petrol,1,Manual,SX 1.0 TURBO,2019 ,Hyundai VENUE
+2022 Hyundai VENUE,"11,39,000","12,415 km",Petrol,1,Manual,SX 1.0 (O) TURBO IMT,2022 ,Hyundai VENUE
+2020 Hyundai VENUE,"8,76,000","15,237 km",Petrol,1,Manual,S+ 1.2,2020 ,Hyundai VENUE
+2021 Hyundai VENUE,"10,23,000","11,936 km",Petrol,1,Manual,SX 1.0 (O) TURBO,2021 ,Hyundai VENUE
+2019 Hyundai VENUE,"10,66,000","26,338 km",Petrol,1,Automatic,1.0 TURBO GDI SX+ AT,2019 ,Hyundai VENUE
+2020 Hyundai VENUE,"10,00,000","8,239 km",Petrol,2,Manual,S 1.0 TURBO IMT,2020 ,Hyundai VENUE
+2020 Hyundai VENUE,"11,13,000","11,066 km",Petrol,1,Manual,SX 1.0 (O) TURBO IMT,2020 ,Hyundai VENUE
+2019 Hyundai VENUE,"8,57,000","47,411 km",Petrol,1,Manual,SX 1.0 (O) TURBO,2019 ,Hyundai VENUE
+2020 Hyundai VENUE,"7,79,000","37,954 km",Petrol,1,Manual,S 1.2,2020 ,Hyundai VENUE
+2019 Hyundai Creta,"12,82,000","68,666 km",Diesel,1,Automatic,SX AT 1.6 DIESEL,2019 ,Hyundai Creta
+2019 Hyundai Creta,"12,20,000","20,269 km",Petrol,2,Automatic,SX AT 1.6 PETROL,2019 ,Hyundai Creta
+2019 Hyundai Creta,"10,82,000","16,808 km",Petrol,1,Manual,SX 1.6 PETROL,2019 ,Hyundai Creta
+2016 Hyundai Creta,"7,77,000","65,531 km",Petrol,1,Manual,1.6 S,2016 ,Hyundai Creta
+2020 Hyundai Creta,"11,17,000","92,108 km",Diesel,1,Manual,EX 1.5 DIESEL,2020 ,Hyundai Creta
+2018 Hyundai Creta,"10,62,000","28,287 km",Petrol,1,Manual,SX PLUS 1.6 PETROL,2018 ,Hyundai Creta
+2018 Hyundai Creta,"11,05,000","68,036 km",Petrol,1,Automatic,SX AT 1.6 PETROL,2018 ,Hyundai Creta
+2019 Hyundai Creta,"11,90,000","48,494 km",CNG,1,Automatic,SX AT 1.6 PETROL,2019 ,Hyundai Creta
+2020 Hyundai Creta,"10,83,000","1,05,334 km",Diesel,2,Manual,SX 1.6 DIESEL,2020 ,Hyundai Creta
+2018 Hyundai Creta,"8,90,000","38,861 km",Petrol,1,Manual,E PLUS 1.6 PETROL,2018 ,Hyundai Creta
+2019 Hyundai Creta,"11,76,000","50,956 km",Diesel,2,Automatic,SX AT 1.6 DIESEL,2019 ,Hyundai Creta
+2016 Hyundai Creta,"8,41,000","63,508 km",Petrol,1,Manual,SX PLUS 1.6 PETROL,2016 ,Hyundai Creta
+2018 Hyundai Creta,"11,50,000","60,316 km",Diesel,1,Automatic,1.6 CRDI SX PLUS AUTO,2018 ,Hyundai Creta
+2017 Hyundai Creta,"8,09,000","96,639 km",Petrol,1,Manual,E PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2016 Hyundai Creta,"7,69,000","62,663 km",Petrol,2,Manual,1.6 S,2016 ,Hyundai Creta
+2016 Hyundai Creta,"7,95,000","78,990 km",Diesel,1,Manual,SX PLUS 1.6 DIESEL,2016 ,Hyundai Creta
+2015 Hyundai Creta,"7,12,000","99,951 km",Petrol,2,Manual,SX PLUS 1.6 PETROL,2015 ,Hyundai Creta
+2018 Hyundai Creta,"9,06,000","61,764 km",Diesel,2,Manual,SX 1.6 DIESEL,2018 ,Hyundai Creta
+2017 Hyundai Creta,"8,56,000","22,591 km",Petrol,2,Manual,E PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2015 Hyundai Creta,"7,29,000","28,025 km",Petrol,1,Manual,1.6 S,2015 ,Hyundai Creta
+2019 Hyundai Creta,"13,02,000","80,463 km",Diesel,1,Automatic,SX AT 1.6 DIESEL,2019 ,Hyundai Creta
+2016 Hyundai Creta,"8,25,000","44,387 km",Petrol,2,Manual,1.6 E + VTVT,2016 ,Hyundai Creta
+2020 Hyundai Creta,"15,19,000","15,905 km",Petrol,1,Manual,SX 1.5 PETROL,2020 ,Hyundai Creta
+2018 Hyundai Creta,"10,62,000","84,766 km",Diesel,1,Manual,SX 1.6 DIESEL,2018 ,Hyundai Creta
+2016 Hyundai Creta,"9,01,000","67,621 km",Petrol,1,Manual,1.6 SX PLUS PETROL,2016 ,Hyundai Creta
+2017 Hyundai Creta,"8,96,000","68,332 km",Petrol,2,Manual,E PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2019 Hyundai Creta,"12,11,000","48,533 km",Petrol,1,Automatic,SX AT 1.6 PETROL,2019 ,Hyundai Creta
+2020 Hyundai Creta,"16,17,000","34,624 km",Petrol,1,Automatic,SX (O) 1.4 TURBO DCT,2020 ,Hyundai Creta
+2019 Hyundai Creta,"11,90,000","27,503 km",Petrol,2,Manual,SX (O) EXECUTIVE 1.6 PETROL,2019 ,Hyundai Creta
+2017 Hyundai Creta,"10,54,000","93,563 km",Petrol,1,Automatic,SX PLUS AT 1.6 PETROL,2017 ,Hyundai Creta
+2016 Hyundai Creta,"9,27,000","70,116 km",Petrol,1,Automatic,SX PLUS AT 1.6 PETROL,2016 ,Hyundai Creta
+2016 Hyundai Creta,"9,55,000","43,687 km",Petrol,2,Manual,SX PLUS 1.6 PETROL,2016 ,Hyundai Creta
+2020 Hyundai Creta,"16,31,000","71,601 km",Petrol,1,Automatic,SX (O) 1.4 TURBO DCT DUAL TONE,2020 ,Hyundai Creta
+2017 Hyundai Creta,"8,99,000","54,439 km",Petrol,1,Manual,E PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2018 Hyundai Creta,"10,68,000","60,950 km",Petrol,1,Manual,SX PLUS 1.6 PETROL,2018 ,Hyundai Creta
+2021 Hyundai Creta,"18,19,000","23,914 km",Petrol,1,Automatic,SX (O) 1.4 TURBO DCT DUAL TONE,2021 ,Hyundai Creta
+2017 Hyundai Creta,"10,76,000","61,139 km",Petrol,2,Manual,SX PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2017 Hyundai Creta,"10,47,000","54,747 km",Petrol,1,Manual,SX PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2017 Hyundai Creta,"9,69,000","54,362 km",Petrol,2,Manual,SX PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2020 Hyundai Creta,"18,05,000","30,420 km",Petrol,1,Automatic,SX (O) IVT 1.5 PETROL,2020 ,Hyundai Creta
+2017 Hyundai Creta,"10,27,000","72,313 km",Petrol,2,Manual,SX PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2017 Hyundai Creta,"10,18,000","60,030 km",Diesel,1,Manual,SX 1.6 DIESEL,2017 ,Hyundai Creta
+2017 Hyundai Creta,"8,77,000","39,759 km",Petrol,1,Manual,E PLUS 1.6 PETROL,2017 ,Hyundai Creta
+2018 Hyundai Creta,"11,97,000","69,160 km",Diesel,1,Automatic,SX PLUS AT 1.6 DIESEL,2018 ,Hyundai Creta
+2019 Hyundai Creta,"11,62,000","60,781 km",Petrol,1,Manual,1.6 SX (O) VTVT,2019 ,Hyundai Creta
+2018 Hyundai Creta,"10,66,000","25,434 km",Petrol,2,Manual,1.6 SX PLUS PETROL,2018 ,Hyundai Creta
+2018 Tata NEXON,"6,13,000","94,046 km",Diesel,1,Automatic,XMA 1.5,2018 ,Tata NEXON
+2020 Tata NEXON,"8,32,000","46,764 km",Petrol,1,Automatic,XMA 1.2,2020 ,Tata NEXON
+2019 Tata NEXON,"6,80,000","78,651 km",Diesel,1,Manual,XM DIESEL,2019 ,Tata NEXON
+2021 Tata NEXON,"11,65,000","10,422 km",Diesel,1,Manual,XZ+ 1.5,2021 ,Tata NEXON
+2020 Tata NEXON,"9,25,000","22,652 km",Petrol,1,Manual,XZ+ OPT PETROL,2020 ,Tata NEXON
+2019 Tata NEXON,"10,38,000","16,032 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"10,02,000","7,074 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,06,000","70,632 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,56,000","23,694 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,08,000","49,044 km",Petrol,2,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"8,55,000","37,300 km",Petrol,2,Automatic,XZA + 1.2 PETROL A/T,2019 ,Tata NEXON
+2019 Tata NEXON,"8,94,000","58,004 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,59,000","15,271 km",Petrol,2,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,82,000","23,457 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2021 Tata NEXON,"9,85,000","11,557 km",Petrol,1,Manual,XZ PLUS PETROL,2021 ,Tata NEXON
+2018 Tata NEXON,"6,14,000","70,052 km",Diesel,1,Manual,XM DIESEL,2018 ,Tata NEXON
+2018 Tata NEXON,"7,32,000","46,574 km",Petrol,1,Automatic,XZA + 1.2 PETROL A/T,2018 ,Tata NEXON
+2021 Tata NEXON,"10,05,000","12,546 km",Petrol,1,Manual,XZ PETROL,2021 ,Tata NEXON
+2020 Tata NEXON,"7,91,000","31,770 km",Petrol,1,Manual,XZ PLUS PETROL,2020 ,Tata NEXON
+2018 Tata NEXON,"7,27,000","37,384 km",Diesel,1,Manual,XM DIESEL,2018 ,Tata NEXON
+2020 Tata NEXON,"8,32,000","46,764 km",Petrol,1,Automatic,XMA 1.2,2020 ,Tata NEXON
+2019 Tata NEXON,"7,52,000","38,643 km",Petrol,1,Automatic,XMA PETROL,2019 ,Tata NEXON
+2020 Tata NEXON,"9,25,000","22,652 km",Petrol,1,Manual,XZ+ OPT PETROL,2020 ,Tata NEXON
+2021 Tata NEXON,"10,03,000","12,546 km",Petrol,1,Manual,XZ PETROL,2021 ,Tata NEXON
+2019 Tata NEXON,"10,02,000","7,074 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"10,38,000","16,032 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2018 Tata NEXON,"7,19,000","95,268 km",Diesel,1,Manual,XZ PLUS DIESEL,2018 ,Tata NEXON
+2019 Tata NEXON,"8,11,000","37,300 km",Petrol,2,Automatic,XZA + 1.2 PETROL A/T,2019 ,Tata NEXON
+2019 Tata NEXON,"8,94,000","58,004 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,59,000","15,271 km",Petrol,2,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"8,98,000","70,632 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,08,000","49,044 km",Petrol,2,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,47,000","23,694 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"9,82,000","23,457 km",Petrol,1,Automatic,XZA PLUS PETROL,2019 ,Tata NEXON
+2019 Tata NEXON,"6,79,000","67,365 km",Petrol,1,Automatic,XMA PETROL,2019 ,Tata NEXON
+2018 Renault Kwid,"3,04,000","81,825 km",Petrol,1,Manual,1.0 RXT Opt,2018 ,Renault Kwid
+2021 Renault Kwid,"5,38,000","31,945 km",Petrol,2,Automatic,RXT 1.0 AMT (O),2021 ,Renault Kwid
+2018 Renault Kwid,"3,37,000","53,600 km",Petrol,3,Manual,RXT 0.8 (O),2018 ,Renault Kwid
+2018 Renault Kwid,"3,57,000","12,872 km",Petrol,1,Manual,1.0 MARVEL CAPTAIN AMERICA EDITION,2018 ,Renault Kwid
+2017 Renault Kwid,"3,21,000","34,736 km",Petrol,1,Manual,RXT 0.8,2017 ,Renault Kwid
+2019 Renault Kwid,"3,16,000","13,045 km",Petrol,1,Manual,RXL,2019 ,Renault Kwid
+2018 Renault Kwid,"3,54,000","7,649 km",Petrol,1,Manual,RXT 1.0 (O),2018 ,Renault Kwid
+2016 Renault Kwid,"2,70,000","83,219 km",Petrol,1,Manual,RXT 0.8 (O),2016 ,Renault Kwid
+2019 Renault Kwid,"3,37,000","37,025 km",Petrol,1,Manual,RXL,2019 ,Renault Kwid
+2016 Renault Kwid,"3,49,000","59,492 km",Petrol,1,Manual,RXT 0.8,2016 ,Renault Kwid
+2019 Renault Kwid,"4,11,000","11,722 km",Petrol,1,Manual,RXL,2019 ,Renault Kwid
+2022 Renault Kwid,"5,72,000","6,587 km",Petrol,1,Manual,CLIMBER MT 1.0,2022 ,Renault Kwid
+2015 Renault Kwid,"2,37,000","58,918 km",Petrol,2,Manual,RXT 0.8,2015 ,Renault Kwid
+2018 Renault Kwid,"4,05,000","37,619 km",Petrol,1,Automatic,1.0 RXL AT,2018 ,Renault Kwid
+2017 Renault Kwid,"3,04,000","48,241 km",Petrol,1,Manual,RXL 1.0 EDITION,2017 ,Renault Kwid
+2017 Renault Kwid,"3,78,000","48,124 km",Petrol,1,Automatic,RXT 1.0 AMT,2017 ,Renault Kwid
+2021 Renault Kwid,"3,65,000","21,784 km",Petrol,1,Manual,RXL,2021 ,Renault Kwid
+2017 Renault Kwid,"3,41,000","39,992 km",Petrol,2,Manual,RXT 1.0,2017 ,Renault Kwid
+2019 Hyundai NEW SANTRO,"4,85,000","17,303 km",Petrol,2,Automatic,SPORTZ AMT,2019 ,Hyundai NEW SANTRO
+2021 Hyundai NEW SANTRO,"5,74,000","32,150 km",CNG,1,Manual,SPORTZ EXECUTIVE CNG,2021 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,25,000","3,908 km",Petrol,2,Automatic,SPORTZ AMT,2019 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,24,000","36,627 km",CNG,1,Manual,1.1 SPORTZ MT CNG,2019 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,50,000","34,207 km",CNG,1,Manual,SPORTZ CNG,2019 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,08,000","68,865 km",CNG,1,Manual,SPORTZ CNG,2019 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,09,000","80,968 km",CNG,1,Manual,SPORTZ CNG,2019 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,15,000","80,157 km",CNG,1,Manual,SPORTZ CNG,2019 ,Hyundai NEW SANTRO
+2021 Hyundai NEW SANTRO,"6,05,000","39,295 km",CNG,1,Manual,SPORTZ EXECUTIVE MT CNG,2021 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,98,000","21,619 km",CNG,1,Manual,SPORTZ CNG,2019 ,Hyundai NEW SANTRO
+2021 Hyundai NEW SANTRO,"5,44,000","54,826 km",CNG,1,Manual,SPORTZ EXECUTIVE MT CNG,2021 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,43,000","59,157 km",CNG,1,Manual,SPORTZ CNG,2019 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,77,000","33,057 km",CNG,1,Manual,SPORTZ CNG,2019 ,Hyundai NEW SANTRO
+2020 Hyundai NEW SANTRO,"5,85,000","18,088 km",CNG,2,Manual,SPORTZ CNG,2020 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,01,000","25,411 km",Petrol,1,Manual,MAGNA,2019 ,Hyundai NEW SANTRO
+2021 Hyundai NEW SANTRO,"6,74,000","5,603 km",Petrol,1,Automatic,ASTA AMT,2021 ,Hyundai NEW SANTRO
+2019 Hyundai NEW SANTRO,"5,83,000","48,344 km",CNG,1,Manual,SPORTZ CNG,2019 ,Hyundai NEW SANTRO
+2020 Hyundai NEW SANTRO,"5,86,000","32,179 km",CNG,1,Manual,MAGNA EXECUTIVE CNG,2020 ,Hyundai NEW SANTRO
+2018 Renault Duster,"8,01,000","1,00,379 km",Diesel,2,Manual,85 PS RXS MT DIESEL,2018 ,Renault Duster
+2016 Renault Duster,"6,34,000","1,05,151 km",Diesel,1,Manual,RXS CVT 106 PS,2016 ,Renault Duster
+2018 Renault Duster,"8,37,000","41,393 km",Petrol,1,Automatic,RXL 85PS EXPLORE,2018 ,Renault Duster
+2018 Renault Duster,"7,19,000","75,114 km",Diesel,2,Automatic,RXZ 1.3 TURBO MT,2018 ,Renault Duster
+2021 Renault Duster,"11,23,000","7,353 km",Petrol,1,Manual,110 PS RXZ 4X2 AMT DIESEL,2021 ,Renault Duster
+2016 Renault Duster,"5,64,000","56,156 km",Diesel,1,Automatic,RXZ 1.3 TURBO MT,2016 ,Renault Duster
+2021 Renault Duster,"12,41,000","12,307 km",Petrol,1,Manual,RXZ DIESEL 110,2021 ,Renault Duster
+2013 Renault Duster,"5,70,000","93,819 km",Diesel,1,Manual,RXZ AMT 110 PS,2013 ,Renault Duster
+2016 Renault Duster,"6,62,000","72,781 km",Diesel,1,Automatic,RXZ 1.3 TURBO PETROL MT,2016 ,Renault Duster
+2020 Renault Duster,"9,39,000","49,139 km",Petrol,1,Manual,85 PS RXL,2020 ,Renault Duster
+2016 Renault Duster,"5,36,000","1,00,583 km",Diesel,1,Manual,85 PS RXL,2016 ,Renault Duster
+2015 Renault Duster,"5,12,000","80,913 km",Diesel,1,Manual,RXS CVT,2015 ,Renault Duster
+2017 Renault Duster,"7,52,000","48,719 km",Petrol,2,Automatic,110 PS RXZ DIESEL,2017 ,Renault Duster
+2016 Renault Duster,"6,38,000","93,415 km",Diesel,1,Manual,RXZ,2016 ,Renault Duster
+2021 Renault Duster,"10,23,500","7,166 km",Petrol,1,Manual,RXZ DIESEL 110,2021 ,Renault Duster
+2018 Renault Duster,"6,49,000","83,253 km",Diesel,1,Manual,110 PS RXL 4X2 AMT DIESEL,2018 ,Renault Duster
+2016 Renault Duster,"6,97,000","1,07,411 km",Diesel,1,Automatic,RXZ AMT 110 PS,2016 ,Renault Duster
