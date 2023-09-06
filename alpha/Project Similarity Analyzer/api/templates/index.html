@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            project search assistant
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+       <script>
+        window.onbeforeunload = function() {
+          window.scrollTo(0, 0);
+        };
+      </script>
+    </head>
+    </head>
+
+    <body>
+
+        <div class="frnt">
+            <div class="h1">
+                    <p class="heading">
+                        PROJECT SEARCH ASSISTANT
+                    </p> 
+                        <p class="subh">
+                            Project Search Assistant checks for similar projects and display their similarity percentage.
+                         </p>
+            </div>
+            <a href="{{ url_for('input_abstract')}}">
+                <button class="try_button">
+                    TRY NOW
+                </button>
+            </a>
+            
+            <img class="image1" src="{{ url_for('static', filename='f1img.jpg')}}" >
+        </div>
+        
+        <div class="v2">
+            <p class="desc">
+                How it works
+            </p>
+    
+            <div class="cons1">
+                <div class="v11">
+                    <p class="h31a">
+                        Enter abstract into Project Search Assistant tool
+                    </p>
+                    <p class="h31b">
+                        Just enter your abstract into our Project search assistant and hit the <strong>CHECK SIMILARITY</strong> button to get started.
+                    </p>
+                </div>
+                <div class="v22">
+                    <img class="i1" src="{{ url_for('static', filename='search.jpg')}}">
+                </div>
+                
+            </div>
+            
+            <div class="cons1">
+                <div class="v22">
+                    <img class="i1" src="{{ url_for('static', filename='results.png')}}">
+                </div>
+                <div class="v11">
+                    <p class="h31a">
+                        Display similar projects
+                    </p>
+                    <p class="h31b">
+                        After evaluating the abstract against other project, you will be provided with a similarity score showing the percentage of text that is an exact or near-match to existing projects.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="cons1">
+                <div class="v11">
+                    <p class="h31a">
+                        View details of the project
+                    </p>
+                    <p class="h31b">
+                        Get the details of the projects
+                    </p>
+                </div>
+                <div class="v22">
+                    <img class="i1" src="{{ url_for('static', filename='details.png')}}">
+                </div>
+            </div>
+
+        </div>
+       
+
+
+         
+           <script>
+            // Your JavaScript code here
+            const tryButton = document.querySelector('.try_button');
+            const textbox = document.getElementById('textbox');
+          
+            tryButton.addEventListener('click', function() {
+              const targetPosition = textbox.offsetTop;
+              const scrollOffset = 100; // Adjust this value to scroll more or less
+          
+              window.scrollTo({
+                top: targetPosition - scrollOffset,
+                behavior: 'smooth'
+              });
+          
+              // Set focus to the textarea after the smooth scroll
+              setTimeout(function() {
+                textbox.focus();
+              }, 800); // Adjust the delay as needed
+            });
+        
+          </script>
+    </body>
+</html>

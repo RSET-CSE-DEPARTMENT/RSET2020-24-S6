@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block heading%}
+  <title>
+    Add Document
+  </title>
+  <link rel='stylesheet' href="{{url_for("static",filename="css/search.css")}}"
+
+{% endblock heading%}
+
+
+{% block content %}
+  
+  <div class="c1">
+      
+      <form action='' method='post'>
+          {{form.csrf_token()}}
+
+          
+          <div class='input_title'>
+            {{form.title}}
+          </div>
+
+          <div class='input_abstract'>
+            
+            {{ form.abstract(rows='20',cols='70',)}}
+          </div > 
+              
+        
+          <p >
+              Start writing or paste your astracts on the editor to begin..!!
+          </p>
+              
+              
+          {{form.submit(class='b1')}}
+                  
+          
+      </form>
+  </div> 
+  
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            text
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/pg2.css')}}">
+    <body>
+        <div class="m">
+            <img class="i2" src="PROJECT SEARCH ASSISTANT.jpg" style="width: 100%;">     
+            <div class="c1">
+                <div class="cc1">
+                  <a href="{{url_for('input_abstract')}}" title="new search">
+                    <img class="i3" src="{{ url_for('static', filename='img11.svg.jpg')}}" style="width: 100%;">
+                 </a>
+                  <a href="{{url_for('output_results',title="similar projects")}}" >
+                    <img class="i4" src="{{ url_for('static', filename='img12.svg.jpg')}}" style="width: 100%;">
+                  </a>
+                </div >
+                <form action='' method='post'>
+                    {{form.csrf_token()}}
+                    <div class="c4">
+                        
+                        {{ form.abstract(class='t1',rows='40',cols='110')}}
+                        
+                    </div>
+                    <div class="c2">
+                        <div class="cc2">
+                            <p class="ft">
+                                Start writing or paste your astracts on the editor to begin..!!
+                            </p>
+                        </div>
+                        
+                        {{form.submit(class='b1')}}
+                            
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </body>        
