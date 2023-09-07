@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>About us Page</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/aboutus.css') }}">
+	<style>
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+		}
+		
+		.box {
+		  display: inline-block;
+		  margin: 0 20px;
+		  text-align: center;
+		}
+
+		#services {
+		  text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>About Us Page</h1>
+	</header>
+	<nav class="navbar">
+		<ul class="nav-list">
+			<div class="logo"><img src=""></div>
+			<li><a href="/home">Home</a></li>
+			<li><a href="/allergies">More on Allergies</a></li>
+			<li><a href="/aboutus">About Us</a></li>
+		</ul>
+		<div class="userprofile" name="user">
+			<a href="/userinfo?username={{ username }}&email={{ email }}" id="link">{{ username }}</a>
+		</div>
+	</nav>
+	<main>
+		<section class="background firstsection">
+			<div class="box-main">
+				<div class="firstHalf">
+					<h1 class="text-big">About Us</h1>
+					<br>
+					<h4 class="text-small">
+						Allergy-Friendly Recipes for Tasty, Safe, and Satisfying Meals!
+					</h4>
+					<br>
+					<p class="center">
+						Welcome to our allergen-based recipe recommendation website! We understand that living with food
+						allergies can be challenging, and that's why we're here to help. Our mission is to provide a safe
+						and inclusive space where individuals with allergies can discover delicious recipes tailored to
+						their specific dietary needs. Whether you're allergic to gluten, dairy, nuts, or any other common
+						allergen, our team has curated a diverse collection of mouthwatering recipes that cater to your
+						restrictions without compromising on taste. We believe that everyone deserves to enjoy flavorful
+						meals that nourish both body and soul, and we're committed to making that a reality for you. So
+						browse our extensive recipe database, get inspired, and embark on a culinary journey that is both
+						allergy-friendly and incredibly satisfying.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="service">
+			
+			<div id="services">
+				<div class="box">
+					<img src="https://media.geeksforgeeks.org/wp-content/uploads/20201231132740/Capture.PNG"
+						alt="picture goes here">
+
+					<p class="center">
+						<a href="#xyz" style="text-decoration:none;color:black;font-weight:bold;font-family: sans-serif, cursive;">
+							Adwaitha Binu
+						</a>
+					</p>
+					<p style="font-family: sans-serif">CEO and the Founder</p>
+				</div>
+				<div class="box">
+					<img src="https://media.geeksforgeeks.org/wp-content/uploads/20201231132740/Capture.PNG"
+						alt="picture goes here">
+
+					<p class="center">
+						<a href="#abc" style="text-decoration:none;color:black;font-weight:bold;font-family: sans-serif, cursive;">
+							Amruta Anandan Nair
+						</a>
+					</p>
+
+					<p style="font-family: sans-serif ">co-founder</p>
+					<p style="font-family: sans-serif ">Foodscalablility@gmail.com</p>
+				</div>
+				<div class="box">
+					<img src="https://media.geeksforgeeks.org/wp-content/uploads/20201231132740/Capture.PNG"
+						alt="picture goes here">
+					<br>
+					<p class="center">
+						<a href="#xyz" style="text-decoration:none;color:black;font-weight:bold;font-family: sans-serif, cursive;">
+							Abhiram Ramachandran
+						</a>
+					</p>
+					<p style="font-family: sans-serif ">Food Manager of the company </p>
+					<p class="text-footer">
+						© All rights are reserved
+					</p>
+
+				</div>
+			</div>
+
+		</section>
+	</main>
+	<footer class="background">
+		
+	</footer>
+</body>
+
+</html>

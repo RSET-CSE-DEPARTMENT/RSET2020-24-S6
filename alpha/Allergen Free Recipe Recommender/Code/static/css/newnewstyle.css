@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 40px;
+}
+
+.container {
+  max-width: 600px; /* Updated width value */
+  width: 90%; /* Added width property for responsiveness */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Poppins;
+    background-image:url('login_pattern.png'); 
+    background-size:cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+.recipe {
+    margin-bottom: 20px;
+}
+
+.recipe label {
+    font-weight: bold;
+}
+
+.rating {
+    display: inline-block;
+    font-size: 24px;
+    color: orange;
+    cursor: pointer;
+}
+
+.rating:hover,
+.rating:hover ~ .rating {
+    color: orange;
+}
+
+.rating:checked ~ .rating {
+    color: rgb(120, 24, 209);
+}
+
+.submit-btn {
+    display: block;
+    margin-top: 20px;
+}

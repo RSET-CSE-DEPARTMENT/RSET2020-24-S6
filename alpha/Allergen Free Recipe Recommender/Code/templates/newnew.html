@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipe Ratings</title>
+  <link rel="stylesheet" href="static\css\newnewstyle.css">
+</head>
+<body>
+<div class="page-container">
+  <div class="container">
+    <h1>Rate Recipes</h1>
+    <form id="recipe-form">
+      <div class="recipe">
+        <label for="recipe1"><h3>Recipe 1: <span id="recipe1-name"></span></h3></label>
+        <div class="ratings">
+          <input type="radio" name="recipe1" id="recipe1-5" class="rating" value="5">
+          <label for="recipe1-5" class="rating">5</label>
+          <input type="radio" name="recipe1" id="recipe1-4" class="rating" value="4">
+          <label for="recipe1-4" class="rating">4</label>
+          <input type="radio" name="recipe1" id="recipe1-3" class="rating" value="3">
+          <label for="recipe1-3" class="rating">3</label>
+          <input type="radio" name="recipe1" id="recipe1-2" class="rating" value="2">
+          <label for="recipe1-2" class="rating">2</label>
+          <input type="radio" name="recipe1" id="recipe1-1" class="rating" value="1">
+          <label for="recipe1-1" class="rating">1</label>
+        </div>
+      </div>
+      <div class="recipe">
+        <label for="recipe2"><h3>Recipe 2: <span id="recipe2-name"></span></h3></label>
+        <div class="ratings">
+          <input type="radio" name="recipe2" id="recipe2-5" class="rating" value="5">
+          <label for="recipe2-5" class="rating">5</label>
+          <input type="radio" name="recipe2" id="recipe2-4" class="rating" value="4">
+          <label for="recipe2-4" class="rating">4</label>
+          <input type="radio" name="recipe2" id="recipe2-3" class="rating" value="3">
+          <label for="recipe2-3" class="rating">3</label>
+          <input type="radio" name="recipe2" id="recipe2-2" class="rating" value="2">
+          <label for="recipe2-2" class="rating">2</label>
+          <input type="radio" name="recipe2" id="recipe2-1" class="rating" value="1">
+          <label for="recipe2-1" class="rating">1</label>
+        </div>
+      </div>
+      <div class="recipe">
+        <label for="recipe3"><h3> Recipe 3: <span id="recipe3-name"></span></h3></label>
+        <div class="ratings">
+          <input type="radio" name="recipe3" id="recipe3-5" class="rating" value="5">
+          <label for="recipe3-5" class="rating">5</label>
+          <input type="radio" name="recipe3" id="recipe3-4" class="rating" value="4">
+          <label for="recipe3-4" class="rating">4</label>
+          <input type="radio" name="recipe3" id="recipe3-3" class="rating" value="3">
+          <label for="recipe3-3" class="rating">3</label>
+          <input type="radio" name="recipe3" id="recipe3-2" class="rating" value="2">
+          <label for="recipe3-2" class="rating">2</label>
+          <input type="radio" name="recipe3" id="recipe3-1" class="rating" value="1">
+          <label for="recipe3-1" class="rating">1</label>
+        </div>
+      </div>
+      <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const recipeForm = document.getElementById("recipe-form");
+  const recipe1Name = document.getElementById("recipe1-name");
+  const recipe2Name = document.getElementById("recipe2-name");
+  const recipe3Name = document.getElementById("recipe3-name");
+
+  // Function to fetch random recipes
+  function fetchRandomRecipes() {
+    // Fetch new recipe names using server-side logic
+    fetch("/fetchrecipenames")
+      .then(response => response.json())
+      .then(data => {
+        recipe1Name.textContent = data.recipe1;
+        recipe2Name.textContent = data.recipe2;
+        recipe3Name.textContent = data.recipe3;
+      })
+      .catch(error => {
+        console.error("Error fetching recipe names:", error);
+      });
+  }
+
+  // Function to submit ratings via AJAX
+  function submitRatings(ratings) {
+    // Send the ratings to the server using AJAX
+    fetch("/raterecipes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(ratings)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error("Error submitting ratings: " + response.status);
+        }
+      })
+      .then(responseText => {
+        console.log(responseText);
+        const shouldRateMore = confirm("Do you want to rate more recipes?");
+        if (shouldRateMore) {
+          recipeForm.reset();
+          fetchRandomRecipes();
+        } else {
+          window.location.href = "/recommendrecipes";
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        alert("Error submitting ratings. Please try again.");
+      });
+  }
+
+  // Initial fetch of random recipes
+  fetchRandomRecipes();
+
+  recipeForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get the selected ratings
+    const recipe1Rating = document.querySelector('input[name="recipe1"]:checked');
+    const recipe2Rating = document.querySelector('input[name="recipe2"]:checked');
+    const recipe3Rating = document.querySelector('input[name="recipe3"]:checked');
+
+    // Check if all ratings are selected
+    if (recipe1Rating && recipe2Rating && recipe3Rating) {
+      // Create an object to hold the ratings
+      const ratings = {
+        recipe1: recipe1Rating.value,
+        recipe2: recipe2Rating.value,
+        recipe3: recipe3Rating.value,
+      };
+
+      // Submit the ratings via AJAX
+      submitRatings(ratings);
+    } else {
+      alert("Please rate all recipes before submitting.");
+    }
+  });
+</script>
+</body>
+</html>

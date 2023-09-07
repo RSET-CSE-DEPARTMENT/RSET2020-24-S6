@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+body{
+    font-family: Poppins;
+}
+h1 {
+    text-align: center;
+}
+.recipe {
+    margin-bottom: 20px;
+}
+.recipe label {
+    font-weight: bold;
+}
+.rating {
+    display: inline-block;
+    font-size: 24px;
+    color: orange;
+    cursor: pointer;
+}
+.rating:hover,
+.rating:hover ~ .rating {
+    color: orange;
+}
+.rating:checked ~ .rating {
+    color: rgb(120, 24, 209);
+}
+.submit-btn {
+    display: block;
+    margin-top: 20px;
+}

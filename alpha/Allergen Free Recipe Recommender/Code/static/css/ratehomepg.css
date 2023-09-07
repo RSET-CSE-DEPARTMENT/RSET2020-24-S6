@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #333333;
+  background-color: #F5F5F5;
+  background-image: url('login_pattern.png');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: #3abf71;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  width: 150px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: orange;
+}
