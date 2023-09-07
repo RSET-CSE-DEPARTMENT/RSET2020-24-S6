@@ -65,7 +65,7 @@ The objective of the air quality monitoring project is to provide people with ac
 1. Clone this repository and change directory
 
 ```bash
-git clone https://github.com/abi-2002/airquality-monitoring.git
+git clone https://github.com/RSET-CSE-DEPARTMENT-RSET2020-24-S6 "alpha/Air Quality Monitoring System using IoT"
 cd airquality-monitoring
 ```
 
