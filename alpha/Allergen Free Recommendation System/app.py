@@ -17,9 +17,9 @@ import requests
 
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  
+app.secret_key = "YOUR SECRET KEY HERE"
 # Configure the database
-db = yaml.safe_load(open(r"C:\Users\Asus\Desktop\miniprover2\db.yaml"))
+db = yaml.safe_load(open("db.yaml"))
 app.config['MYSQL_HOST'] = db['mysql_host']
 app.config['MYSQL_USER'] = db['mysql_user']
 app.config['MYSQL_PASSWORD'] = db['mysql_password']
@@ -34,7 +34,7 @@ RECIPE_LIST3 = []
 mysql = MySQL(app)
 
 def chatbot(msg):
-    openai.api_key = "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"
+    openai.api_key = "YOUR API KEY HERE"
 
     conversation = []
 
@@ -136,10 +136,6 @@ def index():
 @app.route('/allergies', methods=['POST', 'GET'])
 def allergies():
     return render_template('allergeninfo.html', username=session['username'])
-
-@app.route('/aboutus')
-def about_us():
-    return render_template('aboutus.html')
 
 
 
@@ -322,7 +318,7 @@ def rate_recipes():
                                                         'recipe_id': [RECIPE_LIST3[1]],
                                                         'rating': [ratings['recipe3']]})], ignore_index=True)
 
-        new_itest.to_csv('interactions_test2.csv', index=False)
+        new_itest.to_csv('interactions_test.csv', index=False)
 
         new_itrain = pd.concat([new_itrain, pd.DataFrame({'user_id': [session['username']],
                                                           'recipe_id': [RECIPE_LIST1[1]],
@@ -334,7 +330,7 @@ def rate_recipes():
                                                           'recipe_id': [RECIPE_LIST3[1]],
                                                           'rating': [ratings['recipe3']]})], ignore_index=True)
 
-        new_itrain.to_csv('interactions_train2.csv', index=False)
+        new_itrain.to_csv('interactions_train.csv', index=False)
 
         return redirect('/home')
 
@@ -347,14 +343,11 @@ def recommend_recipes():
 
 @app.route('/showrecipes', methods = ['POST', 'GET'])
 def show():
-    
     interaction_data = pd.read_csv("RAW_interactions.csv")
     recipe_data = pd.read_csv("RAW_recipes.csv")
 
-    interaction_train = pd.read_csv("interactions_train2.csv", dtype={"user_id": str})
-    interaction_train['user_id'] = interaction_train['user_id'].astype(str)
+    interaction_train = pd.read_csv("interactions_train2.csv")
     interaction_test = pd.read_csv("interactions_test2.csv")
-    interaction_test['user_id'] = interaction_test['user_id'].astype(str)
 
     interaction_data = interaction_data.astype({'user_id': 'string', 'recipe_id':'string'})
     interaction_train = interaction_train.astype({'user_id': 'string', 'recipe_id':'string'})
@@ -391,10 +384,9 @@ def show():
                                 ])
 
         def call(self, userId, foodId):
-          user_embeddings = self.user_embeddings(userId)
-          food_embeddings = self.product_embeddings(foodId)
-          return self.ratings(tf.concat([user_embeddings, food_embeddings], axis=1))
-
+            user_embeddings  = self.user_embeddings (userId)
+            food_embeddings = self.product_embeddings(foodId)
+            return self.ratings(tf.concat([user_embeddings, food_embeddings], axis=1))
         
     class FoodModel(tfrs.models.Model):
 
@@ -407,8 +399,9 @@ def show():
 
 
         def compute_loss(self, features, training=False):
-          rating_predictions = self.ranking_model(features["userID"], features["foodID"])
-          return self.task(labels=features["rating"], predictions=rating_predictions)
+            rating_predictions = self.ranking_model(features["userID"], features["foodID"]  )
+
+            return self.task( labels=features["rating"], predictions=rating_predictions)
 
     uniqueUserIds = interaction_data.user_id.unique()
     uniqueFoodIds = interaction_data.recipe_id.unique()
@@ -429,13 +422,12 @@ def show():
         "rating":tf.cast(interaction_test.rating.values, tf.float32)
     })
 
-    
+    tf.random.set_seed(42)
 
     train_data = train_data.shuffle(100_000, seed=42, reshuffle_each_iteration=False)
 
     model = FoodModel()
     model.compile(optimizer=tf.keras.optimizers.Adagrad(learning_rate=0.001))
-    
     cached_train = train_data.shuffle(100_000).batch(8192).cache()
     cached_test = test_data.batch(4096).cache()
     model.fit(cached_train, epochs=10)
@@ -446,7 +438,7 @@ def show():
     user_rand = session['username']
     test_rating = {}
     for m in test_data.take(10):
-     test_rating[m["foodID"].numpy()] = model.ranking_model(
+        test_rating[m["foodID"].numpy()] = RankingModel()(
         tf.convert_to_tensor([str(user_rand)]),
         tf.convert_to_tensor([str(m["foodID"].numpy().decode())])
     )
@@ -458,6 +450,10 @@ def show():
         RECIPE_LIST.append(recipe_data.loc[recipe_data['id'] == int(m.decode())]['name'].item())
 
     return render_template('showrecipes2.html', recipelist=RECIPE_LIST)
+
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html', username=session['username'], email=session['email'])
 
 
 recipes_df = pd.read_csv("RAW_recipes.csv")
