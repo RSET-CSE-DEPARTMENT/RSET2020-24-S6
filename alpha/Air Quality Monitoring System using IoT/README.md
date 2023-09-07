@@ -66,7 +66,7 @@ The objective of the air quality monitoring project is to provide people with ac
 
 ```bash
 git clone https://github.com/RSET-CSE-DEPARTMENT-RSET2020-24-S6 "alpha/Air Quality Monitoring System using IoT"
-cd airquality-monitoring
+cd "alpha/Air Quality Monitoring System using IoT"
 ```
 
 2. Install NPM packages using expo
