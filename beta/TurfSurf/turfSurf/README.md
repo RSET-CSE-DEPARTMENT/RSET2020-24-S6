@@ -1,20 +1,5 @@
 # TurfBooking
 
-A new Flutter project.
+A new Flutter project to book turfs.
 
-## Getting Started
-
-FlutterFlow projects are built to run on the Flutter _stable_ release.
-
-### Getting started continued:
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This turf booking application is proposed for booking the turf is an easy and efficient way. It has three modules namely, User , Admin and Turf owner. Admin can login and can add turf locations, assign manager by creating login credentials for manager, add price details for the particular turf, manages turf and view the details of sports venues booking for all locations. Users can check the availability of the turf, select timings, fill personal details, can pay by providing bank details or card details and he/she can also see view previous turf booking history. Most of the Turf grounds presently run a manual reservation system and as customers are desirous to find a handy application that provides the services to avoid physical walking to the ground or contacting by call or reserving through a middle man.So thus an online turf booking system can be used to tackle the current situation by providing an effective booking system that can be directly accessible to every user.
