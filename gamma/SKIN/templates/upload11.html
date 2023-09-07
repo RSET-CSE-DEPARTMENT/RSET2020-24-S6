@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Image</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff; /* Light pink background color */
+      background: linear-gradient(rgba(63, 59, 59, 0.952),rgba(70, 65, 65, 0.589)),url(static/modern-beauty-products-recipients-with-copy-space.jpg);
+
+      background-size: cover;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .upload-box {
+        text-align: center;
+    padding: 20px;
+    background-color: #ffffff4d;/* Box background color */
+    }
+    h1 {
+      color: #1a1919; /* Heading color */
+
+    }
+    #upload-btn {
+      margin-top: 20px;
+    }
+
+    .submit
+    {
+        margin-top: 50px;
+        margin-left: 50px;;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="upload-box">
+      <h1>Upload Image</h1>
+      <form action = "/success" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" />  
+        <input type = "submit" value="Upload">  
+    </form>  
+    </div>
+  </div>
+</body>
+</html>
+
+<!--<html>  
+<head>  
+    <title>upload</title>  
+</head>  
+<body>  
+    <form action = "/success" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" />  
+        <input type = "submit" value="Upload">  
+    </form>  
+</body>  
+</html>-->

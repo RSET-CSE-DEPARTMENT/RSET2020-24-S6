@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skin Type Options</title>
+  <style>
+    body {
+      background-color: white;
+      background: linear-gradient(rgba(63, 59, 59, 0.952),rgba(70, 65, 65, 0.589)),url(static/modern-beauty-products-recipients-with-copy-space.jpg);
+      display: flex;
+      background-size: cover;
+      align-items: center;
+      justify-content: center;
+      height: 87vh;
+      margin: 0;
+      padding: 61px;
+    }
+    
+    .skin-options {
+      text-align: center;
+    }
+    
+    .skin-option {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px 28px;
+      font-family: 'Quicksand', sans-serif;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 5px;
+      color: rgb(0, 0, 0);
+      background-color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 50px;
+    }
+    
+    .skin-option:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .heading {
+      color: rgb(255, 255, 255);
+      font-family: 'Quicksand', sans-serif;
+      text-align:center;
+      font-size: 30px;
+      margin-left:80px;
+    }
+  </style>
+</head>
+<body>
+  <span class="heading">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <h1>Choose Skin Type</h1>
+  </div>
+  <div class="skin-options">
+    <a class="skin-option" href= "{{url_for('oily')}}">Oily Skin</a>
+    <a class="skin-option" href= "{{url_for('dry')}}">Dry Skin</a>
+    <a class="skin-option" href= "{{url_for('comb')}}">Combination Skin</a>
+  </div>
+</body>
+</html>

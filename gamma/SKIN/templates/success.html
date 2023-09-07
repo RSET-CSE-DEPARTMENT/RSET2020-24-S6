@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>product recommendation</title>
+<link rel="stylesheet" href="static/css/successstyle.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="box">
+    <p>Acne Level: {{p}}</p>
+    <h2>PRODUCT RECOMMENDATION</h2>
+</div>
+
+<div class="box">
+    <table>
+        {% for item in data %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="box">
+    <table>
+        {% for item in data1 %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="box">
+    <table>
+        {% for item in data2 %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="box">
+    <table>
+        {% for item in data3 %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="box">
+    <table>
+        {% for item in data4 %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="box">
+    <table>
+        {% for item in data5 %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

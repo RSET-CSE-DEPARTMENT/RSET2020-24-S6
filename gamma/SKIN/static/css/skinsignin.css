@@ -1,0 +1,87 @@
+body {
+  width: 100%;
+  min-height: 84.6vh;
+  background: linear-gradient(rgba(92, 88, 88, 0.829),rgba(70, 65, 65, 0.589)),url('/static/skinb.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.Signin {
+  width: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background: #b9b7b73f;
+  padding: 40px;
+  margin: 8% auto 0;
+  text-align: center;
+}
+
+.Signin h1 {
+  color: black;
+  margin-bottom: 30px;
+}
+
+.input-box {
+  border-radius: 30px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 90%;
+  border: 1px solid #999;
+  outline: none;
+}
+
+button {
+  color: #fff;
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin: 30px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.flash-message {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.error {
+  background-color: #000000;
+  color: white;
+}
+
+.signin-btn,
+.signup-btn,
+.signup-link,
+.signin-link {
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.or {
+  color: #000000;
+  display: inline-block;
+  width: 30px;
+  margin: -19px auto -17px;
+}
+
+.signup-link,
+.signin-link {
+  width: 85%;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin: 30px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
