@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Food Allergens Information</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ 
+</head>
+
+<style>
+
+  h2{
+    font-family: 'Yeseva One', cursive;;
+  }
+
+</style>
+
+<body>
+  <header>
+    <ul class="nav-list">
+			<div class="logo"><img src=""></div>
+			<li><a href="/home">Home</a></li>
+			<li><a href="/allergies">More on Allergies</a></li>
+      <li><a href="/aboutus">About Us</a></li>
+		</ul>
+    <h1>Food Allergens Information</h1>
+    <i class="fas fa-bars menu-icon"></i>
+    <div class="userprofile" name="user"><a href="/userinfo?username={{ username }}&email={{ email }}" , id="link">{{ username  }}</a></div>
+  </header>
+
+  <main>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#gluten">Gluten Allergy/Intolerance</a></li>
+        <li><a href="#dairy">Dairy Allergy/Lactose Intolerance</a></li>
+        <li><a href="#nut">Nut Allergy</a></li>
+        <li><a href="#shellfish">Shellfish Allergy</a></li>
+        <li><a href="#egg">Egg Allergy</a></li>
+        <li><a href="#soy">Soy Allergy</a></li>
+        <li><a href="#fish">Fish Allergy</a></li>
+        <li><a href="#sesame">Sesame Allergy</a></li>
+        <li><a href="#corn">Corn Allergy</a></li>
+        <li><a href="#wheat">Wheat Allergy</a></li>
+        <li><a href="#peanut">Peanut Allergy</a></li>
+        <li><a href="#sulfite">Sulfite Sensitivity</a></li>
+        <li><a href="#nightshade">Nightshade Allergy</a></li>
+        <li><a href="#shellfish-sensitivity">Shellfish Sensitivity</a></li>
+        <li><a href="#histamine">Histamine Intolerance</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="gluten" class="allergen-section">
+      <h2>Gluten Allergy/Intolerance (Celiac Disease)</h2>
+      <p>Description: An immune response triggered by the ingestion of gluten, a protein found in wheat, barley, and rye.</p>
+      <p>Symptoms: Digestive issues (abdominal pain, bloating, diarrhea), fatigue, skin rashes.</p>
+      <p>Substitutes: Gluten-free grains like rice, quinoa, and buckwheat, gluten-free flours (almond flour, coconut flour), and gluten-free products.</p>
+      <br>
+    </section>
+    <br>
+
+    <section id="dairy" class="allergen-section">
+      <h2>Dairy Allergy/Lactose Intolerance</h2>
+      <p>Description: Allergy: An immune response to proteins in cow's milk. Intolerance: Inability to digest lactose, the sugar in milk.</p>
+      <p>Symptoms: Digestive discomfort (bloating, gas, diarrhea), skin rashes, respiratory problems.</p>
+      <p>Substitutes: Plant-based milk alternatives (almond milk, soy milk, oat milk), dairy-free cheeses, and yogurt made from coconut, almond, or soy.</p><br>
+    </section>
+
+    <section id="nut" class="allergen-section">
+      <h2>Nut Allergy</h2>
+      <p>Description: An immune reaction to proteins found in certain nuts, such as peanuts, tree nuts (almonds, cashews, walnuts), or both.</p>
+      <p>Symptoms: Skin reactions (rashes, itching), difficulty breathing, digestive issues.</p>
+      <p>Substitutes: Seeds (sunflower seeds, pumpkin seeds), seed butter (sunflower seed butter, pumpkin seed butter), and non-nut flours (coconut flour, chickpea flour).</p><br>
+    </section>
+
+    <section id="shellfish" class="allergen-section">
+      <h2>Shellfish Allergy</h2>
+      <p>Description: An allergic reaction to shellfish, including crustaceans (shrimp, lobster, crab) and mollusks (clams, mussels, oysters).</p>
+      <p>Symptoms: Swelling, hives, difficulty breathing, digestive discomfort.</p>
+      <p>Substitutes: Fish, poultry, or vegetarian options for seafood flavors, such as seaweed or kelp-based products.</p><br>
+    </section>
+
+    <section id="egg" class="allergen-section">
+      <h2>Egg Allergy</h2>
+      <p>Description: An immune response to proteins found in eggs, particularly the proteins in egg whites.</p>
+      <p>Symptoms: Skin reactions (hives, itching), digestive issues, respiratory problems.</p>
+      <p>Substitutes: Commercial egg replacements, such as applesauce, mashed bananas, silken tofu, or flaxseed meal mixed with water.</p><br>
+    </section>
+
+    <section id="soy" class="allergen-section">
+      <h2>Soy Allergy</h2>
+      <p>Description: An allergic reaction to proteins found in soybeans and soy-based products.</p>
+      <p>Symptoms: Digestive issues, skin reactions (hives, itching), respiratory problems.</p>
+      <p>Substitutes: Almond milk, coconut aminos (instead of soy sauce), chickpea miso paste (instead of soy-based miso), and alternative protein sources like legumes, quinoa, or hemp seeds.</p><br>
+    </section>
+
+    <section id="fish" class="allergen-section">
+      <h2>Fish Allergy</h2>
+      <p>Description: An allergic reaction to proteins found in various types of fish.</p>
+      <p>Symptoms: Swelling, hives, difficulty breathing, digestive discomfort.</p>
+      <p>Substitutes: Poultry, beef, pork, or vegetarian options for seafood flavors, such as seaweed or kelp-based products.</p><br>
+    </section>
+
+    <section id="sesame" class="allergen-section">
+      <h2>Sesame Allergy</h2>
+      <p>Description: An allergic reaction to proteins found in sesame seeds and sesame-based products.</p>
+      <p>Symptoms: Skin reactions (rashes, hives), digestive issues, respiratory problems.</p>
+      <p>Substitutes: Sunflower seeds, pumpkin seeds, or flaxseeds as toppings, and alternative oils like olive oil or coconut oil for cooking.</p><br>
+    </section>
+
+    <section id="corn" class="allergen-section">
+      <h2>Corn Allergy</h2>
+      <p>Description: An allergic reaction to proteins found in corn or a sensitivity to corn-related components.</p>
+      <p>Symptoms: Digestive issues, skin reactions, respiratory problems.</p>
+      <p>Substitutes: Rice, quinoa, or gluten-free grains as alternatives, arrowroot starch or tapioca starch instead of cornstarch, and alternative sweeteners like maple syrup or honey.</p><br>
+    </section>
+
+    <section id="wheat" class="allergen-section">
+      <h2>Wheat Allergy</h2>
+      <p>Description: An allergic reaction to proteins found in wheat.</p>
+      <p>Symptoms: Digestive issues, skin reactions (rashes, hives), respiratory problems.</p>
+      <p>Substitutes: Gluten-free flours (rice flour, tapioca flour, sorghum flour), oats (if certified gluten-free), and alternative grains like amaranth or millet.</p><br>
+    </section>
+
+    <section id="peanut" class="allergen-section">
+      <h2>Peanut Allergy</h2>
+      <p>Description: An allergic reaction to proteins found in peanuts.</p>
+      <p>Symptoms: Swelling, hives, difficulty breathing, digestive discomfort.</p>
+      <p>Substitutes: Other nut butters like almond butter or sunflower seed butter, or alternative spreads made from pumpkin seeds, hemp seeds, or soybeans.</p><br>
+    </section>
+
+    <section id="sulfite" class="allergen-section">
+      <h2>Sulfite Sensitivity</h2>
+      <p>Description: Sensitivity to sulfites, which are compounds used as preservatives in certain foods and beverages.</p>
+      <p>Symptoms: Asthma-like symptoms, headache, digestive issues.</p>
+      <p>Substitutes: Fresh fruits and vegetables instead of dried or processed ones, and vinegar or lemon juice as a substitute for sulfite-containing condiments like ketchup or salad dressings.</p><br>
+    </section>
+
+    <section id="nightshade" class="allergen-section">
+      <h2>Nightshade Allergy</h2>
+      <p>Description: An allergic reaction to plants in the nightshade family, such as tomatoes, potatoes, peppers, and eggplants.</p>
+      <p>Symptoms: Digestive issues, skin reactions, joint pain.</p>
+      <p>Substitutes: Alternatives to nightshade vegetables like sweet potatoes instead of white potatoes, and spices like turmeric or ginger as substitutes for paprika or chili powder.</p><br>
+    </section>
+
+    <section id="shellfish-sensitivity" class="allergen-section">
+      <h2>Shellfish Sensitivity</h2>
+      <p>Description: A sensitivity or allergic reaction to shellfish, including crustaceans and mollusks.</p>
+      <p>Symptoms: Digestive discomfort, skin reactions, respiratory issues.</p>
+      <p>Substitutes: Fish, poultry, or vegetarian options for seafood flavors, such as seaweed or kelp-based products.</p><br>
+    </section>
+
+    <section id="histamine" class="allergen-section">
+      <h2>Histamine Intolerance</h2>
+      <p>Description: Difficulty in breaking down histamine, a compound found in various foods and beverages, leading to an intolerance.</p>
+      <p>Symptoms: Headaches, flushing, hives, digestive issues.</p>
+      <p>Substitutes: Freshly cooked foods instead of aged or fermented ones, low-histamine foods like fresh fruits and vegetables, and alternative seasonings like lemon juice or fresh herbs.</p><br>
+    </section>
+  </main>
+  <script>
+    // JavaScript code here
+    const menuIcon = document.querySelector(".menu-icon");
+    const navbar = document.querySelector(".navbar");
+
+    menuIcon.addEventListener("mouseenter", () => {
+      navbar.classList.add("show");
+    });
+
+    navbar.addEventListener("mouseleave", () => {
+      navbar.classList.remove("show");
+    });
+  </script>
+
+</body>
+
+</html>

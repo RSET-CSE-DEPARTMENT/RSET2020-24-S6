@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Yeseva+One&display=swap');
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  font-family: 'Capriola', sans-serif;
+  padding: 0;
+  display: flex;
+  margin-top: 10%;
+  
+  color: #892d13;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Yeseva One', cursive;
+}
+p{
+  font-family: 'Capriola', sans-serif;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  margin-bottom: 20px;
+  width: 200px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  
+}
+
+p {
+  margin: 10px 0 0;
+}
+
+.load-more {
+  margin-top: 20px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+/* USER PROFILE LINK */
+.userprofile {
+  padding: 10px 20px 10px 10px;
+}
+
+#link {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: orange;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 20px;
+  text-align: center;
+}
+
+#services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}

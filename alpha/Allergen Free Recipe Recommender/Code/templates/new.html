@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipe Ratings</title>
+  <link rel="stylesheet" href="static\css\newstyle.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Rate Recipes</h1>
+    <form id="recipe-form">
+      <div class="recipe">
+        <label for="recipe1"><h3>Recipe 1: {{ recipes1.0 }}</h3></label>
+        <div class="ratings">
+          <input type="radio" name="recipe1" id="recipe1-5" class="rating" value="5">
+          <label for="recipe1-5" class="rating">1</label>
+          <input type="radio" name="recipe1" id="recipe1-4" class="rating" value="4">
+          <label for="recipe1-4" class="rating">2</label>
+          <input type="radio" name="recipe1" id="recipe1-3" class="rating" value="3">
+          <label for="recipe1-3" class="rating">3</label>
+          <input type="radio" name="recipe1" id="recipe1-2" class="rating" value="2">
+          <label for="recipe1-2" class="rating">4</label>
+          <input type="radio" name="recipe1" id="recipe1-1" class="rating" value="1">
+          <label for="recipe1-1" class="rating">5</label>
+        </div>
+      </div>
+      <div class="recipe">
+        <label for="recipe2"><h3>Recipe 2: {{ recipes2.0 }}</h3></label>
+        <div class="ratings">
+          <input type="radio" name="recipe2" id="recipe2-5" class="rating" value="5">
+          <label for="recipe2-5" class="rating">1</label>
+          <input type="radio" name="recipe2" id="recipe2-4" class="rating" value="4">
+          <label for="recipe2-4" class="rating">2</label>
+          <input type="radio" name="recipe2" id="recipe2-3" class="rating" value="3">
+          <label for="recipe2-3" class="rating">3</label>
+          <input type="radio" name="recipe2" id="recipe2-2" class="rating" value="2">
+          <label for="recipe2-2" class="rating">4</label>
+          <input type="radio" name="recipe2" id="recipe2-1" class="rating" value="1">
+          <label for="recipe2-1" class="rating">5</label>
+        </div>
+      </div>
+      <div class="recipe">
+        <label for="recipe3"><h3> Recipe 3: {{ recipes3.0 }}</h3></label>
+        <div class="ratings">
+          <input type="radio" name="recipe3" id="recipe3-5" class="rating" value="5">
+          <label for="recipe3-5" class="rating">1</label>
+          <input type="radio" name="recipe3" id="recipe3-4" class="rating" value="4">
+          <label for="recipe3-4" class="rating">2</label>
+          <input type="radio" name="recipe3" id="recipe3-3" class="rating" value="3">
+          <label for="recipe3-3" class="rating">3</label>
+          <input type="radio" name="recipe3" id="recipe3-2" class="rating" value="2">
+          <label for="recipe3-2" class="rating">4</label>
+          <input type="radio" name="recipe3" id="recipe3-1" class="rating" value="1">
+          <label for="recipe3-1" class="rating">5</label>
+        </div>
+      </div>
+      <button type="button" id="submit-btn" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const submitBtn = document.getElementById("submit-btn");
+    submitBtn.addEventListener("click", function () {
+      // Get the selected ratings
+      const recipe1Rating = document.querySelector('input[name="recipe1"]:checked');
+      const recipe2Rating = document.querySelector('input[name="recipe2"]:checked');
+      const recipe3Rating = document.querySelector('input[name="recipe3"]:checked');
+
+      // Check if all ratings are selected
+      if (recipe1Rating && recipe2Rating && recipe3Rating) {
+        // Create an object to hold the ratings
+        const ratings = {
+          recipe1: recipe1Rating.value,
+          recipe2: recipe2Rating.value,
+          recipe3: recipe3Rating.value,
+        };
+
+        // Send the ratings to the Flask app using AJAX
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            console.log(xhr.responseText);
+          }
+        };
+        xhr.send(JSON.stringify(ratings));
+
+        // Reset the form
+        const form = document.getElementById("recipe-form");
+        form.reset();
+      } else {
+        alert("Please rate all recipes before submitting.");
+      }
+    });
+  </script>
+</body>
+</html>

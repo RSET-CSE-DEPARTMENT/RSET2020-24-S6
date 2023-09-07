@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Here are your personalized recommendations!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Capriola&family=Yeseva+One&display=swap');
+
+    body {
+      
+      background-color: #f5f5f5;
+      background-image: url('static/css/cookingpatternjpg.jpg');
+      font-family: 'Capriola', sans-serif;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: rgb(169, 71, 0);
+      color: white;
+      padding: 40px;
+      border-radius: 5px;
+    }
+
+    .recipe-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .recipe-list-item {
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #3abf71;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #c75100;
+    }
+    .recipe-list-item a {
+      color: beige;  /* Set the color of the recipe links to beige */
+      text-decoration: none;  /* Remove the default underline */
+    }
+  
+    .recipe-list-item a:hover {
+      text-decoration: underline;  /* Add underline on hover */
+    }
+
+    h1{
+      font-family: 'Yeseva One', cursive;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="card">
+    <h1>Here are your personalized recommendations</h1>
+    <ul class="recipe-list">
+      {% for recipe in recipelist %}
+      <li class="recipe-list-item"><a href="/recipe?name={{ recipe }}">{{  loop.index  }}. {{ recipe|capitalize }}</a></li>
+      {% endfor %}
+    </ul>
+    <a class="button" href="http://127.0.0.1:5050/home?username=Helloworld&email=ilovefood@gmail.com">Go Home</a>
+  </div>
+</body>
+
+</html>

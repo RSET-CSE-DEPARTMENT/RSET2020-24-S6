@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Recipe Not Found</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      background-image: url('static/css/cookingpatternjpg.jpg');
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      font-family: 'Capriola', sans-serif;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: rgb(169, 71, 0);
+      color: white;
+      padding: 40px;
+      border-radius: 5px;
+    }
+
+    .not-found-message {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Recipe "{{ recipe_name }}" Not Found</h1>
+    <p class="not-found-message">The requested recipe could not be found. Please try again.</p>
+  </div>
+</body>
+
+</html>

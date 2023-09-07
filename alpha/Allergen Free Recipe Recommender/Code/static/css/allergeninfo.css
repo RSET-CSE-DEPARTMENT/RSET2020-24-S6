@@ -1,0 +1,174 @@
+
+.userprofile {
+  padding: 10px 20px 10px 10px;
+}
+
+#link {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: orange;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+    body {
+      
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: left;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      top: 0;
+			cursor: pointer;
+      background-color: #4caf50;
+      padding-top: 30px;
+    }
+.logo {
+			width: 20%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 33%;
+			border: 2px solid white;
+			border-radius: 50px;
+		}
+
+
+.nav-list {
+			width: 70%;
+			display: flex;
+      text-align: left;
+		}
+
+.nav-list li {
+
+			list-style: none;
+			padding: 2px 6px;
+		}
+
+.nav-list li a {
+
+			text-decoration: none;
+			color: white;
+      font-family: sans-serif;
+		}
+
+.nav-list li a:hover {
+			text-decoration-line: underline;
+		}
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .navbar {
+      width: 200px;
+      background-color: #fff0e6;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: -220px;
+      transition: left 0.3s ease-in-out;
+    }
+
+    .navbar.show {
+      left: 0;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin-bottom: 10px;
+    }
+
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar a:hover {
+      color: #ff8400;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+  padding-left: 30px;
+  font-family: 'Yeseva One', cursive;
+}
+
+p {
+  margin-top: 10px;
+  padding-left: 35px;
+}
+
+.menu-icon {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      color: orange;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+}
+
+    .menu-icon:hover {
+      color: #ff8400;
+    }
+
+    .allergen-section{
+      text-align: left;
+      justify-content: left;
+      
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        left: -100%;
+      }
+
+      .navbar.show {
+        left: 0;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+ 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Recipe Details</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Capriola&family=Yeseva+One&display=swap');
+
+    body {
+      
+      background-color: #feddbc;
+      background-image: url('static/css/cookingpatternjpg.jpg');
+      background-size: cover;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: repeat;
+      font-family: 'Capriola', sans-serif;
+    }
+    
+
+    .wrapper {
+      margin: 40px;
+    }
+
+    .card {
+      background-color: #feddbc;
+      color: white;
+      padding: 20px;
+      border-radius: 20px;
+      width: 1200px; /* Adjust the width dynamically based on the available space */
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .content {
+      display: flex;
+      gap: 40px;
+    }
+   
+
+    .card-wrapper {
+      background-color: #ffffff;
+      color: #892d13;
+      padding: 20px;
+      border-radius: 20px;
+      flex-grow: 1;
+    }
+    .ingredients-list,
+    .steps-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e44a1f;
+      font-family: 'Yeseva One', cursive;
+    }
+
+    .ingredients-list-item,
+    .steps-list-item {
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+
+    .steps-card {
+      margin-top: -225px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e44a1f;
+      font-weight: bold;
+      font-family: 'Capriola', sans-serif;
+      
+    }
+
+    h3 {
+      text-align: center;
+      color: #e44a1f;
+      font-weight: bold;
+      font-family: 'Capriola', sans-serif;
+      
+    }
+    hr{
+      color: #e44a1f
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h1>Recipe Details</h1>
+      <hr color="#e44a1f"/>
+      <h2>{{ recipe_details.name|capitalize }}</h2>
+
+      <img src="{{ recipe_details.image_url }}" alt="Recipe Image" style="width: 350px; height: 200px; object-fit: cover; border-radius: 10px; margin: 20px 0;">
+
+      <div class="content">
+        <div class="card-wrapper">
+          <h3>Ingredients</h3>
+          <ul class="ingredients-list">
+            {% for ingredient in recipe_details.ingredients %}
+            <li class="ingredients-list-item">{{ loop.index }}.  {{ ingredient.strip("[]' ").replace("'", "")|capitalize }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="card-wrapper steps-card">
+          <h3>Steps</h3>
+          <ol class="steps-list">
+            {% for step in recipe_details.steps %}
+            {% set step_lines = step.split(',') %}
+            {% for line in step_lines %}
+            {% set single_line = line.strip("[]' ").replace("'", "") %}
+            <li class="steps-list-item">{{ loop.index }}.  {{ single_line|capitalize }}</li>
+            {% endfor %}
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
