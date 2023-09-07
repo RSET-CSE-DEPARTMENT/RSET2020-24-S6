@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SQL Table Viewer</title>
+  <style>
+    body {
+      background-color: #f9e6e9; /* Light pink background color */
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #333;
+    }
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>SQL Table Viewer</h1>
+
+  <table>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <!-- Add more table headers as needed -->
+    </tr>
+    {% for row in table_data %}
+    <tr>
+      <td>{{ row.column1 }}</td>
+      <td>{{ row.column2 }}</td>
+      <!-- Add more table cells as needed -->
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

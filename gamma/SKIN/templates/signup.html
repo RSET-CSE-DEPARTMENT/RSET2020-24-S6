@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="static/css/skinsignin.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="Signin">
+        <h1>Sign Up</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div id="flash-messages">
+            {% for category, message in messages %}
+                {% if category == 'error' %}
+                    <div class="flash-message error">{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+        <form action="/signup" method="POST">
+            <input type="email" class="input-box" name="email" placeholder="Your Email">
+            <input type="password" class="input-box" name="password" placeholder="Your Password">
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+        <p class="or">OR</p>
+        <a href="/signin" class="signin-link">Sign In</a>
+    </div>
+    
+</body>
+</html>
