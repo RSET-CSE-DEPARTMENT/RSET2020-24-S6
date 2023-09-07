@@ -103,3 +103,7 @@ npx expo start
 ```bash
 python3 read_sensors.py
 ```
+
+# Video Demo
+
+Link - https://youtu.be/F5-YSQnAmCM
