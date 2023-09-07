@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>User-Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="static/css/profile.css">
+<link rel="icon" type="image/ico" href="static/favicon.ico">
+</head>
+<body>
+    <div id="content"></div>
+
+<div class="container">
+    <div class="main-body">
+
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/home?username={{  username  }}&email={{  email  }}">Home</a></li>
+            </ol>
+        </nav>    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="{{ url_for('static', filename='css/User-Profile-PNG-Clipart.png') }}" alt="User" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      
+                      <h4>{{ username }}</h4>
+                    
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+              
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ email }}
+                    </div>
+                  </div>
+                  <hr>
+                    
+                    <div class="row">
+                      <div class="col-sm-3">
+                          <h6 class="mb-0">Allergies</h6>
+                      </div>
+                      <div class="col-sm-6">
+                          <p id="allergiesText" class="text-secondary">{{  allergens  }}</p>
+                          <input type="text" id="allergiesInput" class="form-control d-none" placeholder="Enter allergies">
+                      </div>
+                      <div class="col-sm-3">
+                          <button id="editAllergiesBtn" class="btn btn-link">Edit</button>
+                          <button id="saveAllergiesBtn" class="btn btn-primary d-none">Save</button>
+                      </div>
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Cuisine Preferences</h6>
+                      </div>
+                      <div class="col-sm-6">
+                        <p id="cuisineText" class="text-secondary">{{  cuisine  }}</p>
+                        <input type="text" id="cuisineInput" class="form-control d-none" placeholder="Enter Cuisine Preferences">
+                    </div>
+                      <div class="col-sm-3">
+                        <button id="editCuisineP" class="btn btn-link">Edit</button>
+                        <button id="saveCuisineP" class="btn btn-primary d-none">Save</button>
+                    </div>
+                  </div>
+                  
+                    <div class="col-sm-9 text-secondary">
+                        
+                    </div>
+                  </div>
+                  <hr>
+                  
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <form method = "POST"><input type="submit" class="btn btn-info " target="__blank" href="{{url_for('login')}}" name="logout" value="LOGOUT"></form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               </div>
+
+    </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/userscript.js') }}">
+	
+</script>
+</body>
+</html>
+
