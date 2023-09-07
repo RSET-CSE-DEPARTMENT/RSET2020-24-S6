@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Recipe Details</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: beige;
+      background-image: url('static/css/cookingpatternjpg.jpg');
+      background-size: cover;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrapper {
+      margin: 40px;
+    }
+
+    .card {
+      background-color: rgb(245, 245, 220);
+      color: white;
+      padding: 20px;
+      border-radius: 20px;
+      width: 1200px; /* Adjust the width dynamically based on the available space */
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .content {
+      display: flex;
+      gap: 40px;
+    }
+
+    .card-wrapper {
+      background-color: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 20px;
+      flex-grow: 1;
+    }
+
+    .ingredients-list,
+    .steps-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+      font-family: Garamond, serif;
+      text-decoration: underline;
+    }
+
+    .ingredients-list-item,
+    .steps-list-item {
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+
+    .steps-card {
+      margin-top: -225px;
+    }
+
+    h2 {
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      text-decoration: underline;
+    }
+
+    h3 {
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #3abf71;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    /* Rating styles */
+    .rating-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .rating-container .star {
+      font-size: 25px;
+      cursor: pointer;
+      color: #ccc;
+    }
+
+    .rating-container .star:hover,
+    .rating-container .star.selected {
+      color: #ffdd00;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h1>Recipe Details</h1>
+      <hr>
+      <h2>{{ recipe_details.name|capitalize }}</h2>
+
+      <img src="{{ recipe_details.image_url }}" alt="Recipe Image" style="width: 400px; height: 200px; object-fit: cover; border-radius: 10px; margin: 20px 0;">
+
+      <div class="content">
+        <div class="card-wrapper">
+          <h3>Ingredients</h3>
+          <ul class="ingredients-list">
+            {% for ingredient in recipe_details.ingredients %}
+            <li class="ingredients-list-item">{{ loop.index }}. {{ ingredient.strip("[]' ").replace("'", "")|capitalize }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="card-wrapper steps-card">
+          <h3>Steps</h3>
+          <ol class="steps-list">
+            {% for step in recipe_details.steps %}
+            {% set step_lines = step.split(',') %}
+            {% for line in step_lines %}
+            {% set single_line = line.strip("[]' ").replace("'", "") %}
+            <li class="steps-list-item">{{ loop.index }}. {{ single_line|capitalize }}</li>
+            {% endfor %}
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <button onclick="goBack()" class="button" style="margin-right: 10px;">Back</button>
+        <a href="/home?username={{ session['username'] }}&email={{ session['email'] }}" class="button">Go Home</a>
+      </div>
+
+      <!-- Rating section -->
+      <div class="rating-container">
+        <span class="star" onclick="rateRecipe(1)">★</span>
+        <span class="star" onclick="rateRecipe(2)">★</span>
+        <span class="star" onclick="rateRecipe(3)">★</span>
+        <span class="star" onclick="rateRecipe(4)">★</span>
+        <span class="star" onclick="rateRecipe(5)">★</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function rateRecipe(rating) {
+      // Add your rating handling logic here
+      alert("Thank you for rating " + rating + " stars!");
+    }
+  </script>
+</body>
+
+</html>

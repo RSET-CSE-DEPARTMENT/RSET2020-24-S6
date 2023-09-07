@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - AllerGone</title>
+  <link rel="icon" type="image/ico" href="{{ url_for('static', filename = 'favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutus.css') }}">
+  <style>
+    body {
+      font-family: Poppins;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .nav-list li a:hover {
+      text-decoration-line: underline;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .founder {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .founder-item {
+      width: 300px;
+      margin: 20px;
+    }
+
+    .founder-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .founder-item h3 {
+      margin: 10px 0;
+    }
+
+    .founder-item p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <ul class="nav-list">
+        <div class="logo"><img src=""></div>
+        <li><a href="/home?username={{ session['username'] }}&email={{ session['email'] }}">Home</a></li>
+        <li><a href="/allergies">More on Allergies</a></li>
+        <li><a href="/aboutus">About Us</a></li>
+      </ul>
+      <h1>About Us - AllerGone</h1>
+    </header>
+    <main>
+      <div class="founder">
+        <div class="founder-item">
+          <img src="{{ url_for('static', filename='founder1.jpeg') }}" alt="Abhiram Ramachandran">
+          <h3>Abhiram Ramachandran</h3>
+          <p>Title: Founder</p>
+        </div>
+        <div class="founder-item">
+          <img src="{{ url_for('static', filename='founder2.jpeg') }}" alt="Abhiram Ramachandran">
+          <h3>Adwaitha Binu</h3>
+          <p>Title: Founder</p>
+        </div>
+        <div class="founder-item">
+          <img src="{{ url_for('static', filename='founder3.jpeg') }}" alt="Abhiram Ramachandran">
+          <h3>Amruta Anandan</h3>
+          <p>Title: Founder</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
