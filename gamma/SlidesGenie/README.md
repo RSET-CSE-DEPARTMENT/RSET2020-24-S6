@@ -1,47 +1,39 @@
-# SlidesGenie: Revolutionizing Learning and Presentation Creation with AI
+# Memory Lane and Slides Genie
 
-SlidesGenie is an innovative AI-driven web application designed to address the challenges of traditional learning and presentation creation.
-- **SlideGenie**: An AI-powered slides generator that generates google slides presentations based on the topic that the user has inputted.
-- **Memory Lane**: An AI-powered learning tool that creates bizarre stories around the input learning material and presents it in a visual format.
+This project has two components:
+- **Memory Lane**: An AI-powered learning tool that creates bizarre stories around the input learning material and presents it in a visual format to improve retention.
+- **SlideGenie**: An AI slides generator that generates Google Slides presentations based on the topic entered by the user.
 
-## Problem Statement
+https://github.com/raphaeltony/SlidesGenie/assets/30729856/c65d950e-0919-4df9-9531-9b572bad6aa2
 
-Conventional learning methods often come with limitations, and manual presentation creation can be time-consuming. SlidesGenie recognizes these challenges and offers a solution by introducing two core components: "SlidesGenie" and "Memory Lane."
 
-## SlidesGenie Component
+## Memory Lane Component (AI Learning Tool)
 
-The "SlidesGenie" component allows users to input a topic, leveraging the capabilities of AI and natural language processing through the ChatGPT API. The system dynamically generates visually appealing and informative presentations in Google Slides format. To enhance the content quality, the DALL-E API is used to generate vivid imagery.
+__Memory Lane__ is a learning tool to enhance memory retention. Users can input learning materials. The application identifies the keywords and automatically generates interconnected vivid imagery. These visual associations can be easily memorized and running through the visuals in your mind easily helps in recalling the keywords. This improves memory retention, making learning engaging and memorable. This is achieved with ChatGPT, DALL-E, and Google Slides.
 
-## Memory Lane Component
+## SlidesGenie (AI Slides Generation)
 
-"Memory Lane" is the second component that enhances the learning process. Users can input learning materials, and the application automatically generates interconnected vivid imagery based on identified keywords. These visual associations significantly improve memory retention, making learning engaging and memorable.
+The __SlidesGenie__ component allows users to input a topic. ChatGPT API is used to generate the presentation content and DALL-E API is used for generating the visuals. These are then integrated and saved to Google Slides.
 
-## Methodology
 
-The web application is built using a seamless integration of various technologies, including:
+![interaction diagram](diagram.jpg)
 
-- Python Flask
-- ChatGPT API for natural language processing
-- Google Slides API for presentation generation
-- DALL-E API for vivid imagery generation
+## Pre-requisites
+- Python
+- All dependencies mentioned in `requirements.txt` to be installed.
+- A Google Cloud Platform project with the **Drive API** and **Google Slides API** enabled, along with its authorization credentials for a desktop application. Check out the following section [(Setting Up Google Cloud Console)](#setting-up-google-cloud-console) to learn how to implement this.
+- OpenAI API Key: Create a .env file and save the contents with `OPENAI_API=<your-key-here>`
 
-The frontend is developed using Bootstrap, HTML, CSS, and JS, providing a user-friendly interface across different devices.
+## Setting Up Google Cloud Console
 
-## Key Features
+- To create presentations on the user's account, a Google Cloud Platform project must be set up with the **_Drive API_** and **_Google Slides API_** enabled. Then the user credentials must be downloaded and placed in the same folder as the script.
 
-- AI-powered dynamic presentation generation
-- Vivid imagery generation for enhanced content quality
-- Visual associations to improve memory retention
-- User-friendly interface across devices
-- Streamlined educational process
-- Creative and engaging learning experiences
+- Follow the steps mentioned in this [link](https://developers.google.com/slides/api/quickstart/python) 
 
-## Benefits
+> After downloading the file, rename it to 'credentials' and place it in the same folder as the project
 
-SlidesGenie's successful implementation signifies a breakthrough in AI-driven learning and presentation generation. By simplifying the educational process and enhancing content retention, SlidesGenie offers an efficient and creative solution for learners and professionals seeking impactful ways to learn and present information.
-
-## Conclusion
-
-SlidesGenie stands as an advanced and comprehensive learning and presentation tool. It showcases the potential to transform traditional learning methods and turn knowledge dissemination into an immersive and impactful experience.
-
-Discover the future of learning and presentation creation with SlidesGenie today.
+## Running the Script
+- The project is built on Flask and can be run with the command :
+```
+python -m flask --app main.py run
+```
