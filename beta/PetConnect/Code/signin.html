@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="bxs-dog.svg">
+    <title>PetConnect-Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class='bx bx-search-alt'></i></button>
+        </form>
+    </header>
+
+    
+    
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <h2 class="logo"><i class='bx bxs-dog'></i></i>  Pet Connect</h2>
+            <div class="text-sci">
+                <h2>Welcome! <br><span>To our website</span></h2>
+                <p>
+                    "Adopting a pet is a rewarding experience that saves lives and brings unconditional love.
+                    Come meet our furry friends and give them the chance to steal your heart.
+                    Adopting a pet is a lifelong commitment, but the joy they bring is priceless."
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="logreg-box">
+            <div class="form-box login">
+                <form  id="signinForm">
+                
+                    <h2>Sign In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" name="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" name="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember Me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn" name="sign_in"  >Sign In</button>
+                    <div class="social-message">
+                        <div class="line"></div>
+                        <p class="message">Login with social accounts</p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="social-icons2">
+                        <a href="#"><i class='bx bxl-google'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                    </div>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="signup.html" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebaseui.js"></script>
+    <!-- Replace with your Firebase config -->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBWEi9gYo0eRJtxRI4-5T-aBk_DZ89tyaY",
+        authDomain: "test-75362.firebaseapp.com",
+        databaseURL: "https://test-75362-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "test-75362",
+        storageBucket: "test-75362.appspot.com",
+        messagingSenderId: "565901038176",
+        appId: "1:565901038176:web:343fe9ca2e82be738b6905",
+        measurementId: "G-4XPF7F2NGJ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Add the JavaScript code below this line -->
+    <script>
+      function signinWithEmail(event) {
+        event.preventDefault(); 
+        
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+  
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            // Sign in successful, you can do something here
+            const user = userCredential.user;
+            console.log('User signed in:', user);
+            alert('Login successful');
+            window.location.href = 'integrated1.html';
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error('Sign in error:', errorMessage);
+            alert('Invalid username or password')
+          });
+      }
+      document.getElementById('signinForm').addEventListener('submit', signinWithEmail);
+    </script>
+    
+
+    
+</body>
+</html>

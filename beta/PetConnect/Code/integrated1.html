@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/image/care-for-pets_96935.ico">
+    <title>Municipality Admin Page</title>
+    <link rel="stylesheet" href="style_petfood.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Paste the CSS code here */
+        body {
+            margin: 0;
+            background: #111111;
+            font-family: 'Poppins', sans-serif;
+        }
+        main {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 2px;
+        }
+        section {
+            transform-style: preserve-3d;
+            position: relative;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .no-parallax-head{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+            background-color: #000000;
+            z-index: 999;
+            height: 10vh;
+        }
+
+        /* Additional styles for the Municipality Admin Page */
+        .admin-page-heading {
+            text-align: center;
+            margin: 100px 0 50px; /* Adjust the margin-top value to position the title */
+            font-size: 30px;
+            color: white;
+        }
+        .admin-table {
+            margin: 0 auto;
+            width: 80%;
+            background-color: #ffffff;
+            border-collapse: collapse;
+            text-align: center;
+            color: #000000;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            
+        }
+        .admin-table th,
+        .admin-table td {
+            padding: 10px;
+            border: 1px solid #dddddd;
+            font-family: "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            color: #333333;
+        }
+        .admin-table th {
+            background-color: #f9f9f9;
+            font-family: "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            color: #333333;
+        }
+        /* Adjust the width of the image column */
+        .admin-table td.image {
+            width: 200px; /* Change the width as needed */
+        }
+        .admin-table td.image img {
+            max-width: 100%; /* Make sure the image fits within the column */
+            height: auto;
+        }
+
+        /* Background image for the first frame */
+        .parallax {
+            height: 100vh;
+            }
+            .no-parallax {
+                background-color: #000000;
+                z-index: 999;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+            }
+            .parallax::after {
+                content: " ";
+                position: absolute;
+                top:0;
+                right:0;
+                bottom: 0;
+                left: 0;
+                transform: translateZ(-1px)scale(1.5);
+                background-size: 100%;
+                z-index: -1;
+            }
+            .bg1::after {
+                background: url("https://firebasestorage.googleapis.com/v0/b/test-75362.appspot.com/o/background1.jpg?alt=media&token=b223205b-0ab0-41f2-b3ba-c13195bedec9");
+                background-size: cover;
+            }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 27px; /* Adjust the top value to move the navigation bar lower */
+            left: 0;
+            text-align: center;
+            transform: translateY(-50%);
+            z-index: 999;
+        }
+        .navbar a {
+            position: relative;
+            font-size: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+        .navbar a::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background: transparent;
+            border-radius: 5px;
+            transform: translateY(10px);
+            transition: 0.5s;
+            opacity: 1;
+        }
+        .navbar a:hover::after {
+            transform: translateY(0);
+            background: #ffffff;
+        }
+
+        .no-parallax-end {
+            background-color: #000000;
+            z-index: 999;
+            height: 15vh;
+        }
+
+        #map {
+            height: 500px;
+            width: 80%; /* Change the width to your preference */
+            max-width: 1000px; /* Add max-width to limit the map size */
+            margin: 0 auto;
+            border-radius: 20px;
+            margin-top: 50px; /* Add some spacing between the table and the map */
+        }
+
+        /* Added styling for the Pick-Up Zones heading */
+        .pickup-zones-heading {
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            margin-top: 40px;
+        }
+        .social-icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+        .social-icons a i {
+            position: relative;
+            font-size: 22px;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: 0.5s ease;
+        }
+        .social-icons a:hover i{
+            transform:scale(1.2);
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="no-parallax-head">
+            <nav class="navbar">
+                <a href="/index.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                
+            </nav>
+        </div>
+        <section class="parallax bg1">
+        </section>
+        <section class="no-parallax">
+            <div style="text-align: center; margin-left: 100px; margin-right: 100px;height: 350px; font-size: 20px;color: rgb(255, 255, 255);">
+                <h1 style="margin-top: 150px;">Reported Dogs</h1> <!-- Adjust the margin-top value to position the title -->
+                <p style="font-size: 18px; margin-top: 30px; color: rgb(255, 255, 255);">Below is a comprehensive list of reported rabid dogs within our city. The table provides essential information about each reported dog, including the breed, condition, date of the report, location, and an option to view the dog's image. You can track the actions taken for each reported case. Please review the table for up-to-date data on reported incidents, actions taken, and their status.</p> <!-- Description added -->
+            </div>
+
+            <div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                                
+                                <th>Breed</th>
+                                <th>Condition</th>
+                                <th>Date (Reported)</th>
+                                <th>Location</th>
+                                <th>Image</th>
+                                <th>Action Taken</th>
+                                <th>Date Done</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dog-table-body">
+                        <!-- Table rows will be dynamically added here using JavaScript -->
+                    </tbody>
+                </table>
+
+                <h1 class="pickup-zones-heading">Pick-Up Zones</h1>
+                <div id="map"></div>
+            
+                <div class="button-container">
+                </div> <!-- Button container -->
+            </div>
+            <div><p>
+
+            </p></div>
+        </section>
+        <section class="parallax bg1"></section>
+        <section class="no-parallax-end">
+                <div class="row">
+                    <div class="h2">
+                    Copyright ©2023 PetConnect. All rights reserved.
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                        <a href="#"><i class='bx bxl-instagram' ></i></a>    
+                    </div>
+                </div>
+            </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyCkweWbw5avf9JeUY6iP8dFkDwDD7QMy3M",
+    authDomain: "petconnect-191dd.firebaseapp.com",
+    projectId: "petconnect-191dd",
+    storageBucket: "petconnect-191dd.appspot.com",
+    messagingSenderId: "82959695721",
+    appId: "1:82959695721:web:39ae89be0bab19f42247f8"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        // Get a reference to the database
+        var database = firebase.database();
+
+        var dogsRef = database.ref("Dog");
+        dogsRef.on("value", function(snapshot) {
+            var dogs = snapshot.val();
+            var tableBody = document.getElementById("dog-table-body");
+            tableBody.innerHTML = "";
+            
+
+            // Loop through each dog object and create table rows dynamically
+            Object.keys(dogs).forEach(function(key, index) {
+                var dog = dogs[key];
+                var row = document.createElement("tr");
+
+                var slNoCell = document.createElement("td");
+                slNoCell.textContent = index + 1;
+                row.appendChild(slNoCell);
+
+                var breedCell = document.createElement("td");
+                breedCell.textContent = dog.Breed;
+                row.appendChild(breedCell);
+
+                var conditionCell = document.createElement("td");
+                conditionCell.textContent = dog.Condition;
+                row.appendChild(conditionCell);
+
+                var dateReportedCell = document.createElement("td");
+                dateReportedCell.textContent = dog.Date;
+                row.appendChild(dateReportedCell);
+
+                var locationCell = document.createElement("td");
+                locationCell.textContent = dog.Address;
+                row.appendChild(locationCell);
+
+                var imageCell = document.createElement("td");
+                var imageLink = document.createElement("a");
+                imageLink.href = dog.Image; // Set the link URL to the image URL
+                imageLink.textContent = "View Image"; // Set the link text
+                imageLink.target = "_blank"; // Open the link in a new tab
+                imageLink.style.textDecoration = "none"; // Remove underline by default
+                imageLink.style.color = "#007BFF"; // Link color for unvisited and visited states
+
+                // Add an event listener to handle hover style
+                imageLink.addEventListener("mouseover", function() {
+                    imageLink.style.textDecoration = "underline"; // Add underline on hover
+                });
+                imageLink.addEventListener("mouseout", function() {
+                    imageLink.style.textDecoration = "none"; // Remove underline on hover-out
+                });
+                imageCell.appendChild(imageLink);
+                row.appendChild(imageCell);
+
+                var actionTakenCell = document.createElement("td");
+                var checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.dataset.dogKey = key; // Store the dog key as a data attribute
+                checkbox.checked = !!dog["Date Done"];
+                actionTakenCell.appendChild(checkbox);
+                row.appendChild(actionTakenCell);
+
+                var dateDoneCell = document.createElement("td");
+                dateDoneCell.textContent = dog["Date Done"] || "";
+                row.appendChild(dateDoneCell);
+
+                checkbox.addEventListener("change", function() {
+                    var isChecked = checkbox.checked;
+                    var dogKey = checkbox.dataset.dogKey;
+
+                    if (isChecked) {
+                        // If checkbox is checked, add the current date as "Date Done" in the Dog database
+                        var currentDate = new Date().toLocaleDateString();
+                        database.ref("Dog").child(dogKey).update({
+                            "Date Done": currentDate
+                        });
+                    } else {
+                        // If checkbox is unchecked, remove "Date Done" from the Dog database
+                        database.ref("Dog").child(dogKey).update({
+                            "Date Done": null
+                        });
+                    }
+                });
+
+                tableBody.appendChild(row);
+            });
+        });
+    </script>
+<script>
+function initMap() {
+    var center = { lat: 16.02198, lng: 78.95434 };
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: center
+    });
+
+    var redZonesRef = firebase.database().ref('Dog');
+    
+    redZonesRef.on('value', function(snapshot) {
+        var redZones = snapshot.val();
+        
+        for (var key in redZones) {
+            if (redZones.hasOwnProperty(key)) {
+                var zone = redZones[key];
+                var marker = new google.maps.Marker({
+                    position: { lat: zone.Latitude, lng: zone.Longitude },
+                    map: map,
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: 25,
+                        fillColor: 'yellow',
+                        fillOpacity: 0.8,
+                        strokeColor: 'green',
+                        strokeWeight: 2                    
+                    }
+                });
+            }
+        }
+    });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEg8Psxk_gXK1jipYdWv9pDgZP4iTnnvA&callback=initMap" async defer></script>
+</body>
+</html>

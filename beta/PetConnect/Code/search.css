@@ -1,0 +1,192 @@
+body {
+    margin:0;
+    background: #111111;
+    font-family: 'Poppins', sans-serif;
+  }
+  main {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+  } 
+  section {
+    transform-style: preserve-3d;
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+  .no-parallax-head{
+    background-color: #000000;
+    z-index: 999;
+    display: flex;
+    height: 10vh;
+  }
+  .navbar a {
+    position: relative;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 20px;
+  
+  }
+  .navbar a::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    border-radius: 5px;
+    transform: translateY(10px);
+    transition: 0.5s;
+    opacity: 1;
+  }
+  .navbar a:hover::after{
+    transform: translateY(0);
+    background: #ffffff;
+  }
+  .bg1 {
+    display: flex;
+    background: url("https://images.pexels.com/photos/350748/pexels-photo-350748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+  } 
+  .parallax {
+    height: 100vh;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .no-parallax-end{
+    background-color: #000000;
+    z-index: 999;
+    display: flex;
+    height: 25vh;
+  }
+  .h2{
+    font-size: 20px;
+    color: white;
+  }
+  .social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+  .social-icons a i {
+  position: relative;
+  font-size: 22px;
+  color: #ffffff;
+  margin-right: 10px;
+  transition: 0.5s ease;
+  }
+  .social-icons a:hover i{
+  transform:scale(1.2);
+  }
+
+  /*  */
+  h1 {
+    height: 80px;
+    font-size: 60px;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 360px;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+  }
+  
+  label{
+    width: 200px;
+    margin-left: -75px;
+    padding: 2.5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  select {
+    padding: 10px;
+    width: 300px;
+    font-size: 15px;
+    background: transparent;
+    border-width: 2px;
+    border-color: #000000;
+    color: black;
+  }
+  select option {
+    font-size: 15px;
+    color: #000000;
+    background: transparent;
+  }
+  
+  button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right,#000000,#434343);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+    .dogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+
+  .dog-card {
+    border: 2px solid #818181;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    background: black;
+    text-align: center;
+  }
+  
+  .dog-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .dog-card h3 {
+    margin-top: 0;
+    color: white;
+  }
+  
+  .dog-card p {
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .dog-card button {
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right,#000000,#434343);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .dog-card button:hover {
+    background-color: #434343;
+  }
+  

@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="bxs-dog.svg">
+    <title>PetConnect-SignUp</title>
+    <link rel="stylesheet" href="signup_style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class='bx bx-search-alt'></i></button>
+        </form>
+    </header>
+
+   
+    
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <h2 class="logo"><i class='bx bxs-dog'></i></i>  Pet Connect</h2>
+            <div class="text-sci">
+                <h2>Welcome! <br><span>To our website</span></h2>
+                <p>
+                    "Adopting a pet is a rewarding experience that saves lives and brings unconditional love.
+                    Come meet our furry friends and give them the chance to steal your heart.
+                    Adopting a pet is a lifelong commitment, but the joy they bring is priceless."
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                </div>
+            </div>
+
+        </div>
+            
+        <div class="logreg-box">
+            <div class="form-box login">
+            <form id="signupForm">
+                <h2>Sign Up</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user' ></i></span>
+                        <input type="text" id="name" required>
+                        <label>Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember Me</label>
+                    </div>
+                   <!--
+                         <button type="submit" class="btn" id="submit" name="sign_up">Register</button>
+                 -->
+                    <input class="btn" type="submit" value="Register">
+                    <div class="login-register">
+                        <p>Already have an account? <a href="signin.html" class="register-link">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebaseui.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script type="module" src="signup1.js"></script>      
+</body>
+</html>

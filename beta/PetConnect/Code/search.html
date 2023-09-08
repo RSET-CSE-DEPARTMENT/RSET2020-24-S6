@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/image/care-for-pets_96935.ico">
+        <title>PetConnect-DogAdoption</title>
+        <link rel="stylesheet" href="search.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <main>
+            <section class="no-parallax-head">
+                <nav class="navbar">
+                    <a href="/index.html">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </section>
+            <div class="parallax bg1">
+                <h1>Dog Adoption Center</h1>
+                <div class="search-container">
+                    <h2>Search Filter</h2>
+                    <label for="place">Location:</label>
+                    <select id="searchInput1" required>
+                      <option value="none"></option>
+                      <option value="Alappuzha">Alappuzha</option>
+                      <option value="Ernakulam">Ernakulam</option>
+                      <option value="Idukki">Idukki</option>
+                      <option value="Kannur">Kannur</option>
+                      <option value="Kasaragod">Kasaragod</option>
+                      <option value="Kollam">Kollam</option>
+                      <option value="Kottayam">Kottayam</option>
+                      <option value="Kozhikode">Kozhikode</option>
+                      <option value="Malappuram">Malappuram</option>
+                      <option value="Palakkad">Palakkad</option>
+                      <option value="Pathanamthitta">Pathanamthitta</option>
+                      <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                      <option value="Thrissur">Thrissur</option>
+                      <option value="Wayanad">Wayanad</option>    
+                    </select><br><br>
+  
+                    <label for="Breed">Breed:</label>
+                    <select id="searchInput2" required>
+                        <option value="none"></option>
+                        <option value="Labrador Retriever">Labrador Retriever</option>
+                        <option value="German Shepherd">German Shepherd</option>
+                        <option value="Golden Retriever">Golden Retriever</option>
+                        <option value="Bulldog">Bulldog </option>
+                        <option value="Poodle">Poodle</option>
+                        <option value="Beagle">Beagle</option>
+                        <option value="Rottweiler">Rottweiler</option>
+                        <option value="Boxer">Boxer</option>
+                        <option value="Dachshund">Dachshund</option>
+                        <option value="Siberian Husky">Siberian Husky</option> 
+                    </select><br><br>
+                    <button onclick="searchDogs()">Search</button>
+                </div>
+            </div>
+              <div id="dogsContainer" class="dogs-container"></div>
+
+            <section class="no-parallax-end">
+                <div class="row">
+                    <div class="h2">
+                    Copyright ©2023 PetConnect. All rights reserved.
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                        <a href="#"><i class='bx bxl-instagram' ></i></a>    
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+        <script src="search.js"></script>  
+        <script src="details.js"></script>    
+    </body>
+</html>

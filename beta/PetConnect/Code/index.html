@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/image/care-for-pets_96935.ico">
+        <title>PetConnect</title>
+        <link rel="stylesheet" href="styles_home.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+                #map {
+                    height: 500px;
+                    width: 1000px;
+                    border-radius: 20px;
+                }
+            </style>        
+    </head>
+    <body>
+        <main>
+            <section class="no-parallax-head">
+                <nav class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </section>
+            <section class="parallax-head bg1">
+                <div style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center; margin-left: 100px; margin-right: 100px;height: 350px; font-size: 20px;color: #cfcfcf;">
+                    <h1>PetConnect</h1>
+                </div>
+            </section>
+            <section class="no-parallax">
+                <div style="font-family: Verdana, Geneva, Tahoma, sans-serif;text-align: center; margin-left: 100px; margin-right: 100px; font-size: 20px;">
+                    <p>Adopting a pet is a rewarding experience that saves lives and brings unconditional love. 
+                      At our adoption center, we match pets with their perfect forever homes, taking your lifestyle and preferences into account. 
+                      Come meet our furry friends and give them the chance to steal your heart. 
+                      Adopting a pet is a lifelong commitment, but the joy they bring is priceless.
+                    
+                    </p>
+                </div>
+              </section>
+            <section class="parallax bg2"></section>
+            <section class="no-parallax">
+                <div class="container">
+                    <div class="card2">
+                        <div class="content">
+                            <div class="title">Municipal Panel</div>
+                            <div class="description">Government portal for dog-related incidents consolidation.</div>
+                        </div>
+                        <a href="signin.html" class="button2 text">Track</a>
+                    </div>
+                    <div class="card1">
+                        <div class="content">
+                            <div class="title">PetConnect</div>
+                            <div class="description">Join us in our mission to find forever homes for adorable pets. Are you ready to adopt?</div>
+                        </div>
+                    <div>
+                        <a href="form.html" class="button2 text">Enlist</a>
+                        <p>
+
+                        </p>
+                        <a href="search.html" class="button2 text">Adopt</a>
+                    </div>
+                    </div> 
+
+                    <div class="card3">
+                        <div class="content">
+                            <div class="title">Found a Stray?</div>
+                            <div class="description">Did you come across a stray in need? Help us locate them by pinning their location on the map.</div>
+                        </div>
+                        <a href="reportform.html" class="button2 text">Report</a>
+                    </div>   
+                </div>
+            </section>
+            <section class="parallax bg2""></section>
+            <section class="no-parallax" style="height: auto;"">
+                <div style="display: flex;flex-direction: column;">
+                    <div style="font-family: 'Poppins', sans-serif;text-align: center;font-size: 30px;">
+                        <h3>Rabid Zones</h3>
+                    </div>
+                    <div id="map"></div>     
+                    <p></p>       
+                    </div>
+
+                <script>
+                    function initMap() {
+                        var center = { lat: 16.02198, lng: 78.95434 };
+            
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 4,
+                            center: center
+                        });
+            
+                        var redZonesRef = firebase.database().ref('Dog');
+                        
+                        redZonesRef.on('value', function(snapshot) {
+                            var redZones = snapshot.val();
+                            
+                            for (var key in redZones) {
+                                if (redZones.hasOwnProperty(key)) {
+                                    var zone = redZones[key];
+                                    var marker = new google.maps.Marker({
+                                        position: { lat: zone.Latitude, lng: zone.Longitude },
+                                        map: map,
+                                        icon: {
+                                            path: google.maps.SymbolPath.CIRCLE,
+                                            scale: 25,
+                                            fillColor: 'red',
+                                            fillOpacity: 0.8,
+                                            strokeColor: 'black',
+                                            strokeWeight: 2                    
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    }
+                </script>
+            
+                <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+            
+                <script>
+                    var firebaseConfig = {
+                        apiKey: "AIzaSyCkweWbw5avf9JeUY6iP8dFkDwDD7QMy3M",
+                        authDomain: "petconnect-191dd.firebaseapp.com",
+                        projectId: "petconnect-191dd",
+                        storageBucket: "petconnect-191dd.appspot.com",
+                        messagingSenderId: "82959695721",
+                        appId: "1:82959695721:web:39ae89be0bab19f42247f8"
+                    };
+                    firebase.initializeApp(firebaseConfig);
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEg8Psxk_gXK1jipYdWv9pDgZP4iTnnvA&callback=initMap" async defer></script>            
+            </section>
+            <section class="parallax bg2"></section>
+            <section class="no-parallax-end">
+                <div class="row">
+                    <div>
+                    Copyright ©2023 PetConnect. All rights reserved.
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                        <a href="#"><i class='bx bxl-instagram' ></i></a>   
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
