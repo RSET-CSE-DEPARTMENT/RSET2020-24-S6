@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="bxs-dog.svg">
+    <title>PetConnect-DogForm</title>
+    <link rel="stylesheet" href="form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <section class="no-parallax-head">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </section>
+    <div class="parallax bg1">
+        <div class="container">
+            <div class="content">
+                <form id="form1" action="">
+                    <h3>Dog Details</h3>
+                    <input type="text" placeholder="Name" name="" id="dogName" required>
+                    <input type="text" placeholder="Breed" name="" id="dogBreed" required>
+                    <input type="text" placeholder="Age" name="" id="dogAge" required>
+                    <input type="text" placeholder="Gender" name="" id="gender" required>
+                    <div class="btn-box">
+                        <button type="button" id="next1">Next</button>
+                    </div>
+                </form>
+        
+                <form id="form2">
+                    <h3>Dog Health Details</h3>
+                    <div class="btn-box">
+                        <input type="text" placeholder="Size" name="" id="dogSize" required>
+                        <input type="text" placeholder="Weight" name="" id="dogWeight" required>
+                        <input type="text" placeholder="Training Given" name="" id="dogTraining" required>
+                        <textarea id="vaccinations" placeholder=" Vaccines:" rows="3" cols="40"></textarea> 
+                        <input type="file" placeholder="Image of Dog" id="image" accept="image/*"><br><br>   
+                        <button type="button" id="back1">Back</button>
+                        <button type="button" id="next2">Next</button>
+                    </div>
+                </form>
+        
+                <form id="form3">
+                    <h3>Seller Details</h3>
+                    <input type="text" placeholder="Seller Name" id="seller" required>
+                    <input type="text" placeholder="Location" id="dogLocation" required>
+                    <input type="text" placeholder="Price" id="dogPrice" required>
+                    <input type="text" placeholder="Contact" id="contact" required>
+                    <div class="btn-box">
+                        <button type="button" id="back2">Back</button>
+                        <button type="button" id="submit">Submit</button>
+                    </div>
+                </form>
+        
+                <dvi class="step-row">
+                    <div id="progress"></div>
+                    <div class="step-col"><small>Step1</small></div>
+                    <div class="step-col"><small>Step2</small></div>
+                    <div class="step-col"><small>Step3</small></div>
+                </dvi>
+            </div>
+        
+            <div class="logreg-box">
+                <div class="form-box">
+                    <div id="imagePreview" class="image-preview">
+                        <img id="preview" src="#" alt=" ">
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <section class="no-parallax-end">
+        <div class="row">
+            <div class="h2">
+            Copyright ©2023 PetConnect. All rights reserved.
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>    
+            </div>
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="form.js"></script> 
+    <script>
+                var Form1 = document.getElementById("form1");
+        var Form2 = document.getElementById("form2");
+        var Form3 = document.getElementById("form3");
+
+        var Next1 = document.getElementById("next1");
+        var Next2 = document.getElementById("next2");
+        var Back1 = document.getElementById("back1");
+        var Back2 = document.getElementById("back2");
+
+        var progress = document.getElementById("progress");
+
+        next1.onclick = function(){
+            Form1.style.left ="-450px";
+            Form2.style.left = "40px";
+            progress.style.width = "240px";
+        }
+        back1.onclick = function(){
+            Form1.style.left ="40px";
+            Form2.style.left = "-450px";
+            progress.style.width = "120px";
+        }
+        next2.onclick = function(){
+            Form2.style.left ="-450px";
+            Form3.style.left = "40px";
+            progress.style.width = "360px";
+        }
+        back2.onclick = function(){
+            Form2.style.left ="40px";
+            Form3.style.left = "-450px";
+            progress.style.width = "240px";
+        }
+    </script> 
+</body>
+</html>

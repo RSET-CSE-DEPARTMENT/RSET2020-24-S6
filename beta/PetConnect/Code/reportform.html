@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report Dog</title>
+  <style>
+    body {
+      background-color: #151515;
+      color: #ffffff;
+      background-image: url("https://firebasestorage.googleapis.com/v0/b/test-75362.appspot.com/o/background1.jpg?alt=media&token=b223205b-0ab0-41f2-b3ba-c13195bedec9");
+      background-repeat: no-repeat;
+      background-size: cover;
+      align-items: center;
+      font-family: 'Courier New', monospace;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: transparent;
+      backdrop-filter: blur(20px);
+      border-radius: 5px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+    }
+
+    .form-container label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-container input[type="text"],
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #555;
+      box-sizing: border-box;
+      border-radius: 3px;
+      border: none;
+      color: #cfcbcb;
+    }
+
+    .form-container textarea {
+      resize: vertical;
+    }
+
+    .form-container input[type="submit"] {
+      background-color: #b5b5b5;
+      color: rgb(8, 8, 8);
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .form-container input[type="submit"]:hover {
+      background-color: #17612b;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Report Dog</h2>
+    <form id="dogForm" enctype="multipart/form-data">
+      <label for="breed">Dog Breed :</label>
+      <select id="breed" name="breed" required>
+        <option value="">Select Breed</option>
+        <option value="Labrador">Labrador</option>
+        <option value="Golden Retriever">Golden Retriever</option>
+        <option value="German Shepherd">German Shepherd</option>
+        <option value="Poodle">Poodle</option>
+        <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+        <option value="Bulldog">Bulldog</option>
+        <option value="Rottweiler">Rottweiler</option>
+      </select>
+      <label for="condition">Condition :</label>
+      <select id="condition" name="condition" required>
+        <option value="">Select</option>
+        <option value="Stray">Stray</option>
+        <option value="Injured">Injured</option>
+        <option value="Rabid">Rabid</option>
+      </select>
+      <label for="images">Upload Images:</label>
+      <input type="file" id="images" name="images" multiple required>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+    import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCkweWbw5avf9JeUY6iP8dFkDwDD7QMy3M",
+      authDomain: "petconnect-191dd.firebaseapp.com",
+      projectId: "petconnect-191dd",
+      storageBucket: "petconnect-191dd.appspot.com",
+      messagingSenderId: "82959695721",
+      appId: "1:82959695721:web:39ae89be0bab19f42247f8"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const storage = getStorage(app);
+
+    document.getElementById('dogForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const breed = document.getElementById('breed').value;
+      const condition = document.getElementById('condition').value;
+      const image = document.getElementById('images').files[0];
+      const currentDate = new Date().toLocaleDateString();
+      
+
+
+      if (navigator.geolocation) {
+
+        const options = {
+          enableHighAccuracy: true, // Enable high-accuracy positioning
+          timeout: 5000, // Set a timeout value (in milliseconds)
+          maximumAge: 0 // Disable caching of the position
+        };
+        
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const apKey = "AIzaSyAEg8Psxk_gXK1jipYdWv9pDgZP4iTnnvA";
+            const geocodingUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apKey}`;
+
+            fetch(geocodingUrl)
+              .then(response => response.json())
+              .then(data => {
+                const address = data.results[0].formatted_address;
+                
+
+                const dogData = {
+                  Breed: breed,
+                  Condition: condition,
+                  Latitude: latitude,
+                  Longitude: longitude,
+                  Address: address,
+                  Date: currentDate,
+                  
+                   
+                };
+                const dogKey = push(ref(db, 'Dog')).key;
+
+                const imageRef = storageRef(storage, `images/${dogKey}/${image.name}`);
+      uploadBytes(imageRef, image)
+        .then(() => {
+          // Get the download URL for the uploaded image
+          return getDownloadURL(imageRef);
+        })
+        .then(downloadUrl => {
+          dogData.Image=downloadUrl; // Store the download URL in the dogData object
+
+          return set(ref(db, `Dog/${breed}_${Date.now()}`), dogData);
+        })
+        .then(() => {
+          alert("Reported Successfully!!");
+          clearForm();
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    })
+                  
+              .catch(error => {
+                console.log(error);
+              });
+          },
+          error => {
+            console.log(error);
+          }
+          ,options
+        );
+      } else {
+        console.log("Geolocation is not supported by this browser.");
+      }
+    });
+    function clearForm() {
+      const form = document.getElementById('dogForm');
+      form.reset();
+    }
+  </script>
+</body>
+</html>

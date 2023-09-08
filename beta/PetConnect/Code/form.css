@@ -1,0 +1,260 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #020410;
+}
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.no-parallax-head{
+  background-color: #000000;
+  z-index: 999;
+  display: flex;
+  height: 10vh;
+}
+.navbar a {
+    position: relative;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 20px;
+
+}
+.navbar a::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    border-radius: 5px;
+    transform: translateY(10px);
+    transition: 0.5s;
+    opacity: 1;
+}
+.navbar a:hover::after{
+    transform: translateY(0);
+    background: #ffffff;
+}
+.parallax {
+  height: 100vh;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+.bg1{
+    width: 100%;
+    height: 100vh;
+    background: url("https://firebasestorage.googleapis.com/v0/b/test-75362.appspot.com/o/background1.jpg?alt=media&token=b223205b-0ab0-41f2-b3ba-c13195bedec9") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    position:absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    height: 500px;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.container .content{
+  width: 360px;
+  height: 500px;
+  margin: 8% auto;
+  background: transparent ;
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 60px;
+  margin-top: 0px;
+}
+.container .logreg-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100%;
+    margin-right: 60px;
+    background: transparent;
+}
+.logreg-box .form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    color: #000000;
+}
+.no-parallax-end{
+  background-color: #000000;
+  z-index: 999;
+  display: flex;
+  height: 20vh;
+}
+.h2{
+  font-size: 20px;
+  color: white;
+}
+.social-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.social-icons a i {
+position: relative;
+font-size: 22px;
+color: #ffffff;
+margin-right: 10px;
+transition: 0.5s ease;
+}
+.social-icons a:hover i{
+transform:scale(1.2);
+}
+
+h3{
+  text-align: center;
+  margin-bottom: 40px;
+  color : #000000;
+}
+
+.container form{
+  width: 280px;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  transition: 0.5s;
+}
+
+form input{
+  width: 100%;
+  padding: 10px 5px;
+  margin: 5px 0;
+  border: 0;
+  color: #000000;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  background: transparent;
+}
+small{
+  font-size: 16px;
+  color: #ffffff;
+}
+h3{
+  font-size: 30px;
+}
+textarea{
+  background: transparent;
+  border-radius: 10px;
+}
+input::placeholder,textarea::placeholder{
+  font-size: 14px;
+  color: #000000;
+}
+
+.btn-box{
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+form button{
+  width: 110px;
+  height: 35px;
+  margin: 0 10px;
+  background: linear-gradient(to right,#000000,#434343);
+  border-radius: 30px;
+  border: 0;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#form2{
+  left: 450px;
+}
+#form3{
+  left: -450px;
+}
+
+.step-row{
+  width: 360px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -1px 5px -1px #000;
+  position: relative;
+
+}
+
+.step-row{
+  width: 360px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -1px 5px -1px #000;
+  position: relative;
+
+}
+
+.step-col{
+  width: 120px;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+#progress{
+  position: absolute;
+  height: 100%;
+  width: 120px;
+  background: linear-gradient(to right,#000000,#434343);
+  transition: 1s;
+}
+#progress::after{
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  border-left: 20px solid #434343;
+}
+
+#imagePreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preview {
+  max-width: 90%;
+  max-height: 90%;
+}
+
