@@ -8,4 +8,4 @@ learning.
 
 ## Demo
 
-https://youtu.be/XePR1cWr9BU
+demo video: https://youtu.be/XePR1cWr9BU
