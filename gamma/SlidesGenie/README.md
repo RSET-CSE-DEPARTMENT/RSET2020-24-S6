@@ -16,7 +16,7 @@ __Memory Lane__ is a learning tool to enhance memory retention. Users can input 
 The __SlidesGenie__ component allows users to input a topic. ChatGPT API is used to generate the presentation content and DALL-E API is used for generating the visuals. These are then integrated and saved to Google Slides.
 
 
-![interaction diagram](/diagram.jpg)
+![interaction diagram](diagram.jpg)
 
 ## Pre-requisites
 - Python
