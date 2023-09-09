@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ACCOUNT CREATION</title>
+
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src="/js/validation.js" defer></script>
+    <link rel="stylesheet" href="https://classless.de/addons/themes.css">
+	<link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+
+    <style>
+        
+        .image-container {
+      width: 370px;
+      height: 200px;
+	  top:1px;
+	  left:25px;
+	  position:absolute;
+      mix-blend-mode: multiply;
+	}
+    
+    .header {
+      background-color: #0099cc;
+      color: white;
+      padding: 20px 250px;
+      text-align: center;
+	  top:1px;
+	  left:270px;
+	  position:absolute;
+    }
+
+    .inputfields {
+	  padding: 25px;
+	  mix-blend-mode: screen;
+	  align: center;
+	  width: 370px;
+       height: 200px;
+	  top:180px;
+	  left:580px;
+	  position:absolute;
+	}	
+
+	.button {
+	  border: none;
+	  top:700px;
+	  left:640px;
+	  position:absolute;
+	  
+	}
+
+	</style>
+    
+
+</head>
+
+<body>
+
+    <div class="image-container">
+		<img src="images/logo.jpg" alt="RSET LOGO">
+	</div>
+
+    <div class="header">
+        <h1>CREATE YOUR ACCOUNT</h1>
+    </div>
+    
+    <form action="accountcreate.php" method="post" id="signup" novalidate>
+        
+
+	<div class="inputfields">	
+
+		<div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        
+        
+	    <div>
+            <label for="class">Class</label>
+            <input type="class" id="class" name="class">
+        </div>
+
+		
+		<div>
+            <label for="semester">Semester</label>
+            <input type="semester" id="semester" name="semester">
+        </div>
+
+
+		<div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+        
+        <div>
+            <label for="password_confirmation">Confirm Password</label>
+            <input type="password " id="password_confirmation" name="password_confirmation">
+        </div>
+
+	</div>
+
+	<div class="button">
+		<button>Sign up</button>
+    </div>
+
+	</form>
+    
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
