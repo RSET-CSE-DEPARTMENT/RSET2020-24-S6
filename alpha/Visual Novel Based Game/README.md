@@ -10,7 +10,7 @@ The project was to develop a visually immersive and engaging narrative-based gam
 The premise of the project is to implement interactive storytelling and have branching storylines based on user choices, with overarching consequences throughout.
 The project also aims to convey important moral messages within the game, focusing on and moral values, provide guidance and offer insights into the consequences of one's actions, encouraging players to make thoughtful choices throughout the game, while also maintaining the interactive sentiment through puzzles, challenges, riddles, etc.
 </p>
-<img src="novelsite/images/titleimg.png" alt="Miniproject game image">
+<img src="https://github.com/AnkitJAbraham/Miniproject_VisualNovelGame/raw/main/novelsite/images/titleimg.png" alt="Miniproject game image">
 
 <h2>Hardware and Software Requirements for Development</h2>
 <h3>Software Requirements - </h3>
