@@ -1,7 +1,7 @@
-# S6 mini project of RSET2020-24 batch
-This is the official repository to store code done by CSE students during S6 for the academic year 2023.
+# S6 Mini Projects of RSET2020-24 Batch
+The repository is designated for storing the code developed by the S6 CSE students for their mini-projects during the academic year 2023.
 
 ## Disclaimer
-remove all api keys and email passwords with text explaining what has to be added in it's place.
+Please ensure that all API keys and email passwords have been removed from the code and replaced with a placeholder text indicating what needs to be added in their place.
 
-eg.secretkey=enter key here
+Eg: secretkey = enter-key-here
